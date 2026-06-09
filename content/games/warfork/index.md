@@ -39,6 +39,15 @@ Content here is specific to Warfork. Nothing applies to Quake Live or Reflex Are
 - [[health-and-armor]] — items, values, overheal, armor tiers
 - [[powerups]] — Quad Damage, WarShell, Regeneration
 
+## Modding
+
+- [[modding/index|Modding]] — overview
+- [[modding/server-hosting|Server Hosting]] — dedicated server setup, cvars, RCON
+- [[modding/custom-gametypes|Custom Gametypes]] — AngelScript gametype scripting
+- [[modding/custom-huds|Custom HUDs]] — .hud scripting format and variables
+- [[modding/custom-shaders|Custom Shaders]] — shader script format, visibility setups
+- [[modding/gametype-scripting-reference|Gametype Scripting Reference]] — full AngelScript API
+
 ## Game Modes
 
 - [[gametypes/index|Gametypes]] — all 13 default modes overview
