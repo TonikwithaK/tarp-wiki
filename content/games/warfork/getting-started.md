@@ -26,8 +26,6 @@ steamcmd +login anonymous +app_update 1136510 validate +quit
 steamcmd +login <username> +app_update 671610 validate +quit
 ```
 
-For server setup beyond the install step, see [[server-hosting]].
-
 ## Bug Reports
 
 Report bugs and reach the community on Discord: **discord.gg/VY95TKZ**
@@ -63,8 +61,9 @@ Color your name by inserting a caret followed by a digit anywhere in the string.
 
 Example: `^1War^7fork` renders "War" in red and "fork" in white.
 
-## Next Steps
+## Related
 
 - [[controls]]: default keybinds and how to rebind
 - [[console]]: opening the console, useful commands, config workflow
 - [[server-hosting]]: running your own server
+- For server setup beyond the install step, see [[server-hosting]].

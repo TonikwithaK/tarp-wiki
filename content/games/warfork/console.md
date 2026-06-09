@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Console Commands
+# Console
 
 Open the console with `~` (backtick). Full source: [Warfork Wiki](https://warforkwiki.com/index.php?title=Console_Commands).
 
@@ -286,7 +286,6 @@ opcall <vote> [arg]           Operator instant vote
 rcon <command>                Remote console command
 status                        Server status
 players                       List players
-kill                          Kill yourself
 kill                          Kill yourself
 spec                          Join spectators
 join [team]                   Join game

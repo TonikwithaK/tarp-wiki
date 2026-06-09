@@ -13,8 +13,6 @@ tags:
 - bunny-hop
 - plasma-climb
 confidence: high
-sources:
-- file: raw_sources/warfork/Mechanics/Movement.md
 promoted: 2026-06-09
 canon_attempts: 1
 ---
@@ -134,7 +132,7 @@ Each plasma bolt produces splash knockback on impact. Firing at a surface below 
 
 ---
 
-## See Also
+## Related
 
 - [[controls]]: key bindings including RMB, Space, and weapon slots
 - [[weapons]]: Plasmagun details for plasmaclimbing
