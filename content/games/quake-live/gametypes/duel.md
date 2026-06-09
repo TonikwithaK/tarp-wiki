@@ -43,7 +43,7 @@ Health and armor above 100 decay at 1 point per second. A player at 200 HP and 2
 
 ## Movement
 
-Strafe jumping is the standard movement technique in Duel. VQ3 physics apply unless the server is configured otherwise.
+Strafe jumping is the standard movement technique in Duel. VQL physics apply unless the server is configured otherwise.
 
 ## Rocket Jumping
 

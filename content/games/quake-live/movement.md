@@ -25,13 +25,13 @@ UPS = units per second.
 
 Physics are server-determined.
 
-**VQ3 (Vanilla Quake 3):** Default physics. Strafe jumping is the primary speed technique. Air control is limited.
+**VQL (Vanilla Quake Live):** Default physics. Strafe jumping is the primary speed technique. Air control is limited.
 
-**CPMA/PQL (Challenge Pro Mode Arena):** Heavy air control. Pressing a movement key while airborne steers toward the look direction. To maintain speed while turning, hold forward only. To make tight corners or accelerate rapidly, hold only left or right while turning.
+**PQL (Pro mode, CPM-like physics):** Heavy air control. Pressing a movement key while airborne steers toward the look direction. To maintain speed while turning, hold forward only. To make tight corners or accelerate rapidly, hold only left or right while turning.
 
 ---
 
-## Strafe Jumping (VQ3)
+## Strafe Jumping (VQL)
 
 - Jump while holding forward and either left or right.
 - Guide the mouse in the same direction as the strafe key.
@@ -64,7 +64,7 @@ Physics are server-determined.
 
 - Position against a wall, looking diagonally down at the floor-wall junction.
 - Jump while holding forward, hold fire.
-- In VQ3: release jump after launching (critical). On some server configurations, holding is acceptable.
+- In VQL: release jump after launching (critical). On some server configurations, holding is acceptable.
 - Allows climbing vertical surfaces.
 
 ---

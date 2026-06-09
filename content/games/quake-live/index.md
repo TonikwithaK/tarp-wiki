@@ -11,8 +11,8 @@ Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin 
 
 Two physics modes, determined by the server factory:
 
-- VQ3 (Vanilla Quake 3): default. Strafe jumping is the primary speed technique. Limited air control.
-- CPMA/PQL (Challenge Pro Mode Arena): heavy air control. Movement keys while airborne steer toward the look direction.
+- VQL (Vanilla Quake Live): default. Strafe jumping is the primary speed technique. Limited air control.
+- PQL (Pro mode, CPM-like physics): heavy air control. Movement keys while airborne steer toward the look direction.
 
 Competitive play centers on the weapon triad: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (RG/Rail).
 
@@ -24,7 +24,7 @@ Content here is specific to Quake Live. Nothing applies to Warfork or Reflex Are
 
 ## Movement
 
-- [[movement]]: strafe jumping, circle jumping, rocket jumping, plasma climbing, AutoHop, VQ3 vs CPMA
+- [[movement]]: strafe jumping, circle jumping, rocket jumping, plasma climbing, AutoHop, VQL vs PQL
 
 ## Weapons
 
