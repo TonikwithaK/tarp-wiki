@@ -28,72 +28,32 @@ Quake Live weapons are assigned internal item IDs. The full list:
 | 52 | Chaingun |
 | 54 | Heavy Machinegun |
 
-## Primary Competitive Weapons
+## Competitive Triad
 
-The Rocket Launcher, Lightning Gun, and Railgun are the three weapons that define high-level competitive play.
+The Rocket Launcher, Lightning Gun, and Railgun define high-level competitive play.
 
-### Rocket Launcher (RL)
+- [[rocket-launcher|Rocket Launcher]]: 100 direct damage, splash, self-damage, rocket jump
+- [[lightning-gun|Lightning Gun]]: 6-7 damage/tick hitscan beam, range-capped, highest tracking DPS
+- [[railgun|Railgun]]: 80 damage hitscan, unlimited range, 1.5s reload
 
-- 100 damage on direct hit
-- Splash damage within blast radius
-- Self-damage enabled
-- Used for rocket jumping
-- Projectile travel time
+## Standard Weapons
 
-### Lightning Gun (LG)
-
-- 5-7 damage per tick
-- Rapid-fire beam
-- Effective range is limited
-- Primary tracking weapon
-- Best used at mid-range and in tight spaces
-
-### Railgun (RG)
-
-- 80 damage per shot
-- Hitscan, unlimited range
-- No splash damage
-- No self-damage
-- Long reload between shots
-
-## Secondary Weapons
-
-### Machine Gun (MG)
-
-- 5-7 damage per shot, rapid fire
-- Hitscan
-- Starting weapon; players spawn with MG and 125 HP
-
-### Shotgun
-
-- Close-range burst
-- Fires multiple pellets per shot
-
-### Plasma Gun
-
-- Rapid-fire projectile
-- Splash damage and self-damage
-- Used for plasma climbing
-
-### Grenade Launcher (GL)
-
-- Bouncing explosive projectile
-- Delayed fuse detonation
-- Used for area denial and indirect fire
-
-### Gauntlet
-
-- Melee weapon, contact range only
-- Killing an opponent with the Gauntlet earns the Humiliation award
+- [[machine-gun|Machine Gun]]: spawn weapon, 5-7 damage/shot, rapid-fire hitscan
+- [[shotgun|Shotgun]]: pellet spread, close-range burst
+- [[plasma-gun|Plasma Gun]]: rapid-fire splash bolts, plasma climbing
+- [[grenade-launcher|Grenade Launcher]]: bouncing explosive, arc trajectory, area denial
+- [[gauntlet|Gauntlet]]: melee contact only, Humiliation medal on kill
 
 ## Non-Standard Weapons
 
-BFG10K, Nailgun, Chaingun, Prox Launcher, and Heavy Machinegun are available via specific map pickups or gametype configurations. They are not part of standard competitive loadouts.
+BFG10K, Nailgun, Chaingun, Prox Launcher, and Heavy Machinegun are available via specific map pickups or gametype configurations. Not part of standard competitive loadouts.
 
-## Notes
+## Availability by Gametype
 
-Weapon availability varies by gametype and server configuration. Clan Arena spawns players with all standard weapons. In Duel and FFA, weapons are acquired from map pickups.
+Weapon availability varies by gametype and server configuration. Clan Arena spawns players with all standard weapons and full ammo. In Duel and FFA, weapons are acquired from map pickups. Weapon respawn time is 5 seconds for all standard weapons.
 
----
+## Related
 
-**Related:** [[../movement/index|Movement]], [[../health-and-armor/index|Health and Armor]], [[clan-arena|Clan Arena]]
+- [[../movement|Movement]]: rocket jump, plasma climb applications
+- [[../health-and-armor|Health and Armor]]: item values and timers
+- [[../gametypes/clan-arena|Clan Arena]]: full loadout spawn context
