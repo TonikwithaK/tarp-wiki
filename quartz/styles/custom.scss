@@ -1,3 +1,36 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// ============================================================================
+// Mobile optimizations
+// ============================================================================
+
+@media all and ($mobile) {
+  // Header title: keep it to one short line, coexist with toolbar buttons
+  header h1 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50vw;
+  }
+
+  // Article H1 is too large at default 1.75rem on narrow screens
+  .page article > h1,
+  .center > article > h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  // Note Properties block: hide on mobile — frontmatter metadata clutter
+  .note-properties {
+    display: none;
+  }
+
+  // Date / read time meta: hide on mobile to reduce clutter above the fold
+  .content-meta {
+    display: none;
+  }
+}
