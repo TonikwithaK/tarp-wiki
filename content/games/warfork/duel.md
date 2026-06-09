@@ -1,5 +1,5 @@
 ---
-title: "Duel — Warfork"
+title: "Duel"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Duel — Warfork
+# Duel
 
 Duel is 1v1. First player to the frag limit wins, or whoever has more frags when the time limit expires. There are no teammates to carry you, no spawn advantage over a group, no lucky team wipe to swing momentum. Every outcome is directly yours.
 

@@ -1,5 +1,5 @@
 ---
-title: "Electrobolt — Warfork"
+title: "Electrobolt"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Electrobolt — Warfork
+# Electrobolt
 
 The Electrobolt is the rail equivalent in Warfork — a single-shot, long-range hitscan weapon with the highest per-shot damage of any standard weapon and the longest cooldown in the game. It is the third pillar of the RL/LG/EB competitive triad, covering the range where rockets miss and the Lasergun struggles to track.
 

@@ -1,5 +1,5 @@
 ---
-title: "Powerups — Warfork"
+title: "Powerups"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Powerups — Warfork
+# Powerups
 
 Powerups are temporary enhancements that spawn at fixed locations on fixed timers. They are the highest-value pickups on any map that has them — and like health and armor, controlling them is as much about denial as it is about personal benefit.
 

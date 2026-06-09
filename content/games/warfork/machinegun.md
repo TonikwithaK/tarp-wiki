@@ -1,5 +1,5 @@
 ---
-title: "Machinegun — Warfork"
+title: "Machinegun"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Machinegun — Warfork
+# Machinegun
 
 The Machinegun (MG) fires hitscan rounds at 100ms intervals, dealing 10 damage per shot. It has no splash, no self-damage, and generates 10 knockback per shot. Spread increases at longer ranges.
 

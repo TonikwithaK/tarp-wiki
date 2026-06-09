@@ -1,5 +1,5 @@
 ---
-title: "Headhunt — Warfork"
+title: "Headhunt"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Headhunt — Warfork
+# Headhunt
 
 Headhunt is a free-for-all mode built around a shifting target. One player is designated as the head. All other players hunt them. The head scores points for surviving. When the head is killed, the player who landed the kill becomes the new head — and the hunt resumes with a new target.
 

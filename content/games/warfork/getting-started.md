@@ -1,5 +1,5 @@
 ---
-title: "Getting Started — Warfork"
+title: "Getting Started"
 game: warfork
 layer: canon
 type: guide
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Getting Started — Warfork
+# Getting Started
 
 Warfork is a free arena FPS forked from Warsow, built around fast movement mechanics and precision gunplay. This page covers installation, basic setup, and where to find things once you're in.
 

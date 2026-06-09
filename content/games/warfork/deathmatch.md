@@ -1,5 +1,5 @@
 ---
-title: "Deathmatch — Warfork"
+title: "Deathmatch"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Deathmatch — Warfork
+# Deathmatch
 
 Deathmatch is free-for-all. Every player on the server is your opponent. The winner is whoever reaches the frag limit first, or whoever holds the highest frag count when the time limit expires. No teams, no objectives, no coordination tax — just you, the map, and everyone else trying to kill you.
 

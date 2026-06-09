@@ -1,5 +1,5 @@
 ---
-title: "Rocket Launcher — Warfork"
+title: "Rocket Launcher"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Rocket Launcher — Warfork
+# Rocket Launcher
 
 The Rocket Launcher (RL) fires a straight-line projectile that detonates on contact with a surface or player, dealing 80 direct damage with a 125-unit splash radius. It carries full self-damage (1.0 ratio), 100 knockback, and fires every 950ms. It is one of the three primary competitive weapons alongside the [[lasergun]] and [[electrobolt]].
 

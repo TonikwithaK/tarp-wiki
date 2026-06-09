@@ -1,5 +1,5 @@
 ---
-title: "Clan Arena — Warfork"
+title: "Clan Arena"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Clan Arena — Warfork
+# Clan Arena
 
 Clan Arena (CA) is Warfork's team elimination mode. The last team with at least one player alive wins the round. A match runs for a set number of rounds — typically best of 11 or a fixed count depending on server settings — and the team that wins the most rounds takes the match.
 

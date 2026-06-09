@@ -1,5 +1,5 @@
 ---
-title: "Health and Armor — Warfork"
+title: "Health and Armor"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Health and Armor — Warfork
+# Health and Armor
 
 Health and armor form the resource layer of Warfork's combat. Understanding their values, interactions, and timers separates players who survive fights from players who control matches.
 

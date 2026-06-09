@@ -1,5 +1,5 @@
 ---
-title: "Instagib — Warfork"
+title: "Instagib"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Instagib — Warfork
+# Instagib
 
 Instagib is a modifier, not a standalone game mode. It can be layered onto most gametypes — Instagib FFA, Instagib CTF, and others. What it does is replace every player's loadout with a single weapon: the Instagun.
 

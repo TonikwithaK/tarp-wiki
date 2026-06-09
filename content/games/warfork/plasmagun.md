@@ -1,5 +1,5 @@
 ---
-title: "Plasmagun — Warfork"
+title: "Plasmagun"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Plasmagun — Warfork
+# Plasmagun
 
 The Plasmagun (PG) fires rapid projectiles at 100ms intervals, dealing 15 damage per shot with a 45-unit splash radius. It carries 0.5 self-damage and generates 20 knockback per shot. It is the fastest-firing weapon in the standard kit.
 

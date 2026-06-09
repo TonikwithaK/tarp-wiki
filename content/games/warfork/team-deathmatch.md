@@ -1,5 +1,5 @@
 ---
-title: "Team Deathmatch — Warfork"
+title: "Team Deathmatch"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Team Deathmatch — Warfork
+# Team Deathmatch
 
 Team Deathmatch (TDM) is a team-based frag race. Players are divided into two teams. Every kill any player lands scores for their team. The team with the highest combined frag count when the time limit expires, or the first to hit the frag limit, wins.
 

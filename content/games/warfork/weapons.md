@@ -1,5 +1,5 @@
 ---
-title: "Weapons — Warfork"
+title: "Weapons"
 game: warfork
 layer: canon
 type: reference
@@ -9,7 +9,7 @@ source: source/gameshared/gs_weapondefs.c
 promoted: 2026-06-09
 ---
 
-# Weapons — Warfork
+# Weapons
 
 All stats sourced directly from `gs_weapondefs.c` in the official game source. Primary values reflect the **strong fire mode** (default fire), which is what most players use. Weak fire mode differences are noted per weapon.
 

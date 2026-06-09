@@ -1,5 +1,5 @@
 ---
-title: "Console — Warfork"
+title: "Console"
 game: warfork
 layer: canon
 type: reference
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Console — Warfork
+# Console
 
 The console is the primary interface for configuring Warfork beyond what the menus expose. Most serious players use it regularly — for testing settings, enabling HUD elements, and scripting behaviors that aren't bindable through the UI.
 

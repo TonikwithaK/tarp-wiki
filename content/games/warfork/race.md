@@ -1,5 +1,5 @@
 ---
-title: "Race — Warfork"
+title: "Race"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Race — Warfork
+# Race
 
 Race is a movement-focused game mode with no combat. Players cannot deal damage to each other. The objective is to complete a course in the fastest possible time.
 

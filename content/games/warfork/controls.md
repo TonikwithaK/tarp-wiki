@@ -1,5 +1,5 @@
 ---
-title: "Controls — Warfork"
+title: "Controls"
 game: warfork
 layer: canon
 type: reference
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Controls — Warfork
+# Controls
 
 Default keyboard and mouse bindings from `default_binds_kbmouse.cfg`.
 

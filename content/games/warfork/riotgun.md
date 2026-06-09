@@ -1,5 +1,5 @@
 ---
-title: "Riotgun — Warfork"
+title: "Riotgun"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Riotgun — Warfork
+# Riotgun
 
 The Riotgun is a close-range burst weapon that fires 20 hitscan pellets in a conical spread. At point blank, it deals up to 100 damage in a single shot — the highest single-shot burst in standard gameplay. Its effective range is short, its cooldown is punishing, and its threat drops off fast with distance. Used correctly, it opens fights and closes them at close range. Used carelessly, it hands your opponent a free engagement.
 

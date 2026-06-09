@@ -1,5 +1,5 @@
 ---
-title: "Capture the Flag — Warfork"
+title: "Capture the Flag"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Capture the Flag — Warfork
+# Capture the Flag
 
 Capture the Flag is a team-based game mode in which two teams compete to steal the enemy flag from their base and return it to their own. It is one of the more tactically layered modes in Warfork, combining individual combat skill with team coordination, map knowledge, and movement routing.
 

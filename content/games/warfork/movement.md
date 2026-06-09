@@ -1,5 +1,5 @@
 ---
-title: "Movement — Warfork"
+title: "Movement"
 game: warfork
 layer: canon
 type: mechanic
@@ -20,7 +20,7 @@ promoted: 2026-06-09
 canon_attempts: 1
 ---
 
-# Movement — Warfork
+# Movement
 
 All values sourced directly from `gs_pmove.c`.
 

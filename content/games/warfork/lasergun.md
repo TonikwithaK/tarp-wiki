@@ -1,5 +1,5 @@
 ---
-title: "Lasergun — Warfork"
+title: "Lasergun"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Lasergun — Warfork
+# Lasergun
 
 The Lasergun is the shaft equivalent in Warfork — the primary tracking weapon and the mid-range pillar of the competitive weapon triad alongside the Rocket Launcher and Electrobolt. Mastering it requires sustained aim, ammo discipline, and knowing when to switch off.
 

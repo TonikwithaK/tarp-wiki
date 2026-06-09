@@ -1,5 +1,5 @@
 ---
-title: "Gametypes — Warfork"
+title: "Gametypes"
 game: warfork
 layer: canon
 type: reference
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Gametypes — Warfork
+# Gametypes
 
 Warfork ships with 13 default gametypes covering competitive 1v1, team play, objective modes, and movement-focused formats. Custom gametypes can be written in AngelScript, which gives server operators and community developers the ability to extend or entirely replace the default ruleset.
 

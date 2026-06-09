@@ -1,5 +1,5 @@
 ---
-title: "Bomb and Defuse — Warfork"
+title: "Bomb and Defuse"
 game: warfork
 layer: canon
 type: mechanic
@@ -8,7 +8,7 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Bomb and Defuse — Warfork
+# Bomb and Defuse
 
 Bomb and Defuse is an objective-based team mode. One team (attackers) must plant a bomb at a designated site and protect it until it detonates. The other team (defenders) must prevent the plant or defuse the bomb before it goes off. Eliminating the entire opposing team also wins the round.
 
