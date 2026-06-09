@@ -5,7 +5,6 @@ layer: canon
 type: mechanic
 tags: [warfork, instagun, weapons, instagib]
 status: canon
-source: source/gameshared/gs_weapondefs.c
 promoted: 2026-06-09
 ---
 

@@ -5,7 +5,6 @@ layer: canon
 type: reference
 tags: [warfork, modding, angelscript, api, scripting]
 status: canon
-source: source/gameshared/gs_pmove.c, assets/data0_21pure/progs/gametypes/
 promoted: 2026-06-09
 ---
 

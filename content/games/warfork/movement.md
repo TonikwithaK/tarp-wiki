@@ -15,14 +15,13 @@ tags:
 confidence: high
 sources:
 - file: raw_sources/warfork/Mechanics/Movement.md
-- file: source/gameshared/gs_pmove.c
 promoted: 2026-06-09
 canon_attempts: 1
 ---
 
 # Movement
 
-All values sourced directly from `gs_pmove.c`.
+Values verified against the [game source](https://github.com/TeamForbiddenLLC/warfork-qfusion/blob/master/source/gameshared/gs_pmove.c).
 
 ## Speed Constants
 

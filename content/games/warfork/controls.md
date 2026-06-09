@@ -10,7 +10,7 @@ promoted: 2026-06-09
 
 # Controls
 
-Default keyboard and mouse bindings from `default_binds_kbmouse.cfg`.
+Default keyboard and mouse bindings from the [game source](https://github.com/TeamForbiddenLLC/warfork-qfusion/blob/master/assets/default_binds_kbmouse.cfg).
 
 ## Movement
 

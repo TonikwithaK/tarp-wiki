@@ -12,8 +12,8 @@ Warfork is built on QFusion, a Quake engine fork. Most gameplay logic is exposed
 
 Source repository: [TeamForbiddenLLC/warfork-qfusion](https://github.com/TeamForbiddenLLC/warfork-qfusion)
 
-Gametypes: `assets/data0_21pure/progs/gametypes/`
-HUDs: `assets/data0_21/huds/`
+Gametypes: [assets/data0_21pure/progs/gametypes/](https://github.com/TeamForbiddenLLC/warfork-qfusion/tree/master/assets/data0_21pure/progs/gametypes)
+HUDs: [assets/data0_21/huds/](https://github.com/TeamForbiddenLLC/warfork-qfusion/tree/master/assets/data0_21/huds)
 
 ## Sections
 

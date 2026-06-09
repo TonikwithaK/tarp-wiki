@@ -11,7 +11,7 @@ promoted: 2026-06-09
 Warfork uses a Q3-derived shader system. Shader scripts define visual properties for surfaces, models, and particle effects. Stock shaders live in:
 
 ```
-assets/data0_21pure/scripts/*.shader
+Shader scripts live in [assets/data0_21pure/scripts/](https://github.com/TeamForbiddenLLC/warfork-qfusion/tree/master/assets/data0_21pure/scripts)
 ```
 
 ## Shader Script Format

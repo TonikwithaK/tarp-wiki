@@ -11,7 +11,7 @@ promoted: 2026-06-09
 Warfork gametypes are written in AngelScript. They live in:
 
 ```
-assets/data0_21pure/progs/gametypes/
+[assets/data0_21pure/progs/gametypes/](https://github.com/TeamForbiddenLLC/warfork-qfusion/tree/master/assets/data0_21pure/progs/gametypes)
 ```
 
 ## File Structure

@@ -11,7 +11,7 @@ promoted: 2026-06-09
 Warfork HUDs are plain-text scripts using a draw command language. They live in:
 
 ```
-assets/data0_21/huds/
+HUD scripts live in [assets/data0_21/huds/](https://github.com/TeamForbiddenLLC/warfork-qfusion/tree/master/assets/data0_21/huds)
 ```
 
 ## Default HUDs
