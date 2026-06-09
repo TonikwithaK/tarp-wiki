@@ -10,7 +10,7 @@ promoted: 2026-06-09
 
 # Rocket Launcher
 
-The Rocket Launcher (RL) fires a straight-line projectile that detonates on contact with a surface or player, dealing 80 direct damage with a 125-unit splash radius. It carries full self-damage (1.0 ratio), 100 knockback, and fires every 950ms. It is one of the three primary competitive weapons alongside the [[lasergun]] and [[electrobolt]].
+The Rocket Launcher (RL) fires a straight-line projectile that detonates on contact with a surface or player, dealing 80 direct damage with a 125-unit splash radius. It carries full self-damage (1.0 ratio), 100 knockback, and fires every 950ms. It is one of the three primary competitive weapons.
 
 ## Mechanics
 
@@ -22,18 +22,18 @@ Because the rocket travels at finite speed, it requires leading moving targets. 
 
 The RL is the most versatile weapon in the kit. It handles:
 
-- **Close range burst**: a direct hit plus splash at close range can land 80+ damage in a single shot
-- **Splash pressure**: firing at the floor or walls near an opponent forces movement and chips health without requiring a direct hit
-- **Rocket jumps**: using self-damage and knockback to gain height or speed (see [[movement]])
-- **Follow-up after knockback**: knocking an opponent airborne with a first rocket and following with a second before they land is a core damage pattern
+- **Close range burst**: direct hit plus splash at close range
+- **Splash pressure**: firing at the floor or walls near an opponent
+- **Rocket jumps**: self-damage and knockback enable height and speed gains
+- **Follow-up after knockback**: landing a second rocket while an opponent is airborne from the first
 
 ## Self-Damage
 
-The 1.0 self-damage ratio means you take the same damage you deal. At close range, a rocket that connects for 80 direct damage also deals splash to you if you're inside the radius. Learning when to fire at the floor versus the player involves understanding this tradeoff: splash damage on yourself is often acceptable if it lands more total damage on the opponent.
+Self-damage ratio is 1.0. Splash at close range damages the shooter. Firing at the floor near an opponent damages both the opponent and the shooter.
 
 ## Counters
 
-Distance. Beyond medium range, a rocket is slow enough that strafing and air control make it unreliable. Against an opponent using the RL effectively at close range, the goal is to either stay at a range where their rockets are predictable or use faster weapons (LG, Riotgun) to trade damage more efficiently.
+Beyond medium range, projectile speed makes rockets avoidable via strafing and air control. Faster hitscan weapons (LG, Riotgun) trade damage more efficiently at close range.
 
 ## Related
 

@@ -22,13 +22,13 @@ The 0.5 self-damage ratio (half of full) means the Plasmagun deals partial damag
 
 The Plasmagun serves two distinct roles:
 
-**Sustained damage at range.** The rapid fire rate means it builds damage quickly on a stationary or predictable target. 15 damage × 10 shots per second = 150 DPS theoretical max: comparable to the Lasergun but with travel time and splash, making it more forgiving at the cost of requiring lead.
+**Sustained damage at range.** 15 damage x 10 shots per second = 150 DPS theoretical max. Travel time and splash make it more forgiving than hitscan at the cost of requiring lead.
 
-**Plasmaclimbing.** Firing plasma bolts at a surface beneath or beside you generates knockback that can propel the player upward or laterally. This movement technique (plasmaclimbing) is used in Race mode and in general play for accessing elevated positions without needing a dedicated jump. See [[movement]] for the technique.
+**Plasmaclimbing.** Firing plasma bolts at a surface beneath or beside you generates knockback that can propel the player upward or laterally. This movement technique (plasmaclimbing) is used in Race mode and in general play for accessing elevated positions without needing a dedicated jump.
 
 ## Weaknesses
 
-At close range, the plasma bolt travel time makes it noticeably less efficient than the Lasergun or Riotgun. An opponent who closes distance and moves erratically will dodge a significant portion of shots. The PG is most effective when the target has limited room to move or you have a clear angle at mid range.
+Travel time makes the Plasmagun less efficient than the Lasergun or Riotgun at close range against erratic movement.
 
 ## Related
 

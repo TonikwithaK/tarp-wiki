@@ -20,19 +20,17 @@ Fires a slow projectile (3000 speed) with a 70-unit splash radius. 35 damage, 90
 **Weak (melee): Mouse2**
 A close-range slash. 50 damage, 50 knockback, zero self-damage, zero ammo cost. Infinite use. The melee range is fixed at 64 units.
 
-The melee is strictly better damage than the projectile at close range, costs nothing, and reloads at the same rate. Most players default to melee when using the Gunblade at all.
+The melee is strictly better damage than the projectile at close range, costs nothing, and reloads at the same rate.
 
 ## Role
 
-The Gunblade is not a competitive combat weapon. Its real value is in **weapon jumping**: the projectile's knockback (90) and full self-damage let you use it for movement boosts in a pinch, similar to a rocket jump but weaker and with limited ammo.
-
-At close range where you've exhausted other options, the melee is a real 50-damage hit. That's meaningful for finishing an opponent below that threshold when you're out of rockets or LG ammo.
+The projectile's knockback (90) and full self-damage (1.0 ratio) enable weapon jumps. Melee (50 dmg) out-damages the projectile (35 dmg) at close range.
 
 ## Notes
 
-- The projectile ammo (1 round max) does not drop from players or spawn on maps in standard modes: you have what you spawn with
-- Melee has a fixed range of 64 units: you need to be very close
-- The weapon slot is 1: direct keybind is `1`
+- The projectile ammo (1 round max) does not drop from players or spawn on maps in standard modes
+- Melee range is fixed at 64 units
+- Weapon slot 1: direct keybind is `1`
 
 ## Related
 

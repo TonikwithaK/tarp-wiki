@@ -43,32 +43,32 @@ Stats verified against the [game source](https://github.com/TeamForbiddenLLC/war
 
 ## Weapon Descriptions
 
-**Gunblade:** Starting weapon in most modes. Two fire modes: the projectile (35 dmg, full self-damage) is mostly used for weapon jumping; the free melee (50 dmg) is the better damage option at point-blank and costs no ammo. Most players ignore it as a serious combat weapon but the melee is a real option at close range.
+**Gunblade:** Starting weapon in most modes. Two fire modes: projectile (35 dmg, 1.0 self-damage, 90 knockback, 600ms reload, 1 ammo max) and free melee (50 dmg, 64-unit range, no ammo cost). Projectile enables weapon jumps. Melee out-damages the projectile at close range.
 
-**Machinegun:** Hitscan, high fire rate, low damage per shot. Spread of 10 in both directions. 100 ammo capacity. Best use is finishing opponents below 30–40 HP rather than opening fights. Can maintain accuracy while moving. Falls off noticeably at range due to spread.
+**Machinegun:** Hitscan, 10 dmg per shot, 100ms reload, 100 ammo max. Spread of 10 in both directions. No self-damage. Stun 50ms per shot. Damage falls off in practice at range due to spread.
 
-**Riotgun:** 20 pellets in a cone, up to 100 total damage at point blank. Significant stun (85ms per pellet that connects). 900ms cooldown makes every shot count: missing at close range is a major opening. NOT a spray weapon. Circle-strafing and jumping over the shooter are effective counters to the slow fire rate and conical spread.
+**Riotgun:** 20 pellets per shot, 5 dmg each, up to 100 total damage at point blank. 900ms cooldown. 85ms stun per pellet. Hitscan. No self-damage. Weak mode: 25 pellets at 4 dmg each (same 100 total, different spread profile).
 
-**Grenade Launcher:** Bouncing explosive, 1250ms fuse timer. Projectile speed 1000. Full self-damage. The fuse means it doesn't detonate on contact with surfaces: only on players or when the timer expires. Useful for indirect angles, vertical coverage, and area denial. Grenade jumps are possible via self-damage + knockback. Weak mode has a slightly larger splash radius (135 vs 125).
+**Grenade Launcher:** Bouncing explosive, 80 dmg, 125-unit splash radius, 800ms reload, projectile speed 1000. 1250ms fuse timer: detonates on players or when timer expires, not on surface contact. Full self-damage (1.0). Grenade jumps possible via self-damage and knockback. Weak mode splash radius 135.
 
-**Rocket Launcher:** Primary close-to-mid weapon. Projectile speed 1150 (faster than the GL). Detonates on contact. 950ms reload. Full self-damage: the splash radius means firing near your feet at close range damages you. Rocket jumps are possible. One of the three primary competitive weapons (RL/LG/EB). Weak mode has slightly larger splash (135 vs 125).
+**Rocket Launcher:** 80 dmg, 125-unit splash radius, 950ms reload, projectile speed 1150. Detonates on contact. Full self-damage (1.0). 100 knockback. Rocket jumps possible. One of the three primary competitive weapons (RL/LG/EB). Weak mode splash radius 135.
 
-**Plasmagun:** Rapid fire (100ms cooldown), projectile speed 2500. 0.5 self-damage ratio. 150 ammo capacity. Moderate damage per shot but builds quickly at close-to-mid range. The plasmaclimbing mechanic: firing at surfaces for knockback-based movement: is a core traversal technique. See [[movement]].
+**Plasmagun:** 15 dmg per shot, 100ms reload, projectile speed 2500, 150 ammo max, 45-unit splash radius, 0.5 self-damage. 15 dmg x 10 shots/sec = 150 DPS theoretical max. Plasmaclimbing: firing at surfaces generates knockback for movement.
 
-**Lasergun:** Continuous beam, hitscan, fires every 50ms (20 ticks/sec). The only weapon with `smooth_refire`: it fires as an uninterrupted beam rather than discrete shots. 7 damage per tick × 20 ticks = 140 DPS theoretical max. 14 knockback per tick pushes the target continuously. 300ms stun per tick. No splash, no self-damage. High ammo consumption (150 max, drains fast). The primary tracking weapon: requires keeping the beam on a moving target. One of the three primary competitive weapons.
+**Lasergun:** Continuous hitscan beam, 7 dmg per tick, 50ms tick rate (20 ticks/sec = 140 DPS theoretical max). `smooth_refire=true`: fires as an uninterrupted beam. 14 knockback per tick, 300ms stun per tick. No splash, no self-damage. 150 ammo max. One of the three primary competitive weapons.
 
-**Electrobolt:** Long-range hitscan, 75 damage, 1250ms cooldown. No damage falloff: deals 75 at any range. 1000ms stun on hit: the highest stun of any single shot, significantly disrupting the target's movement. 80 knockback. Only 10 ammo max. The longest reload in the kit means a miss is a significant window for the opponent. Weak fire mode deals the same damage but only 40 knockback (half). One of the three primary competitive weapons.
+**Electrobolt:** Long-range hitscan, 75 dmg, 1250ms cooldown. No damage falloff at any range. 1000ms stun on hit. 80 knockback. 10 ammo max. Weak mode: same 75 dmg, 40 knockback. One of the three primary competitive weapons.
 
-**Instagun:** Instagib mode only. 200 damage (one-shot kill), 1300ms cooldown, instant travel. Has a small 80-unit splash radius with 0.1 self-damage ratio: not a pure hitscan like the EB, but functionally similar at practical distances. Ammo limited to 5 (strong mode) / 15 (weak mode). See [[instagib]].
+**Instagun:** Instagib mode only. 200 dmg (one-shot kill at full health), 1300ms cooldown, instant travel. 80-unit splash radius, 0.1 self-damage ratio. Ammo: 5 strong / 15 weak.
 
 ---
 
 ## Primary Competitive Triad
 
-**Rocket Launcher (close-mid) · Lasergun (mid) · Electrobolt (long).** Most high-level play centers around these three. The other weapons fill specific roles: Riotgun for close ambushes, Plasmagun for movement and sustained pressure, Machinegun for cleanup: but the RL/LG/EB combination defines the competitive meta.
+**Rocket Launcher (close-mid) · Lasergun (mid) · Electrobolt (long).** Most high-level play centers around these three.
 
 ---
 
-## See Also
+## Related
 
 Link to individual weapon pages for deeper coverage: [[rocket-launcher]], [[lasergun]], [[electrobolt]], [[plasmagun]], [[riotgun]], [[grenade-launcher]], [[machinegun]]

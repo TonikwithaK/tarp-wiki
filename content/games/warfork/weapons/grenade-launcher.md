@@ -14,22 +14,17 @@ The Grenade Launcher (GL) fires a bouncing explosive projectile with a delayed f
 
 ## Mechanics
 
-The grenade travels in an arc and bounces off surfaces before detonating on a timer. It does not detonate on contact unless it hits a player directly. This makes it a fundamentally different weapon from the Rocket Launcher: rather than a straight-line projectile that detonates on impact, the GL requires anticipating where the grenade will end up after bouncing.
-
-The bounce mechanic opens up indirect fire angles: shooting through doorways, around corners, into rooms without entering them, and up ledges at opponents who believe they have cover. A grenade that lands at someone's feet without them noticing it is often more dangerous than a direct rocket.
+The grenade travels in an arc and bounces off surfaces before detonating on a timer. It does not detonate on contact unless it hits a player directly. The bounce mechanic enables indirect fire angles: through doorways, around corners, into rooms without entering them, and up ledges.
 
 ## Role in Play
 
-The GL occupies a niche between the Rocket Launcher and pure area denial. It is not a primary damage tool in most exchanges: the travel time and bounce arc make it unreliable for direct dueling at close range. Its strengths are:
+The GL is not a primary damage tool in most direct exchanges. Its travel time and bounce arc make it unreliable for close-range dueling.
 
-- **Vertical coverage**: lobbing grenades onto elevated platforms where a rocket would miss or the angle is awkward
-- **Cover denial**: bouncing grenades behind objects and into blind spots
-- **Zone control**: placing grenades on high-traffic chokepoints to force opponents to route around or time their movement
-- **Grenade jumps**: using self-damage and knockback for movement (see [[movement]])
+The GL covers vertical angles by lobbing grenades onto elevated platforms. It places grenades behind objects and into blind spots. It controls high-traffic chokepoints by placing grenades that force opponents to route around or time their movement. Self-damage and knockback also enable grenade jumps for movement purposes.
 
 ## Counters
 
-The GL's delayed fuse and bounce trajectory mean a moving opponent is difficult to hit reliably. Maintaining unpredictable movement and not sitting still in contested areas reduces the grenade's effectiveness significantly. At close range, the RL or Riotgun will out-damage it before the fuse expires.
+The delayed fuse and bounce trajectory make moving targets hard to hit reliably. At close range, the Rocket Launcher and Riotgun out-damage the GL before the fuse expires.
 
 ## Related
 

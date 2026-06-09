@@ -14,21 +14,13 @@ The Machinegun (MG) fires hitscan rounds at 100ms intervals, dealing 10 damage p
 
 ## Mechanics
 
-Each shot is hitscan: instant travel, no lead required. At close to medium range, the MG maintains reasonable accuracy. At longer range, spread becomes pronounced and the damage output drops significantly.
+Each shot is hitscan: instant travel, no lead required. At close to medium range, the MG maintains reasonable accuracy. At longer range, spread becomes pronounced and damage output drops.
 
-The 10 damage per shot means it takes 10 hits to deal 100 damage: in raw numbers, the MG has comparable DPS to the Plasmagun (~100 DPS) but without splash and without the positioning requirements of a beam weapon. It is a consistent, low-commitment damage source.
+At 10 damage per shot and a 100ms cooldown, sustained DPS is approximately 100. Maximum ammo capacity is 100.
 
-## Role in Play
+The MG functions as a finishing weapon. Its low per-shot damage makes it slow to close out a fight against a healthy opponent with armor. Breaking line of sight negates it. At long range, spread makes it unreliable. Against an opponent below 30-40 HP with minimal armor, the MG's rapid fire can deal 100+ damage within 1250ms, within the same window as a single Electrobolt cooldown.
 
-The MG is not a primary dueling weapon. Against a healthy opponent with armor, its low per-shot damage means it takes too long to close out a fight compared to the RL, LG, or EB.
-
-Its value is in **finishing**. When an opponent is below 30-40 HP with minimal armor, the MG's accurate rapid fire is often more reliable than switching to a slower weapon with a longer cooldown. A single EB shot might deal 75 but has a 1250ms reload: the MG can deal 100+ damage in the same time window with no cooldown risk.
-
-It is also useful as an opener to chip armor before committing a more powerful weapon, particularly at ranges where rockets or plasma would be inefficient.
-
-## Weaknesses
-
-Low damage ceiling. Against any opponent with meaningful armor, the MG will run out of ammo before winning the exchange if used as the primary weapon. Breaking line of sight completely negates it. At long range, the spread makes it unreliable.
+It is also used as an opener to chip armor before committing a higher-damage weapon, at ranges where rockets or plasma would be inefficient.
 
 ## Related
 

@@ -26,15 +26,15 @@ The 1300ms cooldown is the longest of any weapon in the game: 50ms longer than t
 
 ## Role
 
-In Instagib, everything reduces to: hit your shot, don't get hit. There is no health management, no item timing, no weapon switching. Movement becomes the only defense: constant strafing and air control to avoid being a predictable target.
+In Instagib mode, all players start with the Instagun and no other weapons. 200 damage kills any player at full health in one shot. There is no armor, no health pickups, and no weapon switching. Movement is the only means of avoiding damage.
 
-The Instashield and Instajump modifiers (when enabled by the server) add a layer on top of this:
-- **Instashield**: brief invulnerability, used to push aggressively or absorb a shot
-- **Instajump**: enhanced jump height and speed for more dynamic aerial movement
+The Instashield and Instajump modifiers (when enabled by the server) add mechanics on top of the base mode:
+- **Instashield**: brief invulnerability
+- **Instajump**: enhanced jump height and speed
 
 ## Comparison to Electrobolt
 
-The Instagun and Electrobolt share the same aim requirement: hitscan, single shot, punishing cooldown: but differ in key ways:
+The Instagun and Electrobolt share the same aim requirement: hitscan, single shot, punishing cooldown. They differ in key ways:
 
 | | Instagun | Electrobolt |
 |---|---|---|
