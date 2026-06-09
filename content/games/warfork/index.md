@@ -24,13 +24,15 @@ Content here is specific to Warfork. Nothing applies to Quake Live or Reflex Are
 ## Weapons
 
 - [[weapons/index|Weapons]] — full stats table and overview
-- [[weapons/rocket-launcher|Rocket Launcher]] — the primary close-mid weapon
-- [[weapons/lasergun|Lasergun]] — continuous beam tracking weapon
-- [[weapons/electrobolt|Electrobolt]] — long-range precision hitscan
-- [[weapons/plasmagun|Plasmagun]] — rapid-fire projectile, plasma climb
+- [[weapons/gunblade|Gunblade]] — starting weapon, melee and projectile
+- [[weapons/machinegun|Machinegun]] — hitscan rapid-fire, finishing weapon
 - [[weapons/riotgun|Riotgun]] — close-range burst shotgun
 - [[weapons/grenade-launcher|Grenade Launcher]] — bouncing explosive, indirect fire
-- [[weapons/machinegun|Machinegun]] — hitscan rapid-fire, finishing weapon
+- [[weapons/rocket-launcher|Rocket Launcher]] — the primary close-mid weapon
+- [[weapons/plasmagun|Plasmagun]] — rapid-fire projectile, plasma climb
+- [[weapons/lasergun|Lasergun]] — continuous beam tracking weapon
+- [[weapons/electrobolt|Electrobolt]] — long-range precision hitscan
+- [[weapons/instagun|Instagun]] — Instagib mode only
 
 ## Mechanics
 
