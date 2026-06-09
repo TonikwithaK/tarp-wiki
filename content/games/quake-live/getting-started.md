@@ -58,6 +58,23 @@ All other weapons, health, and armor must be picked up from the map. There is no
 
 ---
 
+## Item Priority
+
+The two most important items on any standard map:
+
+- **Mega Health**: +100 HP, cap 200. Respawns 35 seconds after pickup. Health above 100 decays at 1/sec.
+- **Red Armor**: +100 armor, cap 200. Respawns 25 seconds after pickup. Armor above 100 decays at 1/sec.
+
+Controlling both consistently is the primary winning strategy in Duel. A player at 200/200 forces their opponent to fight at a significant disadvantage. Note the pickup time, add the respawn interval, and return before the opponent can.
+
+---
+
+## Movement Priority
+
+Strafe jumping moves approximately twice as fast as normal running. It is not an advanced technique — it is the baseline movement speed that competitive play is built around. Learn it before focusing on aim.
+
+---
+
 ## Related
 
 - [Movement](movement)
