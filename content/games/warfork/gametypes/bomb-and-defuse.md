@@ -10,37 +10,41 @@ promoted: 2026-06-09
 
 # Bomb and Defuse
 
-Bomb and Defuse is an objective-based team mode. One team (attackers) must plant a bomb at a designated site and protect it until it detonates. The other team (defenders) must prevent the plant or defuse the bomb before it goes off. Eliminating the entire opposing team also wins the round.
+Bomb and Defuse is a round-based team mode. One team (attackers) plants a bomb at a designated site and defends it until detonation. The other team (defenders) prevents the plant or defuses the bomb before it detonates.
 
-## Structure
+## Rules
 
-Matches are played in rounds. Teams switch roles after a set number of rounds. A round ends when:
+A round ends when one of the following occurs:
 
-- The bomb detonates (attacker win)
-- The bomb is defused (defender win)
-- All attackers are eliminated before planting
-- All defenders are eliminated and the bomb detonates
+- The bomb detonates: attacker win
+- The bomb is defused: defender win
+- All attackers are eliminated before planting: defender win
+- All defenders are eliminated and the bomb detonates: attacker win
 
-## Roles
+Teams swap sides after a set number of rounds. Players choose their starting weapons at the beginning of each round.
 
-**Attackers** control the bomb carrier. The carrier must reach one of the bombsite locations on the map and plant. Once planted, the timer starts: the attackers just need to survive until detonation or eliminate all defenders.
+## Numbers
 
-**Defenders** split between protecting bombsites and contesting the attackers' approach. If the bomb is planted, a defender must reach it and defuse before time runs out.
-
-## Weapon Selection
-
-Players choose their starting weapons at the beginning of each round. Warfork's Bomb and Defuse mode supports various weapon loadout options including Instagib variants. The weapon selection shapes the round's combat dynamic significantly: a round where both teams run railgun-equivalent weapons plays very differently from one with standard loadouts.
-
-## Strategic Considerations
-
-- **Bomb site control** is the defining strategic element. Attackers force defenders to split attention across multiple potential plant locations.
-- **Post-plant positioning** matters as much as the plant itself: attackers need to hold angles that prevent a defuse, not just survive.
-- **Economy (if enabled)** shapes which weapons are available round-to-round, adding a meta-game layer on top of individual round tactics.
-- Warfork movement tech is directly applicable: strafing routes and walljump angles let attackers cross exposed spaces faster and defenders rotate more quickly.
+| Parameter | Value |
+|---|---|
+| Score limit | 15 rounds |
+| Match time limit | none |
+| Round time | 60 seconds |
+| Arm time | 4 seconds |
+| Defuse time | 7 seconds |
+| Warmup time limit | 1.5 minutes |
+| Armor respawn | 25s |
+| Health respawn | 25s |
+| Mega Health respawn | 20s |
+| Ultra Health respawn | 60s |
+| Weapon respawn | 15s |
+| Ammo respawn | 20s |
+| Powerup respawn | 90s |
+| Team-based | yes |
 
 ## Related
 
-- [[capture-the-flag]]: the other main objective team mode
-- [[clan-arena]]: team elimination without objectives
-- [[movement]]: routing and approach speed
-- [[gametypes]]
+- [[movement]]
+- [[weapons/index]]
+- [[clan-arena]]
+- [[gametypes/index]]
