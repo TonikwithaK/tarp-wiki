@@ -1,6 +1,6 @@
 ---
 title: The Arena Revival Project
-description: A living knowledge base for Arena FPS: Warfork, Quake Live, and Reflex Arena.
+description: "A living knowledge base for Arena FPS: Warfork, Quake Live, and Reflex Arena."
 ---
 
 # The Arena Revival Project
