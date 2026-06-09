@@ -1,0 +1,103 @@
+# TARP: The Arena Revival Project
+
+> A living knowledge base for competitive Arena FPS.
+> Covers mechanics, movement, weapons, gametypes, and modding for Warfork, Quake Live, and Reflex Arena.
+> All pages are verified against source material before publication.
+
+Site: https://tonikwithak.github.io/tarp-wiki
+
+## Overview
+
+- [The Arena Revival Project](https://tonikwithak.github.io/tarp-wiki/): A living knowledge base for Arena FPS: Warfork, Quake Live, and Reflex Arena.
+
+## Warfork
+
+- [Warfork](https://tonikwithak.github.io/tarp-wiki/games/warfork/): Mechanics, movement, weapons, maps, and competitive knowledge for Warfork.
+
+### Warfork: Weapons
+
+- [Weapons](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/)
+- [Electrobolt](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/electrobolt)
+- [Grenade Launcher](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/grenade-launcher)
+- [Gunblade](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/gunblade)
+- [Instagun](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/instagun)
+- [Lasergun](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/lasergun)
+- [Machinegun](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/machinegun)
+- [Plasmagun](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/plasmagun)
+- [Riotgun](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/riotgun)
+- [Rocket Launcher](https://tonikwithak.github.io/tarp-wiki/games/warfork/weapons/rocket-launcher)
+
+### Warfork: Gametypes
+
+- [Gametypes](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/)
+- [Bomb and Defuse](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/bomb-and-defuse)
+- [Capture the Flag](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/capture-the-flag)
+- [Clan Arena](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/clan-arena)
+- [Deathmatch](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/deathmatch)
+- [Duel](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/duel)
+- [Headhunt](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/headhunt)
+- [Instagib](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/instagib)
+- [Race](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/race)
+- [Team Deathmatch](https://tonikwithak.github.io/tarp-wiki/games/warfork/gametypes/team-deathmatch)
+
+### Warfork: Modding
+
+- [Modding](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/)
+- [Custom Gametypes](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/custom-gametypes)
+- [Custom HUDs](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/custom-huds)
+- [Custom Shaders](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/custom-shaders)
+- [Gametype Scripting Reference](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/gametype-scripting-reference)
+- [Server Hosting](https://tonikwithak.github.io/tarp-wiki/games/warfork/modding/server-hosting)
+
+### Warfork: General
+
+- [Console Commands](https://tonikwithak.github.io/tarp-wiki/games/warfork/console)
+- [Controls](https://tonikwithak.github.io/tarp-wiki/games/warfork/controls)
+- [Getting Started](https://tonikwithak.github.io/tarp-wiki/games/warfork/getting-started)
+- [Health and Armor](https://tonikwithak.github.io/tarp-wiki/games/warfork/health-and-armor)
+- [Movement](https://tonikwithak.github.io/tarp-wiki/games/warfork/movement)
+- [Powerups](https://tonikwithak.github.io/tarp-wiki/games/warfork/powerups)
+
+## Quake Live
+
+- [Quake Live](https://tonikwithak.github.io/tarp-wiki/games/quake-live/): Mechanics, movement, weapons, maps, and competitive knowledge for Quake Live.
+
+### Quake Live: Weapons
+
+- [Weapons](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/)
+- [Gauntlet](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/gauntlet)
+- [Grenade Launcher](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/grenade-launcher)
+- [Lightning Gun](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/lightning-gun)
+- [Machine Gun](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/machine-gun)
+- [Plasma Gun](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/plasma-gun)
+- [Railgun](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/railgun)
+- [Rocket Launcher](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/rocket-launcher)
+- [Shotgun](https://tonikwithak.github.io/tarp-wiki/games/quake-live/weapons/shotgun)
+
+### Quake Live: Gametypes
+
+- [Gametypes](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/)
+- [Clan Arena](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/clan-arena)
+- [Capture the Flag](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/ctf)
+- [Duel](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/duel)
+- [Free For All](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/ffa)
+- [Team Deathmatch](https://tonikwithak.github.io/tarp-wiki/games/quake-live/gametypes/tdm)
+
+### Quake Live: Modding
+
+- [Modding](https://tonikwithak.github.io/tarp-wiki/games/quake-live/modding/)
+- [Server Hosting](https://tonikwithak.github.io/tarp-wiki/games/quake-live/modding/server-hosting)
+
+### Quake Live: General
+
+- [Console Commands](https://tonikwithak.github.io/tarp-wiki/games/quake-live/console)
+- [Controls](https://tonikwithak.github.io/tarp-wiki/games/quake-live/controls)
+- [Getting Started](https://tonikwithak.github.io/tarp-wiki/games/quake-live/getting-started)
+- [Health and Armor](https://tonikwithak.github.io/tarp-wiki/games/quake-live/health-and-armor)
+- [Movement](https://tonikwithak.github.io/tarp-wiki/games/quake-live/movement)
+- [Powerups](https://tonikwithak.github.io/tarp-wiki/games/quake-live/powerups)
+
+## Optional
+
+- [Graph view](https://tonikwithak.github.io/tarp-wiki/): Interactive graph showing how pages connect
+- [GitHub repository](https://github.com/TonikwithaK/tarp-wiki)
