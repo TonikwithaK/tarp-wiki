@@ -52,7 +52,11 @@ Walljumping (RMB before touching a wall) lets players jump off walls. Combined w
 
 ## Strafing
 
-Strafing is the fastest way to build speed without weapons. Start with a forward dash, hold spacebar to jump continuously, and strafe A/D while moving the mouse in the same direction. The strafeHUD indicator (enable with `cg_strafeHUD 1`) shows a white bar that should track inside the triangle toward its wide side — when correct the triangles turn green and speed builds. Alternate A/D to keep accelerating.
+Strafing is the fastest way to build speed without weapons. The technique: hold **W + A** (or **W + D**) and move the mouse smoothly in the same direction as your strafe key — left for W+A, right for W+D. Jump continuously with spacebar. Alternate between W+A and W+D each jump cycle to keep accelerating.
+
+The strafeHUD indicator (enable with `cg_strafeHUD 1`) shows a white bar that should track inside the triangle toward its wide side — when the angle is correct, the triangles turn green and speed builds. The HUD only appears above 450u/s.
+
+The key mechanic is the combination: W keeps you moving forward, the strafe key curves your path, and the mouse follows that curve. Moving the mouse faster or slower than your strafe angle is what kills speed — the HUD exists to show you when they're aligned.
 
 ### Air Control
 
