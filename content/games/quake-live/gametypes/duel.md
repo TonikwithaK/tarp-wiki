@@ -25,13 +25,17 @@ Players spawn with Machine Gun and 125 HP. All other weapons and items must be p
 
 ## Respawn Timers
 
-Timers begin at the moment of pickup.
+Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
 
 | Item | Respawn Time |
 |------|-------------|
 | Armor (all types) | 25 seconds |
-| Mega Health | 35 seconds |
-| Weapons | 5 seconds |
+| Mega Health | 35 seconds (standard) |
+| Weapons (standard) | 5 seconds |
+
+### Map Variance
+
+Some maps ship with non-standard Mega Health timers set in their factory or map configuration. Vertical Vengeance is a known example: Mega Health respawns at 2 minutes instead of 35 seconds. Item timers should always be verified per map before assuming standard values apply.
 
 ## Key Items
 

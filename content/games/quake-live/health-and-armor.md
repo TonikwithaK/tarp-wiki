@@ -59,13 +59,17 @@ promoted: 2026-06-09
 
 ## Respawn Timers
 
-Timers begin when the item is picked up.
+Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
 
 | Item | Respawn Time |
 |---|---|
 | All armor types | 25 seconds |
-| Mega Health | 35 seconds |
+| Mega Health | 35 seconds (standard) |
 | Weapons (standard) | 5 seconds |
+
+### Map Variance
+
+Some maps ship with non-standard Mega Health timers. Vertical Vengeance is a known example: Mega Health respawns at 2 minutes instead of 35 seconds. Always verify item timers per map before assuming standard values apply.
 
 ---
 
