@@ -1,54 +1,49 @@
 ---
-title: "Quake Live"
+title: Quake Live
 description: "Mechanics, movement, weapons, maps, and competitive knowledge for Quake Live."
-game: quake-live
-layer: canon
-type: reference
-tags: [quake-live]
-status: canon
-promoted: 2026-06-09
+tags:
+  - quake-live
 ---
 
-Quake Live is an Arena FPS originally released as a browser plugin in 2009, then migrated to Steam in 2014. It is based on Quake 3 Arena and maintained by id Software. It is free to play on Steam.
+# Quake Live
 
-Two physics modes are available, determined by the server:
+Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin in 2009 and migrated to Steam in 2014. Free to play.
 
-- **VQ3 (Vanilla Quake 3):** Default physics. Strafe jumping is the primary speed technique. Limited air control.
-- **CPMA/PQL (Challenge Pro Mode Arena):** Heavy air control. Movement keys while airborne steer toward the look direction.
+Two physics modes, determined by the server factory:
 
-Competitive play centers on the weapon triad: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (RG).
+- VQ3 (Vanilla Quake 3): default. Strafe jumping is the primary speed technique. Limited air control.
+- CPMA/PQL (Challenge Pro Mode Arena): heavy air control. Movement keys while airborne steer toward the look direction.
 
----
+Competitive play centers on the weapon triad: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (RG/Rail).
+
+Content here is specific to Quake Live. Nothing applies to Warfork or Reflex Arena unless a dedicated cross-game page says otherwise.
 
 ## Getting Started
 
-- [Getting Started](getting-started) — Download, config files, console setup, spawn defaults
-
----
+- [[getting-started]]: download, config files, console setup, spawn defaults
 
 ## Movement
 
-- [Movement](movement) — Strafe jumping, circle jumping, rocket jumping, plasma climbing, AutoHop, VQ3 vs CPMA
-
----
+- [[movement]]: strafe jumping, circle jumping, rocket jumping, plasma climbing, AutoHop, VQ3 vs CPMA
 
 ## Weapons
 
-- [Weapons](weapons/index) — All weapons, damage values, and usage
-
----
+- [[weapons/index|Weapons]]: all weapons, item IDs, damage values
 
 ## Mechanics
 
-- [Health and Armor](health-and-armor) — Item values, caps, decay, respawn timers
-
----
+- [[health-and-armor]]: item values, caps, decay, respawn timers
 
 ## Game Modes
 
-- [Gametypes](gametypes/index) — Overview of all gametypes
-- [Duel](gametypes/duel)
-- [Clan Arena](gametypes/clan-arena)
-- [Free For All](gametypes/ffa)
-- [Capture the Flag](gametypes/ctf)
-- [Team Deathmatch](gametypes/tdm)
+- [[gametypes/index|Gametypes]]: overview of all modes
+- [[gametypes/duel|Duel]]: 1v1, item control, 10 minute default
+- [[gametypes/clan-arena|Clan Arena]]: team elimination, full loadout spawn, round-based
+- [[gametypes/ffa|Free For All]]: deathmatch, 15 minute default
+- [[gametypes/ctf|Capture the Flag]]: 15 minute default, ammo packs
+- [[gametypes/tdm|Team Deathmatch]]: team frag race
+
+## Modding
+
+- [[modding/server-hosting|Server Hosting]]: Docker setup, factories, minqlx, RCON
+
