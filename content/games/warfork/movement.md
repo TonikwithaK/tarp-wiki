@@ -56,11 +56,11 @@ Values verified against the [game source](https://github.com/TeamForbiddenLLC/wa
 
 **Trigger:** RMB while airborne and near a wall.
 
-- Wall detection uses 12 radial traces. Only near-vertical surfaces register — floors and ceilings are ignored.
+- Wall detection uses 12 radial traces. Only near-vertical surfaces register: floors and ceilings are ignored.
 - Vertical velocity: ~350.6 UPS. Significantly more height than a dash.
 - Horizontal velocity: clips off the wall surface, with a minimum of ~240 UPS enforced.
 - Cooldown: 1300ms.
-- One walljump per airtime — the cooldown must fully expire before another walljump is possible.
+- One walljump per airtime: the cooldown must fully expire before another walljump is possible.
 - Dash and walljump cooldowns are independent. You can walljump immediately after a dash lands.
 - **Failed / stunned walljump:** If the walljump fires but conditions aren't fully met, you receive only ~53.1 UPS vertical and a shortened 700ms cooldown.
 
@@ -74,7 +74,7 @@ The primary method for building and maintaining speed above the run cap.
 
 1. Jump with Space.
 2. Hold W + A or W + D while airborne.
-3. Move the mouse smoothly in the same direction as the strafe key — left for W+A, right for W+D.
+3. Move the mouse smoothly in the same direction as the strafe key: left for W+A, right for W+D.
 4. Land and jump again immediately with Space.
 5. Alternate W+A and W+D each jump cycle to keep accelerating.
 
@@ -92,7 +92,7 @@ Air control is distinct from strafing and only activates under specific conditio
 
 - **Active only when W is held without A or D.**
 - Hold W and move the mouse to curve your trajectory in mid-air.
-- Strength scales as cos²(angle) relative to your current velocity — most effective when your facing is close to your movement direction.
+- Strength scales as cos²(angle) relative to your current velocity: most effective when your facing is close to your movement direction.
 - Does not function during walljumping or knockback.
 - Purpose: precise mid-air directional adjustments without triggering strafe acceleration. Useful for aiming at a landing spot after a jump without bleeding speed in an unintended direction.
 
@@ -102,9 +102,9 @@ Air control is distinct from strafing and only activates under specific conditio
 
 Bunnyhopping is distinct from strafe jumping and builds speed more slowly.
 
-- Jump continuously with Space — W is not required.
+- Jump continuously with Space: W is not required.
 - Add A or D and move the mouse in that direction to slowly build speed.
-- No CPM-style forward acceleration — the ceiling is lower than proper strafe jumping.
+- No CPM-style forward acceleration: the ceiling is lower than proper strafe jumping.
 - Useful for tight turns where strafing momentum would overshoot.
 - Familiar to players coming from Source games, but notably slower than Warfork strafe jumping.
 
@@ -117,7 +117,7 @@ Bunnyhopping is distinct from strafe jumping and builds speed more slowly.
 Each plasma bolt produces splash knockback on impact. Firing at a surface below or beside you propels you away from the impact point. Chain shots to sustain upward or lateral movement.
 
 - Used to climb vertical surfaces and reach elevated positions that are otherwise inaccessible.
-- Primary use case is Race mode — many race maps have routes that require plasmaclimbing.
+- Primary use case is Race mode: many race maps have routes that require plasmaclimbing.
 - Functional in any gametype while carrying the Plasmagun.
 
 ---
@@ -136,6 +136,6 @@ Each plasma bolt produces splash knockback on impact. Firing at a surface below 
 
 ## See Also
 
-- [[controls]] — key bindings including RMB, Space, and weapon slots
-- [[weapons]] — Plasmagun details for plasmaclimbing
-- [[race]] — Race mode routes and movement requirements
+- [[controls]]: key bindings including RMB, Space, and weapon slots
+- [[weapons]]: Plasmagun details for plasmaclimbing
+- [[race]]: Race mode routes and movement requirements

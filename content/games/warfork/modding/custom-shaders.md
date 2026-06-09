@@ -16,7 +16,7 @@ Shader scripts live in [assets/data0_21pure/scripts/](https://github.com/TeamFor
 
 ## Shader Script Format
 
-A shader definition is a named block. The name is the shader identifier — not the filename.
+A shader definition is a named block. The name is the shader identifier: not the filename.
 
 ```
 shader/name
@@ -61,7 +61,7 @@ Dash burst effects, smoke puffs, and projectile trails are defined in `effects.s
 
 ### Map Geometry Shaders
 
-Surface properties — slick floors, nodraw faces, clip brushes, trigger volumes — are defined in `solidfake.shader` and in per-map `.shader` files. These shaders control physics and visibility independently.
+Surface properties: slick floors, nodraw faces, clip brushes, trigger volumes: are defined in `solidfake.shader` and in per-map `.shader` files. These shaders control physics and visibility independently.
 
 ### Sky Shaders
 
@@ -75,7 +75,7 @@ The engine loads shaders from:
 basewf/scripts/
 ```
 
-Custom shaders can be placed loose in that directory or packaged inside a `.pk3` file under `scripts/`. The `.shader` filename does not matter — shader names come from the block headers.
+Custom shaders can be placed loose in that directory or packaged inside a `.pk3` file under `scripts/`. The `.shader` filename does not matter: shader names come from the block headers.
 
 If two shaders share the same name, load order determines which wins. PK3 files loaded later take precedence over earlier ones.
 
@@ -93,11 +93,11 @@ models/players/mymodel/skin
 }
 ```
 
-`$whiteimage` is a built-in 1x1 white texture. `rgbGen entity` pulls the color from the entity's assigned shader color — in practice, the team color set by the client. This produces a solid, fully lit silhouette regardless of map lighting.
+`$whiteimage` is a built-in 1x1 white texture. `rgbGen entity` pulls the color from the entity's assigned shader color: in practice, the team color set by the client. This produces a solid, fully lit silhouette regardless of map lighting.
 
 Combined with `cg_forceMyTeamAlpha`, `cg_outlinePlayers`, and team color cvars, this is the basis of competitive visibility setups in Warfork.
 
 ## See Also
 
-- [[../getting-started]] — client setup and graphics settings
-- [[console]] — cvar reference for `cg_teamALPHAcolor`, `cg_teamBETAcolor`, `cg_outlinePlayers`
+- [[../getting-started]]: client setup and graphics settings
+- [[console]]: cvar reference for `cg_teamALPHAcolor`, `cg_teamBETAcolor`, `cg_outlinePlayers`

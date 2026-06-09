@@ -72,7 +72,7 @@ The strafe indicator (`cg_strafeHUD 1`) is defined in `inc/strafe.hud` and inclu
 
 **Triangle size** is computed as `0.03 * 4500 - %STRAFEANGLE`. A larger strafe angle shrinks the visual target area.
 
-**Bar position** shifts horizontally based on `%DIFF_ANGLE` — the angle between your movement direction and where you are facing.
+**Bar position** shifts horizontally based on `%DIFF_ANGLE`: the angle between your movement direction and where you are facing.
 
 **Color logic:**
 
@@ -80,7 +80,7 @@ The strafe indicator (`cg_strafeHUD 1`) is defined in `inc/strafe.hud` and inclu
 |---|---|---|
 | White | Default | Neutral |
 | Red | `%ACCELERATION < -5000` | Losing speed |
-| Green | `%ACCELERATION > 0.8` | Gaining speed — correct strafe |
+| Green | `%ACCELERATION > 0.8` | Gaining speed: correct strafe |
 
 ## Include System
 
@@ -103,5 +103,5 @@ Custom HUDs can also be packaged inside a `.pk3` file under the `huds/` path.
 
 ## See Also
 
-- [[console]] — full cvar reference including `cg_clientHUD`, `cg_strafeHUD`
-- [[../movement]] — strafe mechanics context for interpreting the strafe indicator
+- [[console]]: full cvar reference including `cg_clientHUD`, `cg_strafeHUD`
+- [[../movement]]: strafe mechanics context for interpreting the strafe indicator

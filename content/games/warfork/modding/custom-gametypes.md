@@ -21,7 +21,7 @@ Each gametype uses three files:
 | File | Purpose |
 |---|---|
 | `<name>.as` | Main script |
-| `<name>.gt` | Includes list — which `.as` files to load |
+| `<name>.gt` | Includes list: which `.as` files to load |
 | `<name>.gtd` | Gametype descriptor: title, author, version |
 
 ### Example: ca.gt
@@ -130,5 +130,5 @@ The engine compiles the AngelScript on load. Compile errors appear in the server
 
 ## See Also
 
-- [[gametype-scripting-reference]] — full AngelScript API: Vec3, Trace, Match, Gametype, Team, Entity, Client
-- [[server-hosting]] — running a server and setting cvars
+- [[gametype-scripting-reference]]: full AngelScript API: Vec3, Trace, Match, Gametype, Team, Entity, Client
+- [[server-hosting]]: running a server and setting cvars

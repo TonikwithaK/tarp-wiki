@@ -74,11 +74,11 @@ Direct keys are strongly preferred by competitive players over scroll wheel. Swi
 
 ## Notes
 
-**MOUSE2 triple duty:** RMB is bound to `+special`, which the engine routes based on game state — secondary fire when applicable, dash when grounded, walljump when airborne near a wall. This is not a rebind; it is a single binding with context-dependent behavior.
+**MOUSE2 triple duty:** RMB is bound to `+special`, which the engine routes based on game state: secondary fire when applicable, dash when grounded, walljump when airborne near a wall. This is not a rebind; it is a single binding with context-dependent behavior.
 
 **Weapon switching:** Rebinding weapons to direct keys (1–8) and using Q for last weapon is the competitive standard. Scroll wheel is too imprecise under fire.
 
 ## See Also
 
-- [[console]] — configuration and cvars
-- [[movement]] — dash and walljump mechanics
+- [[console]]: configuration and cvars
+- [[movement]]: dash and walljump mechanics

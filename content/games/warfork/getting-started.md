@@ -65,6 +65,6 @@ Example: `^1War^7fork` renders "War" in red and "fork" in white.
 
 ## Next Steps
 
-- [[controls]] — default keybinds and how to rebind
-- [[console]] — opening the console, useful commands, config workflow
-- [[server-hosting]] — running your own server
+- [[controls]]: default keybinds and how to rebind
+- [[console]]: opening the console, useful commands, config workflow
+- [[server-hosting]]: running your own server

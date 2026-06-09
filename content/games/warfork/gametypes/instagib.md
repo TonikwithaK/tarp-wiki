@@ -10,13 +10,13 @@ promoted: 2026-06-09
 
 # Instagib
 
-Instagib is a modifier, not a standalone game mode. It can be layered onto most gametypes — Instagib FFA, Instagib CTF, and others. What it does is replace every player's loadout with a single weapon: the Instagun.
+Instagib is a modifier, not a standalone game mode. It can be layered onto most gametypes: Instagib FFA, Instagib CTF, and others. What it does is replace every player's loadout with a single weapon: the Instagun.
 
 ## The Instagun
 
 The Instagun fires an instant-kill hitscan beam. It has infinite ammo. One hit kills, regardless of the target's health or armor. There is no resource management, no weapon switching, no health pickups that matter. Every engagement comes down entirely to aim.
 
-The Instagun's demand on precision is comparable to the [[electrobolt]] — you are placing an exact shot on a moving target. The key difference is that the Instagun fires faster, which tightens the timing of exchanges. A miss costs you very little in terms of ammo; the penalty is purely the time you gave the opponent to return fire or reposition.
+The Instagun's demand on precision is comparable to the [[electrobolt]]: you are placing an exact shot on a moving target. The key difference is that the Instagun fires faster, which tightens the timing of exchanges. A miss costs you very little in terms of ammo; the penalty is purely the time you gave the opponent to return fire or reposition.
 
 ## Movement as Defense
 
@@ -30,7 +30,7 @@ See [[movement]] for the techniques that directly improve your survivability her
 
 Instagib servers may enable additional modifiers on top of the base mode:
 
-**Instashield** grants temporary invulnerability. It is typically used for aggressive pushes — crossing open ground or contesting a position that would otherwise be suicidal. Timing the shield well is a skill in itself.
+**Instashield** grants temporary invulnerability. It is typically used for aggressive pushes: crossing open ground or contesting a position that would otherwise be suicidal. Timing the shield well is a skill in itself.
 
 **Instajump** enhances jump height and speed, opening up movement routes and making you harder to track during vertical repositioning. Maps that support Instajump often have geometry that rewards it.
 
@@ -42,6 +42,6 @@ The console command to enable Instagib exists, but specifics vary by server conf
 
 ## Related Pages
 
-- [[electrobolt]] — the standard hitscan weapon, comparable in aim requirement
-- [[movement]] — strafing and air control as survival mechanics
-- [[gametypes]] — all available game modes and modifiers
+- [[electrobolt]]: the standard hitscan weapon, comparable in aim requirement
+- [[movement]]: strafing and air control as survival mechanics
+- [[gametypes]]: all available game modes and modifiers

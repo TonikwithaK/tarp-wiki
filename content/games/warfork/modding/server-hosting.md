@@ -25,7 +25,7 @@ wget tar rsync unzip tmux jq bc
 | Game client | 671610 | Steam login required |
 | Dedicated server | 1136510 | Anonymous login |
 
-Use App ID **1136510** for Linux dedicated servers — no Steam account needed.
+Use App ID **1136510** for Linux dedicated servers: no Steam account needed.
 
 ```bash
 steamcmd +login anonymous +app_update 1136510 validate +quit
@@ -72,23 +72,23 @@ Edit these files directly after the first run. Settings in the config are loaded
 
 | Cvar | Default | Description |
 |---|---|---|
-| `sv_hostname` | — | Name shown in server browser |
+| `sv_hostname` |: | Name shown in server browser |
 | `sv_port` | 44400 | UDP port |
-| `sv_public` | — | Report to master server (1 = yes) |
+| `sv_public` |: | Report to master server (1 = yes) |
 | `sv_pure` | 0 | Enforce pure client (0 = off) |
-| `sv_maxclients` | — | Max player slots |
-| `g_gametype` | — | Gametype: dm, ca, ctf, duel, tdm, race, etc. |
+| `sv_maxclients` |: | Max player slots |
+| `g_gametype` |: | Gametype: dm, ca, ctf, duel, tdm, race, etc. |
 | `g_timelimit` | 10 | Match time limit in minutes |
 | `g_scorelimit` | 0 | Frag/score limit (0 = disabled) |
-| `g_maplist` | — | Space-separated map rotation |
-| `g_maprotation` | — | 0 = same map, 1 = ordered, 2 = random |
+| `g_maplist` |: | Space-separated map rotation |
+| `g_maprotation` |: | 0 = same map, 1 = ordered, 2 = random |
 | `g_numbots` | 0 | Number of bots |
 | `g_warmup_timelimit` | 5 | Warmup duration in minutes |
 | `g_instagib` | 0 | Instagib modifier (0/1) |
-| `g_allow_falldamage` | — | Enable fall damage |
-| `g_allow_selfdamage` | — | Enable self damage |
-| `g_allow_teamdamage` | — | Enable team damage |
-| `g_allow_stun` | — | Enable stun mechanic |
+| `g_allow_falldamage` |: | Enable fall damage |
+| `g_allow_selfdamage` |: | Enable self damage |
+| `g_allow_teamdamage` |: | Enable team damage |
+| `g_allow_stun` |: | Enable stun mechanic |
 
 ## CA-Specific CVars
 
@@ -119,5 +119,5 @@ rcon addip <ipaddress>
 
 ## See Also
 
-- [[console]] — full cvar and command reference
-- [[custom-gametypes]] — writing and loading custom gametypes
+- [[console]]: full cvar and command reference
+- [[custom-gametypes]]: writing and loading custom gametypes

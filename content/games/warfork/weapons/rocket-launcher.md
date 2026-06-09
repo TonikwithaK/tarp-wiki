@@ -14,7 +14,7 @@ The Rocket Launcher (RL) fires a straight-line projectile that detonates on cont
 
 ## Mechanics
 
-The rocket travels in a straight line at a fixed speed — unlike the GL, there is no arc or bounce. It detonates on the first surface it contacts. At the point of impact, it deals direct damage plus splash damage to anything within the radius, including the shooter.
+The rocket travels in a straight line at a fixed speed: unlike the GL, there is no arc or bounce. It detonates on the first surface it contacts. At the point of impact, it deals direct damage plus splash damage to anything within the radius, including the shooter.
 
 Because the rocket travels at finite speed, it requires leading moving targets. At close range the lead time is minimal. At longer range, a fast-moving opponent who is strafing actively will dodge most rockets. The RL is a close-to-mid range weapon in practice despite having no falloff by range.
 
@@ -22,14 +22,14 @@ Because the rocket travels at finite speed, it requires leading moving targets. 
 
 The RL is the most versatile weapon in the kit. It handles:
 
-- **Close range burst** — a direct hit plus splash at close range can land 80+ damage in a single shot
-- **Splash pressure** — firing at the floor or walls near an opponent forces movement and chips health without requiring a direct hit
-- **Rocket jumps** — using self-damage and knockback to gain height or speed (see [[movement]])
-- **Follow-up after knockback** — knocking an opponent airborne with a first rocket and following with a second before they land is a core damage pattern
+- **Close range burst**: a direct hit plus splash at close range can land 80+ damage in a single shot
+- **Splash pressure**: firing at the floor or walls near an opponent forces movement and chips health without requiring a direct hit
+- **Rocket jumps**: using self-damage and knockback to gain height or speed (see [[movement]])
+- **Follow-up after knockback**: knocking an opponent airborne with a first rocket and following with a second before they land is a core damage pattern
 
 ## Self-Damage
 
-The 1.0 self-damage ratio means you take the same damage you deal. At close range, a rocket that connects for 80 direct damage also deals splash to you if you're inside the radius. Learning when to fire at the floor versus the player involves understanding this tradeoff — splash damage on yourself is often acceptable if it lands more total damage on the opponent.
+The 1.0 self-damage ratio means you take the same damage you deal. At close range, a rocket that connects for 80 direct damage also deals splash to you if you're inside the radius. Learning when to fire at the floor versus the player involves understanding this tradeoff: splash damage on yourself is often acceptable if it lands more total damage on the opponent.
 
 ## Counters
 
@@ -37,8 +37,8 @@ Distance. Beyond medium range, a rocket is slow enough that strafing and air con
 
 ## Related
 
-- [[weapons]] — full stats and weapon overview
-- [[lasergun]] — primary mid-range companion
-- [[electrobolt]] — long-range triad weapon
-- [[grenade-launcher]] — the indirect explosive alternative
-- [[movement]] — rocket jump applications
+- [[weapons]]: full stats and weapon overview
+- [[lasergun]]: primary mid-range companion
+- [[electrobolt]]: long-range triad weapon
+- [[grenade-launcher]]: the indirect explosive alternative
+- [[movement]]: rocket jump applications
