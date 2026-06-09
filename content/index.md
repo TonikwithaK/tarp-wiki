@@ -5,12 +5,12 @@ description: "A living knowledge base for Arena FPS: Warfork, Quake Live, and Re
 
 # The Arena Revival Project
 
-A living knowledge base for competitive Arena FPS. Curated mechanics, movement tech, weapons, maps, and history: checked before it's published.
+A living knowledge base for competitive Arena FPS. Curated mechanics, movement tech, weapons, maps, and history: checked before it is published.
 
 ## Browse by Game
 
 - [[games/warfork/|Warfork]]
-- Quake Live: coming
+- [[games/quake-live/|Quake Live]]
 - Reflex Arena: coming
 
 ---
