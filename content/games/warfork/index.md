@@ -39,13 +39,13 @@ Content here is specific to Warfork. Nothing applies to Quake Live or Reflex Are
 
 ## Game Modes
 
-- [[gametypes]] — all 13 default modes overview
-- [[duel]] — 1v1, item control, timing
-- [[clan-arena]] — team elimination, 3v3, no self-damage
-- [[deathmatch]] — free-for-all frag race
-- [[team-deathmatch]] — team frag race
-- [[capture-the-flag]] — flag steal and return
-- [[bomb-and-defuse]] — plant and defuse objective
-- [[race]] — movement courses, fastest time
-- [[instagib]] — one-shot Instagun modifier
-- [[headhunt]] — one target, all hunters
+- [[gametypes/index|Gametypes]] — all 13 default modes overview
+- [[gametypes/duel|Duel]] — 1v1, item control, timing
+- [[gametypes/clan-arena|Clan Arena]] — team elimination, 3v3, no self-damage
+- [[gametypes/deathmatch|Deathmatch]] — free-for-all frag race
+- [[gametypes/team-deathmatch|Team Deathmatch]] — team frag race
+- [[gametypes/capture-the-flag|Capture the Flag]] — flag steal and return
+- [[gametypes/bomb-and-defuse|Bomb and Defuse]] — plant and defuse objective
+- [[gametypes/race|Race]] — movement courses, fastest time
+- [[gametypes/instagib|Instagib]] — one-shot Instagun modifier
+- [[gametypes/headhunt|Headhunt]] — one target, all hunters
