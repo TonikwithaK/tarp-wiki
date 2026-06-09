@@ -12,67 +12,131 @@ tags:
 - air-control
 - bunny-hop
 - plasma-climb
-confidence: medium
+confidence: high
 sources:
 - file: raw_sources/warfork/Mechanics/Movement.md
+- file: source/gameshared/gs_pmove.c
 promoted: 2026-06-09
 canon_attempts: 1
 ---
 
 # Movement — Warfork
 
-Movement is a core part of competitive Warfork play. A player with strong movement is significantly harder to hit and can control map space more effectively. The basics are accessible but the ceiling is high.
+All values sourced directly from `gs_pmove.c`.
 
-## Running and Walking
+## Speed Constants
 
-The standard running speed is 320u/s. Walking (hold Alt) moves at 160u/s. Holding the jump key allows repeated jumping without speed loss — most advanced movement builds on this.
+| State | Speed |
+|---|---|
+| Walking (Left Alt held) | 160 UPS |
+| Running | 320 UPS |
+| Crouching | 100 UPS |
+| Dash minimum horizontal | 450 UPS |
+| Jump vertical velocity | ~297.5 UPS |
+| Dash vertical velocity | ~184.9 UPS |
+| Walljump vertical velocity | ~350.6 UPS |
+| Strafe bunny soft cap | 925 UPS |
 
-## Dashing
+---
 
-Dashing is Warfork's signature movement ability. A dash is a short directional burst triggered by RMB that immediately redirects movement at ground contact. Starting a run with a dash is the fastest way to gain initial speed (450u/s).
+## Dash
 
-**Key rules:**
-- Cannot dash while holding the jump key
-- Works at any speed — enables high-speed direction changes
-- One dash per second cooldown
-- Can pre-hold the dash button before landing
-- With no directional key held, dashes toward wherever you're looking
-- If executed cleanly, no speed is lost
+**Trigger:** RMB (`BUTTON_SPECIAL`) while grounded.
 
-## Walljumping
+- Horizontal speed: floor of 450 UPS. If you are already moving faster, your current speed is preserved.
+- Vertical component: ~184.9 UPS upward.
+- Direction: taken from your input (forward + strafe blend). If no directional input is held, defaults to your facing direction.
+- Cooldown: 1000ms.
+- Cannot be triggered during knockback.
+- RMB must be released and re-pressed between dashes (`PMF_SPECIAL_HELD` flag). Holding RMB does not repeat the dash.
+- Air control is suppressed for the first ~800ms after a dash.
 
-Walljumping (RMB before touching a wall) lets players jump off walls. Combined with dashing, it enables movement sequences that can catch enemies off guard.
+---
 
-**Key rules:**
-- Can be performed while holding the jump key (unlike dashing)
-- 1.3 second cooldown
-- Can pre-hold the dash button before wall contact
-- Dash and walljump cooldowns are independent — walljumping immediately after a dash is valid
-- Being stunned temporarily disables walljumping
+## Walljump
 
-## Strafing
+**Trigger:** RMB while airborne and near a wall.
 
-Strafing is the fastest way to build speed without weapons. The technique: hold **W + A** (or **W + D**) and move the mouse smoothly in the same direction as your strafe key — left for W+A, right for W+D. Jump continuously with spacebar. Alternate between W+A and W+D each jump cycle to keep accelerating.
+- Wall detection uses 12 radial traces. Only near-vertical surfaces register — floors and ceilings are ignored.
+- Vertical velocity: ~350.6 UPS. Significantly more height than a dash.
+- Horizontal velocity: clips off the wall surface, with a minimum of ~240 UPS enforced.
+- Cooldown: 1300ms.
+- One walljump per airtime — the cooldown must fully expire before another walljump is possible.
+- Dash and walljump cooldowns are independent. You can walljump immediately after a dash lands.
+- **Failed / stunned walljump:** If the walljump fires but conditions aren't fully met, you receive only ~53.1 UPS vertical and a shortened 700ms cooldown.
 
-The strafeHUD indicator (enable with `cg_strafeHUD 1`) shows a white bar that should track inside the triangle toward its wide side — when the angle is correct, the triangles turn green and speed builds. The HUD only appears above 450u/s.
+---
 
-The key mechanic is the combination: W keeps you moving forward, the strafe key curves your path, and the mouse follows that curve. Moving the mouse faster or slower than your strafe angle is what kills speed — the HUD exists to show you when they're aligned.
+## Strafe Jumping
 
-### Air Control
+The primary method for building and maintaining speed above the run cap.
 
-In the air, hold W and spacebar and move the mouse to change direction. Changing direction in air bleeds speed gradually. You can look around freely without changing trajectory by releasing all directional keys.
+**How to strafe:**
 
-Note: strafeHUD only appears above 450u/s.
+1. Jump with Space.
+2. Hold W + A or W + D while airborne.
+3. Move the mouse smoothly in the same direction as the strafe key — left for W+A, right for W+D.
+4. Land and jump again immediately with Space.
+5. Alternate W+A and W+D each jump cycle to keep accelerating.
+
+Speed gain per frame scales with the angle between your current velocity vector and your wish direction. The strafe key and mouse movement must stay aligned for the angle to remain in the gain zone.
+
+**Soft cap:** 925 UPS. CPM-style bunny acceleration applies diminishing returns above this value. Speed can exceed 925 UPS but gains become marginal.
+
+**StrafeHUD:** Enable with `cg_strafeHUD 1`. A white bar appears inside a triangle indicator. The bar should track toward the wide side of the triangle. Triangles turn green when the angle is correct and speed is building. The HUD only appears above 450 UPS.
+
+---
+
+## Air Control
+
+Air control is distinct from strafing and only activates under specific conditions.
+
+- **Active only when W is held without A or D.**
+- Hold W and move the mouse to curve your trajectory in mid-air.
+- Strength scales as cos²(angle) relative to your current velocity — most effective when your facing is close to your movement direction.
+- Does not function during walljumping or knockback.
+- Purpose: precise mid-air directional adjustments without triggering strafe acceleration. Useful for aiming at a landing spot after a jump without bleeding speed in an unintended direction.
+
+---
 
 ## Bunnyhopping
 
-Bunnyhopping is a simpler but slower alternative to strafing — no W key required, just spacebar and A/D with mouse movement in the same direction. Common for players coming from Source games. Notably slower than proper strafing.
+Bunnyhopping is distinct from strafe jumping and builds speed more slowly.
+
+- Jump continuously with Space — W is not required.
+- Add A or D and move the mouse in that direction to slowly build speed.
+- No CPM-style forward acceleration — the ceiling is lower than proper strafe jumping.
+- Useful for tight turns where strafing momentum would overshoot.
+- Familiar to players coming from Source games, but notably slower than Warfork strafe jumping.
+
+---
 
 ## Plasmaclimbing
 
-Plasmaclimbing uses the Plasmagun (PG) to climb surfaces by firing at walls or floors beneath the player. Primarily used in Race mode on specific maps but executable in any gametype with a PG equipped.
+**Trigger:** Fire the Plasmagun (weapon 6) at a wall or floor near your position.
+
+Each plasma bolt produces splash knockback on impact. Firing at a surface below or beside you propels you away from the impact point. Chain shots to sustain upward or lateral movement.
+
+- Used to climb vertical surfaces and reach elevated positions that are otherwise inaccessible.
+- Primary use case is Race mode — many race maps have routes that require plasmaclimbing.
+- Functional in any gametype while carrying the Plasmagun.
+
+---
+
+## Speed Reference
+
+| State | Speed |
+|---|---|
+| Walking (Alt held) | 160 UPS |
+| Running | 320 UPS |
+| Dash minimum | 450 UPS |
+| Efficient strafing | 600–800 UPS |
+| Strafe soft cap | 925 UPS |
+
+---
 
 ## See Also
 
-- [[controls]] — keybind reference
+- [[controls]] — key bindings including RMB, Space, and weapon slots
 - [[weapons]] — Plasmagun details for plasmaclimbing
+- [[race]] — Race mode routes and movement requirements

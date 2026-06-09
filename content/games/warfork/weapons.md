@@ -3,65 +3,73 @@ title: "Weapons — Warfork"
 game: warfork
 layer: canon
 type: reference
-tags: [warfork, weapons, mechanics]
+tags: [warfork, weapons, mechanics, stats]
 status: canon
+source: source/gameshared/gs_weapondefs.c
 promoted: 2026-06-09
 ---
 
 # Weapons — Warfork
 
-Warfork has nine weapons, each with a distinct role and range profile. The three weapons that dominate competitive play are the Rocket Launcher, Lasergun, and Electrobolt — covering close-mid, mid, and long range respectively. Every other weapon has situational value, but understanding the RL/LG/EB triad is the foundation of competitive weapon management.
+All stats sourced directly from `gs_weapondefs.c` in the official game source. Primary values reflect the **strong fire mode** (default fire), which is what most players use. Weak fire mode differences are noted per weapon.
 
-## Stats
+---
 
-| ID | Weapon | Damage | Rate of Fire | Self-Dmg | Knockback | Stun | Splash Radius | Min Dmg | Min KB |
-|----|--------|--------|-------------|----------|-----------|------|---------------|---------|--------|
-| 1 | Gunblade | 35 | 600ms | 1.0 | 90 | 0 | 70 | 8 | 10 |
-| 2 | Machinegun | 10 | 100ms | 0 | 10 | 50 | 0 | 0 | 0 |
-| 3 | Riotgun | 5×20 | 900ms | 0 | 7/pellet | 85 | 0 | 0 | 0 |
-| 4 | Grenade Launcher | 80 | 800ms | 1.0 | 100 | 1250 | 125 | 15 | 35 |
-| 5 | Rocket Launcher | 80 | 950ms | 1.0 | 100 | 1250 | 125 | 15 | 35 |
-| 6 | Plasmagun | 15 | 100ms | 0.5 | 20 | 200 | 45 | 5 | 1 |
-| 7 | Lasergun | 7 | 50ms | 0 | 14 | 300 | 0 | 0 | 0 |
-| 8 | Electrobolt | 75 | 1250ms | 0 | 80 | 1000 | 0 | 0 | 0 |
-| 9 | Instagun | 200 | 100ms | 0 | 10 | 100 | 0 | 0 | 0 |
+## Stats Reference
+
+| Weapon | Dmg | Pellets | Reload | Proj Speed | Self-Dmg | Knockback | Stun | Splash R | Ammo Max |
+|--------|-----|---------|--------|------------|----------|-----------|------|----------|----------|
+| Gunblade (strong) | 35 | 1 | 600ms | 3000 | 1.0 | 90 | 0 | 70 | 1 |
+| Gunblade (melee) | 50 | — | 600ms | melee | 0 | 50 | 0 | 0 | ∞ (free) |
+| Machinegun | 10 | 1 | 100ms | instant | 0 | 10 | 50ms | 0 | 100 |
+| Riotgun | 5 | 20 | 900ms | instant | 0 | 7/pellet | 85ms | 0 | 20 |
+| Grenade Launcher | 80 | 1 | 800ms | 1000 | 1.0 | 100 | 1250ms | 125 | 20 |
+| Rocket Launcher | 80 | 1 | 950ms | 1150 | 1.0 | 100 | 1250ms | 125 | 20 |
+| Plasmagun | 15 | 1 | 100ms | 2500 | 0.5 | 20 | 200ms | 45 | 150 |
+| Lasergun | 7 | 1 | 50ms | instant | 0 | 14 | 300ms | 0 | 150 |
+| Electrobolt | 75 | 1 | 1250ms | instant | 0 | 80 | 1000ms | 0 | 10 |
+| Instagun | 200 | 1 | 1300ms | instant | 0.1 | 95 | 1000ms | 80 | 5 |
+
+### Table Notes
+
+- **Riotgun:** 20 pellets × 5 dmg = 100 max damage; 20 × 7 = 140 max knockback at point blank. Weak mode fires 25 pellets at 4 dmg each (same 100 total damage, different spread profile).
+- **Lasergun:** 7 dmg × 20 ticks/sec = 140 DPS theoretical max. `smooth_refire=true` — the only weapon with this flag. Fires as a true continuous beam rather than discrete shots.
+- **Instagun:** Instagib mode only. Ammo max of 5 in strong mode (15 in weak). Has a small splash radius of 80 units — not purely hitscan. Self-damage ratio of 0.1 applies.
+- **Electrobolt:** No damage falloff at range — minimum damage equals full damage (75). The `projectile_timeout` field controls the min-damage range threshold but the min is set equal to the max, so effective damage is flat at all distances.
+- **Gunblade melee (weak fire):** Free and infinite — costs no ammo. At 50 damage it actually out-damages the projectile mode (35 dmg) at close range.
+- **GL/RL weak modes:** Slightly larger splash radius (135) compared to strong mode (125).
+- **EB weak mode:** Same 75 damage, but only 40 knockback vs. strong mode's 80.
 
 ---
 
 ## Weapon Descriptions
 
-### Gunblade
+**Gunblade:** Starting weapon in most modes. Two fire modes — the projectile (35 dmg, full self-damage) is mostly used for weapon jumping; the free melee (50 dmg) is the better damage option at point-blank and costs no ammo. Most players ignore it as a serious combat weapon but the melee is a real option at close range.
 
-The Gunblade is your starting weapon — the one weapon you always have. It has two fire modes: a melee strike and a projectile shot. The numbers are unimpressive (35 damage, 600ms fire rate), but that is not its primary value. The projectile carries significant knockback and deals splash damage within a 70-unit radius, which makes it useful for self-boosting in situations where you have no other explosive available. Players use the Gunblade for weapon jumps when the Rocket Launcher and Grenade Launcher are empty or unavailable. See [[movement]] for jump applications.
+**Machinegun:** Hitscan, high fire rate, low damage per shot. Spread of 10 in both directions. 100 ammo capacity. Best use is finishing opponents below 30–40 HP rather than opening fights. Can maintain accuracy while moving. Falls off noticeably at range due to spread.
 
-### Machinegun
+**Riotgun:** 20 pellets in a cone, up to 100 total damage at point blank. Significant stun (85ms per pellet that connects). 900ms cooldown makes every shot count — missing at close range is a major opening. NOT a spray weapon. Circle-strafing and jumping over the shooter are effective counters to the slow fire rate and conical spread.
 
-The Machinegun is a hitscan weapon with a fast 100ms fire rate but low per-shot damage of 10. It is not a weapon you build fights around — it is a finisher. Against an opponent sitting at 10–20 health, the Machinegun's consistent hitscan output gets the job done without burning Rocket Launcher ammo. Accuracy degrades at range as spread increases, so it is most reliable at close to medium distance. The 50 stun per hit is modest but adds up over sustained fire.
+**Grenade Launcher:** Bouncing explosive, 1250ms fuse timer. Projectile speed 1000. Full self-damage. The fuse means it doesn't detonate on contact with surfaces — only on players or when the timer expires. Useful for indirect angles, vertical coverage, and area denial. Grenade jumps are possible via self-damage + knockback. Weak mode has a slightly larger splash radius (135 vs 125).
 
-### Riotgun
+**Rocket Launcher:** Primary close-to-mid weapon. Projectile speed 1150 (faster than the GL). Detonates on contact. 950ms reload. Full self-damage — the splash radius means firing near your feet at close range damages you. Rocket jumps are possible. One of the three primary competitive weapons (RL/LG/EB). Weak mode has slightly larger splash (135 vs 125).
 
-The Riotgun fires 20 pellets in a cone pattern, each dealing 5 damage — a theoretical maximum of 100 damage at point-blank range. That burst potential makes it a serious close-range threat. The stun value of 85 means a clean hit at close range will noticeably disrupt the opponent's movement. What keeps the Riotgun in check is its 900ms cooldown: you get one shot, and if you miss, your opponent has nearly a full second to punish you. Damage drops sharply as range increases because the pellet spread widens and fewer pellets connect. Circle-strafing is the standard counter — move perpendicular to the shooter to step out of the cone. For a detailed breakdown, see [[riotgun]].
+**Plasmagun:** Rapid fire (100ms cooldown), projectile speed 2500. 0.5 self-damage ratio. 150 ammo capacity. Moderate damage per shot but builds quickly at close-to-mid range. The plasmaclimbing mechanic — firing at surfaces for knockback-based movement — is a core traversal technique. See [[movement]].
 
-### Grenade Launcher
+**Lasergun:** Continuous beam, hitscan, fires every 50ms (20 ticks/sec). The only weapon with `smooth_refire` — it fires as an uninterrupted beam rather than discrete shots. 7 damage per tick × 20 ticks = 140 DPS theoretical max. 14 knockback per tick pushes the target continuously. 300ms stun per tick. No splash, no self-damage. High ammo consumption (150 max, drains fast). The primary tracking weapon — requires keeping the beam on a moving target. One of the three primary competitive weapons.
 
-The Grenade Launcher fires bouncing explosives with an 800ms fire rate, 80 direct damage, and a 125-unit splash radius. Grenades follow an arc and bounce off surfaces before detonating on a timed fuse, which makes them useful for attacking opponents behind cover, around corners, and below ledges — angles that projectile weapons cannot reach directly. Area denial is a core application: a well-placed grenade on a doorway or item spawn forces opponents to adjust their movement. Self-damage is enabled at a full 1.0 ratio, so close-range detonations hurt you as much as the target. The Grenade Launcher is also used for grenade jumps to reach vertical positions quickly. See [[movement]].
+**Electrobolt:** Long-range hitscan, 75 damage, 1250ms cooldown. No damage falloff — deals 75 at any range. 1000ms stun on hit — the highest stun of any single shot, significantly disrupting the target's movement. 80 knockback. Only 10 ammo max. The longest reload in the kit means a miss is a significant window for the opponent. Weak fire mode deals the same damage but only 40 knockback (half). One of the three primary competitive weapons.
 
-### Rocket Launcher
+**Instagun:** Instagib mode only. 200 damage (one-shot kill), 1300ms cooldown, instant travel. Has a small 80-unit splash radius with 0.1 self-damage ratio — not a pure hitscan like the EB, but functionally similar at practical distances. Ammo limited to 5 (strong mode) / 15 (weak mode). See [[instagib]].
 
-The Rocket Launcher is the most important weapon in Warfork. It fires a slow-moving explosive projectile dealing 80 direct damage with a 125-unit splash radius, a 950ms fire rate, and full self-damage. At close to mid range, connecting rockets consistently is the primary way to deal damage and control fights. Because rockets travel slowly, you must lead moving targets — the degree of lead required increases with distance, which is why the RL is strongest at close-mid range and hands off to the Electrobolt at long range. Self-damage enables rocket jumping, one of the fundamental movement techniques in the game. See [[movement]] for rocket jump applications.
+---
 
-### Plasmagun
+## Primary Competitive Triad
 
-The Plasmagun fires rapid plasma bolts at 100ms intervals, each dealing 15 damage with a 45-unit splash and 0.5 self-damage ratio. Sustained fire can accumulate meaningful damage over time, and the spread of bolts functions as area denial — an opponent walking into a stream of plasma takes consistent chip damage and knockback that disrupts their movement. The plasma climb mechanic allows players to use the self-knockback from rapid fire against a surface to gain height or momentum. The Plasmagun is weak at close range because the self-damage accumulates quickly and the per-shot damage is low compared to the Riotgun or Rocket Launcher. It is most effective at mid-to-long range where the volume of fire is hard to avoid cleanly.
+**Rocket Launcher (close-mid) · Lasergun (mid) · Electrobolt (long).** Most high-level play centers around these three. The other weapons fill specific roles — Riotgun for close ambushes, Plasmagun for movement and sustained pressure, Machinegun for cleanup — but the RL/LG/EB combination defines the competitive meta.
 
-### Lasergun
+---
 
-The Lasergun is the shaft equivalent in Warfork — the primary tracking weapon for mid-range engagements. It fires a continuous hitscan beam that deals 7 damage every 50ms, sustained over a full second that is approximately 140 DPS. Each tick also applies 14 knockback and 300 stun, which persistently disrupts the target's movement and trajectory. The beam has perfect accuracy with no spread or deviation. Ammo drains fast at full fire rate, so discipline matters — firing into empty air is a fast way to run dry. In competitive play the Lasergun fills the mid-range role in the RL/LG/EB triad, requiring continuous tracking rather than the flick aim demanded by the Electrobolt. For a detailed breakdown, see [[lasergun]].
+## See Also
 
-### Electrobolt
-
-The Electrobolt is the rail equivalent — a single-shot hitscan weapon dealing 75 damage with the longest cooldown in the game at 1250ms. There is no travel time; the beam connects the instant you fire. A hit applies 80 knockback and 1000 stun, one of the highest stun values in the game, meaningfully disrupting the opponent's movement. The Electrobolt covers the long-range slot in the RL/LG/EB triad — at distances where rockets are easy to dodge and the LG beam struggles to stay on target, a clean Electrobolt shot is the highest-value damage you can deal. The 1250ms cooldown makes misses expensive: an opponent who sees you fire has over a second to close the gap or reposition. For a detailed breakdown, see [[electrobolt]].
-
-### Instagun
-
-The Instagun is exclusive to Instagib mode and is not available in standard gameplay. It fires a hitscan beam dealing 200 damage — a one-hit kill against any target at full health. In Instagib, all players spawn with the Instagun and no other weapons, making the entire game a test of precision hitscan aim. The 100ms fire rate is the fastest of any weapon, but the one-shot-kill nature of the mode means the fire rate is largely theoretical — each shot either kills or misses.
+Link to individual weapon pages for deeper coverage: [[rocket-launcher]], [[lasergun]], [[electrobolt]], [[plasmagun]], [[riotgun]], [[grenade-launcher]], [[machinegun]]
