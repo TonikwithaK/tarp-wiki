@@ -9,8 +9,6 @@ tags:
 
 Warfork is an Arena FPS derived from Warsow, built on the QFusion engine. Its movement system: dash, walljump, strafe jump, plasma climb, air control: is the defining mechanical layer of the game. Competitive play centers on the RL/LG/EB weapon triad and high-level movement routing.
 
-Content here is specific to Warfork. Nothing applies to Quake Live or Reflex Arena unless a dedicated cross-game page says otherwise.
-
 ## Getting Started
 
 - [[getting-started]]: download, config paths, name colors, Discord

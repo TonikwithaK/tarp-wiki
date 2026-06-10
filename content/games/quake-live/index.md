@@ -14,9 +14,7 @@ Two physics modes, determined by the server factory:
 - VQL (Vanilla Quake Live): default. Strafe jumping is the primary speed technique. Limited air control.
 - PQL (CPM-like physics): heavy air control. Movement keys while airborne steer toward the look direction.
 
-Competitive play centers on the weapon triad: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (RG/Rail).
-
-Content here is specific to Quake Live. Nothing applies to Warfork or Reflex Arena unless a dedicated cross-game page says otherwise.
+Competitive play centers on the weapon trinity: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (Rail).
 
 ## Getting Started
 

@@ -28,7 +28,7 @@ Quake Live weapons are assigned internal item IDs. The full list:
 | 52 | Chaingun |
 | 54 | Heavy Machinegun |
 
-## Competitive Triad
+## Competitive Trinity
 
 The Rocket Launcher, Lightning Gun, and Railgun are the three weapons used in standard competitive play.
 
