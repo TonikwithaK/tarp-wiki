@@ -10,9 +10,29 @@ updated: 2026-06-10
 
 Challenge ProMode Arena (CPMA) is a modification for Quake 3 Arena focused on competitive gameplay. Originally called Challenge ProMode (CPM), it was created in May 1999 by Richard "Hoony" Sandlant shortly after the release of the Q3 beta. It became the standard competitive mod for Q3 after the Cyberathlete Professional League adopted it, and was used in the Electronic Sports World Cup (ESWC).
 
-The mod introduced CPM physics -- a distinct movement system with full air control -- which became the foundation for Defrag's CPM mode, Quake Live's PQL (Pro mode), and the physics lineage that influenced Reflex Arena.
+Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the double jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
 
 The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maintained by the same team. Download and guides at [playmorepromode.com](https://playmorepromode.com).
+
+## Air Control
+
+In base Q3 (VQ3), holding forward while airborne contributes almost nothing to steering. Directional changes require landing contact or wall interaction. In CPM, strafing while airborne steers the player meaningfully -- turns of 90 degrees or more are possible without losing momentum. A/D handles large changes, W handles small adjustments.
+
+This changes the geometry of the game. Routes that require sharp mid-air turns are not possible in VQ3. In CPM they are expected. The skill floor for using air control effectively is high; the ceiling is what separates top-level CPM movement from everything else.
+
+Air acceleration in CPM is `15.0` vs VQ3's `10.0`. Combined with air control, circlejump speeds are higher: roughly 492 UPS in CPM vs 407 UPS in VQ3 from a standing start.
+
+## Held Mega Health
+
+In base Q3, the Mega Health respawns on a fixed timer from the moment it is picked up -- the carrier has no influence over when it comes back. In CPMA, the Mega Health timer does not start until the carrier's health drops to 100 or below. A player sitting above 100 HP indefinitely delays the respawn.
+
+This makes Mega Health a strategic resource in a way it is not in VQ3. Controlling it means not just picking it up but understanding when to let health decay and when to hold it. Denying the opponent the Mega while managing your own decay is a core part of high-level CPMA duel.
+
+## Double Jump
+
+Landing on a step or ramp within 400ms of a previous jump grants additional upward velocity on the next jump. The timing window is tight. Used correctly it allows players to reach positions that would require a weapon jump in VQ3, and it chains with air control to extend routes significantly.
+
+It is not a second press of the jump key -- it is the physics response to landing at the right moment in a jump arc. Maps designed for CPM are built with this in mind.
 
 ## Physics Constants (CPM vs VQ3)
 
@@ -27,26 +47,6 @@ The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maint
 | Ramp jump | Height + directional | Height only |
 
 CPMA supports both CPM and VQ3 physics. VQ3 mode behaves identically to base Q3.
-
-## Air Control
-
-The defining difference between CPM and VQ3. In CPM, strafing while airborne with +forward held allows meaningful steering. Players can turn 90 degrees or more without losing momentum.
-
-Strafe keys (A/D) handle large directional changes in the air. W-only is used for small adjustments.
-
-## Bunny Hopping
-
-Maintaining momentum through a series of jumps without losing speed on landing. Works in CPM, does not work in VQ3 (speed drops to ground cap on contact).
-
-## Double Jump
-
-Landing on a step or ramp within 400ms of a previous jump grants a height bonus on the next jump.
-
-## Strafe Jumping
-
-Still present and useful in CPM. Higher air acceleration (`15.0` vs `10.0`) means velocity builds faster. Combined with air control, CPM strafe jumping produces higher starting speeds than VQ3 for a given mouse input.
-
-Circlejump speeds: VQ3 roughly 407 UPS from a good standing circlejump. CPM roughly 492 UPS under the same conditions.
 
 ## Ruleset Variants
 
