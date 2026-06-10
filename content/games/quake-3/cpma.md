@@ -10,7 +10,7 @@ updated: 2026-06-10
 
 Challenge ProMode Arena (CPMA) is a modification for Quake 3 Arena focused on competitive gameplay. Originally called Challenge ProMode (CPM), it was created in May 1999 by Richard "Hoony" Sandlant shortly after the release of the Q3 beta. It became the standard competitive mod for Q3 after the Cyberathlete Professional League adopted it, and was used in the Electronic Sports World Cup (ESWC).
 
-Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the double jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
+Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the ramp jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
 
 The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maintained by the same team. Download and guides at [playmorepromode.com](https://playmorepromode.com).
 
@@ -24,17 +24,21 @@ Air acceleration in CPM is `15.0` vs VQ3's `10.0`. Combined with air control, ci
 
 ## Held Mega Health
 
-In base Q3, the Mega Health respawns on a fixed timer from the moment it is picked up -- the carrier has no influence over when it comes back.
+In base Q3, the Mega Health respawns on a fixed 35-second timer from the moment it is picked up -- the carrier has no influence over when it comes back.
 
-CPMA's behavior depends on the ruleset and gametype. In the CPM duel ruleset, the Mega Health timer does not start until the carrier's health drops to 100 or below -- a player sitting above 100 HP indefinitely delays the respawn. This makes Mega Health a strategic resource in a way it is not in VQ3: controlling it means not just picking it up but understanding when to let health decay and when to hold it.
+In CPMA, Mega Health behavior is configurable per server and gametype via the `simplemega` setting. The default configuration for duel (1v1) uses **wearoff-based respawn**: the timer does not start until the carrier's health drops to 100 or below. A player sitting above 100 HP indefinitely delays the respawn. In this mode, Mega Health becomes a strategic resource -- controlling it means not just picking it up but understanding when to let health decay and when to hold it.
 
-Other gametypes in CPMA (CTF, TDM, etc.) use simple Mega Health -- the same fixed respawn timer as VQ3.
+FFA and some other configurations use **fixed-interval respawn** (same as VQ3). Whether a given server or gametype uses wearoff or fixed respawn is determined by the `simplemega` cvar; it is not an immutable property of the CPM ruleset.
 
-## Double Jump
+*Note: exact per-gametype defaults in standard CPMA distributions (CTF, TDM) need verification. If you know these, contribute via the TARP Discord.*
 
-Landing on a step or ramp within 400ms of a previous jump grants additional upward velocity on the next jump. The timing window is tight. Used correctly it allows players to reach positions that would require a weapon jump in VQ3, and it chains with air control to extend routes significantly.
+## Ramp Jump
 
-It is not a second press of the jump key -- it is the physics response to landing at the right moment in a jump arc. Maps designed for CPM are built with this in mind.
+CPMA preserves and amplifies the ramp jump behavior present in base Q3. Jumping while moving up a slope carries the slope's directional momentum into the jump, granting additional height and distance compared to a flat-surface jump. In VQ3 this produces height only; in CPM the effect is stronger and combines with air control to extend routes significantly.
+
+This is distinct from a "double jump" in the platform-game sense. There is no second press of the jump key -- it is the physics response to the geometry at the moment of takeoff. Maps designed for CPM are built around ramp jump lines that are not reachable from flat ground.
+
+*Note: the 400ms timing window figure that appeared in an earlier version of this page is unverified. If you have a primary source (CPMA source code or official documentation), contribute via the TARP Discord.*
 
 ## Physics Constants (CPM vs VQ3)
 
@@ -44,9 +48,8 @@ It is not a second press of the jump key -- it is the physics response to landin
 | Air acceleration | 15.0 | 10.0 |
 | Air control | Full | Minimal |
 | Bunny hopping | Yes | No |
-| Double jump | Yes (400ms window) | No |
-| Weapon switching | Instant | 450ms delay |
 | Ramp jump | Height + directional | Height only |
+| Weapon switching | Instant | 450ms delay |
 
 CPMA supports both CPM and VQ3 physics. VQ3 mode behaves identically to base Q3.
 
