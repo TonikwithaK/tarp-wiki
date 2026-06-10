@@ -1,11 +1,11 @@
 // ============================================================================
-// Open Arena — blue on dark.
-// Accent: #3b8fd4
+// Open Arena — electric cyan on dark. Matches the OA logo glow.
+// Accent: #00d4ff
 // ============================================================================
 
 [data-slug^="games/open-arena"] {
-  --game-accent: #3b8fd4;
-  --game-muted: rgba(59, 143, 212, 0.10);
+  --game-accent: #00d4ff;
+  --game-muted: rgba(0, 212, 255, 0.10);
 
   article h1 {
     color: var(--game-accent);
@@ -32,7 +32,7 @@
     border-radius: 3px;
     margin-bottom: 1rem;
     opacity: 0.85;
-    background: #3b8fd4;
-    color: #ffffff;
+    background: #00d4ff;
+    color: #000000;
   }
 }
