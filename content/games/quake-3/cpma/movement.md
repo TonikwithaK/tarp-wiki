@@ -48,7 +48,7 @@ Rocket and grenade jumping work identically to VQ3 in terms of physics. Instant 
 
 ## Related
 
-- [[games/cpma/index|CPMA]]
+- [[games/quake-3/cpma/index|CPMA]]
 - [[games/quake-3/movement|Quake III Arena Movement]]
-- [[games/defrag/index|Defrag]]
+- [[games/quake-3/defrag/index|Defrag]]
 - [[games/quake-live/movement|Quake Live Movement]]

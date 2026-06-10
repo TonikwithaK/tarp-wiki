@@ -5,11 +5,11 @@ description: Arena FPS titles covered by TARP.
 
 Browse by title. Each section covers mechanics, movement, weapons, and competitive knowledge specific to that game. Content from one game is never applied to another.
 
-## Quake III Arena and Mods
+## Quake III Arena
 
 - [[games/quake-3/index|Quake III Arena]] -- the base game. VQ3 physics, the mod ecosystem anchor.
-- [[games/cpma/index|CPMA]] -- Challenge ProMode Arena. CPM physics origin. The competitive standard for Q3.
-- [[games/defrag/index|DeFRaG]] -- speedrunning/movement mod. VQ3 and CPM. See also: [defrag.racing](https://defrag.racing).
+  - [[games/quake-3/cpma/index|CPMA]] -- Challenge ProMode Arena. CPM physics origin. The competitive standard for Q3.
+  - [[games/quake-3/defrag/index|DeFRaG]] -- speedrunning/movement mod. VQ3 and CPM. See also: [defrag.racing](https://defrag.racing).
 
 ## Open Arena
 

@@ -57,4 +57,4 @@ Full technique documentation, CVAR reference, HUD tools, mapping guides, and his
 
 - [[games/quake-3/index|Quake III Arena]]
 - [[games/quake-3/movement|Q3 Movement]]
-- [[games/cpma/index|CPMA]]
+- [[games/quake-3/cpma/index|CPMA]]

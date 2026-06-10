@@ -58,9 +58,9 @@ CPMA rebalances Q3's weapons. Instant weapon switching removes the 450ms switch 
 
 ## Related
 
-- [[games/cpma/movement|Movement]]
-- [[games/cpma/weapons/index|Weapons]]
-- [[games/cpma/gametypes/index|Gametypes]]
+- [[games/quake-3/cpma/movement|Movement]]
+- [[games/quake-3/cpma/weapons/index|Weapons]]
+- [[games/quake-3/cpma/gametypes/index|Gametypes]]
 - [[games/quake-3/index|Quake III Arena]]
-- [[games/defrag/index|Defrag]]
+- [[games/quake-3/defrag/index|Defrag]]
 - [[games/quake-live/index|Quake Live]]

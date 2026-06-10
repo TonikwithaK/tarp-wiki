@@ -59,4 +59,4 @@ BFG also deals area-of-effect damage on proximity to the plasma ball in flight, 
 
 - [[games/quake-3/index|Quake III Arena]]
 - [[games/quake-3/movement|Movement]]
-- [[games/cpma/index|CPMA]]
+- [[games/quake-3/cpma/index|CPMA]]
