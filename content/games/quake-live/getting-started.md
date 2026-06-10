@@ -10,7 +10,7 @@ promoted: 2026-06-09
 
 ## Download
 
-Quake Live is available on Steam. It is free to play.
+Quake Live is available on Steam. $9.99.
 
 ---
 

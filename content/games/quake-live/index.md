@@ -7,7 +7,7 @@ tags:
 
 # Quake Live
 
-Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin in 2009 and migrated to Steam in 2014. Free to play.
+Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin in 2009 and migrated to Steam in 2014. $9.99 on Steam.
 
 Two physics modes, determined by the server factory:
 
