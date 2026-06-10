@@ -1,7 +1,7 @@
 ---
 title: CPMA
-game: cpma
-type: index
+game: quake-3
+type: reference
 tags: [cpma, promode, cpm, quake3, arena-fps]
 status: canon
 created: 2026-06-10
@@ -14,14 +14,39 @@ The mod introduced CPM physics -- a distinct movement system with full air contr
 
 The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maintained by the same team. Download and guides at [playmorepromode.com](https://playmorepromode.com).
 
-## Physics
+## Physics Constants (CPM vs VQ3)
 
-CPMA supports two physics modes:
+| Constant | CPM | VQ3 |
+|---|---|---|
+| Ground speed | 320 UPS | 320 UPS |
+| Air acceleration | 15.0 | 10.0 |
+| Air control | Full | Minimal |
+| Bunny hopping | Yes | No |
+| Double jump | Yes (400ms window) | No |
+| Weapon switching | Instant | 450ms delay |
+| Ramp jump | Height + directional | Height only |
 
-- **CPM (ProMode)**: Full air control. Players can turn sharply in the air using strafe keys while holding forward. `pm_accelerate = 15.0` vs VQ3's `10.0`. Instant weapon switching. Additional jumping techniques including double-jumping and enhanced ramp jumping.
-- **VQ3**: Vanilla Q3 physics. CPMA can run VQ3 servers for compatibility with the base game feel.
+CPMA supports both CPM and VQ3 physics. VQ3 mode behaves identically to base Q3.
 
-The CPM physics mode is the reason CPMA matters to the broader AFPS lineage. Every game that references "ProMode physics" or "CPM physics" is tracing back to this mod.
+## Air Control
+
+The defining difference between CPM and VQ3. In CPM, strafing while airborne with +forward held allows meaningful steering. Players can turn 90 degrees or more without losing momentum.
+
+Strafe keys (A/D) handle large directional changes in the air. W-only is used for small adjustments.
+
+## Bunny Hopping
+
+Maintaining momentum through a series of jumps without losing speed on landing. Works in CPM, does not work in VQ3 (speed drops to ground cap on contact).
+
+## Double Jump
+
+Landing on a step or ramp within 400ms of a previous jump grants a height bonus on the next jump.
+
+## Strafe Jumping
+
+Still present and useful in CPM. Higher air acceleration (`15.0` vs `10.0`) means velocity builds faster. Combined with air control, CPM strafe jumping produces higher starting speeds than VQ3 for a given mouse input.
+
+Circlejump speeds: VQ3 roughly 407 UPS from a good standing circlejump. CPM roughly 492 UPS under the same conditions.
 
 ## Ruleset Variants
 
@@ -39,14 +64,14 @@ Inherits FFA, TDM, 1v1 Tournament, and CTF from base Q3. CPMA-exclusive modes:
 | Mode | Description |
 |---|---|
 | Clan Arena (CA) | Full loadout on spawn. No pickups. Respawn only between rounds. |
-| Freeze Tag | Freeze all enemy players to win the round. Frozen players thawed by a teammate standing nearby for 3 seconds. |
+| Freeze Tag | Freeze all enemy players to win the round. Frozen players thawed by teammate contact for 3 seconds. |
 | Capture Strike | CTF + Rocket Arena hybrid. Teams alternate offense and defense. |
 | Not Team Fortress (NTF) | Class-based CTF. 4 classes: Fighter, Scout, Sniper, Tank. Health and armor regenerate. |
 | HoonyMode | Tennis-format 1v1. Players choose spawn points, deaths score points. |
 
 ## Weapons
 
-CPMA rebalances Q3's weapons. Instant weapon switching removes the 450ms switch delay from base Q3. See the weapons page for stats.
+CPMA rebalances Q3's weapons. Instant weapon switching removes the 450ms switch delay from base Q3.
 
 ## Key Versions
 
@@ -58,9 +83,7 @@ CPMA rebalances Q3's weapons. Instant weapon switching removes the 450ms switch 
 
 ## Related
 
-- [[games/quake-3/cpma/movement|Movement]]
-- [[games/quake-3/cpma/weapons/index|Weapons]]
-- [[games/quake-3/cpma/gametypes/index|Gametypes]]
 - [[games/quake-3/index|Quake III Arena]]
-- [[games/quake-3/defrag/index|Defrag]]
+- [[games/quake-3/movement|Q3 Movement]]
+- [[games/quake-3/defrag|Defrag]]
 - [[games/quake-live/index|Quake Live]]

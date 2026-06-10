@@ -8,8 +8,8 @@ Browse by title. Each section covers mechanics, movement, weapons, and competiti
 ## Quake III Arena
 
 - [[games/quake-3/index|Quake III Arena]] -- the base game. VQ3 physics, the mod ecosystem anchor.
-  - [[games/quake-3/cpma/index|CPMA]] -- Challenge ProMode Arena. CPM physics origin. The competitive standard for Q3.
-  - [[games/quake-3/defrag/index|DeFRaG]] -- speedrunning/movement mod. VQ3 and CPM. See also: [defrag.racing](https://defrag.racing).
+  - [[games/quake-3/cpma|CPMA]] -- Challenge ProMode Arena. CPM physics origin. The competitive standard for Q3.
+  - [[games/quake-3/defrag|DeFRaG]] -- speedrunning/movement mod. VQ3 and CPM. See also: [defrag.racing](https://defrag.racing).
 
 ## Open Arena
 

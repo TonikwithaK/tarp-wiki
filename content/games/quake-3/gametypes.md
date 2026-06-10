@@ -28,4 +28,4 @@ Spawn weapons in all modes: Gauntlet + Machine Gun.
 ## Related
 
 - [[games/quake-3/index|Quake III Arena]]
-- [[games/quake-3/weapons/index|Weapons]]
+- [[games/quake-3/weapons|Weapons]]

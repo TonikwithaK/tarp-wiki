@@ -52,9 +52,9 @@ Config lives at `baseq3/q3config.cfg`. Edit settings via `autoexec.cfg` -- `q3co
 ## Related
 
 - [[games/quake-3/movement|Movement]]
-- [[games/quake-3/weapons/index|Weapons]]
-- [[games/quake-3/gametypes/index|Gametypes]]
+- [[games/quake-3/weapons|Weapons]]
+- [[games/quake-3/gametypes|Gametypes]]
 - [[games/quake-3/getting-started|Getting Started]]
-- [[games/quake-3/cpma/index|CPMA]]
-- [[games/quake-3/defrag/index|Defrag]]
+- [[games/quake-3/cpma|CPMA]]
+- [[games/quake-3/defrag|Defrag]]
 - [[games/quake-live/index|Quake Live]]

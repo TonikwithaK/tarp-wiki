@@ -61,6 +61,6 @@ Server physics run at 125 fps. Client framerate does not affect physics calculat
 ## Related
 
 - [[games/quake-3/index|Quake III Arena]]
-- [[games/quake-3/cpma/movement|CPMA Movement]]
-- [[games/quake-3/defrag/index|Defrag]]
+- [[games/quake-3/cpma|CPMA Movement]]
+- [[games/quake-3/defrag|Defrag]]
 - [[games/quake-live/movement|Quake Live Movement]]
