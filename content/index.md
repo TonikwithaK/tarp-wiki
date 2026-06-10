@@ -19,4 +19,4 @@ Mechanics, movement, weapons, gametypes, and history for competitive Arena FPS.
 
 ---
 
-Find what you need with the search bar or explorer. If something is missing or wrong, it will get fixed.
+Find what you need with the search bar or explorer. If something is missing or wrong, report it in the [TARP Discord](https://discord.gg/myRt8kVfdR).
