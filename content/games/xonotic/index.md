@@ -35,10 +35,20 @@ High air control relative to other AFPS games. Ground friction is heavy — bunn
 
 Considered one of the more welcoming AFPS communities. Active players generally help newcomers if asked. Pickup sounds and map callouts are part of the competitive meta, especially in duel.
 
+## XDF and the Defrag Scene
+
+XDF (Xonotic Defrag) is a race/trick movement mode with distinct CPMA-like physics — effectively a separate game running on the Xonotic engine. The Xonotic development team does not actively support XDF.
+
+The defrag community organizes its own competitive events independently. The primary hub is xdf.gg. The XDWC (Xonotic Defrag World Cup) and XSC (Xonotic Strafe Competition) are the main organized events, tracked at https://xdwc.xdf.gg. XSC 2026 ran 5 rounds with 344 participants.
+
+XDF movement tech (CPMA-like strafe jumping, circle jumping) is meaningfully different from vanilla Xonotic physics. Knowledge does not transfer cleanly between the two.
+
 ## Resources
 
-- Download and official guide: https://xonotic.org
+- Official site and beginner guide: https://xonotic.org/guide/ (Halogene's Newbie Corner — comprehensive, actively maintained)
 - Stats: https://stats.xonotic.org
+- XDF competitive scene: https://xdwc.xdf.gg
+- XDF hub: https://xdf.gg
 
 ## Related
 
