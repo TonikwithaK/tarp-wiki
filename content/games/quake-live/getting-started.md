@@ -10,7 +10,7 @@ promoted: 2026-06-09
 
 ## Download
 
-Quake Live is available on Steam. $9.99.
+Quake Live is available on [Steam](https://store.steampowered.com/app/282440/Quake_Live/). $9.99.
 
 ---
 
