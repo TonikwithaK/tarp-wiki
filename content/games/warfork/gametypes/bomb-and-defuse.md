@@ -45,6 +45,5 @@ Teams swap sides after a set number of rounds. Players choose their starting wea
 ## Related
 
 - [[games/warfork/movement|Movement]]
-- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/weapons/index|Weapons]]
 - [[games/warfork/gametypes/clan-arena|Clan Arena]]
-- [[games/warfork/weapons/index|Index]]

@@ -51,13 +51,12 @@ Respawning is continuous. There are no rounds.
 ## Variants
 
 - Instagib CTF: all weapons replaced with the Instagun (one-hit kills).
-- Class-based CTF: introduces distinct player classes. Separate gametype: ctftactics. See [[class-based-ctf]] (page forthcoming).
+- Class-based CTF: introduces distinct player classes. Separate gametype: ctftactics.
 
 ---
 
 ## Related
 
 - [[games/warfork/movement|Movement]]
-- [[games/warfork/weapons/index|Index]]
-- [[games/warfork/health-and-armor|Health And Armor]]
-- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/weapons/index|Weapons]]
+- [[games/warfork/health-and-armor|Health and Armor]]

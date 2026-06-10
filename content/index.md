@@ -9,9 +9,9 @@ Mechanics, movement, weapons, gametypes, and history for competitive Arena FPS. 
 
 ## Games
 
-- [[games/warfork/|Warfork]]
-- [[games/quake-live/|Quake Live]]
-- [[games/reflex/|Reflex Arena]]
+- [[games/warfork/index|Warfork]]
+- [[games/quake-live/index|Quake Live]]
+- [[games/reflex/index|Reflex Arena]]
 
 ---
 

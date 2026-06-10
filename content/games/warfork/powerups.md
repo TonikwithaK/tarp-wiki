@@ -28,7 +28,6 @@ Regeneration heals the carrier's HP over time for its duration.
 
 All three powerups spawn at fixed map locations. The respawn timer is 90 seconds in all standard gametypes (Duel, CA, TDM, FFA, CTF). The timer starts when the powerup is picked up.
 
-To track a powerup respawn: note the time of pickup and add 90 seconds. This is the same timing method used for Mega Health and armor.
 
 ## Related
 

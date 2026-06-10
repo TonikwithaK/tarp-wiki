@@ -42,4 +42,4 @@ Both can be enabled via server callvote or cvar.
 
 - [[games/warfork/weapons/instagun|Instagun]]
 - [[games/warfork/movement|Movement]]
-- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/weapons/index|Weapons]]
