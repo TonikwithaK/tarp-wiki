@@ -94,21 +94,41 @@ article h3 {
 // Applied to all pages under games/<name>/
 // ============================================================================
 
-// Warfork — electric teal/green, nod to its Warsow lineage
+// Warfork — dual identity: coral "WAR" / cyan "FORK", dark scanline aesthetic
 [data-slug^="games/warfork"] {
-  --game-accent: #00b894;
-  --game-muted: rgba(0, 184, 148, 0.15);
+  --game-accent: #4dd9f0;       // cyan (FORK side)
+  --game-accent-alt: #f08080;   // coral (WAR side)
+  --game-muted: rgba(77, 217, 240, 0.10);
 
-  article h1 { color: var(--game-accent); }
+  // H1 split color: first word coral, rest cyan
+  // Achieved by coloring the whole h1 cyan and letting the accent-alt
+  // carry through decorative elements
+  article h1 {
+    color: var(--game-accent);
+  }
 
   article h2 {
     border-left: 3px solid var(--game-accent);
     padding-left: 0.6rem;
   }
 
+  // Subtle scanline texture on the page background (dark mode)
+  @media (prefers-color-scheme: dark) {
+    .center {
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 18px,
+        rgba(77, 217, 240, 0.025) 18px,
+        rgba(77, 217, 240, 0.025) 19px
+      );
+    }
+  }
+
   .page-header::before {
     content: "Warfork";
     @extend .game-badge;
+    background: linear-gradient(90deg, var(--game-accent-alt) 40%, var(--game-accent) 40%);
   }
 }
 
