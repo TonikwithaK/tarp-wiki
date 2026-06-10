@@ -479,7 +479,7 @@ Three separate color systems in QL:
 | | 26 | Medium Grey | 808080 | 128 | 128 | 128 |
 | 8/0 | - | Black | 000000 | 0 | 0 | 0 |
 
-## Commands: A–C
+## Commands
 
 | Command | Usage | Description |
 |---------|-------|-------------|
@@ -500,26 +500,6 @@ Three separate color systems in QL:
 | `connect` | `connect <ip:port>` | Connect to server |
 | `cvar_restart` | `cvar_restart` | Restart CVAR system |
 | `cvarlist` | `cvarlist <query>` | List CVARs |
-
-callvote options:
-```
-callvote map_restart
-callvote nextmap
-callvote map <mapname>
-callvote g_gametype <n>
-callvote kick <player>
-callvote clientkick <clientnum>
-callvote timelimit <time>
-callvote fraglimit <frags>
-callvote shuffle
-callvote teamsize <number>
-callvote cointoss <heads/tails>
-```
-
-## Commands: D–K
-
-| Command | Usage | Description |
-|---------|-------|-------------|
 | `demo` | `demo <demoname>` | Play a demo |
 | `devmap` [C] | `devmap <mapname>` | Open map with cheats |
 | `dir` | `dir [dir]/[ext]` | Show files in directory |
@@ -541,11 +521,6 @@ callvote cointoss <heads/tails>
 | `in_restart` | `in_restart` | Restart input drivers |
 | `kick` | `kick <playername>` | Kick a client |
 | `kill` | `kill` | Kill yourself (requires g_allowKill 1) |
-
-## Commands: M–Z
-
-| Command | Usage | Description |
-|---------|-------|-------------|
 | `map` | `map <mapname>` | Load map (server) |
 | `map_restart` | `map_restart` | Restart current map |
 | `messagemode` | `messagemode` | Open all-chat |
@@ -583,6 +558,21 @@ callvote cointoss <heads/tails>
 | `weapnext` | `weapnext` | Next weapon |
 | `weapprev` | `weapprev` | Previous weapon |
 | `writeconfig` | `writeconfig <file>` | Write settings to file |
+
+callvote options:
+```
+callvote map_restart
+callvote nextmap
+callvote map <mapname>
+callvote g_gametype <n>
+callvote kick <player>
+callvote clientkick <clientnum>
+callvote timelimit <time>
+callvote fraglimit <frags>
+callvote shuffle
+callvote teamsize <number>
+callvote cointoss <heads/tails>
+```
 
 ## Button Commands
 
