@@ -1,0 +1,38 @@
+// ============================================================================
+// Warfork — dual identity: coral "WAR" / cyan "FORK", dark scanline aesthetic
+// Accent:     #4dd9f0 (cyan)
+// Accent alt: #f08080 (coral)
+// ============================================================================
+
+[data-slug^="games/warfork"] {
+  --game-accent: #4dd9f0;
+  --game-accent-alt: #f08080;
+  --game-muted: rgba(77, 217, 240, 0.10);
+
+  article h1 {
+    color: var(--game-accent);
+  }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .center {
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 18px,
+        rgba(77, 217, 240, 0.025) 18px,
+        rgba(77, 217, 240, 0.025) 19px
+      );
+    }
+  }
+
+  .page-header::before {
+    content: "Warfork";
+    @extend .game-badge;
+    background: linear-gradient(90deg, var(--game-accent-alt) 40%, var(--game-accent) 40%);
+  }
+}

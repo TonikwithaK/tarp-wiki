@@ -4,29 +4,27 @@
 // TARP — Custom Styles
 // ============================================================================
 //
-// Structure:
-//   1. Global base
-//   2. Game themes (per-game accent colors via [data-slug])
-//   3. Custom page injection helpers
-//   4. Mobile optimizations
+// This file is the entry point only. Game themes live in games/_<name>.scss.
 //
 // Adding a new game:
-//   1. Add a $game-<name> color block below
-//   2. Add a [data-slug^="games/<name>"] block that references it
-//   3. Done — all pages under that path inherit the theme
+//   1. Create quartz/styles/games/_<game-slug>.scss
+//   2. Copy any existing game file as a template
+//   3. Update the slug selector: [data-slug^="games/<game-slug>"]
+//   4. Add the @use import below — done
+//
 // ============================================================================
 
 
 // ============================================================================
-// 1. GLOBAL BASE
+// BASE — global styles applied to all pages
 // ============================================================================
 
-// Tighten up the content column slightly for readability
+// Tighten content column for readability
 article {
   max-width: 680px;
 }
 
-// Tables: clean, readable, full width
+// Tables
 article table {
   width: 100%;
   border-collapse: collapse;
@@ -57,7 +55,7 @@ article pre {
   border-radius: 4px;
 }
 
-// Headings — tighten spacing
+// Heading spacing
 article h2 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
@@ -68,7 +66,7 @@ article h3 {
   margin-bottom: 0.25rem;
 }
 
-// Game badge — shown on pages with a game theme
+// Game badge — base definition, extended by each game theme
 .game-badge {
   display: inline-block;
   font-size: 0.7rem;
@@ -85,125 +83,16 @@ article h3 {
 
 
 // ============================================================================
-// 2. GAME THEMES
+// CUSTOM PAGE INJECTION HELPERS
 //
-// Each game gets:
-//   --game-accent   primary color (headings, links, highlights)
-//   --game-muted    softer variant (borders, badges)
+// Drop these into any markdown page via HTML blocks.
+// They inherit --game-accent automatically from the active game theme.
 //
-// Applied to all pages under games/<name>/
-// ============================================================================
-
-// Warfork — dual identity: coral "WAR" / cyan "FORK", dark scanline aesthetic
-[data-slug^="games/warfork"] {
-  --game-accent: #4dd9f0;       // cyan (FORK side)
-  --game-accent-alt: #f08080;   // coral (WAR side)
-  --game-muted: rgba(77, 217, 240, 0.10);
-
-  // H1 split color: first word coral, rest cyan
-  // Achieved by coloring the whole h1 cyan and letting the accent-alt
-  // carry through decorative elements
-  article h1 {
-    color: var(--game-accent);
-  }
-
-  article h2 {
-    border-left: 3px solid var(--game-accent);
-    padding-left: 0.6rem;
-  }
-
-  // Subtle scanline texture on the page background (dark mode)
-  @media (prefers-color-scheme: dark) {
-    .center {
-      background-image: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 18px,
-        rgba(77, 217, 240, 0.025) 18px,
-        rgba(77, 217, 240, 0.025) 19px
-      );
-    }
-  }
-
-  .page-header::before {
-    content: "Warfork";
-    @extend .game-badge;
-    background: linear-gradient(90deg, var(--game-accent-alt) 40%, var(--game-accent) 40%);
-  }
-}
-
-// Quake Live — black, red, white. Hard contrast, no softness.
-[data-slug^="games/quake-live"] {
-  --game-accent: #cc0000;
-  --game-muted: rgba(204, 0, 0, 0.10);
-
-  article h1 {
-    color: var(--game-accent);
-  }
-
-  article h2 {
-    border-left: 3px solid var(--game-accent);
-    padding-left: 0.6rem;
-  }
-
-  // Strong top border on article to anchor the red
-  article {
-    border-top: 2px solid var(--game-accent);
-    padding-top: 1rem;
-  }
-
-  .page-header::before {
-    content: "Quake Live";
-    @extend .game-badge;
-    background: #cc0000;
-    color: #ffffff;
-    letter-spacing: 0.12em;
-  }
-}
-
-// Reflex Arena — grey and red, stripped back, mechanical
-[data-slug^="games/reflex"] {
-  --game-accent: #c0392b;
-  --game-muted: rgba(192, 57, 43, 0.10);
-  --game-grey: #888888;
-
-  article h1 {
-    color: var(--game-grey);
-  }
-
-  article h2 {
-    border-left: 3px solid var(--game-accent);
-    padding-left: 0.6rem;
-    color: var(--game-grey);
-  }
-
-  // Muted grey top border, red accent stripe
-  article {
-    border-top: 1px solid var(--game-grey);
-    padding-top: 1rem;
-  }
-
-  .page-header::before {
-    content: "Reflex Arena";
-    @extend .game-badge;
-    background: var(--game-grey);
-    color: #ffffff;
-    border-left: 3px solid var(--game-accent);
-    border-radius: 0 3px 3px 0;
-  }
-}
-
-
-// ============================================================================
-// 3. CUSTOM PAGE INJECTION HELPERS
-//
-// Use these classes in any markdown page via raw HTML blocks:
-//   <div class="callout-info">...</div>     — informational aside
-//   <div class="callout-warn">...</div>     — warning or caveat
-//   <div class="stat-block">...</div>       — highlighted stat/number
-//   <div class="version-note">...</div>     — version-specific note
-//
-// These work in any game section and inherit the game accent color.
+// Usage:
+//   <div class="callout-info">Informational note</div>
+//   <div class="callout-warn">Warning or caveat</div>
+//   <div class="stat-block"><strong>320 u/s</strong> Ground speed</div>
+//   <div class="version-note">Changed in v1.2.0</div>
 // ============================================================================
 
 .callout-info,
@@ -249,7 +138,23 @@ article h3 {
 
 
 // ============================================================================
-// 4. MOBILE OPTIMIZATIONS
+// GAME THEMES — one file per game
+// To add a new game: create games/_<slug>.scss and @use it here
+// ============================================================================
+
+@use "./games/warfork";
+@use "./games/quake-live";
+@use "./games/reflex";
+
+// @use "./games/quake3";       ← future
+// @use "./games/warsow";       ← future
+// @use "./games/cpma";         ← future
+// @use "./games/diabotical";   ← future
+// @use "./games/xonotic";      ← future
+
+
+// ============================================================================
+// MOBILE
 // ============================================================================
 
 @media all and ($mobile) {
@@ -268,21 +173,14 @@ article h3 {
     line-height: 1.3;
   }
 
-  .note-properties {
-    display: none;
-  }
+  .note-properties { display: none; }
+  .content-meta { display: none; }
 
-  .content-meta {
-    display: none;
-  }
-
-  // Game badge on mobile: smaller
   .game-badge {
     font-size: 0.65rem;
     padding: 0.15rem 0.4rem;
   }
 
-  // h2 left border still works on mobile, just less padding
   article h2 {
     padding-left: 0.4rem;
   }
