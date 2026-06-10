@@ -10,3 +10,4 @@ Browse by title. Each section covers mechanics, movement, weapons, maps, and com
 - [[games/warfork/index|Warfork]]
 - [[games/quake-live/index|Quake Live]]
 - [[games/reflex/index|Reflex Arena]]
+- [[games/open-arena/index|Open Arena]]

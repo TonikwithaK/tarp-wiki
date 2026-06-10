@@ -1,0 +1,38 @@
+// ============================================================================
+// Open Arena — orange/amber on dark. Free software energy.
+// Accent: #e87c00 (orange)
+// ============================================================================
+
+[data-slug^="games/open-arena"] {
+  --game-accent: #e87c00;
+  --game-muted: rgba(232, 124, 0, 0.10);
+
+  article h1 {
+    color: var(--game-accent);
+  }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  article {
+    border-top: 2px solid var(--game-accent);
+    padding-top: 1rem;
+  }
+
+  .page-header::before {
+    content: "Open Arena";
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+    background: #e87c00;
+    color: #ffffff;
+  }
+}
