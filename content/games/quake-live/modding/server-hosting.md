@@ -142,4 +142,4 @@ Compatible tools:
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
+- [[../gametypes/index|Gametypes]]

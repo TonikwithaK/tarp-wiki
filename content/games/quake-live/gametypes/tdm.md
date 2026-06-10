@@ -34,7 +34,7 @@ Item pickups present.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
-- [Clan Arena](gametypes/clan-arena)
+- [[index|Gametypes]]
+- [[../movement|Movement]]
+- [[../health-and-armor|Health and Armor]]
+- [[clan-arena|Clan Arena]]

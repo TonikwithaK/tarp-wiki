@@ -67,5 +67,5 @@ All other weapons, health, and armor must be picked up from the map. There is no
 
 ## Related
 
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
+- [[movement|Movement]]
+- [[health-and-armor|Health and Armor]]

@@ -125,4 +125,4 @@ r_decals 0
 
 ## Related
 
-- [Getting Started](getting-started.md)
+- [[getting-started|Getting Started]]

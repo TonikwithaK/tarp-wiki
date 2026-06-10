@@ -38,7 +38,7 @@ Powerups including the Battle Suit are present on CTF maps.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
-- [Weapons Index](weapons/index)
+- [[index|Gametypes]]
+- [[../movement|Movement]]
+- [[../health-and-armor|Health and Armor]]
+- [[../weapons/index|Weapons]]

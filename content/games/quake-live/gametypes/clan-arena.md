@@ -54,6 +54,6 @@ Items do not spawn in CA. No item pickups.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Weapons Index](weapons/index)
-- [Health and Armor](health-and-armor)
+- [[index|Gametypes]]
+- [[../weapons/index|Weapons]]
+- [[../health-and-armor|Health and Armor]]

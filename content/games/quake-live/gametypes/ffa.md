@@ -35,6 +35,6 @@ Item pickups present. Item respawn timers apply.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
+- [[index|Gametypes]]
+- [[../movement|Movement]]
+- [[../health-and-armor|Health and Armor]]
