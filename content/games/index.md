@@ -5,18 +5,10 @@ description: Arena FPS titles covered by TARP.
 
 Browse by title. Each section covers mechanics, movement, weapons, and competitive knowledge specific to that game. Content from one game is never applied to another.
 
-## Quake III Arena
-
-- [[games/quake-3/index|Quake III Arena]] -- the base game. VQ3 physics, the mod ecosystem anchor.
-  - [[games/quake-3/cpma|CPMA]] -- Challenge ProMode Arena. CPM physics origin. The competitive standard for Q3.
-  - [[games/quake-3/defrag|DeFRaG]] -- speedrunning/movement mod. VQ3 and CPM. See also: [defrag.racing](https://defrag.racing).
-
-## Open Arena
-
-- [[games/open-arena/index|Open Arena]] -- free, open-source ioquake3 game. Its own community and mod ecosystem.
-
-## Other Games
-
 - [[games/warfork/index|Warfork]]
 - [[games/quake-live/index|Quake Live]]
 - [[games/reflex/index|Reflex Arena]]
+- [[games/open-arena/index|Open Arena]]
+- [[games/quake-3/index|Quake III Arena]]
+  - [[games/quake-3/cpma|CPMA]]
+  - [[games/quake-3/defrag|DeFRaG]]
