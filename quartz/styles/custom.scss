@@ -161,21 +161,35 @@ article h3 {
   }
 }
 
-// Reflex Arena — cold blue/purple, reflects its CPM roots
+// Reflex Arena — grey and red, stripped back, mechanical
 [data-slug^="games/reflex"] {
-  --game-accent: #6c5ce7;
-  --game-muted: rgba(108, 92, 231, 0.15);
+  --game-accent: #c0392b;
+  --game-muted: rgba(192, 57, 43, 0.10);
+  --game-grey: #888888;
 
-  article h1 { color: var(--game-accent); }
+  article h1 {
+    color: var(--game-grey);
+  }
 
   article h2 {
     border-left: 3px solid var(--game-accent);
     padding-left: 0.6rem;
+    color: var(--game-grey);
+  }
+
+  // Muted grey top border, red accent stripe
+  article {
+    border-top: 1px solid var(--game-grey);
+    padding-top: 1rem;
   }
 
   .page-header::before {
     content: "Reflex Arena";
     @extend .game-badge;
+    background: var(--game-grey);
+    color: #ffffff;
+    border-left: 3px solid var(--game-accent);
+    border-radius: 0 3px 3px 0;
   }
 }
 
