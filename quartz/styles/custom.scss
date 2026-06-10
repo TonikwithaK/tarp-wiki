@@ -1,30 +1,37 @@
-@use "./variables.scss" as *;
-
 // ============================================================================
 // TARP — Custom Styles
 // ============================================================================
 //
-// This file is the entry point only. Game themes live in games/_<name>.scss.
+// All @use rules must be at the top (SCSS requirement).
+// Game themes live in games/_<name>.scss — imported below.
 //
 // Adding a new game:
 //   1. Create quartz/styles/games/_<game-slug>.scss
 //   2. Copy any existing game file as a template
 //   3. Update the slug selector: [data-slug^="games/<game-slug>"]
-//   4. Add the @use import below — done
+//   4. Add the @forward import in games/_index.scss — done
 //
 // ============================================================================
+
+@use "./variables.scss" as *;
+@use "./games/warfork";
+@use "./games/quake-live";
+@use "./games/reflex";
+// @use "./games/quake3";       // future
+// @use "./games/warsow";       // future
+// @use "./games/cpma";         // future
+// @use "./games/diabotical";   // future
+// @use "./games/xonotic";      // future
 
 
 // ============================================================================
 // BASE — global styles applied to all pages
 // ============================================================================
 
-// Tighten content column for readability
 article {
   max-width: 680px;
 }
 
-// Tables
 article table {
   width: 100%;
   border-collapse: collapse;
@@ -49,13 +56,11 @@ article table {
   }
 }
 
-// Code blocks
 article pre {
   border-left: 3px solid var(--secondary);
   border-radius: 4px;
 }
 
-// Heading spacing
 article h2 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
@@ -66,7 +71,6 @@ article h3 {
   margin-bottom: 0.25rem;
 }
 
-// Game badge — base definition, extended by each game theme
 .game-badge {
   display: inline-block;
   font-size: 0.7rem;
@@ -85,10 +89,7 @@ article h3 {
 // ============================================================================
 // CUSTOM PAGE INJECTION HELPERS
 //
-// Drop these into any markdown page via HTML blocks.
-// They inherit --game-accent automatically from the active game theme.
-//
-// Usage:
+// Usage in any markdown page:
 //   <div class="callout-info">Informational note</div>
 //   <div class="callout-warn">Warning or caveat</div>
 //   <div class="stat-block"><strong>320 u/s</strong> Ground speed</div>
@@ -135,22 +136,6 @@ article h3 {
   color: var(--darkgray);
   font-style: italic;
 }
-
-
-// ============================================================================
-// GAME THEMES — one file per game
-// To add a new game: create games/_<slug>.scss and @use it here
-// ============================================================================
-
-@use "./games/warfork";
-@use "./games/quake-live";
-@use "./games/reflex";
-
-// @use "./games/quake3";       ← future
-// @use "./games/warsow";       ← future
-// @use "./games/cpma";         ← future
-// @use "./games/diabotical";   ← future
-// @use "./games/xonotic";      ← future
 
 
 // ============================================================================
