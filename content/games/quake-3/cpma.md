@@ -24,9 +24,11 @@ Air acceleration in CPM is `15.0` vs VQ3's `10.0`. Combined with air control, ci
 
 ## Held Mega Health
 
-In base Q3, the Mega Health respawns on a fixed timer from the moment it is picked up -- the carrier has no influence over when it comes back. In CPMA, the Mega Health timer does not start until the carrier's health drops to 100 or below. A player sitting above 100 HP indefinitely delays the respawn.
+In base Q3, the Mega Health respawns on a fixed timer from the moment it is picked up -- the carrier has no influence over when it comes back.
 
-This makes Mega Health a strategic resource in a way it is not in VQ3. Controlling it means not just picking it up but understanding when to let health decay and when to hold it. Denying the opponent the Mega while managing your own decay is a core part of high-level CPMA duel.
+CPMA's behavior depends on the ruleset and gametype. In the CPM duel ruleset, the Mega Health timer does not start until the carrier's health drops to 100 or below -- a player sitting above 100 HP indefinitely delays the respawn. This makes Mega Health a strategic resource in a way it is not in VQ3: controlling it means not just picking it up but understanding when to let health decay and when to hold it.
+
+Other gametypes in CPMA (CTF, TDM, etc.) use simple Mega Health -- the same fixed respawn timer as VQ3.
 
 ## Double Jump
 

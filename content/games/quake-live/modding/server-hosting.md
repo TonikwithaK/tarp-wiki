@@ -90,14 +90,7 @@ duel1:
 
 ## Factories
 
-A `.factories` file defines gametype rules as a JSON object.
-
-| Field | Purpose |
-|---|---|
-| `basegt` | Base gametype (`duel`, `ca`, `ctf`, `tdm`, `ffa`, etc.) |
-| `id` | Factory identifier used in server config |
-| `title` | Display name |
-| `cvars` | Overrides applied on top of base gametype defaults |
+A `.factories` file defines gametype rules as a JSON object. See [[games/quake-live/modding/index|Modding]] for the field reference.
 
 Example duel standard factory `cvars`:
 
@@ -114,7 +107,7 @@ Example duel standard factory `cvars`:
 
 ## minqlx
 
-minqlx is a server-side plugin framework for Quake Live. Plugins are Python scripts that hook into game events (player connect, kill, round end, etc.) and can add commands, modify rules, and integrate external services.
+See [[games/quake-live/modding/index|Modding]] for the full minqlx reference. Configuration keys relevant to server setup:
 
 | Setting | Value |
 |---|---|
@@ -142,4 +135,6 @@ Compatible tools:
 
 ## Related
 
+- [[games/quake-live/modding/index|Modding]]: minqlx capabilities, factories reference, physics mode
 - [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/console|Console]]: server cvar reference

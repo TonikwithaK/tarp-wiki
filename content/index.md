@@ -1,6 +1,6 @@
 ---
 title: The Arena Revival Project
-description: "Arena FPS knowledge. Movement, mechanics, and competitive play across the genre."
+description: "A knowledge base for Arena FPS: Warfork, Quake Live, Reflex Arena, Open Arena, Quake III Arena, CPMA, and DeFRaG."
 ---
 
 # The Arena Revival Project
@@ -19,4 +19,4 @@ Mechanics, movement, weapons, gametypes, and history for competitive Arena FPS.
 
 ---
 
-Find what you need with the search bar or explorer. If something is missing or wrong, report it in the [TARP Discord](https://discord.gg/myRt8kVfdR).
+Find what you need with the search bar or explorer. If something is missing or wrong, it will get fixed.

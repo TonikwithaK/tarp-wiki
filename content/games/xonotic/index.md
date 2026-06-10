@@ -19,17 +19,15 @@ Xonotic is a free, open-source arena FPS built on the DarkPlaces engine (a heavi
 
 Xonotic is a movement-heavy arena shooter with a full weapon loadout available from spawn (Blaster + Shotgun) and pickups for everything else. Matches are fast-paced and reward map control, movement tech, and weapon comboing.
 
-The Blaster is a unique fixture of the kit: it deals low damage but has no ammo cost and is primarily used as a movement tool throughout the game — not just a fallback weapon.
+The Blaster is a unique fixture of the kit: it deals low damage but has no ammo cost and is primarily used as a movement tool throughout the game, not just a fallback weapon.
 
 ## Game Modes
 
 Standard vanilla modes: deathmatch, team deathmatch, CTF, domination, key hunt, freeze tag, assault, and more. The server browser organizes vanilla servers under the "Normal" category. InstaGib, Overkill, and vehicle CTF are popular mutator modes with separate communities.
 
-XDF (Xonotic Defrag) is a race/trick movement mode with distinct CPMA-like physics — separate from vanilla entirely.
-
 ## Physics
 
-High air control relative to other AFPS games. Ground friction is heavy — bunny hopping is the primary way to maintain speed. Strafe turning is the key skill for navigating at speed without losing momentum.
+High air control relative to other AFPS games. Ground friction is heavy; bunny hopping is the primary way to maintain speed. Strafe turning is the key skill for navigating at speed without losing momentum.
 
 ## Community
 
@@ -37,7 +35,7 @@ Considered one of the more welcoming AFPS communities. Active players generally 
 
 ## XDF and the Defrag Scene
 
-XDF (Xonotic Defrag) is a race/trick movement mode with distinct CPMA-like physics — effectively a separate game running on the Xonotic engine. The Xonotic development team does not actively support XDF.
+XDF (Xonotic Defrag) is a race/trick movement mode with distinct CPMA-like physics, effectively a separate game running on the Xonotic engine. The Xonotic development team does not actively support XDF.
 
 The defrag community organizes its own competitive events independently. The primary hub is xdf.gg. The XDWC (Xonotic Defrag World Cup) and XSC (Xonotic Strafe Competition) are the main organized events, tracked at https://xdwc.xdf.gg. XSC 2026 ran 5 rounds with 344 participants.
 
