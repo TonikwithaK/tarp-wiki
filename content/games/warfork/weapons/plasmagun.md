@@ -32,7 +32,7 @@ Travel time makes the Plasmagun less efficient than the Lasergun or Riotgun at c
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[movement]]: plasmaclimbing technique
-- [[lasergun]]: faster DPS hitscan alternative
-- [[race]]: primary mode where plasmaclimbing is built into routes
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/movement|Movement]]: plasmaclimbing technique
+- [[games/warfork/weapons/lasergun|Lasergun]]: faster DPS hitscan alternative
+- [[games/warfork/gametypes/race|Race]]: primary mode where plasmaclimbing is built into routes

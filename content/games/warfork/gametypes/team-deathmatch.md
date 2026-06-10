@@ -62,9 +62,9 @@ TDM has no rounds. Play is continuous, and individual frags accumulate into the 
 
 ## Related
 
-- [[movement]]
-- [[weapons/index]]
-- [[health-and-armor]]
-- [[clan-arena]]
-- [[deathmatch]]
-- [[gametypes/index]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/health-and-armor|Health And Armor]]
+- [[games/warfork/gametypes/clan-arena|Clan Arena]]
+- [[games/warfork/gametypes/deathmatch|Deathmatch]]
+- [[games/warfork/weapons/index|Index]]

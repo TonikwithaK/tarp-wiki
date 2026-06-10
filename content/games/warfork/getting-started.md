@@ -40,7 +40,7 @@ Warfork stores persistent settings, binds, and autoexec scripts in a `basewf` fo
 | Mac      | `~/Library/Application Support/Warfork-2.1/basewf/` |
 | Linux    | `~/.local/share/warfork-2.1/basewf/` |
 
-`config.cfg` inside that folder stores your settings. You can edit it directly or let the game write to it via the console. See [[console]] for how to work with it effectively.
+`config.cfg` inside that folder stores your settings. You can edit it directly or let the game write to it via the console. See [[games/warfork/console|Console]] for how to work with it effectively.
 
 ## Player Name Color Codes
 
@@ -63,7 +63,7 @@ Example: `^1War^7fork` renders "War" in red and "fork" in white.
 
 ## Related
 
-- [[controls]]: default keybinds and how to rebind
-- [[console]]: opening the console, useful commands, config workflow
-- [[server-hosting]]: running your own server
-- For server setup beyond the install step, see [[server-hosting]].
+- [[games/warfork/controls|Controls]]: default keybinds and how to rebind
+- [[games/warfork/console|Console]]: opening the console, useful commands, config workflow
+- [[games/warfork/modding/server-hosting|Server Hosting]]: running your own server
+- For server setup beyond the install step, see [[games/warfork/modding/server-hosting|Server Hosting]].

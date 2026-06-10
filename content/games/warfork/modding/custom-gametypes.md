@@ -130,5 +130,5 @@ The engine compiles the AngelScript on load. Compile errors appear in the server
 
 ## See Also
 
-- [[gametype-scripting-reference]]: full AngelScript API: Vec3, Trace, Match, Gametype, Team, Entity, Client
-- [[server-hosting]]: running a server and setting cvars
+- [[games/warfork/modding/gametype-scripting-reference|Gametype Scripting Reference]]: full AngelScript API: Vec3, Trace, Match, Gametype, Team, Entity, Client
+- [[games/warfork/modding/server-hosting|Server Hosting]]: running a server and setting cvars

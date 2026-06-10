@@ -53,7 +53,7 @@ Queue-based. Players spawn with all weapons. Winner stays, next in queue enters.
 
 ## Related
 
-- [[../movement]]: movement mechanics
-- [[../health-and-armor]]: pickup values and armor interaction
-- [[../weapons/index]]: weapon stats
-- [[index]]: all gametypes
+- [[games/warfork/movement|Movement]]: movement mechanics
+- [[games/warfork/health-and-armor|Health And Armor]]: pickup values and armor interaction
+- [[games/warfork/weapons/index|Index]]: weapon stats
+- [[games/warfork/gametypes/index|Index]]: all gametypes

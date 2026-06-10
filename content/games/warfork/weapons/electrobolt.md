@@ -38,6 +38,6 @@ Closing distance during the 1250ms cooldown window forces the Electrobolt user i
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[lasergun]]: mid-range triad weapon
-- [[movement]]
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/weapons/lasergun|Lasergun]]: mid-range triad weapon
+- [[games/warfork/movement|Movement]]

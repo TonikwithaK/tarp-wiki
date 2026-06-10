@@ -58,8 +58,8 @@ FFA variant: players spawn with a full set of weapons and ammo, with no dependen
 
 ## Related
 
-- [[movement]]
-- [[weapons/index]]
-- [[health-and-armor]]
-- [[team-deathmatch]]
-- [[gametypes/index]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/health-and-armor|Health And Armor]]
+- [[games/warfork/gametypes/team-deathmatch|Team Deathmatch]]
+- [[games/warfork/weapons/index|Index]]

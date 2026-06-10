@@ -134,6 +134,6 @@ Each plasma bolt produces splash knockback on impact. Firing at a surface below 
 
 ## Related
 
-- [[controls]]: key bindings including RMB, Space, and weapon slots
-- [[weapons]]: Plasmagun details for plasmaclimbing
-- [[race]]: Race mode routes and movement requirements
+- [[games/warfork/controls|Controls]]: key bindings including RMB, Space, and weapon slots
+- [[games/warfork/weapons|Weapons]]: Plasmagun details for plasmaclimbing
+- [[games/warfork/gametypes/race|Race]]: Race mode routes and movement requirements

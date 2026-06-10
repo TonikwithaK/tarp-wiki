@@ -99,5 +99,5 @@ Bolt Rifle range: 16384 units. Ion Cannon range: 768 units.
 
 ## Related
 
-- [[movement]]
-- [[modes]]
+- [[games/reflex/movement|Movement]]
+- [[games/reflex/modes|Modes]]

@@ -37,8 +37,8 @@ Beyond medium range, projectile speed makes rockets avoidable via strafing and a
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[lasergun]]: primary mid-range companion
-- [[electrobolt]]: long-range triad weapon
-- [[grenade-launcher]]: the indirect explosive alternative
-- [[movement]]: rocket jump applications
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/weapons/lasergun|Lasergun]]: primary mid-range companion
+- [[games/warfork/weapons/electrobolt|Electrobolt]]: long-range triad weapon
+- [[games/warfork/weapons/grenade-launcher|Grenade Launcher]]: the indirect explosive alternative
+- [[games/warfork/movement|Movement]]: rocket jump applications

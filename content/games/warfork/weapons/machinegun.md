@@ -24,6 +24,6 @@ It is also used as an opener to chip armor before committing a higher-damage wea
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[lasergun]]: hitscan beam with higher DPS
-- [[electrobolt]]: hitscan with high burst damage
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/weapons/lasergun|Lasergun]]: hitscan beam with higher DPS
+- [[games/warfork/weapons/electrobolt|Electrobolt]]: hitscan with high burst damage

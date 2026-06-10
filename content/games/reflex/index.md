@@ -18,11 +18,11 @@ Reflex Arena is an arena first-person shooter developed by Turbo Pixel Studios (
 
 | Page | Description |
 |---|---|
-| [Getting Started](getting-started.md) | Finding games, rulesets overview, HUD, key settings |
-| [Rulesets](rulesets.md) | Competitive, Sushi, and Casual: weapons, movement, and match settings |
-| [Movement](movement.md) | Physics constants, strafe-jumping, double/triple jump, rocket-jump, plasma-climb |
-| [Weapons](weapons.md) | Full stats across all three rulesets |
-| [Health and Armor](health-and-armor.md) | Armor tiers, absorption, Mega timer, Carnage |
-| [Modes](modes.md) | All game modes, Arena variants, Race |
-| [Console](console.md) | CVAR reference, config files, bind syntax |
-| [Server Hosting](server-hosting.md) | Docker setup, server CVARs, replay service |
+| [[games/reflex/getting-started|Getting Started]] | Finding games, rulesets overview, HUD, key settings |
+| [[games/reflex/rulesets|Rulesets]] | Competitive, Sushi, and Casual: weapons, movement, and match settings |
+| [[games/reflex/movement|Movement]] | Physics constants, strafe-jumping, double/triple jump, rocket-jump, plasma-climb |
+| [[games/reflex/weapons|Weapons]] | Full stats across all three rulesets |
+| [[games/reflex/health-and-armor|Health and Armor]] | Armor tiers, absorption, Mega timer, Carnage |
+| [[games/reflex/modes|Modes]] | All game modes, Arena variants, Race |
+| [[games/reflex/console|Console]] | CVAR reference, config files, bind syntax |
+| [[games/reflex/server-hosting|Server Hosting]] | Docker setup, server CVARs, replay service |

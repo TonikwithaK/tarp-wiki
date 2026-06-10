@@ -52,7 +52,7 @@ Respawning is continuous. There are no rounds.
 
 ## Related
 
-- [[movement]]
-- [[weapons/index]]
-- [[deathmatch]]
-- [[gametypes/index]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/gametypes/deathmatch|Deathmatch]]
+- [[games/warfork/weapons/index|Index]]

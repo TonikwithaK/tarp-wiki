@@ -34,5 +34,5 @@ The projectile's knockback (90) and full self-damage (1.0 ratio) enable weapon j
 
 ## Related
 
-- [[index|Weapons]]: full stats and weapon overview
-- [[movement]]: weapon jump applications
+- [[games/warfork/weapons/index|Weapons]]: full stats and weapon overview
+- [[games/warfork/movement|Movement]]: weapon jump applications

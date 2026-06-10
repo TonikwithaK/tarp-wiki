@@ -245,5 +245,5 @@ CS_GENERAL  // config string index for custom HUD data
 
 ## Related
 
-- [[custom-gametypes]]: how to structure a gametype, file layout, mandatory callbacks
-- [[server-hosting]]: deploying and configuring a server
+- [[games/warfork/modding/custom-gametypes|Custom Gametypes]]: how to structure a gametype, file layout, mandatory callbacks
+- [[games/warfork/modding/server-hosting|Server Hosting]]: deploying and configuring a server

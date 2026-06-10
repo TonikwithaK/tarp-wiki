@@ -106,7 +106,7 @@ Spawns are placed at opposite ends of the map. Alpha and Beta spawn points are c
 
 ## Related
 
-- [[movement]]
-- [[weapons/index]]
-- [[health-and-armor]]
-- [[gametypes/index]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/health-and-armor|Health And Armor]]
+- [[games/warfork/weapons/index|Index]]

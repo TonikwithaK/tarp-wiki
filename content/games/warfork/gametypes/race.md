@@ -33,6 +33,6 @@ Race is a movement mode. Players complete a course in the fastest time. There is
 
 ## Related
 
-- [[movement]]
-- [[weapons/plasmagun]]
-- [[gametypes/index]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/plasmagun|Plasmagun]]
+- [[games/warfork/weapons/index|Index]]

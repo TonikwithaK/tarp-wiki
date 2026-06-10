@@ -69,5 +69,5 @@ CA does not spawn items at all (`spawnableItemsMask = 0`).
 
 ## Related
 
-- [[powerups]]
-- [[gametypes/duel]]
+- [[games/warfork/powerups|Powerups]]
+- [[games/warfork/gametypes/duel|Duel]]

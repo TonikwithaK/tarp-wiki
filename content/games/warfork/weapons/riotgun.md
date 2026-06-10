@@ -42,5 +42,5 @@ Circle-strafing moves the target perpendicular to the cone's facing, requiring t
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[movement]]
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/movement|Movement]]

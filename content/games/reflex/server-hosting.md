@@ -83,5 +83,5 @@ Known limitation: players who disconnect before a match ends are not listed in t
 
 ## Related
 
-- [[modes]]
-- [[console]]
+- [[games/reflex/modes|Modes]]
+- [[games/reflex/console|Console]]

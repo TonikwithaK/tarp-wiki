@@ -20,7 +20,7 @@ To see all current bindings:
 ```
 bindlist
 ```
-Config is saved to `config.cfg` in your data folder. See [[getting-started]] for data folder locations.
+Config is saved to `config.cfg` in your data folder. See [[games/warfork/getting-started|Getting Started]] for data folder locations.
 
 ---
 
@@ -135,6 +135,6 @@ bind p "position"
 
 ## Related
 
-- [[console]]: full command and cvar reference
-- [[movement]]: dash and walljump mechanics
-- [[getting-started]]: data folder paths and config locations
+- [[games/warfork/console|Console]]: full command and cvar reference
+- [[games/warfork/movement|Movement]]: dash and walljump mechanics
+- [[games/warfork/getting-started|Getting Started]]: data folder paths and config locations

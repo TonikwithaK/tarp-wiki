@@ -71,4 +71,4 @@ Stats verified against the [game source](https://github.com/TeamForbiddenLLC/war
 
 ## Related
 
-Link to individual weapon pages for deeper coverage: [[rocket-launcher]], [[lasergun]], [[electrobolt]], [[plasmagun]], [[riotgun]], [[grenade-launcher]], [[machinegun]]
+Link to individual weapon pages for deeper coverage: [[games/warfork/weapons/rocket-launcher|Rocket Launcher]], [[games/warfork/weapons/lasergun|Lasergun]], [[games/warfork/weapons/electrobolt|Electrobolt]], [[games/warfork/weapons/plasmagun|Plasmagun]], [[games/warfork/weapons/riotgun|Riotgun]], [[games/warfork/weapons/grenade-launcher|Grenade Launcher]], [[games/warfork/weapons/machinegun|Machinegun]]

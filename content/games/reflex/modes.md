@@ -47,5 +47,5 @@ Carnage powerup spawns every 90 seconds, typically near map center.
 
 ## Related
 
-- [[rulesets]]
-- [[health-and-armor]]
+- [[games/reflex/rulesets|Rulesets]]
+- [[games/reflex/health-and-armor|Health And Armor]]

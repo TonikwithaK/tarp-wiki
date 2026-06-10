@@ -40,6 +40,6 @@ Both can be enabled via server callvote or cvar.
 
 ## Related
 
-- [[weapons/instagun]]
-- [[movement]]
-- [[gametypes/index]]
+- [[games/warfork/weapons/instagun|Instagun]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]

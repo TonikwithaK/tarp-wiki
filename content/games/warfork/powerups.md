@@ -32,5 +32,5 @@ To track a powerup respawn: note the time of pickup and add 90 seconds. This is 
 
 ## Related
 
-- [[health-and-armor]]
-- [[gametypes/duel]]
+- [[games/warfork/health-and-armor|Health And Armor]]
+- [[games/warfork/gametypes/duel|Duel]]

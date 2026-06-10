@@ -55,5 +55,5 @@ Mouse2 (right-click) is the community-standard jump key. Jump queuing is support
 
 ## Related
 
-- [[rulesets]]
-- [[console]]
+- [[games/reflex/rulesets|Rulesets]]
+- [[games/reflex/console|Console]]

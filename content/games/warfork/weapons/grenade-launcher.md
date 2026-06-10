@@ -28,6 +28,6 @@ The delayed fuse and bounce trajectory make moving targets hard to hit reliably.
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[rocket-launcher]]: the more direct explosive option
-- [[movement]]: grenade jump applications
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/weapons/rocket-launcher|Rocket Launcher]]: the more direct explosive option
+- [[games/warfork/movement|Movement]]: grenade jump applications

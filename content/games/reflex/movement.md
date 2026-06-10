@@ -63,4 +63,4 @@ Firing the Plasma Rifle at walls or floors beneath the player produces upward ve
 
 ## Related
 
-- [[weapons]]
+- [[games/reflex/weapons|Weapons]]

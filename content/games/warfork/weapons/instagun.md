@@ -48,6 +48,6 @@ The Instagun's splash gives it a slight margin for near-misses that the EB doesn
 
 ## Related
 
-- [[index|Weapons]]: full stats and weapon overview
-- [[../gametypes/instagib|Instagib]]: the gametype this weapon belongs to
-- [[electrobolt]]: the closest standard-mode equivalent
+- [[games/warfork/weapons/index|Weapons]]: full stats and weapon overview
+- [[games/warfork/gametypes/instagib|Instagib]]: the gametype this weapon belongs to
+- [[games/warfork/weapons/electrobolt|Electrobolt]]: the closest standard-mode equivalent

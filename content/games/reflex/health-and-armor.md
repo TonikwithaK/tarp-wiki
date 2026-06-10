@@ -81,5 +81,5 @@ Players spawn in Arena modes (AFFA, ATDM, A1v1) with 200 armor / 100 health and 
 
 ## Related
 
-- [[weapons]]
-- [[modes]]
+- [[games/reflex/weapons|Weapons]]
+- [[games/reflex/modes|Modes]]

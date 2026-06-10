@@ -18,15 +18,15 @@ Instagib (`g_instagib 1`) is a modifier that can be applied to most modes, not a
 
 | Gametype | Description |
 |---|---|
-| [[duel]] | 1v1, frag or time limit, item pickups, Mega Health respawns 20s after holder drops to 100 HP |
-| [[clan-arena]] | Team elimination, rounds, full loadout at spawn, 150 armor, no self/team/fall damage, first to 11 rounds |
-| [[deathmatch]] | Free-for-all frag race, 15 minute default, weapon pickups |
-| [[team-deathmatch]] | Team frag race, 20 minute default, individual frags score for team |
-| [[capture-the-flag]] | Steal enemy flag, return to base while own flag is present |
-| [[bomb-and-defuse]] | Plant/defuse, 60s round time, 4s arm, 7s defuse, teams swap sides |
-| [[race]] | Movement course, fastest time wins, no combat, infinite ammo, plasmaclimbing routes |
-| [[instagib]] | Modifier applied to other modes, Instagun replaces all weapons, one-hit kill |
-| [[headhunt]] | One designated target, all others hunt them, killer becomes new target |
+| [[games/warfork/gametypes/duel|Duel]] | 1v1, frag or time limit, item pickups, Mega Health respawns 20s after holder drops to 100 HP |
+| [[games/warfork/gametypes/clan-arena|Clan Arena]] | Team elimination, rounds, full loadout at spawn, 150 armor, no self/team/fall damage, first to 11 rounds |
+| [[games/warfork/gametypes/deathmatch|Deathmatch]] | Free-for-all frag race, 15 minute default, weapon pickups |
+| [[games/warfork/gametypes/team-deathmatch|Team Deathmatch]] | Team frag race, 20 minute default, individual frags score for team |
+| [[games/warfork/gametypes/capture-the-flag|Capture The Flag]] | Steal enemy flag, return to base while own flag is present |
+| [[games/warfork/gametypes/bomb-and-defuse|Bomb And Defuse]] | Plant/defuse, 60s round time, 4s arm, 7s defuse, teams swap sides |
+| [[games/warfork/gametypes/race|Race]] | Movement course, fastest time wins, no combat, infinite ammo, plasmaclimbing routes |
+| [[games/warfork/gametypes/instagib|Instagib]] | Modifier applied to other modes, Instagun replaces all weapons, one-hit kill |
+| [[games/warfork/gametypes/headhunt|Headhunt]] | One designated target, all others hunt them, killer becomes new target |
 
 ## Variant and Community Gametypes
 
@@ -38,6 +38,6 @@ Instagib (`g_instagib 1`) is a modifier that can be applied to most modes, not a
 
 ## Related
 
-- [[movement]]
-- [[weapons/index]]
-- [[modding/custom-gametypes]]
+- [[games/warfork/movement|Movement]]
+- [[games/warfork/weapons/index|Index]]
+- [[games/warfork/modding/custom-gametypes|Custom Gametypes]]

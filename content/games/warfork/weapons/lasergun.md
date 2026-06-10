@@ -44,6 +44,6 @@ Breaking line of sight stops the beam entirely. The Rocket Launcher is more effi
 
 ## Related
 
-- [[weapons]]: full stats and weapon overview
-- [[electrobolt]]: long-range triad weapon
-- [[movement]]
+- [[games/warfork/weapons|Weapons]]: full stats and weapon overview
+- [[games/warfork/weapons/electrobolt|Electrobolt]]: long-range triad weapon
+- [[games/warfork/movement|Movement]]

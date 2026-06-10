@@ -81,5 +81,5 @@ Shares Competitive weapon values with several exceptions.
 
 ## Related
 
-- [[weapons]]
-- [[movement]]
+- [[games/reflex/weapons|Weapons]]
+- [[games/reflex/movement|Movement]]

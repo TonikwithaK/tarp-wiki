@@ -119,5 +119,5 @@ rcon addip <ipaddress>
 
 ## See Also
 
-- [[console]]: full cvar and command reference
-- [[custom-gametypes]]: writing and loading custom gametypes
+- [[games/warfork/console|Console]]: full cvar and command reference
+- [[games/warfork/modding/custom-gametypes|Custom Gametypes]]: writing and loading custom gametypes

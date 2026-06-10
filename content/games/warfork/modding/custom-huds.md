@@ -103,5 +103,5 @@ Custom HUDs can also be packaged inside a `.pk3` file under the `huds/` path.
 
 ## See Also
 
-- [[console]]: full cvar reference including `cg_clientHUD`, `cg_strafeHUD`
-- [[../movement]]: strafe mechanics context for interpreting the strafe indicator
+- [[games/warfork/console|Console]]: full cvar reference including `cg_clientHUD`, `cg_strafeHUD`
+- [[games/warfork/movement|Movement]]: strafe mechanics context for interpreting the strafe indicator

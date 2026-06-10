@@ -99,5 +99,5 @@ Combined with `cg_forceMyTeamAlpha`, `cg_outlinePlayers`, and team color cvars, 
 
 ## See Also
 
-- [[../getting-started]]: client setup and graphics settings
-- [[console]]: cvar reference for `cg_teamALPHAcolor`, `cg_teamBETAcolor`, `cg_outlinePlayers`
+- [[games/warfork/getting-started|Getting Started]]: client setup and graphics settings
+- [[games/warfork/console|Console]]: cvar reference for `cg_teamALPHAcolor`, `cg_teamBETAcolor`, `cg_outlinePlayers`
