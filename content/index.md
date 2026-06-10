@@ -1,18 +1,18 @@
 ---
 title: The Arena Revival Project
-description: "A living knowledge base for Arena FPS: Warfork, Quake Live, and Reflex Arena."
+description: "A knowledge base for Arena FPS: Warfork, Quake Live, and Reflex Arena."
 ---
 
 # The Arena Revival Project
 
-A living knowledge base for competitive Arena FPS. Curated mechanics, movement tech, weapons, maps, and history: checked before it is published.
+Mechanics, movement, weapons, gametypes, and history for competitive Arena FPS. Three games covered so far, more coming.
 
-## Browse by Game
+## Games
 
 - [[games/warfork/|Warfork]]
 - [[games/quake-live/|Quake Live]]
-- Reflex Arena: coming
+- [[games/reflex/|Reflex Arena]]
 
 ---
 
-Use the explorer on the left or search to navigate. The graph view shows how pages connect.
+Find what you need with the search bar or explorer. If something is missing or wrong, it will get fixed.
