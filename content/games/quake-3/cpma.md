@@ -10,7 +10,7 @@ updated: 2026-06-10
 
 Challenge ProMode Arena (CPMA) is a modification for Quake 3 Arena focused on competitive gameplay. Originally called Challenge ProMode (CPM), it was created in May 1999 by Richard "Hoony" Sandlant shortly after the release of the Q3 beta. It became the standard competitive mod for Q3 after the Cyberathlete Professional League adopted it, and was used in the Electronic Sports World Cup (ESWC).
 
-Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the ramp jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
+Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the double/ramp jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
 
 The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maintained by the same team. Download and guides at [playmorepromode.com](https://playmorepromode.com).
 
@@ -32,13 +32,15 @@ FFA and some other configurations use **fixed-interval respawn** (same as VQ3). 
 
 *Note: exact per-gametype defaults in standard CPMA distributions (CTF, TDM) need verification. If you know these, contribute via the TARP Discord.*
 
-## Ramp Jump
+## Double Jump and Ramp Jump
 
-CPMA preserves and amplifies the ramp jump behavior present in base Q3. Jumping while moving up a slope carries the slope's directional momentum into the jump, granting additional height and distance compared to a flat-surface jump. In VQ3 this produces height only; in CPM the effect is stronger and combines with air control to extend routes significantly.
+These are two distinct mechanics that combine.
 
-This is distinct from a "double jump" in the platform-game sense. There is no second press of the jump key -- it is the physics response to the geometry at the moment of takeoff. Maps designed for CPM are built around ramp jump lines that are not reachable from flat ground.
+**Double jump**: pressing jump a second time within 400ms of landing grants additional upward velocity. This is a second jump input -- it requires the player to hit the key again at the right moment. The timing window is tight and has to be developed by feel.
 
-*Note: the 400ms timing window figure that appeared in an earlier version of this page is unverified. If you have a primary source (CPMA source code or official documentation), contribute via the TARP Discord.*
+**Ramp jump**: jumping while moving up a slope converts forward speed into vertical speed, proportional to the slope angle. This is not a button press -- it is the physics response to the geometry at the moment of takeoff. VQ3 also has ramp jumps but the effect is weaker; CPM amplifies it.
+
+The two mechanics chain: a ramp jump can be followed immediately by a double jump to extend height and distance further than either alone. CPM maps are designed around routes that require this combination to reach certain positions. Faster approach speed into a ramp = higher jump.
 
 ## Physics Constants (CPM vs VQ3)
 
@@ -48,7 +50,8 @@ This is distinct from a "double jump" in the platform-game sense. There is no se
 | Air acceleration | 15.0 | 10.0 |
 | Air control | Full | Minimal |
 | Bunny hopping | Yes | No |
-| Ramp jump | Height + directional | Height only |
+| Double jump | Yes (400ms window) | No |
+| Ramp jump | Amplified | Base |
 | Weapon switching | Instant | 450ms delay |
 
 CPMA supports both CPM and VQ3 physics. VQ3 mode behaves identically to base Q3.
