@@ -33,6 +33,54 @@ article {
   max-width: 680px;
 }
 
+// Headings — aggressive hierarchy
+article h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--secondary);
+}
+
+article h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--darkgray);
+}
+
+article h4, article h5, article h6 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+// Page title (left sidebar / header)
+#quartz-body .sidebar > h1,
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
 article table {
   width: 100%;
   border-collapse: collapse;
@@ -41,9 +89,13 @@ article table {
 
   th {
     text-align: left;
-    font-weight: 600;
-    border-bottom: 2px solid var(--gray);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    border-bottom: 2px solid var(--secondary);
     padding: 0.5rem 0.75rem;
+    color: var(--secondary);
   }
 
   td {
@@ -60,16 +112,6 @@ article table {
 article pre {
   border-left: 3px solid var(--secondary);
   border-radius: 4px;
-}
-
-article h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-article h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.25rem;
 }
 
 .game-badge {
@@ -155,8 +197,12 @@ article h3 {
 
   .page article > h1,
   .center > article > h1 {
-    font-size: 1.4rem;
-    line-height: 1.3;
+    font-size: 1.7rem;
+    line-height: 1.15;
+  }
+
+  article h2 {
+    font-size: 1.1rem;
   }
 
   .note-properties { display: none; }
