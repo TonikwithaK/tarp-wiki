@@ -3,7 +3,7 @@
 A knowledge base for competitive Arena FPS. Covers mechanics, movement, weapons, gametypes, and modding. Facts checked against source code or first-hand testing before publishing.
 
 **Site:** [tonikwithak.github.io/tarp-wiki](https://tonikwithak.github.io/tarp-wiki)
-**Built with:** [Quartz v5](https://quartz.jzhao.xyz/) | Deployed via GitHub Actions
+**Deployed via:** GitHub Actions | See [ACKNOWLEDGEMENTS.md](./ACKNOWLEDGEMENTS.md)
 
 ---
 
