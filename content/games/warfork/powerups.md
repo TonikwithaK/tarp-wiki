@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Powerups
+
 Warfork has three powerups: Quad Damage, WarShell, and Regeneration. Not all maps include powerups.
 
 ## Quad Damage

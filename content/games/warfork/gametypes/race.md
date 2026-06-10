@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Race
+
 Race is a movement mode. Players complete a course in the fastest time. There is no combat and no damage between players.
 
 ## Rules

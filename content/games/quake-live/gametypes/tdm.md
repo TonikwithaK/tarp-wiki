@@ -9,6 +9,8 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
+# Team Deathmatch
+
 Verified from `tdm.factories` (quakelive-server-standards). The standard factory defines no custom cvars; all settings reflect Quake Live base game defaults.
 
 ## Format
@@ -32,7 +34,7 @@ Item pickups present.
 
 ## Related
 
-- [[index|Gametypes]]
-- [[../movement|Movement]]
-- [[../health-and-armor|Health and Armor]]
-- [[clan-arena|Clan Arena]]
+- [Gametypes Index](gametypes/index)
+- [Movement](movement)
+- [Health and Armor](health-and-armor)
+- [Clan Arena](gametypes/clan-arena)

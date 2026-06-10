@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Lasergun
+
 The Lasergun is the primary tracking weapon in Warfork and the mid-range weapon in the RL/LG/EB competitive triad.
 
 ## Stats

@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Deathmatch
+
 Deathmatch is a free-for-all mode. Every player on the server is an opponent. There are no teams. The player with the highest frag count when time expires wins. If a score limit is set, the first player to reach it wins.
 
 Respawning is continuous. There are no rounds.

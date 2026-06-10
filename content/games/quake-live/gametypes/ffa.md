@@ -9,6 +9,8 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
+# Free For All
+
 Verified from `ffa.factories` (quakelive-server-standards).
 
 ## Format
@@ -33,6 +35,6 @@ Item pickups present. Item respawn timers apply.
 
 ## Related
 
-- [[index|Gametypes]]
-- [[../movement|Movement]]
-- [[../health-and-armor|Health and Armor]]
+- [Gametypes Index](gametypes/index)
+- [Movement](movement)
+- [Health and Armor](health-and-armor)

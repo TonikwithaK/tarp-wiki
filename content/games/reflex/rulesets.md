@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Rulesets
+
 A ruleset in Reflex is a config layer applied on top of the game that simultaneously defines weapon behavior, movement constants, and match settings. It is not a gametype or mode. Rulesets are set independently of modes. Three rulesets are active: Competitive, Sushi, and Casual.
 
 ## Competitive

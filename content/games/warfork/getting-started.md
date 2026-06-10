@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Getting Started
+
 Warfork is a free arena FPS forked from Warsow, built around fast movement mechanics and precision gunplay. This page covers installation, basic setup, and where to find things once you're in.
 
 ## Download
@@ -17,7 +19,11 @@ Warfork is a free arena FPS forked from Warsow, built around fast movement mecha
 **Linux dedicated servers** use SteamCMD. Anonymous login pulls App ID `1136510` (the dedicated server package). If you need the full client via SteamCMD, log in with your Steam account and use App ID `671610`.
 
 ```
+# Anonymous server install
+steamcmd +login anonymous +app_update 1136510 validate +quit
 
+# Full client (requires login)
+steamcmd +login <username> +app_update 671610 validate +quit
 ```
 
 ## Bug Reports

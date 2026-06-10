@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Headhunt
+
 Headhunt is a free-for-all mode built around a single designated target called the head. There are no permanent teams. The player with the highest score when time expires wins.
 
 Respawning is continuous. There are no rounds.

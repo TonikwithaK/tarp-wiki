@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Controls
+
 All bindings are fully customizable via the `bind` command in console or the settings menu. Default bindings are from the [game source](https://github.com/TeamForbiddenLLC/warfork-qfusion/blob/master/assets/default_binds_kbmouse.cfg).
 
 To rebind a key:

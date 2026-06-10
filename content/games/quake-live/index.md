@@ -5,14 +5,18 @@ tags:
   - quake-live
 ---
 
-Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin in 2009 and migrated to Steam in 2014. [$9.99 on Steam](https://store.steampowered.com/app/282440/Quake_Live/).
+# Quake Live
+
+Quake Live is an Arena FPS based on Quake 3 Arena, released as a browser plugin in 2009 and migrated to Steam in 2014. Free to play.
 
 Two physics modes, determined by the server factory:
 
 - VQL (Vanilla Quake Live): default. Strafe jumping is the primary speed technique. Limited air control.
 - PQL (CPM-like physics): heavy air control. Movement keys while airborne steer toward the look direction.
 
-Competitive play centers on the weapon trinity: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (Rail).
+Competitive play centers on the weapon triad: Rocket Launcher (RL), Lightning Gun (LG), and Railgun (RG/Rail).
+
+Content here is specific to Quake Live. Nothing applies to Warfork or Reflex Arena unless a dedicated cross-game page says otherwise.
 
 ## Getting Started
 

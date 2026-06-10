@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Weapons
+
 Stats verified against the [game source](https://github.com/TeamForbiddenLLC/warfork-qfusion/blob/master/source/gameshared/gs_weapondefs.c). Primary values reflect the **strong fire mode** (default fire), which is what most players use. Weak fire mode differences are noted per weapon.
 
 ---

@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Getting Started
+
 Reflex has three distinct rulesets that change weapon behavior, movement constants, and match settings simultaneously. The same game mode on different rulesets plays differently enough that choosing a ruleset is a prerequisite to finding the right server.
 
 ## Finding Games

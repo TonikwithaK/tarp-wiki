@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Gametypes
+
 Warfork ships with 13 default gametypes written in AngelScript. Custom gametypes can be added via the same scripting system.
 
 Instagib (`g_instagib 1`) is a modifier that can be applied to most modes, not a standalone gametype.

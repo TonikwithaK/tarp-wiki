@@ -9,6 +9,8 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
+# Server Hosting
+
 Source: [quakelive-server-standards](https://github.com/quakelive-server-standards/quakelive-server-standards)
 
 ## Overview
@@ -55,6 +57,10 @@ sv_serverType        "2"                 Server type flag
 
 ```bash
 git clone https://github.com/quakelive-server-standards/quakelive-server-standards.git
+# Install Docker: https://docs.docker.com/engine/install/
+cd _myservers
+# Copy docker-compose.source.yml to docker-compose.yml and edit
+docker-compose up -d
 ```
 
 ## Example Docker Compose Service (Duel)
@@ -136,4 +142,4 @@ Compatible tools:
 
 ## Related
 
-- [[../gametypes/index|Gametypes]]
+- [Gametypes Index](gametypes/index)

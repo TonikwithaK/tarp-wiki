@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Weapons
+
 All values sourced directly from ruleset files. Three active rulesets: Competitive (CR2 merged), Sushi (NA), Casual. Where a ruleset does not override a value, the Casual file is the baseline.
 
 The Rocket Launcher, Ion Cannon, and Bolt Rifle are the three primary competitive weapons. The Stake Launcher exists in the files but is disabled (`gconst_stakelauncher_enabled 0`).

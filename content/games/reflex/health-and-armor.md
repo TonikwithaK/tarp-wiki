@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Health and Armor
+
 ## Health Pickups
 
 | Pickup | Value | Respawn |

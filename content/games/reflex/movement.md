@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Movement
+
 ## Physics Origins
 
 Reflex uses a variant of Challenge ProMode Arena (CPMA) physics. The lineage is: Quake 3 (VQ3) → CPMA mod → Reflex CPM physics.

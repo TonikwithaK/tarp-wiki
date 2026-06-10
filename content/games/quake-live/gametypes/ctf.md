@@ -9,6 +9,8 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
+# Capture the Flag
+
 Verified from `ctf.factories` (quakelive-server-standards).
 
 ## Format
@@ -36,7 +38,7 @@ Powerups including the Battle Suit are present on CTF maps.
 
 ## Related
 
-- [[index|Gametypes]]
-- [[../movement|Movement]]
-- [[../health-and-armor|Health and Armor]]
-- [[../weapons/index|Weapons]]
+- [Gametypes Index](gametypes/index)
+- [Movement](movement)
+- [Health and Armor](health-and-armor)
+- [Weapons Index](weapons/index)

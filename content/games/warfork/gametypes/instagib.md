@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Instagib
+
 Instagib is a modifier, not a standalone gametype. It is enabled via the server cvar `g_instagib 1` and requires a restart. It can be applied to FFA, TDM, CTF, CA, and Duel.
 
 ## Effect

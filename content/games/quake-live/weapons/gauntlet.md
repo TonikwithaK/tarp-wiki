@@ -8,15 +8,9 @@ status: canon
 promoted: 2026-06-10
 ---
 
+# Gauntlet
+
 The Gauntlet is a melee weapon that deals damage only at contact range. Always available: players cannot run out of Gauntlet ammo. Killing an opponent with the Gauntlet awards the Humiliation medal.
-
-## Stats
-
-| Stat | Value |
-|---|---|
-| Range | Contact only |
-| Ammo | Unlimited |
-| Damage type | Continuous contact |
 
 ## Mechanics
 
@@ -24,7 +18,7 @@ The Gauntlet activates a spinning blade that damages any opponent it touches at 
 
 ## Humiliation
 
-Killing an opponent with the Gauntlet triggers the Humiliation award and plays a distinctive audio cue.
+Killing an opponent with the Gauntlet triggers the Humiliation award and plays a distinctive audio cue. It is a recognized taunt in competitive play: chasing down a low-HP opponent to finish with the Gauntlet rather than a hitscan weapon.
 
 ## Related
 

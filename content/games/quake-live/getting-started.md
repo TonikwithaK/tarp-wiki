@@ -10,7 +10,7 @@ promoted: 2026-06-09
 
 ## Download
 
-Quake Live is available on [Steam](https://store.steampowered.com/app/282440/Quake_Live/). $9.99.
+Quake Live is available on Steam. It is free to play.
 
 ---
 
@@ -58,14 +58,24 @@ All other weapons, health, and armor must be picked up from the map. There is no
 
 ---
 
-## Key Items
+## Item Priority
 
-- **Mega Health**: +100 HP, cap 200. Respawns 35 seconds after pickup on most maps. Some maps use non-standard timers (Vertical Vengeance: 2 minutes). Health above 100 decays at 1/sec.
+The two most important items on any standard map:
+
+- **Mega Health**: +100 HP, cap 200. Respawns 35 seconds after pickup on most maps — some maps use non-standard timers (Vertical Vengeance runs 2 minutes). Health above 100 decays at 1/sec.
 - **Red Armor**: +100 armor, cap 200. Respawns 25 seconds after pickup. Armor above 100 decays at 1/sec.
+
+Controlling both consistently is the primary winning strategy in Duel. A player at 200/200 forces their opponent to fight at a significant disadvantage. Note the pickup time, add the respawn interval, and return before the opponent can.
+
+---
+
+## Movement Priority
+
+Strafe jumping moves approximately twice as fast as normal running. It is not an advanced technique — it is the baseline movement speed that competitive play is built around. Learn it before focusing on aim.
 
 ---
 
 ## Related
 
-- [[movement|Movement]]
-- [[health-and-armor|Health and Armor]]
+- [Movement](movement)
+- [Health and Armor](health-and-armor)

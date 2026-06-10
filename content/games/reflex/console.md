@@ -10,6 +10,8 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
+# Console
+
 The console opens with tilde (`~`).
 
 ## Config Files
@@ -123,4 +125,4 @@ r_decals 0
 
 ## Related
 
-- [[getting-started|Getting Started]]
+- [Getting Started](getting-started.md)

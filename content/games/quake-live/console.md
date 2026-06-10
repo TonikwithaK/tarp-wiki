@@ -1,5 +1,5 @@
 ---
-title: "Console Commands"
+title: "Console"
 game: quake-live
 layer: canon
 type: reference
@@ -8,150 +8,109 @@ status: canon
 promoted: 2026-06-10
 ---
 
-Open the console with `~` (tilde/backtick). Commands and cvars can be entered directly. Config files are stored in `baseq3/` under the Quake Live install directory.
+# Console
 
-## Config File Locations
+Open the console with `~` (tilde). First time: press `Ctrl+Alt+~`, then type `com_allowConsole "1"` to allow `~` access from that point on.
+
+Tab auto-completes commands and map names. PgUp/PgDn to scroll.
+
+---
+
+## Config Files
+
+| File | Description |
+|------|-------------|
+| `repconfig.cfg` | Auto-generated. Key bindings and preferences. Never manually edit |
+| `qzconfig.cfg` | Auto-generated. Other settings. Never manually edit |
+| `autoexec.cfg` | User-created. Runs automatically on launch. Safe to edit in WordPad/a text editor that isn't Notepad |
+
+To apply changes made in console: `writeconfig autoexec`
+
+To reset all settings: delete `repconfig.cfg`, `qzconfig.cfg`, and `autoexec.cfg`, then relaunch.
+
+If settings won't save, run `writeconfig autoexec` in console after making changes.
+
+---
+
+## File Locations
 
 | Platform | Path |
-|---|---|
+|----------|------|
 | Windows | `C:\Users\<user>\AppData\Roaming\id Software\quakelive\home\baseq3\` |
 | Linux | `~/.quakelive/quakelive/home/baseq3/` |
 
-Primary config files: `autoexec.cfg` (runs on launch), `server.cfg` (server settings).
+---
+
+## CVAR Reference
+
+1,079 CVARs documented. Sourced from [euere.eu/ql](https://www.euere.eu/ql/) (September 2025).
+
+- [[console/cvars-a-c|CVars A–C]]: bots, crosshair, HUD, client network, com_
+- [[console/cvars-d-p|CVars D–P]]: game settings, weapon damage, knockback, physics
+- [[console/cvars-r-t|CVars R–T]]: rendering, sound, server settings
+- [[console/cvars-u-w|CVars U–W]]: UI variables
 
 ---
 
-## Sensitivity and Input
+## Command Reference
 
-```
-sensitivity          5          Mouse sensitivity multiplier
-m_yaw                0.022      Horizontal mouse turn rate
-m_pitch              0.022      Vertical mouse turn rate
-m_accel              0          Mouse acceleration (0 = off)
-cl_mouseAccelStyle   0          Acceleration style (0 = Quake3 style)
-in_nograb            0          Release mouse from window (1 = ungrab)
-```
+205 commands documented. Sourced from [euere.eu/ql](https://www.euere.eu/ql/).
+
+- [[console/commands|Console Commands]]: full alphabetical reference
+- [[console/button-commands|Button Commands]]: +attack, +forward, +moveup, etc.
+- [[console/premium-server-commands|Premium Server Commands]]: admin and owner commands for paid servers
 
 ---
 
-## Video
+## Quick Reference
+
+### Commonly Used CVars
 
 ```
-r_fullscreen         1          Fullscreen mode (1 = on, 0 = windowed)
-r_mode               -1         Resolution mode (-1 = custom)
-r_customwidth        1920       Custom resolution width
-r_customheight       1080       Custom resolution height
-com_maxfps           125        Frame rate cap (125 recommended for physics)
-r_overBrightBits     0          Overbright rendering
-r_gamma              1.0        Gamma value
-r_picmip             1          Texture detail (higher = lower quality, better FPS)
-r_vertexlight        0          Vertex lighting (0 = lightmaps)
-cg_drawFPS           1          Show FPS counter
+com_maxfps        125       Frame rate cap (125 recommended for consistent physics)
+pmove_fixed       1         Fixed physics timestep
+pmove_msec        8         8ms = 125Hz physics
+rate              25000     Network data rate (bytes/sec)
+snaps             40        Snapshot rate from server
+cl_maxpackets     125       Outgoing packet rate
+cl_timenudge      0         Packet timing offset
+
+r_fullscreen      1         Fullscreen
+r_mode            -1        Custom resolution
+r_customwidth     1920      Resolution width
+r_customheight    1080      Resolution height
+r_picmip          0         Texture detail (0=highest, 16=near solid)
+
+cg_fov            100       Field of view
+cg_drawCrosshair  4         Crosshair style (0–10)
+cg_crosshairSize  24        Crosshair size
+cg_simpleItems    1         2D item icons
+cg_noProjectileTrail 1      No projectile trails
+cg_autoswitch     0         No auto weapon switch
+
+s_volume          0.7       Master volume
+s_musicvolume     0         Mute music
 ```
 
----
-
-## Network
+### Common Commands
 
 ```
-rate                 25000      Network data rate (bytes/sec); increase on fast connections
-snaps                40          Snapshot rate from server
-cl_maxpackets        125        Outgoing packet rate
-cl_timenudge         0          Packet timing offset (negative = earlier, use -1 to -30)
-```
-
----
-
-## HUD and Display
-
-```
-cg_drawTimer         1          Match timer
-cg_drawSpeed         1          Speed display
-cg_drawAmmoWarning   1          Low ammo warning
-cg_drawCrosshair     4          Crosshair style (0-10)
-cg_crosshairSize     24         Crosshair size in pixels
-cg_crosshairColor    white      Crosshair color
-cg_crosshairHealth   0          Color crosshair by health (0 = off)
-cg_drawStatus        1          Show health/armor HUD
-cg_gibs              1          Gib effects
-cg_blood             1          Blood effects
-cg_brassTime         0          Bullet casings duration (0 = off, reduces clutter)
-```
-
----
-
-## Sound
-
-```
-s_volume             0.7        Master volume (0.0 to 1.0)
-s_musicvolume        0          Music volume (0 = mute music)
-s_doppler            0          Doppler effect (0 = off)
+/connect <ip:port>     Connect to server
+/disconnect            Leave server
+/map <mapname>         Load map (server)
+/callvote map <map>    Vote to change map
+/players               List players and IDs
+/rcon <command>        RCON command
+/exec <file>           Execute a .cfg file
+/bind <key> <cmd>      Bind key
+/cvarlist              List all cvars
+/writeconfig autoexec  Save settings
 ```
 
 ---
-
-## Weapon and Combat
-
-```
-cg_autoswitch        0          Auto-switch to picked-up weapon (0 = off recommended)
-cg_predictItems      1          Client-side item pickup prediction
-pmove_fixed          1          Fixed physics timestep (required for consistent physics)
-pmove_msec           8          Physics timestep in ms (8 = 125Hz physics)
-```
-
----
-
-## Competitive Settings
-
-```
-cg_teamChatsOnly     0          Filter chat to team only
-cg_noProjectileTrail 1          Disable projectile trails (reduces visual noise)
-cg_simpleItems       1          Simple 2D item icons instead of 3D models
-cg_forceModel        0          Force all players to your model
-cg_enemyModel        keel/default  Model override for enemies
-cg_enemyColors       FFFF00     Hex color for enemy players
-cg_teamModel         keel/default  Model override for teammates
-cg_teamColors        0000FF     Hex color for teammates
-```
-
----
-
-## Common Commands
-
-```
-/connect <ip:port>   Connect to a server
-/disconnect          Disconnect from server
-/quit                Quit the game
-/map <mapname>       Load a map (server-side)
-/callvote map <map>  Vote to change map
-/callvote kick <id>  Vote to kick a player
-/players             List connected players and IDs
-/rcon <command>      Send RCON command (requires rcon_password set)
-/condump             Dump console output to file
-/exec <file>         Execute a .cfg file
-/bind <key> <cmd>    Bind a key to a command
-/unbind <key>        Remove a key binding
-/bindlist            List all current bindings
-/cvarlist            List all cvars
-/set <cvar> <value>  Set a cvar
-/toggle <cvar>       Toggle a boolean cvar
-```
-
----
-
-## Item Timer Commands (minqlx)
-
-On servers running minqlx with item timer plugins, commands are prefixed with `!`:
-
-```
-!help                List available plugin commands
-!time                Server time
-!maps                List available maps
-```
-
-Specific commands depend on which minqlx plugins the server has loaded.
 
 ## Related
 
-- [[controls|Controls]]: key bindings
-- [[modding/server-hosting|Server Hosting]]: server-side cvar reference
+- [[controls|Controls]]: key binding reference
+- [[modding/server-hosting|Server Hosting]]: server-side setup
+- [[console/appendix|Appendix]]: CVAR flag legend, prefix reference, color chart

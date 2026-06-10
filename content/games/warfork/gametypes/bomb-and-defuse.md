@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Bomb and Defuse
+
 Bomb and Defuse is a round-based team mode. One team (attackers) plants a bomb at a designated site and defends it until detonation. The other team (defenders) prevents the plant or defuses the bomb before it detonates.
 
 ## Rules

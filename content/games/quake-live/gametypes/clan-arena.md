@@ -9,6 +9,8 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
+# Clan Arena
+
 Verified from `ca.factories` (quakelive-server-standards).
 
 ## Format
@@ -52,6 +54,6 @@ Items do not spawn in CA. No item pickups.
 
 ## Related
 
-- [[index|Gametypes]]
-- [[../weapons/index|Weapons]]
-- [[../health-and-armor|Health and Armor]]
+- [Gametypes Index](gametypes/index)
+- [Weapons Index](weapons/index)
+- [Health and Armor](health-and-armor)

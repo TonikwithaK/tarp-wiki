@@ -8,6 +8,8 @@ status: canon
 promoted: 2026-06-09
 ---
 
+# Riotgun
+
 The Riotgun is a close-range burst weapon that fires 20 hitscan pellets in a conical spread.
 
 ## Stats
