@@ -132,21 +132,32 @@ article h3 {
   }
 }
 
-// Quake Live — classic Quake orange/red
+// Quake Live — black, red, white. Hard contrast, no softness.
 [data-slug^="games/quake-live"] {
-  --game-accent: #e17055;
-  --game-muted: rgba(225, 112, 85, 0.15);
+  --game-accent: #cc0000;
+  --game-muted: rgba(204, 0, 0, 0.10);
 
-  article h1 { color: var(--game-accent); }
+  article h1 {
+    color: var(--game-accent);
+  }
 
   article h2 {
     border-left: 3px solid var(--game-accent);
     padding-left: 0.6rem;
   }
 
+  // Strong top border on article to anchor the red
+  article {
+    border-top: 2px solid var(--game-accent);
+    padding-top: 1rem;
+  }
+
   .page-header::before {
     content: "Quake Live";
     @extend .game-badge;
+    background: #cc0000;
+    color: #ffffff;
+    letter-spacing: 0.12em;
   }
 }
 
