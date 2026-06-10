@@ -8,11 +8,11 @@ status: canon
 promoted: 2026-06-10
 ---
 
-OpenArena is free. No account, no installer required — download, extract, run.
+OpenArena is free. No account, no installer required. Download, extract, run.
 
 ## Download
 
-[openarena.ws/download.php?view.4](http://openarena.ws/download.php?view.4) — full ZIP, 0.8.8
+[openarena.ws/download.php?view.4](http://openarena.ws/download.php?view.4) (full ZIP, 0.8.8)
 
 Extract to any folder. Run `openarena.exe` (Windows) or `openarena` (Linux/Mac).
 

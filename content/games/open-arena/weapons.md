@@ -33,7 +33,7 @@ Weapons 11-13 (Nailgun, Prox Mine Launcher, Chaingun) originate from Quake III T
 
 ## Notes
 
-**Gauntlet:** Melee contact only. Earns Humiliation medal on kill. Cannot be selected with mouse scroll — press key 1.
+**Gauntlet:** Melee contact only. Earns Humiliation medal on kill. Cannot be selected with mouse scroll. Press key 1.
 
 **Machine Gun:** Starting weapon. 10 rounds/second. 2° spread.
 

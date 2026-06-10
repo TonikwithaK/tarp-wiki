@@ -12,7 +12,7 @@ updated: 2026-06-10
 
 Max ammo capacity: 200 for all weapons. Knockback equals damage. Self-damage is half damage.
 
-Quad Damage multiplier: 3x (not 4x -- the name is legacy from Q1/Q2).
+Quad Damage multiplier: 3x (not 4x; the name is legacy from Q1/Q2).
 
 ## Stats (VQ3, patch 1.32)
 
@@ -36,7 +36,7 @@ Rail penetrates up to 4 players in a single shot.
 
 ## Notes
 
-The Lightning Gun deals 5 damage per tick in base Q3 (q3df.org source, 1.32 data). Some references show 8 -- that figure includes the fandom wiki and appears to reflect a different version or calculation method. The 5/tick figure from q3df.org is from the 1.32 point release and is used in Defrag.
+The Lightning Gun deals 5 damage per tick in base Q3 (q3df.org source, 1.32 data). Some references show 8. That figure includes the fandom wiki and appears to reflect a different version or calculation method. The 5/tick figure from q3df.org is from the 1.32 point release and is used in Defrag.
 
 Machine Gun deals 5 damage in Team Deathmatch, 7 in all other modes.
 

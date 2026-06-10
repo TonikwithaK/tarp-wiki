@@ -23,7 +23,7 @@ updated: 2026-06-10
 
 ## Strafe Jumping
 
-The engine checks speed limits per-axis, not on the resultant vector. When a player holds a strafe key and rotates the view, the engine calculates the wish direction as the combination of the two inputs. If the projection of current velocity onto the wish direction is below the speed cap, the engine adds acceleration in that direction -- even if total velocity already exceeds the cap.
+The engine checks speed limits per-axis, not on the resultant vector. When a player holds a strafe key and rotates the view, the engine calculates the wish direction as the combination of the two inputs. If the projection of current velocity onto the wish direction is below the speed cap, the engine adds acceleration in that direction, even if total velocity already exceeds the cap.
 
 This allows velocity to accumulate beyond 320 UPS. Timing the key presses to each jump cycle and maintaining a precise angle between the view direction and strafe direction is the core of VQ3 strafe-jumping.
 

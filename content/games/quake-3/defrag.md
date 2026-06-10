@@ -8,7 +8,7 @@ created: 2026-06-10
 updated: 2026-06-10
 ---
 
-DeFRaG is a movement-focused mod for Quake 3 Arena. Players complete movement courses -- reaching a finish trigger from a start trigger in the shortest possible time. Maps range from straightforward strafe-jump tracks to complex multi-path routes requiring precise technique.
+DeFRaG is a movement-focused mod for Quake 3 Arena. Players complete movement courses, reaching a finish trigger from a start trigger in the shortest possible time. Maps range from straightforward strafe-jump tracks to complex multi-path routes requiring precise technique.
 
 The mod runs both VQ3 and CPM physics. Every map has separate leaderboards for each physics mode.
 

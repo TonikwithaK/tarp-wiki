@@ -35,13 +35,13 @@ Pick up health and armor whenever the path doesn't put you in a worse position. 
 
 ## Sound Awareness
 
-Each pickup size has a distinct audio cue audible at distance — more reliable than footsteps for tracking opponents across the map. Knowing pickup locations and recognizing their sounds tells you where players are before you see them.
+Each pickup size has a distinct audio cue audible at distance, more reliable than footsteps for tracking opponents across the map. Knowing pickup locations and recognizing their sounds tells you where players are before you see them.
 
 Hit sounds change when a player's health is critically low. The low-health groan tells you a follow-up with a fast spread weapon (Shotgun, MachineGun) or fast splash (Crylink) will finish them. Important in duel.
 
 ## Splash Damage Through Walls
 
-All splash weapons — Mortar, Devastator, Electro combo — deal damage through thin walls and ceilings. The hit indicator beep confirms a hit. The opponent cannot retaliate simultaneously, making this a safe damage option when you know their position.
+All splash weapons (Mortar, Devastator, Electro combo) deal damage through thin walls and ceilings. The hit indicator beep confirms a hit. The opponent cannot retaliate simultaneously, making this a safe damage option when you know their position.
 
 ## Console
 

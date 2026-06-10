@@ -47,7 +47,7 @@ The original binary does not run well on modern systems. Recommended:
 | [Quake3e](https://github.com/ec-/Quake3e) | Competitive-focused. Bug fixes, security, QoL. |
 | [Spearmint](https://github.com/zturtleman/spearmint/) | MSAA, XInput, 4-player split-screen. |
 
-Config lives at `baseq3/q3config.cfg`. Edit settings via `autoexec.cfg` -- `q3config.cfg` is auto-generated and will be overwritten.
+Config lives at `baseq3/q3config.cfg`. Edit settings via `autoexec.cfg`. `q3config.cfg` is auto-generated and will be overwritten.
 
 ## Related
 

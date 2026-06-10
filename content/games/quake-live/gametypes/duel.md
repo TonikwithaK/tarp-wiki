@@ -25,7 +25,7 @@ Players spawn with Machine Gun and 125 HP. All other weapons and items must be p
 
 ## Respawn Timers
 
-Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
+Timers begin when the item is picked up. Standard values; map-specific configurations can override these.
 
 | Item | Respawn Time |
 |------|-------------|

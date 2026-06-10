@@ -10,13 +10,13 @@ updated: 2026-06-10
 
 Challenge ProMode Arena (CPMA) is a modification for Quake 3 Arena focused on competitive gameplay. Originally called Challenge ProMode (CPM), it was created in May 1999 by Richard "Hoony" Sandlant shortly after the release of the Q3 beta. It became the standard competitive mod for Q3 after the Cyberathlete Professional League adopted it, and was used in the Electronic Sports World Cup (ESWC).
 
-Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the double/ramp jump. Everything else -- instant weapon switching, rebalanced weapons, additional gametypes -- matters, but these three are what the mod is built around.
+Three things define CPMA as distinct from base Q3: full air control, the held Mega Health, and the double/ramp jump. Instant weapon switching, rebalanced weapons, and additional gametypes all matter, but these three are what the mod is built around.
 
 The recommended engine for playing CPMA today is CNQ3 (Challenge Quake 3), maintained by the same team. Download and guides at [playmorepromode.com](https://playmorepromode.com).
 
 ## Air Control
 
-In base Q3 (VQ3), holding forward while airborne contributes almost nothing to steering. Directional changes require landing contact or wall interaction. In CPM, strafing while airborne steers the player meaningfully -- turns of 90 degrees or more are possible without losing momentum. A/D handles large changes, W handles small adjustments.
+In base Q3 (VQ3), holding forward while airborne contributes almost nothing to steering. Directional changes require landing contact or wall interaction. In CPM, strafing while airborne steers the player meaningfully. Turns of 90 degrees or more are possible without losing momentum. A/D handles large changes, W handles small adjustments.
 
 This changes the geometry of the game. Routes that require sharp mid-air turns are not possible in VQ3. In CPM they are expected. The skill floor for using air control effectively is high; the ceiling is what separates top-level CPM movement from everything else.
 
@@ -24,9 +24,9 @@ Air acceleration in CPM is `15.0` vs VQ3's `10.0`. Combined with air control, ci
 
 ## Held Mega Health
 
-In base Q3, the Mega Health respawns on a fixed 35-second timer from the moment it is picked up -- the carrier has no influence over when it comes back.
+In base Q3, the Mega Health respawns on a fixed 35-second timer from the moment it is picked up. The carrier has no influence over when it comes back.
 
-In CPMA, Mega Health behavior is configurable per server and gametype via the `simplemega` setting. The default configuration for duel (1v1) uses **wearoff-based respawn**: the timer does not start until the carrier's health drops to 100 or below. A player sitting above 100 HP indefinitely delays the respawn. In this mode, Mega Health becomes a strategic resource -- controlling it means not just picking it up but understanding when to let health decay and when to hold it.
+In CPMA, Mega Health behavior is configurable per server and gametype via the `simplemega` setting. The default configuration for duel (1v1) uses **wearoff-based respawn**: the timer does not start until the carrier's health drops to 100 or below. A player sitting above 100 HP indefinitely delays the respawn. In this mode, Mega Health becomes a strategic resource. Controlling it means not just picking it up but understanding when to let health decay and when to hold it.
 
 FFA and some other configurations use **fixed-interval respawn** (same as VQ3). Whether a given server or gametype uses wearoff or fixed respawn is determined by the `simplemega` cvar; it is not an immutable property of the CPM ruleset.
 
@@ -36,9 +36,9 @@ FFA and some other configurations use **fixed-interval respawn** (same as VQ3). 
 
 These are two distinct mechanics that combine.
 
-**Double jump**: pressing jump a second time within 400ms of landing grants additional upward velocity. This is a second jump input -- it requires the player to hit the key again at the right moment. The timing window is tight and has to be developed by feel.
+**Double jump**: pressing jump a second time within 400ms of landing grants additional upward velocity. This is a second jump input. It requires the player to hit the key again at the right moment. The timing window is tight and has to be developed by feel.
 
-**Ramp jump**: jumping while moving up a slope converts forward speed into vertical speed, proportional to the slope angle. This is not a button press -- it is the physics response to the geometry at the moment of takeoff. VQ3 also has ramp jumps but the effect is weaker; CPM amplifies it.
+**Ramp jump**: jumping while moving up a slope converts forward speed into vertical speed, proportional to the slope angle. This is not a button press. It is the physics response to the geometry at the moment of takeoff. VQ3 also has ramp jumps but the effect is weaker; CPM amplifies it.
 
 The two mechanics chain: a ramp jump can be followed immediately by a double jump to extend height and distance further than either alone. CPM maps are designed around routes that require this combination to reach certain positions. Faster approach speed into a ramp = higher jump.
 

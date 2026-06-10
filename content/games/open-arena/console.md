@@ -74,7 +74,7 @@ cl_maxpackets  125  Outgoing packet rate
 \rcon <command>
 ```
 
-Never use `/sets` to set rconpassword — it becomes visible in `/serverstatus`.
+Never use `/sets` to set rconpassword. It becomes visible in `/serverstatus`.
 
 ## Logging
 

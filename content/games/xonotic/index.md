@@ -43,7 +43,7 @@ XDF movement tech (CPMA-like strafe jumping, circle jumping) is meaningfully dif
 
 ## Resources
 
-- Official site and beginner guide: https://xonotic.org/guide/ (Halogene's Newbie Corner — comprehensive, actively maintained)
+- Official site and beginner guide: https://xonotic.org/guide/ (Halogene's Newbie Corner, comprehensive, actively maintained)
 - Stats: https://stats.xonotic.org
 - XDF competitive scene: https://xdwc.xdf.gg
 - XDF hub: https://xdf.gg

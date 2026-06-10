@@ -18,7 +18,7 @@ promoted: 2026-06-10
 
 # Movement
 
-Xonotic movement is built around minimizing ground contact. Ground friction is heavy; air control is high. The core loop is bunny hopping — staying airborne to maintain and build speed.
+Xonotic movement is built around minimizing ground contact. Ground friction is heavy; air control is high. The core loop is bunny hopping, staying airborne to maintain and build speed.
 
 Source: Halogene's Newbie Corner (https://xonotic.org/guide/)
 
@@ -34,7 +34,7 @@ Turning at speed requires strafe turning. If you hold forward and turn the mouse
 3. Smoothly and steadily turn mouse in that direction
 4. Release strafe, press forward again when done
 
-Order matters: release forward before pressing strafe, and vice versa. Mouse movement must be smooth — abrupt inputs kill speed. Practice figure-eights in the Afterslime main room.
+Order matters: release forward before pressing strafe, and vice versa. Mouse movement must be smooth. Abrupt inputs kill speed. Practice figure-eights in the Afterslime main room.
 
 **Advanced techniques (limited effect in vanilla):**
 
@@ -46,9 +46,9 @@ Circle jumping: on the ground, make a quick 90-180° turn with forward + strafe 
 
 The Blaster has no ammo cost and is the primary movement tool in the game, not just a fallback weapon.
 
-Shoot the ground below you while jumping — the blast pushes you upward. Jumping and shooting simultaneously gives maximum height. Firing while already airborne gives a weaker, more controlled boost (more space between impact and self = softer push).
+Shoot the ground below you while jumping. The blast pushes you upward. Jumping and shooting simultaneously gives maximum height. Firing while already airborne gives a weaker, more controlled boost (more space between impact and self = softer push).
 
-Timing becomes muscle memory. Height is precise enough to target specific platforms — from the upper area to the roof or fan-to-Crylink on Xoylent, for example.
+Timing becomes muscle memory. Height is precise enough to target specific platforms, from the upper area to the roof or fan-to-Crylink on Xoylent, for example.
 
 ## Wall Blastering
 
@@ -57,17 +57,17 @@ Technique for instant horizontal acceleration from a standstill.
 1. Stand next to a wall that runs parallel to your intended movement direction
 2. Start a bunny hop (forward + jump)
 3. While airborne, flick to ~8 o'clock (wall on left) or ~4 o'clock (wall on right)
-4. Shoot the Blaster at the wall, aiming slightly above head height — shooting parallel or down wastes energy into vertical
+4. Shoot the Blaster at the wall, aiming slightly above head height. Shooting parallel or down wastes energy into vertical.
 5. Turn back to movement direction and continue hopping
 6. Do not release the jump key at any point
 
 **Key refinement:** while facing away from your movement direction, switch from forward to strafe (strafe right if wall is left, strafe left if wall is right). Switch back as you return to movement direction.
 
-At high speeds you barely need to turn — shooting at 10 or 2 o'clock is enough because the projectile travels forward while you move.
+At high speeds you barely need to turn. Shooting at 10 or 2 o'clock is enough because the projectile travels forward while you move.
 
 ## Ramp Jumping
 
-Sloped surfaces give an upward boost on jump contact. Approach frontally (not sideways). Hit the ramp at a flat angle — ideally while still rising from your previous jump. Steep or 90° impact angle stops you instead of launching you. Faster approach = more height.
+Sloped surfaces give an upward boost on jump contact. Approach frontally (not sideways). Hit the ramp at a flat angle, ideally while still rising from your previous jump. Steep or 90° impact angle stops you instead of launching you. Faster approach = more height.
 
 Silent and does no self-damage. Especially useful in duels and 2v2 where Blaster noise and health cost matter.
 

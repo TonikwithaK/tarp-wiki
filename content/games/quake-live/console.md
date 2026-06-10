@@ -11,7 +11,7 @@ source: https://www.euere.eu/ql/
 
 Open with `~` (tilde). First time: `Ctrl+Alt+~`, then run `com_allowConsole "1"` so `~` works from that point on. Tab auto-completes. PgUp/PgDn scrolls.
 
-Full source: [euere.eu/ql](https://www.euere.eu/ql/) — 1,079 CVARs, 205 commands. Updated September 2025.
+Full source: [euere.eu/ql](https://www.euere.eu/ql/) (1,079 CVARs, 205 commands. Updated September 2025).
 
 ## Config Files
 
@@ -34,14 +34,14 @@ Full source: [euere.eu/ql](https://www.euere.eu/ql/) — 1,079 CVARs, 205 comman
 
 | Flag | Meaning |
 |------|---------|
-| A | Archive — saved to vars.rc |
-| C | Cheat-protected — localhost/cheat servers only |
-| I | Init — command line only, not settable from console |
-| L | Latched — requires server restart to apply |
+| A | Archive: saved to vars.rc |
+| C | Cheat-protected: localhost/cheat servers only |
+| I | Init: command line only, not settable from console |
+| L | Latched: requires server restart to apply |
 | R | Read-only |
-| S | Server info — broadcast to clients |
+| S | Server info: broadcast to clients |
 | T | Saved to QL database |
-| U | User info — sent to server on connect |
+| U | User info: sent to server on connect |
 | W | Write-protected |
 
 ## CVARs: A

@@ -59,7 +59,7 @@ promoted: 2026-06-09
 
 ## Respawn Timers
 
-Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
+Timers begin when the item is picked up. Standard values; map-specific configurations can override these.
 
 | Item | Respawn Time |
 |---|---|
