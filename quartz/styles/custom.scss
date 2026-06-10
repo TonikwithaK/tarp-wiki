@@ -1,13 +1,213 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================================
+// TARP — Custom Styles
+// ============================================================================
+//
+// Structure:
+//   1. Global base
+//   2. Game themes (per-game accent colors via [data-slug])
+//   3. Custom page injection helpers
+//   4. Mobile optimizations
+//
+// Adding a new game:
+//   1. Add a $game-<name> color block below
+//   2. Add a [data-slug^="games/<name>"] block that references it
+//   3. Done — all pages under that path inherit the theme
+// ============================================================================
+
 
 // ============================================================================
-// Mobile optimizations
+// 1. GLOBAL BASE
+// ============================================================================
+
+// Tighten up the content column slightly for readability
+article {
+  max-width: 680px;
+}
+
+// Tables: clean, readable, full width
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gray);
+    padding: 0.5rem 0.75rem;
+  }
+
+  td {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--lightgray);
+    vertical-align: top;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+// Code blocks
+article pre {
+  border-left: 3px solid var(--secondary);
+  border-radius: 4px;
+}
+
+// Headings — tighten spacing
+article h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+article h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+// Game badge — shown on pages with a game theme
+.game-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  background: var(--game-accent, var(--secondary));
+  color: var(--light);
+  opacity: 0.85;
+}
+
+
+// ============================================================================
+// 2. GAME THEMES
+//
+// Each game gets:
+//   --game-accent   primary color (headings, links, highlights)
+//   --game-muted    softer variant (borders, badges)
+//
+// Applied to all pages under games/<name>/
+// ============================================================================
+
+// Warfork — electric teal/green, nod to its Warsow lineage
+[data-slug^="games/warfork"] {
+  --game-accent: #00b894;
+  --game-muted: rgba(0, 184, 148, 0.15);
+
+  article h1 { color: var(--game-accent); }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  .page-header::before {
+    content: "Warfork";
+    @extend .game-badge;
+  }
+}
+
+// Quake Live — classic Quake orange/red
+[data-slug^="games/quake-live"] {
+  --game-accent: #e17055;
+  --game-muted: rgba(225, 112, 85, 0.15);
+
+  article h1 { color: var(--game-accent); }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  .page-header::before {
+    content: "Quake Live";
+    @extend .game-badge;
+  }
+}
+
+// Reflex Arena — cold blue/purple, reflects its CPM roots
+[data-slug^="games/reflex"] {
+  --game-accent: #6c5ce7;
+  --game-muted: rgba(108, 92, 231, 0.15);
+
+  article h1 { color: var(--game-accent); }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  .page-header::before {
+    content: "Reflex Arena";
+    @extend .game-badge;
+  }
+}
+
+
+// ============================================================================
+// 3. CUSTOM PAGE INJECTION HELPERS
+//
+// Use these classes in any markdown page via raw HTML blocks:
+//   <div class="callout-info">...</div>     — informational aside
+//   <div class="callout-warn">...</div>     — warning or caveat
+//   <div class="stat-block">...</div>       — highlighted stat/number
+//   <div class="version-note">...</div>     — version-specific note
+//
+// These work in any game section and inherit the game accent color.
+// ============================================================================
+
+.callout-info,
+.callout-warn,
+.stat-block,
+.version-note {
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.callout-info {
+  background: var(--game-muted, rgba(143, 159, 169, 0.12));
+  border-left: 3px solid var(--game-accent, var(--secondary));
+}
+
+.callout-warn {
+  background: rgba(253, 203, 110, 0.12);
+  border-left: 3px solid #fdcb6e;
+}
+
+.stat-block {
+  background: var(--lightgray);
+  border-left: 3px solid var(--game-accent, var(--secondary));
+  font-family: var(--codeFont);
+  font-size: 0.85rem;
+
+  strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.version-note {
+  background: rgba(99, 110, 114, 0.08);
+  border-left: 3px solid var(--gray);
+  color: var(--darkgray);
+  font-style: italic;
+}
+
+
+// ============================================================================
+// 4. MOBILE OPTIMIZATIONS
 // ============================================================================
 
 @media all and ($mobile) {
-  // Header title: keep it to one short line, coexist with toolbar buttons
   header h1 {
     font-size: 1.1rem;
     line-height: 1.2;
@@ -17,20 +217,28 @@
     max-width: 50vw;
   }
 
-  // Article H1 is too large at default 1.75rem on narrow screens
   .page article > h1,
   .center > article > h1 {
     font-size: 1.4rem;
     line-height: 1.3;
   }
 
-  // Note Properties block: hide on mobile — frontmatter metadata clutter
   .note-properties {
     display: none;
   }
 
-  // Date / read time meta: hide on mobile to reduce clutter above the fold
   .content-meta {
     display: none;
+  }
+
+  // Game badge on mobile: smaller
+  .game-badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  // h2 left border still works on mobile, just less padding
+  article h2 {
+    padding-left: 0.4rem;
   }
 }
