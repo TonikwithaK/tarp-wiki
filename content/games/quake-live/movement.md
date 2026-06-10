@@ -45,7 +45,6 @@ Physics are server-determined.
 
 - A fast mouse flick at the moment of the initial jump.
 - Gains extra initial speed before a strafe jump sequence.
-- Considered the hardest fundamental technique to execute consistently.
 
 ---
 
@@ -86,7 +85,7 @@ Physics are server-determined.
 
 ## Speed Reference
 
-Strafe jumping reaches ~2x normal run speed. At 320 UPS base run, sustained strafe jumping reaches 640 UPS in approximately 3 hops. This is fast enough that strafe jumping is effectively required to compete at any level — not just for advanced play.
+Strafe jumping reaches approximately 2x normal run speed. At 320 UPS base run, sustained strafe jumping reaches 640 UPS in approximately 3 hops.
 
 ---
 

@@ -59,7 +59,7 @@ promoted: 2026-06-09
 
 ## Respawn Timers
 
-Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
+Timers begin when the item is picked up. Standard values; map-specific configurations can override these.
 
 | Item | Respawn Time |
 |---|---|
@@ -75,5 +75,5 @@ Some maps ship with non-standard Mega Health timers. Vertical Vengeance is a kno
 
 ## Related
 
-- [Movement](movement) — rocket jumping health cost
-- [Gametypes: Duel](gametypes/duel) — item timing in competitive play
+- [Movement](movement): rocket jumping health cost
+- [Gametypes: Duel](gametypes/duel): item timing in competitive play

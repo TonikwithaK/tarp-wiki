@@ -30,10 +30,10 @@ Quake Live weapons are assigned internal item IDs. The full list:
 
 ## Competitive Triad
 
-The Rocket Launcher, Lightning Gun, and Railgun define high-level competitive play. Most players use nothing else unless the triad is unavailable or out of ammo. If you see someone using anything else consistently, it is usually because they ran out of ammo on the triad weapons or the map does not have them.
+The Rocket Launcher, Lightning Gun, and Railgun are the three weapons used in standard competitive play.
 
 - [[rocket-launcher|Rocket Launcher]]: 100 direct damage, splash, self-damage, rocket jump
-- [[lightning-gun|Lightning Gun]]: 6-7 damage/tick hitscan beam, range-capped, highest tracking DPS
+- [[lightning-gun|Lightning Gun]]: 6-7 damage/tick hitscan beam, range-capped
 - [[railgun|Railgun]]: 80 damage hitscan, unlimited range, 1.5s reload
 
 ## Standard Weapons
@@ -41,7 +41,7 @@ The Rocket Launcher, Lightning Gun, and Railgun define high-level competitive pl
 - [[machine-gun|Machine Gun]]: spawn weapon, 5-7 damage/shot, rapid-fire hitscan
 - [[shotgun|Shotgun]]: pellet spread, close-range burst
 - [[plasma-gun|Plasma Gun]]: rapid-fire splash bolts, plasma climbing
-- [[grenade-launcher|Grenade Launcher]]: bouncing explosive, arc trajectory, area denial
+- [[grenade-launcher|Grenade Launcher]]: bouncing explosive, arc trajectory
 - [[gauntlet|Gauntlet]]: melee contact only, Humiliation medal on kill
 
 ## Non-Standard Weapons

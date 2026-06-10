@@ -12,24 +12,23 @@ promoted: 2026-06-10
 
 The Rocket Launcher (RL) fires a straight-line projectile that deals 100 damage on direct hit with splash damage in a radius around the impact point. Full self-damage applies. Respawn time is 5 seconds.
 
+## Stats
+
+| Stat | Value |
+|---|---|
+| Direct hit damage | 100 |
+| Splash damage | Radius falloff from impact center |
+| Self-damage | Full |
+| Projectile speed | Fixed, finite |
+| Respawn time | 5 seconds |
+
 ## Mechanics
 
-The rocket travels at fixed speed in a straight line. It detonates on first contact with a surface or player. Splash damage falls off from the impact center; targets at the edge of the radius take reduced damage.
-
-Because of finite travel speed, RL requires leading moving targets. At close range the lead is minimal. At long range an actively strafing opponent will dodge most rockets. RL is practical at close-to-mid range despite having no range falloff on direct hits.
-
-## Role in Play
-
-The RL is part of the competitive weapon triad alongside the Lightning Gun and Railgun. It handles:
-
-- Close range burst: direct hit plus splash
-- Splash pressure: floor or wall shots near an opponent
-- Rocket jumps: self-knockback for height and speed gain
-- Follow-up: second rocket while opponent is airborne from the first
+The rocket travels at fixed speed in a straight line. It detonates on first contact with a surface or player. Splash damage falls off from the impact center; targets at the edge of the radius take reduced damage. Because of finite travel speed, the RL requires leading moving targets.
 
 ## Self-Damage
 
-Self-damage is full. Shooting the floor at close range damages both the opponent and the shooter. Rocket jump technique requires intentional self-damage.
+Self-damage is full. Shooting the floor at close range damages both the opponent and the shooter.
 
 ## Rocket Jump
 

@@ -54,18 +54,6 @@ Default key bindings for Quake Live. All bindings are configurable via the Optio
 /bind r "weapon 7"
 ```
 
-Direct weapon slot binds are common in competitive play. Most players bind RL, LG, and Rail to easy-reach keys rather than number keys.
-
-## Common Competitive Bind Patterns
-
-| Action | Common bind |
-|---|---|
-| Rocket Launcher | Q or E |
-| Lightning Gun | E or R |
-| Railgun | R or F |
-| Grenade Launcher | G or 4 |
-| Previous weapon (fallback) | Mouse wheel |
-
 ## Sensitivity Setup
 
 Configure in console:
@@ -76,8 +64,6 @@ Configure in console:
 /m_pitch 0.022
 /m_accel 0
 ```
-
-Sensitivity preference varies widely by player. Lower sensitivity is common for Rail accuracy. Higher sensitivity helps LG tracking. Most competitive players use 400-800 DPI on hardware and 3-7 in-game sensitivity.
 
 ## Related
 

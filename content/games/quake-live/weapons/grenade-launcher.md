@@ -12,21 +12,23 @@ promoted: 2026-06-10
 
 The Grenade Launcher (GL) fires a bouncing explosive projectile with a delayed fuse. 100 damage on direct hit, splash damage on detonation. Full self-damage applies. Respawn time is 5 seconds.
 
+## Stats
+
+| Stat | Value |
+|---|---|
+| Direct hit damage | 100 |
+| Detonation | Timed fuse or on direct player contact |
+| Self-damage | Full |
+| Trajectory | Arc with surface bounce |
+| Respawn time | 5 seconds |
+
 ## Mechanics
 
-The grenade follows an arc trajectory and bounces off surfaces before detonating on a timer. It detonates early on direct player contact. The arc and bounce make the GL useful for indirect fire: shooting around corners or pre-covering a landing zone.
+The grenade follows an arc trajectory and bounces off surfaces before detonating on a timer. It detonates early on direct player contact. The delayed fuse means a grenade fired at a close opponent may detonate after they have moved.
 
-Timing the bounce and detonation requires practice. The GL is less forgiving than the RL at close range because the delayed fuse means a grenade fired at a close opponent may detonate after they have moved.
+## Grenade Jump
 
-## Role in Play
-
-The GL is used for:
-
-- Area denial: bouncing grenades into rooms before entering
-- Indirect fire: lobbing around corners or over obstacles
-- Grenade jumping: similar to rocket jumping but with a different trajectory
-
-In close-quarters fights the GL is harder to use effectively than the RL due to the fuse delay and arc trajectory.
+Similar to rocket jumping: position below the trajectory, fire, and jump simultaneously to gain height and speed using the self-knockback. Trajectory differs from rocket jump due to the arc.
 
 ## Related
 

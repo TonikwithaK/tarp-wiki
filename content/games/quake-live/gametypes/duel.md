@@ -25,7 +25,7 @@ Players spawn with Machine Gun and 125 HP. All other weapons and items must be p
 
 ## Respawn Timers
 
-Timers begin when the item is picked up. Standard values — map-specific configurations can override these.
+Timers begin when the item is picked up. Standard values -- map-specific configurations can override these.
 
 | Item | Respawn Time |
 |------|-------------|
@@ -37,10 +37,6 @@ Timers begin when the item is picked up. Standard values — map-specific config
 
 Some maps ship with non-standard Mega Health timers set in their factory or map configuration. Vertical Vengeance is a known example: Mega Health respawns at 2 minutes instead of 35 seconds. Item timers should always be verified per map before assuming standard values apply.
 
-## Key Items
-
-Red Armor and Mega Health have the longest respawn timers and the highest effect on sustained combat effectiveness. Controlling both consistently creates a health and armor advantage over time.
-
 ## Item Decay
 
 Health and armor above 100 decay at 1 point per second. A player at 200 HP and 200 armor who takes no damage and picks up no items will reach 100 HP and 100 armor after 100 seconds.
@@ -51,7 +47,7 @@ Strafe jumping is the standard movement technique in Duel. VQL physics apply unl
 
 ## Rocket Jumping
 
-Rocket jumping is available in Duel. The health cost from self-damage is a tradeoff against map positioning and item timing.
+Rocket jumping is available in Duel. Self-damage from rocket jumping reduces the player's health.
 
 ---
 
