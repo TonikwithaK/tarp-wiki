@@ -1,11 +1,11 @@
 // ============================================================================
-// Open Arena — orange/amber on dark. Free software energy.
-// Accent: #e87c00 (orange)
+// Open Arena — blue on dark.
+// Accent: #3b8fd4
 // ============================================================================
 
 [data-slug^="games/open-arena"] {
-  --game-accent: #e87c00;
-  --game-muted: rgba(232, 124, 0, 0.10);
+  --game-accent: #3b8fd4;
+  --game-muted: rgba(59, 143, 212, 0.10);
 
   article h1 {
     color: var(--game-accent);
@@ -32,7 +32,7 @@
     border-radius: 3px;
     margin-bottom: 1rem;
     opacity: 0.85;
-    background: #e87c00;
+    background: #3b8fd4;
     color: #ffffff;
   }
 }
