@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Gunblade
-
 The Gunblade is the default starting weapon in most game modes. It has two fire modes with completely different mechanics and ammo pools.
 
 ## Fire Modes

@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Tools
-
 ## Timing Trainer
 
 Item respawn timing practice tool. Supports QL and QC.

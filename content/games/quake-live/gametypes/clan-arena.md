@@ -9,8 +9,6 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
-# Clan Arena
-
 Verified from `ca.factories` (quakelive-server-standards).
 
 ## Format

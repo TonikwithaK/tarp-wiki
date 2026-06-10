@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Electrobolt
-
 The Electrobolt is a single-shot, long-range hitscan weapon. It is the long-range weapon in the RL/LG/EB competitive triad.
 
 ## Stats

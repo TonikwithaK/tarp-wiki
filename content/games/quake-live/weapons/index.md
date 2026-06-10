@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Weapons
-
 Quake Live weapons are assigned internal item IDs. The full list:
 
 | ID | Weapon |

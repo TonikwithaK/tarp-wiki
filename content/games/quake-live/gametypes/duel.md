@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Duel
-
 1v1 gametype. The player with the most frags at the end of the time limit wins. If a frag limit is set, the first player to reach it wins.
 
 ## Default Settings

@@ -10,8 +10,6 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
-# Modes
-
 The mode determines the match format (1v1, FFA, Race). The ruleset determines how weapons and movement behave. Modes and rulesets are set independently.
 
 ## Summary

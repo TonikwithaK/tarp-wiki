@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Gauntlet
-
 The Gauntlet is a melee weapon that deals damage only at contact range. Always available: players cannot run out of Gauntlet ammo. Killing an opponent with the Gauntlet awards the Humiliation medal.
 
 ## Stats

@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Gametype Scripting Reference
-
 AngelScript API reference for Warfork gametype development. All types and functions are available in gametype scripts unless noted.
 
 ## Core Types

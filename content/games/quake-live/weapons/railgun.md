@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Railgun
-
 The Railgun (RG, Rail) fires a hitscan beam dealing 80 damage per shot. No splash damage. No self-damage. Unlimited range. Reload time is approximately 1.5 seconds. Respawn time is 5 seconds.
 
 ## Stats

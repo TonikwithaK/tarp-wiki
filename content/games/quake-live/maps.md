@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Maps
-
 ## Duel Map Pool
 
 Maps in active rotation for competitive duel play as of 2025/2026 (250 FPS QL League Season 4/5 reference).

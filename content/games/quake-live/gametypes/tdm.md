@@ -9,8 +9,6 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
-# Team Deathmatch
-
 Verified from `tdm.factories` (quakelive-server-standards). The standard factory defines no custom cvars; all settings reflect Quake Live base game defaults.
 
 ## Format

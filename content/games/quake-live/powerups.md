@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Powerups
-
 Quake Live has two primary powerups: Quad Damage and Regeneration. Not all maps include powerups. Powerup availability depends on map and gametype configuration.
 
 ## Quad Damage

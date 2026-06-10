@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Duel
-
 1v1. First to the frag limit wins, or most frags when time expires. Default: no frag limit, 10 minute time limit.
 
 ## Item Timers

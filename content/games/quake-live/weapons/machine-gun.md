@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Machine Gun
-
 The Machine Gun (MG) fires rapid-fire hitscan shots dealing 5-7 damage per shot. Players spawn with the Machine Gun and 100 ammo in all standard gametypes. It is the default starting weapon.
 
 ## Stats

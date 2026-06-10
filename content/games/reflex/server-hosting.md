@@ -10,8 +10,6 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
-# Server Hosting
-
 ## Docker Deployment
 
 The community-standard Linux server setup uses Docker Compose: https://github.com/furioness/reflex-arena-srv-docker
@@ -22,8 +20,7 @@ It handles server auto-start, ruleset syncing from https://github.com/Nailok/ref
 git clone https://github.com/furioness/reflex-arena-srv-docker
 cd reflex-arena-srv-docker
 cp docker-compose.example.yml docker-compose.yml
-# edit docker-compose.yml
-docker compose up -d
+
 ```
 
 ## Ports

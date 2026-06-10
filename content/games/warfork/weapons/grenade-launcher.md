@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Grenade Launcher
-
 The Grenade Launcher (GL) fires a bouncing explosive projectile with a delayed fuse. It deals 80 damage on a direct hit with splash damage in a 125-unit radius, carries full self-damage (1.0 ratio), and generates 100 knockback. It fires every 800ms.
 
 ## Mechanics

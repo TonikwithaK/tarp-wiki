@@ -10,8 +10,6 @@ promoted: 2026-06-10
 canon_attempts: 1
 ---
 
-# Reflex
-
 Reflex Arena is an arena first-person shooter developed by Turbo Pixel Studios (Melbourne, Australia), built on a custom Reflex Engine written from scratch for AFPS. It entered Steam Early Access on 4 November 2014 under the name "Reflex" and reached full release on 8 March 2017 (Steam App ID: 328070). Physics are CPMA-inspired: developer Newborn contributed to CPMA for Quake 3. Movement includes strafe-jumping, rocket-jumping, and triple jump. Servers support up to 16 players.
 
 ## Contents

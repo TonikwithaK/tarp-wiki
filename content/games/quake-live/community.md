@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Community
-
 ## quakelife.ru
 
 Russian QL and Arena FPS community hub. Active since ~2011. Hosts the 250 FPS QL Duel League, LAN events, and reference tools.

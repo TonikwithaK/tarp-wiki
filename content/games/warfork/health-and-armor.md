@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Health and Armor
-
 Health and armor are the primary survival resources in Warfork combat.
 
 ## Health

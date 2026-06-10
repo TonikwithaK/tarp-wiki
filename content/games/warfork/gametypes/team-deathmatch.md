@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Team Deathmatch
-
 Team Deathmatch (TDM) is a team-based frag mode. Players are divided into two teams: Alpha and Beta. Every kill any player lands scores one point for their team. The team with the highest combined frag count when time expires wins. If a score limit is set, the first team to reach it wins.
 
 Respawning is continuous. There are no rounds.

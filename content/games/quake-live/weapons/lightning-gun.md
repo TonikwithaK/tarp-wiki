@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Lightning Gun
-
 The Lightning Gun (LG) fires a continuous hitscan beam dealing 6-7 damage per tick at a high fire rate. No splash damage. No self-damage. Effective range is capped: beam does not connect beyond approximately 768 units. Respawn time is 5 seconds.
 
 ## Stats

@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Plasma Gun
-
 The Plasma Gun (PG) fires rapid-fire plasma bolts dealing splash damage on each impact. Self-damage applies. Used for plasma climbing in addition to combat. Respawn time is 5 seconds.
 
 ## Stats

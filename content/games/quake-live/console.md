@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Console
-
 Open the console with `~` (tilde/backtick). Commands and cvars can be entered directly. Config files are stored in `baseq3/` under the Quake Live install directory.
 
 ## Config File Locations

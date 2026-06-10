@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Grenade Launcher
-
 The Grenade Launcher (GL) fires a bouncing explosive projectile with a delayed fuse. 100 damage on direct hit, splash damage on detonation. Full self-damage applies. Respawn time is 5 seconds.
 
 ## Stats

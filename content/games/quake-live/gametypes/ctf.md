@@ -9,8 +9,6 @@ source: quakelive-server-standards
 promoted: 2026-06-09
 ---
 
-# Capture the Flag
-
 Verified from `ctf.factories` (quakelive-server-standards).
 
 ## Format

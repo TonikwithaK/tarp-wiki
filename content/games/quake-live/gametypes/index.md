@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Gametypes
-
 Quake Live ships with multiple gametypes. Competitive and community play is concentrated in a subset of them.
 
 ## Competitive Gametypes

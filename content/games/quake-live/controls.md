@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Controls
-
 Default key bindings for Quake Live. All bindings are configurable via the Options menu or the console with `/bind <key> <command>`.
 
 ## Default Bindings

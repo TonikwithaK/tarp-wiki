@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Clan Arena
-
 Clan Arena (CA) is a team elimination mode. Two teams compete across a series of rounds. The team that wins 11 rounds first wins the match.
 
 ---

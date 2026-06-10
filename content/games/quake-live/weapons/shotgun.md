@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Shotgun
-
 The Shotgun fires a spread of pellets dealing damage across a close-range cone. High damage at point-blank range, significant falloff at distance. Respawn time is 5 seconds.
 
 ## Stats

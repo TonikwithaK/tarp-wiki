@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Rocket Launcher
-
 The Rocket Launcher (RL) fires a straight-line projectile that deals 100 damage on direct hit with splash damage in a radius around the impact point. Full self-damage applies. Respawn time is 5 seconds.
 
 ## Stats

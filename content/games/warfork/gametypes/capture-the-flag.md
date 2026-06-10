@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Capture the Flag
-
 Capture the Flag (CTF) is a team-based mode. Two teams, Alpha and Beta, each have a flag at their base. The objective is to capture the enemy flag by carrying it back to your own base. The team with the most captures when time expires wins.
 
 Respawning is continuous. There are no rounds.

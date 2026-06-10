@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-10
 ---
 
-# Modding
-
 Quake Live modding is primarily server-side. The client is a fixed Steam binary. Server customization is done through factories (gametype rule files), minqlx plugins (Python), and server cvars.
 
 ## minqlx
@@ -31,10 +29,6 @@ Source: [minqlx on GitHub](https://github.com/MinoMino/minqlx)
 minqlx is included in the quakelive-server-standards Docker images. For manual setup:
 
 ```bash
-# Install to server root
-python3 minqlx_setup.py
-# Configure in server.cfg
-qlx_pluginsPath "minqlx-plugins"
 qlx_database    "Redis"
 qlx_redisAddress "localhost"
 ```

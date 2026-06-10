@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Instagun
-
 The Instagun is exclusive to Instagib mode. It is not available in standard gametypes.
 
 ## Stats

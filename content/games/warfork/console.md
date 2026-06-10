@@ -8,8 +8,6 @@ status: canon
 promoted: 2026-06-09
 ---
 
-# Console
-
 Open the console with `~` (backtick). Full source: [Warfork Wiki](https://warforkwiki.com/index.php?title=Console_Commands).
 
 ## Cvar Flags
