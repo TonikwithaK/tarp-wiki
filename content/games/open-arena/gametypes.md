@@ -35,5 +35,5 @@ Instantgib, All Rockets, and Vampire Mode can be applied as modifiers on top of 
 ## Related
 
 - [[games/open-arena/index\|Overview]]
-- [[games/open-arena/weapons/index\|Weapons]]
+- [[games/open-arena/weapons\|Weapons]]
 - [[games/open-arena/health-and-armor\|Health and Armor]]

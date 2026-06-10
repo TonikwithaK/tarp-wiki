@@ -22,10 +22,10 @@ OpenArena is a free and open-source deathmatch FPS built on the ioquake3 engine 
 |------|-------------|
 | [[games/open-arena/getting-started\|Getting Started]] | Download, install, console setup |
 | [[games/open-arena/movement\|Movement]] | Strafe jumping, rocket jumping, plasma climbing |
-| [[games/open-arena/weapons/index\|Weapons]] | All 13 weapons, stats, mechanics |
+| [[games/open-arena/weapons\|Weapons]] | All 13 weapons, stats, mechanics |
 | [[games/open-arena/health-and-armor\|Health and Armor]] | Item values, caps, respawn timers |
 | [[games/open-arena/powerups\|Powerups]] | Quad, Haste, Battle Suit, runes |
-| [[games/open-arena/gametypes/index\|Gametypes]] | All 13 gametypes |
+| [[games/open-arena/gametypes\|Gametypes]] | All 13 gametypes |
 | [[games/open-arena/console\|Console]] | CVARs and commands |
 
 ## Community

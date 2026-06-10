@@ -52,4 +52,4 @@ Scout + Haste: does not stack beyond Scout's speed.
 ## Related
 
 - [[games/open-arena/health-and-armor\|Health and Armor]]
-- [[games/open-arena/gametypes/index\|Gametypes]]
+- [[games/open-arena/gametypes\|Gametypes]]

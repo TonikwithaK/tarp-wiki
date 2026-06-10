@@ -61,4 +61,4 @@ Weapons 11-13 (Nailgun, Prox Mine Launcher, Chaingun) originate from Quake III T
 
 - [[games/open-arena/health-and-armor\|Health and Armor]]
 - [[games/open-arena/movement\|Movement]]
-- [[games/open-arena/gametypes/index\|Gametypes]]
+- [[games/open-arena/gametypes\|Gametypes]]

@@ -46,5 +46,5 @@ Armor above 100 decays back to 100. All armor respawns 25 seconds after pickup.
 ## Related
 
 - [[games/open-arena/powerups\|Powerups]]
-- [[games/open-arena/weapons/index\|Weapons]]
-- [[games/open-arena/gametypes/index\|Gametypes]]
+- [[games/open-arena/weapons\|Weapons]]
+- [[games/open-arena/gametypes\|Gametypes]]

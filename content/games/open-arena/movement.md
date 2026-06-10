@@ -28,6 +28,6 @@ The Flight powerup grants free flight for 60 seconds. Strafe jumping provides no
 
 ## Related
 
-- [[games/open-arena/weapons/index\|Weapons]]
+- [[games/open-arena/weapons\|Weapons]]
 - [[games/open-arena/powerups\|Powerups]]
 - [[games/open-arena/getting-started\|Getting Started]]
