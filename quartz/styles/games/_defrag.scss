@@ -1,0 +1,39 @@
+// ============================================================================
+// DeFRaG — grey/green. Utilitarian. Movement tool, not a game.
+// Accent: #44bb66 (terminal green)
+// ============================================================================
+
+[data-slug^="games/defrag"] {
+  --game-accent: #44bb66;
+  --game-muted: rgba(68, 187, 102, 0.10);
+
+  article h1 {
+    color: var(--game-accent);
+  }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  article {
+    border-top: 2px solid var(--game-accent);
+    padding-top: 1rem;
+  }
+
+  .page-header::before {
+    content: "DeFRaG";
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+    background: #1a1a1a;
+    color: #44bb66;
+    border: 1px solid #44bb66;
+  }
+}

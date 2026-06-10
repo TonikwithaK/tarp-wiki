@@ -1,0 +1,38 @@
+// ============================================================================
+// Quake III Arena — dark brown/gold. id era. Raw, no chrome.
+// Accent: #c8a248 (gold)
+// ============================================================================
+
+[data-slug^="games/quake-3"] {
+  --game-accent: #c8a248;
+  --game-muted: rgba(200, 162, 72, 0.10);
+
+  article h1 {
+    color: var(--game-accent);
+  }
+
+  article h2 {
+    border-left: 3px solid var(--game-accent);
+    padding-left: 0.6rem;
+  }
+
+  article {
+    border-top: 2px solid var(--game-accent);
+    padding-top: 1rem;
+  }
+
+  .page-header::before {
+    content: "Quake III Arena";
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+    background: #c8a248;
+    color: #000000;
+  }
+}
