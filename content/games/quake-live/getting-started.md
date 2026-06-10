@@ -77,5 +77,5 @@ Strafe jumping moves approximately twice as fast as normal running. It is not an
 
 ## Related
 
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/health-and-armor|Health and Armor]]

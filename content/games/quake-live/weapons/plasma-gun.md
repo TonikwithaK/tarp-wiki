@@ -26,6 +26,6 @@ The PG is used primarily for plasma climbing and as area-pressure in corridors. 
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
-- [[rocket-launcher|Rocket Launcher]]: primary explosive weapon
-- [[../movement|Movement]]: plasma climbing applications
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/rocket-launcher|Rocket Launcher]]: primary explosive weapon
+- [[games/quake-live/movement|Movement]]: plasma climbing applications

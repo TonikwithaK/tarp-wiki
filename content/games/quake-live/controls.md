@@ -81,5 +81,5 @@ Sensitivity preference varies widely by player. Lower sensitivity is common for 
 
 ## Related
 
-- [[console|Console]]: full cvar and command reference
-- [[getting-started|Getting Started]]: initial setup
+- [[games/quake-live/console|Console]]: full cvar and command reference
+- [[games/quake-live/getting-started|Getting Started]]: initial setup

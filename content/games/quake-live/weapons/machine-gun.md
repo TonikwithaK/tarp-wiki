@@ -24,5 +24,5 @@ Spawning with the MG means it is always available as a last resort in any gamety
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
-- [[lightning-gun|Lightning Gun]]: primary hitscan tracking weapon
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/lightning-gun|Lightning Gun]]: primary hitscan tracking weapon

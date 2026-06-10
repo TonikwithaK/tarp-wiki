@@ -104,5 +104,5 @@ OverBounce (a Quake 3 physics exploit that preserved vertical velocity through s
 
 ## Related
 
-- [Getting Started](../getting-started)
-- [Weapons](../weapons/index)
+- [[games/quake-live/getting-started|Getting Started]]
+- [[games/quake-live/weapons/index|Weapons]]

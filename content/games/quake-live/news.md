@@ -59,6 +59,6 @@ Current global duel and CA rankings. Most reliable active tracking for QL matchm
 
 ## Related
 
-- [[gametypes/duel|Duel]]
-- [[gametypes/clan-arena|Clan Arena]]
-- [[getting-started|Getting Started]]
+- [[games/quake-live/gametypes/duel|Duel]]
+- [[games/quake-live/gametypes/clan-arena|Clan Arena]]
+- [[games/quake-live/getting-started|Getting Started]]

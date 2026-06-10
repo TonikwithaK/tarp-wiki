@@ -55,4 +55,9 @@ Rocket jumping is available in Duel. The health cost from self-damage is a trade
 
 ---
 
-**Related:** [[../movement/index|Movement]], [[../health-and-armor/index|Health and Armor]], [[../weapons/index|Weapons]], [[index|Gametypes]]
+## Related
+
+- [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/health-and-armor|Health and Armor]]
+- [[games/quake-live/weapons/index|Weapons]]

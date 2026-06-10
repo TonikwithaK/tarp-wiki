@@ -35,6 +35,6 @@ Item pickups present. Item respawn timers apply.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
+- [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/health-and-armor|Health and Armor]]

@@ -30,5 +30,5 @@ In close-quarters fights the GL is harder to use effectively than the RL due to 
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
-- [[rocket-launcher|Rocket Launcher]]: direct explosive alternative
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/rocket-launcher|Rocket Launcher]]: direct explosive alternative

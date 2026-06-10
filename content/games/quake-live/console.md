@@ -111,6 +111,6 @@ s_musicvolume     0         Mute music
 
 ## Related
 
-- [[controls|Controls]]: key binding reference
-- [[modding/server-hosting|Server Hosting]]: server-side setup
-- [[console/appendix|Appendix]]: CVAR flag legend, prefix reference, color chart
+- [[games/quake-live/controls|Controls]]
+- [[games/quake-live/modding/server-hosting|Server Hosting]]
+- [[games/quake-live/console/appendix|Appendix]]

@@ -142,4 +142,4 @@ Compatible tools:
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
+- [[games/quake-live/gametypes/index|Gametypes]]

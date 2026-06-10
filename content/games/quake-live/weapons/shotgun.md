@@ -22,4 +22,4 @@ The Shotgun is a situational close-range weapon. In open competitive play on sta
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list

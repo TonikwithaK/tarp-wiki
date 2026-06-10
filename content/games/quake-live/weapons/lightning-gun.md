@@ -35,6 +35,6 @@ The LG beam is broken by distance. Force the fight to long range (Rail/RL prefer
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
-- [[rocket-launcher|Rocket Launcher]]: close-range triad weapon
-- [[railgun|Railgun]]: long-range triad weapon
+- [[games/quake-live/weapons/index|Weapons]]
+- [[games/quake-live/weapons/rocket-launcher|Rocket Launcher]]
+- [[games/quake-live/weapons/railgun|Railgun]]

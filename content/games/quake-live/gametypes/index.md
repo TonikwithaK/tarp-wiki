@@ -14,23 +14,23 @@ Quake Live ships with multiple gametypes. Competitive and community play is conc
 
 ## Competitive Gametypes
 
-### [[duel|Duel]]
+### Duel
 
 1v1. Players start with Machine Gun and 125 HP. All weapons and items are acquired from map pickups. Default time limit is 10 minutes.
 
-### [[clan-arena|Clan Arena]]
+### Clan Arena
 
 Team elimination. Players spawn with all standard weapons and full health and armor each round. No item pickups. Rounds end when one team is fully eliminated.
 
-### [[ffa|Free For All (FFA)]]
+### Free For All
 
 Deathmatch. All players compete individually. Item pickups on the map. Default time limit is 20 minutes.
 
-### [[tdm|Team Deathmatch (TDM)]]
+### Team Deathmatch
 
 Two teams. Frags score for the team. Item pickups on the map. Default time limit is 20 minutes.
 
-### [[ctf|Capture the Flag (CTF)]]
+### Capture the Flag
 
 Two teams. Players steal the enemy flag and return it to their base. Default time limit is 20 minutes.
 
@@ -52,4 +52,12 @@ Pickup games for CTF and TDM are organized through community Discord servers rat
 
 ---
 
-**Related:** [[duel|Duel]], [[clan-arena|Clan Arena]], [[ffa|FFA]], [[../movement/index|Movement]], [[../weapons/index|Weapons]]
+## Related
+
+- [[games/quake-live/gametypes/duel|Duel]]
+- [[games/quake-live/gametypes/clan-arena|Clan Arena]]
+- [[games/quake-live/gametypes/ffa|FFA]]
+- [[games/quake-live/gametypes/tdm|TDM]]
+- [[games/quake-live/gametypes/ctf|CTF]]
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/weapons/index|Weapons]]

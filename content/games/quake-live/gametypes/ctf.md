@@ -38,7 +38,7 @@ Powerups including the Battle Suit are present on CTF maps.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
-- [Weapons Index](weapons/index)
+- [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/health-and-armor|Health and Armor]]
+- [[games/quake-live/weapons/index|Weapons]]

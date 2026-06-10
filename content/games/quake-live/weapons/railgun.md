@@ -33,6 +33,6 @@ Hitscan and unlimited range mean the Rail rewards map awareness and prediction. 
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
-- [[rocket-launcher|Rocket Launcher]]: close-range triad weapon
-- [[lightning-gun|Lightning Gun]]: mid-range triad weapon
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/rocket-launcher|Rocket Launcher]]: close-range triad weapon
+- [[games/quake-live/weapons/lightning-gun|Lightning Gun]]: mid-range triad weapon

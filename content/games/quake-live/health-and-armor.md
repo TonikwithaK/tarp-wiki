@@ -75,5 +75,5 @@ Some maps ship with non-standard Mega Health timers. Vertical Vengeance is a kno
 
 ## Related
 
-- [Movement](movement) — rocket jumping health cost
-- [Gametypes: Duel](gametypes/duel) — item timing in competitive play
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/gametypes/duel|Duel]]

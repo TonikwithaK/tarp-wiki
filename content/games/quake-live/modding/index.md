@@ -71,5 +71,5 @@ VQL is standard for most competitive gametypes. PQL servers are available but le
 
 ## Related
 
-- [[server-hosting|Server Hosting]]: Docker setup, ports, RCON
-- [[../console|Console]]: server cvar reference
+- [[games/quake-live/modding/server-hosting|Server Hosting]]: Docker setup, ports, RCON
+- [[games/quake-live/console|Console]]: server cvar reference

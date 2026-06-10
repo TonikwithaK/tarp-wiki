@@ -34,7 +34,7 @@ Item pickups present.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Movement](movement)
-- [Health and Armor](health-and-armor)
-- [Clan Arena](gametypes/clan-arena)
+- [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/movement|Movement]]
+- [[games/quake-live/health-and-armor|Health and Armor]]
+- [[games/quake-live/gametypes/clan-arena|Clan Arena]]

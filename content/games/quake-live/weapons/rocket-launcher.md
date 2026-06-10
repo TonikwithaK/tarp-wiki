@@ -37,7 +37,7 @@ Stand on a flat surface, aim downward, jump and fire simultaneously. The explosi
 
 ## Related
 
-- [[index|Weapons]]: full weapon list and item IDs
-- [[lightning-gun|Lightning Gun]]: primary mid-range triad weapon
-- [[railgun|Railgun]]: long-range triad weapon
-- [[../movement|Movement]]: rocket jump applications
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list and item IDs
+- [[games/quake-live/weapons/lightning-gun|Lightning Gun]]: primary mid-range triad weapon
+- [[games/quake-live/weapons/railgun|Railgun]]: long-range triad weapon
+- [[games/quake-live/movement|Movement]]: rocket jump applications

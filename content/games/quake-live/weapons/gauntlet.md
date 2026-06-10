@@ -22,4 +22,4 @@ Killing an opponent with the Gauntlet triggers the Humiliation award and plays a
 
 ## Related
 
-- [[index|Weapons]]: full weapon list
+- [[games/quake-live/weapons/index|Weapons]]: full weapon list

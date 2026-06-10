@@ -54,6 +54,6 @@ Items do not spawn in CA. No item pickups.
 
 ## Related
 
-- [Gametypes Index](gametypes/index)
-- [Weapons Index](weapons/index)
-- [Health and Armor](health-and-armor)
+- [[games/quake-live/gametypes/index|Gametypes]]
+- [[games/quake-live/weapons/index|Weapons]]
+- [[games/quake-live/health-and-armor|Health and Armor]]

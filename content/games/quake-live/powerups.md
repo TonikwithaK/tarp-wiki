@@ -38,5 +38,5 @@ Timer starts when the powerup is picked up. To track a respawn: note the pickup 
 
 ## Related
 
-- [[health-and-armor|Health and Armor]]: item timers and values
-- [[gametypes/duel|Duel]]: item control context
+- [[games/quake-live/health-and-armor|Health and Armor]]: item timers and values
+- [[games/quake-live/gametypes/duel|Duel]]: item control context
