@@ -30,603 +30,1401 @@ Full source: [euere.eu/ql](https://www.euere.eu/ql/) — 1,079 CVARs, 205 comman
 | Windows | `C:\Users\<user>\AppData\Roaming\id Software\quakelive\home\baseq3\` |
 | Linux | `~/.quakelive/quakelive/home/baseq3/` |
 
-## CVAR Flags
+## CVAR Flag Legend
 
-| Flag | Name | Description |
-|------|------|-------------|
-| `[A]` | Archive | Saved to vars.rc |
-| `[C]` | Cheat-Protected | Only usable in cheat-enabled servers or localhost |
-| `[I]` | Init | Cannot be set from console; command line only |
-| `[L]` | Latched | Requires server restart to apply |
-| `[R]` | Read-Only | Display only; cannot be set |
-| `[S]` | Server Info | Server broadcasts to clients |
-| `[U]` | User Info | Client broadcasts to server on connect or change |
-| `[T]` | QL Database | Saved to QL database |
-| `[W]` | Write-Protected | Cannot be set by user at all |
-
-## CVAR Prefix Reference
-
-| Prefix | Domain |
-|--------|--------|
-| `BOT_` | Bot settings |
-| `CG_` | Client game settings |
-| `CL_` | Client-side settings |
-| `CM_` | Collision map settings |
-| `COM_` | Common settings |
-| `FS_` | Game files settings |
-| `G_` | Server-side game settings |
-| `GT_` | Connection settings |
-| `IN_` | General input device settings |
-| `JOY_` | Joystick input settings |
-| `M_` | Mouse input settings |
-| `NET_` | Network settings |
-| `PMOVE_` | Player movement server settings |
-| `R_` | Video rendering settings |
-| `S_` | Sound system settings |
-| `SV_` | Server-side settings |
-| `SYS_` | System configuration settings |
-| `UI_` | User interface settings |
-| `WEB_` | Website settings |
+| Flag | Meaning |
+|------|---------|
+| A | Archive — saved to vars.rc |
+| C | Cheat-protected — localhost/cheat servers only |
+| I | Init — command line only, not settable from console |
+| L | Latched — requires server restart to apply |
+| R | Read-only |
+| S | Server info — broadcast to clients |
+| T | Saved to QL database |
+| U | User info — sent to server on connect |
+| W | Write-protected |
 
 ## CVARs: A
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `activeAction` | - | Executed on client's first active frame; use to script timedemo start after loading |
-| `appendlogfile` | 0 | Appends log file writing (0=disabled, 1=enabled) |
-| `archss` | OS | Displays OS architecture |
-| `armor_tiered` | 0 | Enables QW-inspired tiered armor rules on server |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `activeAction` |  | - | activeAction | Executed on a client’s first frame of active play to allow scripting a timedemo to start right after loading. |
+| `appendlogfile` |  | 0 | appendlogfile [0\|1] /  /  /  / 0 = disabled /  / 1 = enabled | Appends log file writing. |
+| `archss` |  | your os | arch | Displays the OS architecture. |
+| `armor_tiered` |  | 0 | "armor_tiered [0\|1] / 0 = disabled /  / 1 = QW-inspired" | Enables Quake-inspired tiered armor rules in the server. |
 
-## CVARs: B — Bots
+## CVARs: B
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `bot_enable` [R] | 1 | Enable/disable bots on server/offline match |
-| `bot_minplayers` [S] | 0 | Auto-fill disconnected player slots with bots |
-| `bot_challenge` | 0 | Makes bots slightly more challenging |
-| `bot_dynamicSkill` [A] | 0 | 0=fixed skill, 1=matches "My Skill" setting |
-| `bot_startingSkill` [A] | 1 | 1=Easy, 2=Bring It On, 3=Medium, 4=Hardcore, 5=Nightmare |
-| `bot_thinktime` [C] | 100 | AI frame interval in ms |
-| `bot_gauntlet` [A] | 0 | Force bots to use gauntlet only |
-| `bot_gauntletOnly` | 0 | Force bots to chase humans with gauntlet |
-| `bot_grapple` | 0 | Allow bots to use grappling hook |
-| `bot_rocketjump` | 1 | Allow bots to rocket jump |
-| `bot_teamkill` | 0 | When enabled, bots shoot teammates |
-| `bot_followMe` [A] | 0 | Make bots follow you in debug mode |
-| `bot_followDist` | 250 | Following distance when bot_followMe 1 |
-| `bot_training` [A] | 0 | Sets server into training mode |
-| `bot_instaGibAimSkill` | 0.4 | Bot aim skill in instagib rails (0.0-1.0) |
-| `bot_nochat` | 0 | Disable bot chat |
-| `bot_fastchat` | 0 | More frequent bot chat |
-| `bot_debug` [C] | 0 | Enable bot debug subsystems |
-| `bot_developer` [C] | 0 | Enable bot developer mode |
-| `bot_pause` [C] | 0 | Pause bots for debugging |
-| `bot_report` [C] | 0 | Bots report their current actions |
-| `bot_hud` [C] | -1 | Print bot debug info on HUD (-1=off, 0=freeze, 1=live) |
-| `bot_memorydump` [C] | 0 | Display bot memory allocation |
-| `bot_aasoptimize` | 0 | Optimize bot intelligence for specific map |
-| `bot_forceclustering` | 0 | Force recalculation of AAS clustering |
-| `bot_forcereachability` | 0 | Force recalculation of AAS reachabilities |
-| `bot_forcewrite` | 0 | Force writing new AAS file |
-| `bot_predictobstacles` | 1 | Enable bot obstacle prediction |
-| `bot_testsolid` [C] | 0 | Test for solid areas in AAS file |
-| `bot_interbreedbots` [C] | 10 | Number of bots for goal fuzzy logic interbreeding |
-| `bot_interbreedcycle` [C] | 20 | Matches between interbreeding cycles |
-| `bot_interbreedchar` [C] | - | Bot character for interbreeding |
-| `bot_interbreedwrite` [C] | - | File to write interbreeded fuzzy logic to |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `bot_aasoptimize` |  | 0 | bot_aasoptimize [0\|1] | Optimizes the bot intelligence, if possible on the specific map. |
+| `bot_breakPoint` |  | 0 | bot_breakPoint [value] | Causes a program break to occur in the bot’s intelligence. |
+| `bot_challenge` |  | 0 | bot_challenge [0\|1] | Makes the bots slightly more challenging. |
+| `bot_debug` | C | 0 | bot_debug [0\|1] | Debugging tools for various bot subsystems. Many bot debugging features are disabled if this is not set to 1. |
+| `bot_debugVar` |  | 0 | bot_debugVar [0\|1] | ??? |
+| `bot_developer` | C | 0 | bot_developer [0\|1] | Enables developer mode for bots |
+| `bot_dynamicSkill` | A | 0 | bot_dynamicSkill [0\|1] /  /  /  / 0 = bot skill set by skill setting /  / 1 = bot skill set by ‘My Skill’ setting | Controls whether the bot skill changes to your skill or not. |
+| `bot_enable` | R | 1 | bot_enable [0\|1] | Enable/disable bots on your server/offline match. |
+| `bot_fastchat` |  | 0 | bot_fastchat [0\|1] | Sets bot chat to be more frequent. |
+| `bot_followDist` |  | 250 | bot_followDist [distance] | Sets bot following distance when bot_followMe 1. |
+| `bot_followMe` | A | 0 | bot_followMe [0\|1] /  /  /  / 0 = free roam /  / 1 = follow | Make bots follow you in debug mode. |
+| `bot_forceclustering` |  | 0 | bot_forceclustering [0\|1] | Force recalculation of AAS clustering. |
+| `bot_forcereachability` |  | 0 | bot_forcereachability [0\|1] | Force recalculation of AAS reachabilities. |
+| `bot_forcewrite` |  | 0 | bot_forcewrite [0\|1] | Force writing out of a new AAS file. |
+| `bot_gauntlet` | A | 0 | bot_gauntlet [0\|1] /  /  /  / 1 = gauntlet-only | Force bots to only use the gauntlet weapon. |
+| `bot_gauntletOnly` |  | 0 | bot_gauntletOnly [0\|1] | Force bots to switch to gauntlet and chase after human players. |
+| `bot_grapple` |  | 0 | bot_grapple [0\|1] | Allow bots to use grappling hook. |
+| `bot_groundonly` |  | 1 | bot_groundonly [0\|1] | Shows areas that do not work with bots in the retail version of Q3A. |
+| `bot_hud` | C | -1 | bot_hud [-1\|0\|1] /  /  /  / -1 = disabled /  / 0 = freeze debug information /  / 1 = debug information | Print out the bots debug info onto the players HUD. Set to the clientNum of the bot to debug. |
+| `bot_instaGibAimSkill` |  | 0.4 | bot_instaGibAimSkill [0.0-1.0] | The aim skill of bots in instagib rails matches. |
+| `bot_interbreedbots` | C | 10 | bot_interbreedbots [number of bots] | Sets the number of bots used for goal fuzzy logic interbreeding. |
+| `bot_interbreedchar` | C | - | bot_interbreedchar [character] | Sets the bot character to be used with goal fuzzy logic interbreeding. |
+| `bot_interbreedcycle` | C | 20 | bot_interbreedcycle [number of matches] | Sets the number of matches between interbreeding |
+| `bot_interbreedwrite` | C | - | bot_interbreedwrite [file name] | Sets the file to write interbreeded goal fuzzy logic to. |
+| `bot_itemDelayTime` |  | 0 | ??? | ??? |
+| `bot_log` |  | 0 | ??? | ??? |
+| `bot_maxdebugpolys` |  | 2 | bot_maxdebugpolys [number] | The maximum number of polygons available for visualizing things when debugging. |
+| `bot_memorydump` | C | 0 | bot_memorydump [0\|1] | Displays bot memory allocation when debugging. |
+| `bot_minplayers` | S | 0 | bot_minplayers [minimum # of players] | Balances the number of players playing in a server by replacing players who disconnect with bots. |
+| `bot_nochat` |  | 0 | bot_nochat [0\|1] | Disables bot chat. |
+| `bot_pause` | C | 0 | bot_pause [0\|1] /  /  /  / 0 = active bots /  / 1 = paused bots | A debug command to pause bots. |
+| `bot_predictobstacles` |  | 1 | bot_predictobstacles [0\|1] | Enables bot obstacle prediction. |
+| `bot_reachability` |  | 0 | bot_reachability [0\|1] | Bot reachability calculation |
+| `bot_reloadcharacters` |  | 0 | bot_reloadcharacters [0\|1] | Bot character file caching. |
+| `bot_report` | C | 0 | bot_report [0\|1] | Debug command to get bots to report on what they are doing. |
+| `bot_rocketjump` |  | 1 | bot_rocketjump [0\|1] | Allows bots to rocket jump. |
+| `bot_saveroutingcache` | C | 0 | ??? | ??? |
+| `bot_showAreaNumber` |  | 0 | bot_showAreaNumber [0\|1] /  /  /  / 1= enabled | ??? |
+| `bot_showAreas` |  | 0 | bot_showAreas [0\|1] | ??? |
+| `bot_showAvoidSpots` |  | 0 | bot_showAvoidSpots [0\|1] | ??? |
+| `bot_showPath` |  | 0 | bot_showPath [0\|1] | ??? |
+| `bot_showTourPoints` |  | 0 | bot_showTourPoints [0\|1] | ??? |
+| `bot_startingSkill` | A | 1 | bot_startingSkill [1-5] /  /  /  / 1 = I Can Win (easy) /  / 2 = Bring It On /  / 3 = Hurt Me Plenty (medium) /  / 4 = Hardcore /  / 5 = Nightmare (difficult) | The starting skill level of bots when bot_dynamicSkill 1. |
+| `bot_teamkill` |  | 0 | bot_teamkill [0\|1] | When enabled, bots will shoot their team-mates in team game-types. |
+| `bot_testclusters` | C | 0 | bot_testclusters [0\|1] | Used for testing of bot AI clusters. |
+| `bot_testichat` |  | 0 | bot_testichat [0\|1] /  /  /  / 0 = normal /  / 1 = test initial chat | Used to test bot initial chat. |
+| `bot_testrchat` |  | 0 | bot_testrchat [0\|1] /  /  /  / 1 = test reply chat | Used to test bot reply chat. |
+| `bot_testsolid` | C | 0 | bot_testsolid [0\|1] | Tests for solid areas in the AAS file. |
+| `bot_thinktime` | C | 100 | bot_thinktime [time in milliseconds] | The time in milliseconds between two AI frames – The time it takes for a bot to think about a move before making it. |
+| `bot_training` | A | 0 | bot_training [0\|1] /  /  /  / 1 = training mode | Sets server into training mode as used in the training match against crash. |
+| `bot_visualizejumppads` | C | 0 | bot_visualizejumppads [0\|1] | Forces bots to visualise the default arch of a jump pad. |
 
 ## CVARs: C
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `capturelimit` [S,A] | 8 | Captures needed to win CTF |
-| `cg_draw2D` [A] | 1 | 0=no HUD, 1=show HUD |
-| `cg_drawFPS` [A] | 0 | FPS counter |
-| `cg_drawTimer` [A] | 0 | Match timer |
-| `cg_drawSpeed` [A] | 0 | Speed display |
-| `cg_drawAmmoWarning` [A] | 1 | Low ammo warning |
-| `cg_drawStatus` [A] | 1 | Health/armor HUD |
-| `cg_drawTeamOverlay` [A] | 1 | 1=top-right, 2=bottom-right |
-| `cg_drawAttacker` [A] | 0 | Show last player to damage you |
-| `cg_drawFragMessages` [A] | 1 | Frag messages at top of view |
-| `cg_speedometer` [A] | 0 | 1=graph, 2=value+graph, 3=value only |
-| `cg_lagometer` [A] | 0 | 1=netgraph, 2=netgraph+ping estimation |
-| `cg_fov` [A,T] | 100 | Field of view (10-130) |
-| `cg_zoomfov` [A,T] | 22.5 | Zoomed FOV (10-130) |
-| `cg_drawCrosshair` [A] | 5 | Crosshair style 0-10 (0=off) |
-| `cg_crosshairSize` [A,T] | 32 | Size in pixels |
-| `cg_crosshairColor` [A,T] | 7 | Color (1-26) |
-| `cg_crosshairBrightness` [A,T] | 1.0 | Brightness (0.0-1.0) |
-| `cg_crosshairHealth` [A,T] | 0 | Color crosshair by health |
-| `cg_crosshairX` [A,T] | 0 | X offset from center (-300 to 300) |
-| `cg_crosshairY` [A,T] | 0 | Y offset from center (-220 to 220) |
-| `cg_crosshairPulse` [A,T] | 1 | Pulse on item pickup |
-| `cg_crosshairHitStyle` [A,T] | 2 | Hit indicator style (0-8) |
-| `cg_crosshairHitColor` [A,T] | 1 | Hit indicator color (1-26) |
-| `cg_crosshairHitTime` [A,T] | 200 | Duration of hit effect (ms) |
-| `cg_drawCrosshairNames` [A] | 1 | 0=off, 1=names, 2=names+teammate health/armor |
-| `cg_drawCrosshairNamesOpacity` [A,T] | 0.75 | Opacity of crosshair names (0.0-1.0) |
-| `cg_drawCrosshairTeamHealth` [A,T] | 2 | Show teammate health/armor when targeted |
-| `cg_crosshairTeamHealthSize` [A,T] | 0.12f | Font size for teammate health readout |
-| `cg_autoswitch` [A] | 1 | Auto-switch to picked-up weapon (0=off recommended) |
-| `cg_predictItems` [A] | 1 | Client-side item pickup prediction |
-| `cg_simpleItems` [A] | 0 | Simple 2D item icons instead of 3D models |
-| `cg_gibs` [A] | 1 | Gib effects |
-| `cg_blood` [A] | 1 | Blood effects |
-| `cg_brassTime` [A] | 2500 | Bullet casings duration (0=off) |
-| `cg_noProjectileTrail` [A] | 0 | Disable projectile trails (1=off) |
-| `cg_forceModel` [A] | 0 | Force all players to use your model |
-| `cg_enemyModel` [A] | - | Model override for enemies |
-| `cg_enemyColors` [A] | - | Hex color for enemies |
-| `cg_teamModel` [A] | - | Model override for teammates |
-| `cg_teamColors` [A] | - | Hex color for teammates |
-| `cg_teamChatsOnly` [A] | 0 | Filter chat to team only |
-| `cl_maxpackets` [A] | 30 | Outgoing packet rate (125 recommended) |
-| `cl_timenudge` [A] | 0 | Packet timing offset (-1 to -30; negative = earlier) |
-| `cl_mouseAccelStyle` [A] | 0 | Acceleration style (0=Quake3, 1=simple) |
-| `com_maxfps` [A] | 85 | Max rendered FPS (125 recommended for physics) |
-| `com_hunkMegs` [I] | 96 | Memory reserved for gameplay (MB) |
-| `com_soundMegs` [I] | 16 | Memory for sounds (MB) |
-| `com_allowConsole` | 0 | Allow ~ to open console |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `capturelimit` | S / A | 8 | capturelimit [number] | Sets amount of captures needed in Capture the Flag to win the match. |
+| `cg_allowtaunt` | A / T | 1 | cg_allowtaunt [0\|1] | Allows gesture events and VO taunts client side. |
+| `cg_animspeed` | C | 1 | cg_animspeed [0\|1] /  /  /  / 0 = disables player animations /  / 1 = enabled player animations | Allows linear interpolation between frames in player model animations. |
+| `cg_armorTiered` | R | 0 | cg_armorTiered [0\|1] | A read-only client setting that is used for telling the HUD to color the armor icon according to the armor tier when armor_tiered is set to 1. |
+| `cg_atmosphericEffects` | A | 1 | cg_atmosphericEffects [0\|1] | Enables drawing of atmospheric effects such as snow and rain (only server-forced effects, this does not disable rain/fog featured in maps) |
+| `cg_autoAction` | U / A / T | 0 | cg_autoAction [0\|1\|2\|3] /  /  /  / 0 = do nothing /  / 1 = enable auto demo recording /  / 2 = enable auto screenshot /  / 3 = enable auto demo recording and auto screenshot | Controls the automation of demo recording and final scoreboard screenshots. |
+| `cg_autoProjectileNudge` | A T | 0 | cg_autoProjectileNudge [0\|1] | ??? |
+| `cg_autoswitch` | A / T | 0 | cg_autoswitch [0\|1] | Enables weapon auto-switch on pickup. |
+| `cg_battlesuitKillCounter` | A T | 1 | cg_battlesuitKillCounter [0\|1] | Enables Battle Suit frag counter while using a Battle Suit |
+| `cg_blueTeam` |  | - | cg_blueTeam [string] | Sets the name of the blue team for in team games, to draw to menu elements (HUD, scoreboard, about box, etc.) |
+| `cg_blueTeamShort` |  | - | cg_blueTeamShort [string] | Blue team name acronym. |
+| `cg_bob` | A / T | 1 | cg_bob [0.0-1.0] | Controls view bobbing. |
+| `cg_brassTime` | A | 2500 | cg_brassTime [time in milliseconds] | Time in milliseconds that bullets or shells are shown before disappearing. |
+| `cg_bubbleTrail` | A / T | 1 | cg_bubbleTrail [0\|1] | Enables the drawing of bubble trails drawn by projectiles entering water. |
+| `cg_buzzerSound` | A / T | 1 | cg_buzzerSound [0\|1] | Enables the end-game buzzer sound in all game types. |
+| `cg_cameraOrbit` | C | 0 | cg_cameraOrbit [increment] | Changes the camera orbit rotation increment. |
+| `cg_cameraOrbitDelay` | A / T | 50 | cg_cameraOrbitDelay [delay] | Delay between increments of camera orbit rotation. |
+| `cg_cameraSmartMode` | C | 1 | ??? | ??? |
+| `cg_cameraThirdPersonSmartMode` | C | 1 | cg_cameraThirdPersonSmartMode [0\|1] | ??? |
+| `cg_centertime` | C | 3 | cg_centertime [time] | Sets display time for center screen messages (0 to disable messages). |
+| `cg_chatbeep` | A / T | 1 | cg_chatbeep [0\|1] | Controls the sound made when in-game chat messages are received. |
+| `cg_chatHistoryLength` | T | 6 | cg_chatHistoryLength <6 - 24> | sets the amount of chatlines |
+| `cg_clanOnTeamOverlay` | A / T | 0 | cg_clanOnTeamOverlay [0\|1] /  /  /  / 0 = hidden /  / 1 = shown | Show clan tags in team overlay box. |
+| `cg_compHud` | A | 0 | cg_compHud [0\|1] | Enables the stream friendly HUD on private servers. |
+| `cg_complaintWarning` | A T | 1 | cg_complaintWarning [0\|1] | ??? |
+| `cg_compmode` |  | 0 | cg_compmode [0\|1] | Enables competition mode for private servers. |
+| `cg_crosshairBrightness` | A / T | 1.0 | cg_crosshairBrightness [0.0\|1.0] /  /  /  / 0.0 = darkest /  / 1.0 = brightest | Brightness of the crosshair. |
+| `cg_crosshairColor` | A / T | 7 | cg_crosshairColor [ 1 - 26] /  / Uses the 26 Color Chart (see appendix) | Color of your crosshair, unless cg_crosshairhealth is set to 1. |
+| `cg_crosshairHealth` | A / T | 0 | cg_crosshairHealth [0\|1] | Colors the crosshair to indicate your health status. (This overrides cg_crosshairColor) |
+| `cg_crosshairHitColor` | A / T | 1 | cg_crosshairHitColor [1-26] | Controls crosshair color as applicable to the appropriate hits style controlled by cg_crosshairHitStyle. |
+| `cg_crosshairHitStyle` | A / T | 2 | cg_crosshairHitStyle [0-8] /  /  /  / 0 = Off /  /  /  / 1 = Colorize the crosshair based on damage dealt. /  /  /  / 2 = Colorize the crosshair to color designated by cg_crosshairHitColor. /  /  /  / 3 = Pulse the crosshair (exaggerated/scaled pulse) /  /  /  / 4 = Colorize by damage and Pulse the crosshair. /  /  /  / 5 = Colorize by cg_crosshairHitColor and Pulse the crosshair. /  /  /  / 6 = Pulse the crosshair with a smaller pulse. (same size as the cg_crosshairPulse uses when picking items up) /  /  /  / 7 = Colorize by damage and pulse with smaller pulse. /  /  /  / 8 = Colorize by cg_crosshairHitColor and pulse with smaller pulse. | Allows the crosshair to indicate the damage dealt to other players. |
+| `cg_crosshairHitTime` | A / T | 200 | cg_crosshairHitTime <time> | Sets the amount of time the crosshair hit effect is displayed for. |
+| `cg_crosshairPulse` | A / T | 1 | cg_crosshairPulse [0\|1] | Allows pulsating effect of the crosshair when items are picked up. |
+| `cg_crosshairSize` | A / T | 32 | cg_crosshairSize <size> | Size of crosshair, measured in pixels. |
+| `cg_crosshairTeamHealthSize` | A / T | 0.12f | cg_crosshairTeamHealthSize <0.10f – 0.26f> | Allows the setting of the font size of the teammate health/armor read-out on teammate crosshair hovers. |
+| `cg_crosshairX` | A / T | 0 | cg_crosshairX [-300 – 300] | X-axis distance of crosshair from the center of the field of view |
+| `cg_crosshairY` | A / T | 0 | cg_crosshairY [-220 – 220] | Y-axis distance of crosshair from the center of the field of view. |
+| `cg_currentSelectedPlayer` | A | 0 | cg_currentSelectedPlayer [player] | Selected team mate number for team commands. |
+| `cg_currentSelectedPlayerName` | A | - | cg_currentSelectedPlayerName | This shows the friendly player name that was last highlighted in your crosshair. |
+| `cg_customAspect_X` | A | 0 | cg_currentAspect_X [aspect] | ??? |
+| `cg_customAspect_Y` | A | 0 | cg_currentAspect_Y [aspect] | ??? |
+| `cg_deadBodyColor` | A / T | 0x101010FF | cg_deadBodyColor [hex color code] | The color applied to bright model corpses as enabled in cg_deadbodydarken. |
+| `cg_deadBodyDarken` | A / T | 1 | cg_deadBodyDarken [0\|1] | Darkens bright model corpses. |
+| `cg_debuganim` | C | 0 | cg_debuganim [0\|1] | Enables model animation debug mode. |
+| `cg_debugevents` | C | 0 | cg_debugevents [0\|1] | Enables event debug mode. |
+| `cg_debugFlags` |  | 0 | ??? | ??? |
+| `cg_deferPlayers` | A / T | 1 | cg_deferPlayers [0\|1] | Sets loading of player models at death or map change, disabling models loading when bringing up the scoreboard. |
+| `cg_draw2D` | A / T | 1 | cg_draw2D [0\|1] /  /  /  / 0 = No HUD /  / 1 = Show HUD | Displays HUD elements. |
+| `cg_draw3dIcons` | A / T | 1 | cg_draw3dIcons [0\|1] | Displays 3D HUD icons instead of 2D. It is not available in the default Quake Live HUD. |
+| `cg_drawAmmoWarning` | A / T | 1 | cg_drawAmmoWarning [0\|1\|2] /  /  /  / 1 = Normal-Sized Text Warning /  / 2 = Small-Sized Text Warning | Displays ‘low ammo’ and ‘out of ammo’ warnings. |
+| `cg_drawAttacker` | A / T | 0 | cg_drawAttacker [0\|1] | Displays the name and icon of the last player to damage you. |
+| `cg_drawCrosshair` | A | 5 | cg_drawCrosshair [0-10] /  / 0 =  / Off  /  /  /  /   1       2       3       4       5 /  /  /  /  /  /  /  /   6       7       8       9       10 | Displays the specified crosshair image. |
+| `cg_drawCrosshairNames` | A | 1 | cg_drawCrosshairNames [0\|1] /  /  /  / 0 = disabled /  / 1 = enabled /  / 2 = enabled, also shows team mate health and armor when cg_drawCrosshairTeamHealth 1 | Displays the names of target opponents. |
+| `cg_drawCrosshairNamesOpacity` | A / T | 0.75 | cg_drawCrosshairNamesOpacity <0.0-1.0> /  /  /  / 0.0 = fully transparent (invisible) /  / 1.0 = fully opaque | Sets the opacity of the crosshair names feature when cg_drawCrosshairNames 1 or 2 |
+| `cg_drawCrosshairTeamHealth` | A / T | 2 | cg_drawCrosshairTeamHealth [0\|1\|2] /  /  /  / 1 = setting 1 /  / 2 = setting 2 | Displays team mate health and armor under their name when targeted. |
+| `cg_drawFoe` | C | 0 | cg_drawFoe [0\|1] | enables the little red triangle above opponents' heads, like in the practice match against Crash |
+| `cg_drawFPS` | A / T | 0 | cg_drawFPS [0\|1] | Displays the frames-per-second counter. |
+| `cg_drawFragMessages` | A / T | 1 | cg_drawFragMessages [0\|1] | Displays frag messages on the top of the player view. |
+| `cg_drawFriend` | A / T | 1 | cg_drawFriend [0\|1] | Displays blips above your team mates. |
+| `cg_drawFullWeaponBar` | A / T | 1 | cg_drawFullWeaponBar [0\|1] /  /  /  / 0 = Draw only currently held weapons on the weapon bar /  /  /  / 1 = Draw all weapons available in the map on the weapon bar | Draws the full weapon bar. |
+| `cg_drawGun` | A / T | 1 | cg_drawGun [0\|1\|2] /  / 1 = Normal (bobs when moving) /  / 2 = Still | Controls the displaying of weapons in 1st person view. |
+| `cg_drawIcons` | A / T | 1 | cg_drawIcons [0\|1] | Enables the drawing of icons in the HUD or scoreboard. |
+| `cg_drawItemPickups` | A T | 3 | "cg_drawItemPickups [0\|&1\|&2\|&4] /  / &1 = draw icon /  / &2 = draw name /  / &4 = draw time /  / " | Displays items that were recently picked up. |
+| `cg_drawItemPickups` | A / T | 3 | cg_drawItemPickups [0\|1\|2\|3\|4\|5\|6\|7] /  / 3 = Draw Icon + Item Name on Pickup /  / 7 = Draw Timestamp + Icon + Item Name on Pickup | Displays items that were recently picked up. |
+| `cg_drawPregameMessages` |  | 1 | cg_drawPregameMessages [0\|1] /  / 1 = show messages in warmup rounds | Draw messages to the warmup heads-up display. |
+| `cg_drawRewards` | A / T | 1 | cg_drawRewards [0\|1] /  / 1 = show rewards | Displays rewards you have earned during the match, as you earn them. |
+| `cg_drawSnapshot` | A / T | 0 | cg_drawSnapshot [0\|1] | Displays the snapshots counter with the time and frame. |
+| `cg_drawSpecMessages` |  | 1 | cg_drawSpecMessages [0\|1] /  / 1 = show messages in spectator mode | Draw messages to the spectator heads-up display. |
+| `cg_drawSprites` |  | 1 | cg_drawSprites [0\|1] /  / 1 = draw sprites | Show sprite elements. |
+| `cg_drawStatus` | A / T | 1 | cg_drawStatus [0\|1] /  / 1 = draw status | Draws the health and score elements of the HUD. |
+| `cg_drawtargetnames` |  | - | cg_drawtargetnames [0\|1] /  / 1 = show target names | Draws the names of opponents when targeted. |
+| `cg_drawTeamOverlay` | A / T | 1 | cg_drawTeamOverlay [0\|1\|2] /  / 1 = Top-right of view /  / 2 = Bottom-right of view | Displays the team overlay. <0\|1\|2> |
+| `cg_drawTeamOverlayOpacity` | A / T | 0.75 | cg_drawTeamOverlayOpacity <opacity> /  / 0.0 = Fully Transparent | Sets the opacity of the team overlay background. |
+| `cg_drawTeamOverlayX` | A / T | 0 | cg_drawTeamOverlayX <value> | X-axis offset in respect of cg_drawteamoverlay 1 or 2. <-640/640> |
+| `cg_drawTeamOverlayY` | A / T | 0 | cg_drawTeamOverlayY <value> | Y-axis offset in respect of cg_drawteamoverlay 1 or 2. <-480/480> |
+| `cg_enableBreath` |  | 1 | cg_enableBreath [0\|1] | Enables the drawing of ‘frosty’ breaths on player models to depict cold weather. |
+| `cg_enableRespawnTimer` | A | 0 | cg_enableRespawnTimer [0\|1] | Draws the respawn timings of certain items (armor, megahealth, powerups) for spectators - on private servers only. This feature is dependent upon server-side shoutcaster privileges being enabled. Items are sorted by height according to their placement in the level for non-CTF games, and are sorted by team according to proximity from flag in CTF. |
+| `cg_enemyColor` | A | - | cg_enemyColor <hex color code> | Colorize bright enemy models. See appendix for common hex color codes. |
+| `cg_enemyHeadColor` | A / T | 0x408000FF | cg_enemyHeadColor <hex color code> | Colorize bright enemy model heads.  Replaces cg_enemyColor. See appendix for common hex color codes. |
+| `cg_enemyLowerColor` | A / T | 0x408000FF | cg_enemyLowerColor <hex color code> | Colorize bright enemy model legs.  Replaces cg_enemyColor. See appendix for common hex color codes. |
+| `cg_enemyUpperColor` | A / T | 0x408000FF | cg_enemyUpperColor <hex color code> | Colorize bright enemy model torso.  Replaces cg_enemyColor. See appendix for common hex color codes. |
+| `cg_errordecay` |  | 100 | cg_errordecay <0 – 100> | Detects prediction errors and helps to smooth these errors out over a few frames to ease jerking. |
+| `cg_filter_angles` |  | 0 | cg_filter_angles <amount> | Alters how the player’s view camera changes in relation to aim position changes. When it is set to a value higher than 0, the view camera lags behind the player’s aim position, causing a mouse smoothing effect. |
+| `cg_followKiller` |  | 0 | cg_followKiller [0\|1] | When enabled: In spectator mode, when a player scores a frag, the spectator view automatically switches to that player. |
+| `cg_followPowerup` |  | 0 | cg_followPowerup [0\|1] | When enabled: In spectator mode, when a player obtains a powerup, the spectator view automatically switches to that player. |
+| `cg_footsteps` | C | 1 | cg_footsteps [0\|1] | Enables footstep sounds. |
+| `cg_forceBlueTeamModel` | A / T | 0 | cg_forceBlueTeamModel [model] | Force blue team player models to be displayed as a specific model. Used in spectator mode. |
+| `cg_forceDrawCrosshair` | A / T | 0 | cg_forceDrawCrosshair [0\|1] | ??? |
+| `cg_forceEnemyModel` | A / T | 0 | cg_forceEnemyModel [model] | Force enemy team player models to be displayed as a specific model. |
+| `cg_forceEnemyWeaponColor` | A / T | 0 | cg_forceEnemyWeaponColor [0\|1] | Force enemies' grenades and rails to use 'Enemy Upper Color' (cg_enemyUpperColor). |
+| `cg_forceModel` |  | 0 | cg_forceModel [model] | Force all player models to be displayed as a specific model. |
+| `cg_forceRedTeamModel` | A / T | 0 | cg_forceRedTeamModel [model] | Force red team player models to be displayed as a specific model. Used in spectator mode. |
+| `cg_forceTeamModel` | A / T | 0 | cg_forceTeamModel [model] | Force team mate player models to be displayed as a specific model. |
+| `cg_forceTeamWeaponColor` | A / T | 0 | cg_forceTeamWeaponColor [0\|1] | Force teammates’ grenades and rails to use 'Team Upper Color' (cg_teamUpperColor). |
+| `cg_fov` | A / T | 100 | cg_fov <10 - 130> | Field of view factor. |
+| `cg_gameInfo1` | R / A | 0 | cg_gameInfo1 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gameInfo2` | R / A | 0 | cg_gameInfo2 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gameInfo3` | R / A | 0 | cg_gameInfo3 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gameInfo4` | R / A | 0 | cg_gameInfo4 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gameInfo5` | R / A | 0 | cg_gameInfo5 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gameInfo6` | R / A | 0 | cg_gameInfo6 [string] | Contains the text which is displayed on the welcome screen describing the game type. |
+| `cg_gametype` | R / A | 0 | cg_gametype <number> | Used as a game type test for adapting the UI to the specific game type. |
+| `cg_gibs` | A / T | 10 | cg_gibs <amount> /  /  /  / Min = 0 /  / Max = 15 | Controls the quantity of animated gibs to display (N/A for QL) |
+| `cg_gunX` | A / T | 0 | cg_gunX <-10 – 10> | X-axis displacement of weapon in 1st person view. |
+| `cg_gunY` | A / T | 0 | cg_gunY <-10 – 20> | Y-axis displacement of weapon in 1st person view. |
+| `cg_gunZ` | A / T | 0 | cg_gunZ <-8 – 0> | Z-axis displacement of weapon in 1st person view. |
+| `cg_hitBeep` | A / T | 2 | cg_hitBeep [0\|1\|2\|3] /  /  /  / 1 = Single-Tone /  / 2 = Multi-Tone /  / 3 = Reverse Multi-Tone | Controls the sound made when you damage an opponent. |
+| `cg_hudFiles` | A | ui/hud.txt | cg_hudFiles <file name> | Points to the file which controls the heads-up display. Note: You need to use the ‘loadhud’ command when changing HUD file if you wish to change HUD in-game. |
+| `cg_ignoreMouseInput` | R | 0 | cg_ignoreMouseInput [0\|1] | Disables mouse usage. |
+| `cg_impactMarkTime` | A / T | 10000 | cg_impactMarkTime <0 – 10000> | Sets the amount of time in which impact marks are drawn for. |
+| `cg_impactSparks` | A / T | 1 | cg_impactSparks [0\|1] | Causes the enemy to spark when they are hit by any non-explosive weapons. <0\|1> |
+| `cg_impactSparksLifetime` | A / T | 250 | cg_impactSparksLifetime <0 – 1000> | Time in milliseconds before impact sparks fade out. |
+| `cg_impactSparksSize` | A / T | 8 | cg_impactSparksSize <2 – 16> | Adjust the size of the impact sparks. |
+| `cg_impactSparksVelocity` | A / T | 128 | cg_impactSparksVelocity <-128 – 128> | Speed in which impactSparks gravitate up or down. |
+| `cg_itemFx` | T | 7 | cg_itemFx [0\|1\|2\|4] /  / 0 = static /  / 1 = bounce /  / 2 = rotating /  / 4 = scale | Changes how items are rendered in the world. Sum it up ti combine it. |
+| `cg_kickScale` | A / T | 1 | cg_kickscale [0\|1] | Screen shakes when hit. |
+| `cg_killbeep` | A T | 0 | cg_killbeep [0-8] /  /  /  / 0 = default  /  / 1 = Ting /  / 2 = Tink  /  / 3 = Dramatic /  / 4 = Voosh  /  / 5 = Drum /  / 6 = Bang  /  / 7 = Ding  /  / 8 = ChaChing | Plays a distinct sound when you score a kill in any mode [SUBSCRIBERS ONLY] |
+| `cg_lagometer` | A / T | 0 | cg_lagometer [0\|1\|2] /  /  /  / 1 = Show netgraph /  / 2 = Show netgraph + client ping estimation. | Displays netgraph that shows your network packet traffic including received, rejected and lost packets. |
+| `cg_lastmsg` | R / A | - | cg_lastmsg | Displays last chat message received from the XMPP system. |
+| `cg_levelTimerDirection` | A / T | 1 | cg_levelTimerDirection [0\|1] /  /  /  / 0 = Count up to time limit /  / 1 = Count down to zero | The counting direction of the timer. |
+| `cg_lightningImpact` | A / T | 1 | cg_lightningImpact [0\|1] | Enables lightning impact affect on surfaces by lightning gun. |
+| `cg_lightningImpactCap` | T | 192 | cg_lightningImpactCap [0 – 768] | Change the size of the lightning impact effect when impact is closer than x units. |
+| `cg_lightningStyle` | A / T | 1 | cg_lightningStyle [1\|2\|3\|4\|5] /  / 1 = Default Q3/QL /  / 2 = QuakeWorld inspired /  / 3 = Team Arena shaft /  / 4 = Thin shaft /  / 5 = Wide beam (Q3 style) | Controls the lightning stream effect. |
+| `cg_lowAmmoWarningPercentile` | A / T | 0.20 | cg_lowAmmoWarningPercentile <percentile> /  /  /  / Min: 0.01 (1%) /  / Max: 1.00 (100%) | Controls percentile level of ammo available before issuing a low ammo warning. |
+| `cg_lowAmmoWarningSound` | A / T | 1 | cg_lowAmmoWarningSound [0\|1\|2] /  /  /  / 0 = Disabled /  /  /  / 1 = Low Ammo Clip Reload Sound played for Low Ammo, No Ammo Click Sound played for No Ammo /  /  /  / 2 = No Ammo Click Sound played for both Low and No Ammo | Controls the playing of low ammo warning sounds. |
+| `cg_lowAmmoWeaponBarWarning` | A / T | 2 | cg_lowAmmoWeaponBarWarning [0\|1\|2] /  / 1 = Draw weapon bar ammo value in red when empty /  / 2 = Draw weapon bar ammo value in yellow when low and red when empty | Controls the weapon bar ammo warning display. |
+| `cg_marks` | A | 1 | cg_marks [0\|1] | Enables projectile decal marks on walls. |
+| `cg_muzzleFlash` | A / T | 1 | cg_muzzleFlash [0\|1] | Shows a muzzle flash when firing a weapon. |
+| `cg_noplayeranims` | C | 0 | cg_noplayeranims [0\|1] /  / 0 = All animations /  / 1 = No animations | Disables player model animations, showing only the 1st frame in the models animation sequence. |
+| `cg_nopredict` | T | 0 | cg_nopredict [0\|1] /  / 0 = server-player prediction /  / 1 = no player prediction | A value of 1 will provide more accurate pickup notification sounds, however at the cost of potentially delayed playback. |
+| `cg_placebo` |  | -20.074. /  / 859.899. /  / 884.700 | ??? | ??? |
+| `cg_plasmaStyle` | A / T | 1 | cg_plasmaStyle [1\|2] /  / 1 = No Trail /  / 2 = Particle Trail | Controls the plasma effect. |
+| `cg_playerBBModelScale` | C | 1.1 | cg_playerBBModelScale <scale> | Player model bounding box scale. |
+| `cg_playerLean` | A | 1 | cg_playerLean <0.0-1.0> /  / 0.0    = disabled /  / 1.0    = maximum lean | Scales or disables the player lean effect caused by high velocities. |
+| `cg_playerNames` | A / T | 1 | cg_playerNames [0\|1] | Draw targeted player names while in spectator mode, both in freecam and first-person mode. |
+| `cg_playTeamVO` | A / T | 1 | cg_playTeamVO [0\|1] | Enables team voice chats. |
+| `cg_playvoicechats` | A / T | 1 | cg_playvoicechats [0\|1] | Enables voice chats. |
+| `cg_predictItems` | U / A | 1 | cg_predictItems [0\|1] | Client prediction for picking up items. |
+| `cg_predictLocalRailshots` |  | 1 | cg_predictLocalRailShots [0\|1] | A value of 0 will feel less responsive in high ping environments but may prevent wrongly predicted rail shots and/or impacts. |
+| `cg_premium` | R | 1 | cg_premium [0\|1] | ??? |
+| `cg_projectileNudge` | A | 0 | cg_projectileNudge <0 - 80> | ??? |
+| `cg_quadKillCounter` | A T | 1 | cg_quadKillCounter [0\|1] | Enables Quad Damage frag counter for Quad runs |
+| `cg_railStyle` | A / T | 1 | cg_railStyle [1\|2] /  / 1 = Rail core rail trail /  / 2 = Spiral rail trail | Controls the railgun trail effect. |
+| `cg_railTrailTime` | A / T | 400 | cg_railTrailTime <time> | The time (in milliseconds) that rail trails are displayed for. |
+| `cg_readyIcon` | A T | 0 | cg_readyIcon [0\|1] | ??? |
+| `cg_redTeam` |  | - | cg_redTeam [string] | Sets the name of the red team for in team games, to draw to menu elements (HUD, scoreboard, about box, etc.) |
+| `cg_redTeamShort` |  | - | cg_redTeamShort [string] | Red team name acronym. |
+| `cg_respawnTimerX` | A / T | 10 | cg_respawnTimerX <position> | Controls the x-axis position of where spectator respawn timers are drawn. |
+| `cg_respawnTimerY` | A / T | 100 | cg_respawnTimerY <position> | Controls the y-axis position of where spectator respawn timers are drawn. |
+| `cg_restrictFeatures` | C | 0 | ??? | ??? |
+| `cg_rocketStyle` | A / T | 1 | cg_rocketStyle [1\|2] /  / 1 = No Plume /  / 2 = Fire Plume | Controls the rocket trail effect. |
+| `cg_scalePlayerModelsToBB` | C | 1 | cg_scalePlayerModelsToBB [0\|1] | Scales player models to bounding box size as set by cg_playerBBModelScale |
+| `cg_scorePlums` | A / T | 1 | cg_scorePlums [0\|1] | Show floating score plums. |
+| `cg_screenDamage` | A / T | 0x700000C8 | cg_screenDamage <hex color code> | Colorizes the on-screen damage indicator, use "cg_screenDamage 0" to disable. See hex color code sheet in appendix for common color options. |
+| `cg_screenDamage_Self` | A / T | 0x00000000 | cg_screenDamage_Self <hex color code> | Colorizes the on-screen self-damage indicators, use “cg_screenDamage_Self 0” to disable. See hex color code sheet in appendix for common color options. |
+| `cg_screenDamage_Team` | A / T | 0x700000C8 | cg_screenDamage_Team <hex color code> | Colorizes the on-screen team-damage indicators, use "cg_screenDamage_Team 0" to disable. See hex color code sheet in appendix for common color options. |
+| `cg_screenDamageAlpha` | A / T | 0x00000000 | cg_screenDamageAlpha <hex code> | Sets the transparency of the on-screen damage indicators. |
+| `cg_screenDamageAlpha_Team` | A / T | 0x700000C8 | cg_screenDamageAlpha_Team <hex code> | Sets the transparency of the on-screen team damage indicators |
+| `cg_selectedPlayer` | A | - | cg_selectedPlayer <number> | Selects a team member (by team mate number) to issue/confirm orders to/from. |
+| `cg_selectedPlayerName` | A | - | cg_selectedPlayerName [team member name] | Selects a team member (by name) to issue/confirm orders to/from. |
+| `cg_selfOnTeamOverlay` | A / T | 0 | cg_selfOnTeamOverlay [0\|1] | Show yourself on your team overlay. Requires enabling cg_drawteamoverlay. |
+| `cg_shadows` | A / T | 1 | cg_shadows [0\|1] /  /  /  / 0 = No shadows /  / 1 = Shadows | Draws a blob type shadow underneath the player. |
+| `cg_showmiss` | A / T | 0 | cg_showmiss [0\|1] | Displays missed packets and predictions on the HUD. |
+| `cg_showVoiceText` | A / T | 1 | cg_showvoicetext [0\|1] | Show corresponding text with VO’s. |
+| `cg_simpleItems` | A / T | 0 | cg_simpleItems [0\|1] | Replace 3D world items with 2D icons |
+| `cg_simpleItemsRadius` | T | 15 | cg_simpleItemsRadius [8 – 22] | Scales the icon size of items when cg_simpleItems 1. |
+| `cg_smoke_SG` | A / T | 1 | cg_smoke_SG [0\|1] | Enables the drawing of smoke puffs when firing the shotgun. |
+| `cg_smokeRadius_dust` | T | 24 | cg_smokeRadius_dust [0 – 32] | Scales the size of smoke plumes from ground dust. |
+| `cg_smokeRadius_flight` | T | 8 | cg_smokeRadius_flight [0 – 16] | Scales the size of smoke plumes in flight trails. |
+| `cg_smokeRadius_GL` | A / T | 64 | cg_smokeRadius_GL <size> | Scales the size of the grenade and proximity mine smoke plumes. |
+| `cg_smokeRadius_haste` | T | 8 | cg_smokeRadius_haste [0 – 16] | Scales the size of smoke plumes in haste trails. |
+| `cg_smokeRadius_NG` | A / T | 16 | cg_smokeRadius_NG <size> | Scales the size of the nailgun smoke plumes. |
+| `cg_smokeRadius_RL` | A / T | 32 | cg_smokeRadius_RL <size> | Scales the size of the rocket smoke plumes. |
+| `cg_smoothClients` | A | 0 | cg_smoothClients [0\|1] | Smooth out other players’ movement when they experience packet loss. |
+| `cg_specOnly` | U / A | 0 | ??? | ??? |
+| `cg_speedometer` | A / T | 0 | cg_speedometer [0\|1\|2\|3] /  /  /  / 1 = lag-o-meter style graph /  / 2 = value and graph under crosshair /  / 3 = value under crosshair | Enables displaying of speedometer for monitoring of player’s horizontal velocity. |
+| `cg_stats` | T | 0 | cg_stats [0\|1] | Displays client frames in sequence with the exception of missed frames. |
+| `cg_stereoSeparation` | A | 0.4 | cg_stereoSeparation <amount> | Stereo separation – splits color channels. |
+| `cg_swingSpeed` | C | 0.3 | cg_swingSpeed <speed> | Speed in which player models rotate to match the player’s view. |
+| `cg_switchOnEmpty` | A / T | 1 | cg_switchOnEmpty [0\|1] | Automatically switch to highest numbered weapon with ammo when attempting to fire a weapon that is out of ammo. |
+| `cg_switchToEmpty` | A / T | 1 | cg_switchToEmpty [0\|1] | Enables the ability to switch to weapons that have no ammo. |
+| `cg_teamChatBeep` | A / T | 1 | cg_teamChatBeep [0\|1] | Enable/disable sound that is played for incoming team messages. |
+| `cg_teamChatHeight` | A / T | 0 | cg_teamChatHeight <rows> | Number of rows of team chat that is shown at a time. Not applicable for Quake Live’s interface. |
+| `cg_teamChatsOnly` | A / T | 0 | cg_teamChatsOnly [0\|1] | Show only team-based chat. |
+| `cg_teamChatTime` | A / T | 3000 | cg_teamChatTime <time> | Display time on HUD for team messages. |
+| `cg_teamColor` | A | - | cg_teamColor <hex color code> | Colorize team bright model skins. |
+| `cg_teamHeadColor` | A / T | 0x408000FF | cg_teamHeadColor <hex color code> | Colorize team bright model skin heads. |
+| `cg_teamLowerColor` | A / T | 0x408000FF | cg_teamLowerColor <hex color code> | Colorize team bright model skin legs. |
+| `cg_teamUpperColor` | A / T | 0x408000FF | cg_teamUpperColor <hex color code> | Colorize team bright model skin torsos. |
+| `cg_thirdPerson` | C | 0 | cg_thirdPerson [0\|1] /  /  /  / 0 = first-person view /  / 1 = third-person view | Switch to third person view. |
+| `cg_thirdPersonAngle` | C | 0 | cg_thirdPersonAngle <angle> | Third person view camera angle on Z-axis towards player (0-359 degrees). |
+| `cg_thirdPersonPitch` | C | -1 | cg_thirdPersonPitch <pitch> | Third person view vertical camera axis towards player. |
+| `cg_thirdPersonRange` | C | 80 | cg_thirdPersonRange <range> | Maximum distance the third person view is from the player. |
+| `cg_timescaleFadeEnd` |  | 1 | cg_timescaleFadeEnd <value> | ??? |
+| `cg_timescaleFadeSpeed` |  | 0 | cg_timescaleFadeSpeed <value> | ??? |
+| `cg_tracerchance` | C | 0.4 | cg_tracerchance <0.0 – 1.0> | Frequency of tracer bullets. |
+| `cg_tracerlength` | C | 100 | cg_tracerlength <length> | Sets length of tracer bullets. |
+| `cg_tracerwidth` | C | 1 | cg_tracerwidth <width> | Sets width of tracer bullets. |
+| `cg_trackPlayer` | C | -1 | cg_trackPlayer [-1\|0\|1] /  /  /  / 0 = setting 1 /  / 1 = setting 2 | Locks view onto a player. |
+| `cg_trueLightning` | A / T | 1 | cg_trueLightning <0.0 – 1.0> /  /  /  / 0.0 = Most flexible /  / 1.0 = Most Rigid | Flexibility factor for lightning gun shaft. |
+| `cg_trueShotgun` | T | 0 | cg_trueShotgun [0\|1] | When enabled, will display the true shotgun collision pattern that the server uses, while a value of 0 will show a more randomised and slightly inaccurate scatter of pellets. |
+| `cg_useItemMessage` | A T | 1 | cg_useItemMessage [0\|1] | Enables drawing of the "No Item to Use" message when lacking a holdable item but attempting to use it |
+| `cg_useItemWarning` | A T | 1 | cg_useItemWarning [0\|1] | Enables playing of the "No Item to Use" sound when any player is lacking a holdable item but is attempting to use it |
+| `cg_version` | R | - | cg_version | Displays client game version. |
+| `cg_viewsize` | A | 100 | cg_viewsize <percentage> | Percentage of screen the game appears on. |
+| `cg_waterWarp` | A / T | 1 | cg_waterWarp [0\|1] | Enables the minor warp effect on underwater views. |
+| `cg_weaponBar` | A / T | 1 | cg_weaponBar [0\|1\|2\|3\|4] /  /  /  / 0 - Disabled /  / 1 - Left docked icons /  / 2 - Right docked icons /  / 3 - Center docked icons /  / 4 - Large floating icons (Legacy Q3 Style) | Displays the weapon bar at the specified place on the screen. |
+| `cg_weaponColor_grenade` | A / T | 0x007000FF | cg_weaponColor_grenade <hex color code> | Sets grenade color. |
+| `cg_weaponConfig` | A T | "" | "cg_weaponConfig <settings> /  / cg_weaponConfig_bfg <settings> / BFG10K /  / cg_weaponConfig_cg <settings> / Chaingun /  / cg_weaponConfig_g <settings> / Gauntlet /  / cg_weaponConfig_gh <settings> / Hook /  / cg_weaponConfig_gl <settings> / Grenade /  / cg_weaponConfig_lg <settings> / Lightning Gun /  / cg_weaponConfig_mg <settings> / Machinegun /  / cg_weaponConfig_ng <settings> / Nailgun /  / cg_weaponConfig_pg <settings> / Plasmagun /  / cg_weaponConfig_pl <settings> / Prox Mine /  / cg_weaponConfig_rg <settings> / Railgun /  / cg_weaponConfig_rl <settings> / Rocket Launcher /  / cg_weaponConfig_sg <settings> / Shotgun | The specified settings are applied after every weapon switch. Also listed in the menu under Game Settings >> Advanced >> Weapon Config. |
+| `cg_zoomfov` | A / T | 22.5 | cg_zoomfov <10 – 130> | Sets zoomed-in field of view factor. |
+| `cg_zoomOutOnDeath` | A / T | 1 | cg_zoomOutOnDeath [0\|1] | Enables resetting of player FOVs back to normal on death. This is useful if you use the cg_zoomToggle CVar. |
+| `cg_zoomScaling` | A / T | 1 | cg_zoomScaling [0\|1] | Enables the zooming in / zooming out scaling effect that is used as a transition between your cg_fov and cg_zoomfov; causing the +zoom to act as a quick snap to and from the zoomed fov. |
+| `cg_zoomSensitivity` | A / T | 1 | cg_zoomSensitivity <value> | The value of this is multiplied to the current zoom sensitivity, allowing the user to increase or decrease their sensitivity while zoomed. A value of 0 will revert the zoomSensitivity code to the Q3 legacy code that was previously available in QuakeLive. |
+| `cg_zoomToggle` | A / T | 0 | cg_zoomToggle [0\|1] | Alters the behavior of +zoom such that a single key press will enable zooming and a repeated keystroke disables zooming, no longer requiring players to hold the key down while zooming. |
+| `cl_AdTimeout` | I | 6000 | ??? | ??? |
+| `cl_allowConsoleChat` | A / T | 0 | cl_allowConsoleChat [0\|1] | Allows chat from console window without using the ‘/say’ command, while omitting the ‘/’. |
+| `cl_allowDownload` | R | 1 | cl_allowDownload [0\|1] | Enables automatic downloading of missing files from server. |
+| `cl_anglespeedkey` |  | 1.5 | cl_anglespeedkey <speed> | Sets the speed in which the directional keys (binded to +left, +right, +lookdown or +lookup) change the viewing angle. |
+| `cl_anonymous` | U / A | 0 | cl_anonymous [0\|1] | Appear anonymous to the server. |
+| `cl_autoTimeNudge` | A T | 0 | cl_autoTimeNudge [0\|1] | ??? |
+| `cl_avidemo` |  | 0 | cl_avidemo [0\|1] | Enable AVI demo recording. |
+| `cl_avidemo_latch` |  | 0 | cl_avidemo_latch [0\|1] | Setting this to 1 starts capturing according to the value specified by cl_avidemo the moment the game starts or the demo begins. |
+| `cl_avidemo_maxtime` |  | 0 | cl_avidemo_maxtime <time> | Maximum length of AVI demos. |
+| `cl_avidemo_mintime` |  | 0 | cl_avidemo_mintime <time> | Minimum length of AVI demos. |
+| `cl_contimestamps` |  | 0 | cl_contimestamps [0\|1\|2] /  / 0 = None /  / 1 = Game time /  / 2 = Server time | Put time stamps on console entries. |
+| `cl_conXOffset` |  | 0 | cl_conXOffset <0 – 999> | Sets the offset of the console message display. |
+| `cl_debugMove` |  | 0 | cl_debugMove [0\|1\|2] /  /  /  / 1 = display x-axis (yaw) mouse speed graph /  / 2 = display y-axis (pitch) mouse speed graph | Displays a real-time graph on the lower part of the screen illustrating mouse speed. |
+| `cl_demoRecordMessage` |  | 1 | cl_demoRecordMessage [0\|1] /  /  /  / 0 = Hide /  / 1 = Show | Message that appears on HUD when recording a demo. |
+| `cl_downloadCount` |  | - | cl_downloadCount | Displays the number of files for download. N/A |
+| `cl_downloadName` |  | - | cl_downloadName | Holds the name of the file currently downloading. N/A |
+| `cl_downloadSize` |  | - | cl_downloadSize | Displays the size (in bytes) of the file currently downloading. N/A |
+| `cl_forceavidemo` |  | 0 | cl_forceavidemo [0\|1] | Forces all demo recording into a sequence of screenshots in TGA format. |
+| `cl_freelook` |  | 1 | cl_freelook [0\|1] | Enables freelook (ability to look around using your mouse). |
+| `cl_freezeDemo` |  | 0 | cl_freezeDemo [0\|1] | Stops demo recording while ‘freezing’ on to one frame. |
+| `cl_guid` | U / R | Unknown | ??? | ??? |
+| `cl_maxpackets` | A / T | 63 | cl_maxpackets <30 – 125> | Controls how many updates you send to the server. |
+| `cl_maxPing` | A | 800 | cl_maxPing <ping> | Maximum ping before disconnecting from server. |
+| `cl_motd` |  | 1 | cl_motd [0\|1] | Enables the displaying of the message of the day string. |
+| `cl_motdString` | R | - | cl_motdString | Message of the day string. |
+| `cl_mouseAccel` |  | 0 | cl_mouseAccel <value> | Mouse acceleration factor. |
+| `cl_mouseAccelDebug` | A / T | 0 | cl_mouseAccelDebug [0\|1] | Enables mouse acceleration debugging mode. |
+| `cl_mouseAccelOffset` | A / T | 5 | cl_mouseAccelOffset <offset> | Sets mouse acceleration sensitivity offset. |
+| `cl_mouseAccelPower` | A T | 2 | cl_mouseAccelPower <value> | Sets the power of the mouse acceleration curve, 2 is the default traditional curve. |
+| `cl_mouseAccelStyle` | A / T | 0 | cl_mouseAccelStyle [integer] | Sets mouse acceleration style. |
+| `cl_mouseSensCap` | A | 0 | cl_mouseSensCap <max sensitivity> | Sets mouse sensitivity limit when using mouse acceleration. |
+| `cl_nodelta` |  | 0 | cl_nodelta [0\|1] | Disables delta compression. May slow down connection performance, only use if net problems occur. |
+| `cl_noprint` |  | 0 | cl_noprint [0\|1] | Disables message printing to HUD. |
+| `cl_packetdup` | A | 1 | cl_packetdup <0 – 5> | Determines how many duplicate packets you send to the server to avoid packet loss. |
+| `cl_paused` | R | 0 | cl_paused [0\|1] | Displays the status of the paused flag, client side. |
+| `cl_pitchspeed` | C | 140 | cl_pitchspeed <value> | Sets the pitch speed for +lookup and +lookdown. |
+| `cl_platform` | R | 1 | ??? | ??? |
+| `cl_punkbuster` | U / R / A | 1 | cl_punkbuster [0\|1] | Enables use of PunkBuster anti-cheat system. |
+| `cl_quitOnDemoCompleted` |  | 0 | cl_quitOnDemoCompleted [0\|1] | With this set to 1, if you play a demo, the game will exit when the demo is over. |
+| `cl_run` | A | 1 | cl_run [0\|1] /  /  /  / 0 = Walk /  / 1 = Run | Enables ‘always run’. |
+| `cl_running` | R | 0 | cl_running | Dictates whether or not a client game is running or if client/server mode. |
+| `cl_serverStatusResendTime` |  | 750 | cl_serverStatusResendTime <time> | Sets the amount of time (in milliseconds) between heartbeats sent to the master server |
+| `cl_shownet` |  | 0 | cl_shownet [0\|1] | Displays information about the network quality. |
+| `cl_showSend` |  | 0 | cl_showSend [0\|1] | A network debugging tool, showing packets sent. |
+| `cl_showTimeDelta` |  | 0 | cl_showTimeDelta [0\|1] | Displays time delta between server updates. |
+| `cl_timeNudge` |  | 0 | cl_timeNudge [-20 - 20] | Allows more or less latency to be added in the interest of better smoothness or better responsiveness. |
+| `cl_timeout` |  | 40 | cl_timeout <time> | Time (in seconds) that it takes to be kicked when lagging. |
+| `cl_viewAccel` | A | 1.7 | cl_viewAccel <value> | ??? |
+| `cl_yawspeed` | C | 140 | cl_yawspeed <value> | Sets turn speed when using +left and +right. |
+| `clan` | U / A / T | - | clan <clan tag> | Player clan tag string as per clan joined. |
+| `cm_noAreas` | C | 0 | cm_noAreas [0\|1] | ??? |
+| `cm_noCurves` | C | 0 | cm_noCurves [0\|1] | Sets the ability of the player bounding box to clip through curved surfaces. |
+| `cm_playerCurveClip` | C | 1 | cm_playerCurveClip [0\|1] | Sets the ability of the player bounding box to keep to curved surfaces. |
+| `color1` | U / A / T | 1 | color1 <color code> | Color of the rail beam. <1-26> |
+| `color2` | U / A / T | 1 | color2 <color code> | Color of rail core/disc/swirl effect. <1-26> |
+| `com_allowConsole` | A / T | 1 | com_allowConsole [0\|1] /  / 0 = Ctrl + Alt + <console bind> /  / 1 = <console bind> | Affects how you access the console. |
+| `com_blood` | A | 0 | com_blood [0\|1] | Enable blood mist effects. Not available in Quake Live. |
+| `com_build` |  | 0 | com_build [0\|1] | Automates data building. |
+| `com_cameraMode` | C | 0 | com_cameraMode [0\|1] | Setting to 1 renders the player model invisible with cg_thirdperson 1. Only the player model whose perspective the game is from is made invisible. |
+| `com_configVersion` | A | 16 | ??? | ??? |
+| `com_dropsim` | C | 0 | com_dropsim [0\|1] | Testing CVAR to simulate packet loss during communication drops. |
+| `com_hunkMegs` | A L | 96 | com_hunkMegs <amount> | Sets the amount of memory (in mega bytes) reserved for the game play. A value of 56 is best suited for 128MB of RAM, 112 for 256MB RAM etc. |
+| `com_introplayed` | A | 0 | com_introplayed [0\|1] /  /  /  / 0 = plays intro cinematic /  / 1 = disables intro cinematic | Disables the playing of intro movie when loading game. |
+| `com_maxfps` | A / T | 125 | com_maxfps <amount> | Maximum rendered frames per second. |
+| `com_showtrace` | C | 0 | com_showtrace [0\|1] | Displays packet traces. |
+| `com_soundMegs` | A L | 16 | com_soundMegs <amount> | Allocates memory (in mega bytes) to game sounds. A value of 16 is best suited for 128MB of RAM. |
+| `com_speeds` |  | 0 | com_speeds [0\|1] /  /  /  / 0 = disabled | Displays the reporting of game speed data: frame#, time (in ms), ev, work, sv, cl, gm, rf, bk, rm /  / SV = server, CL = client, GM = game time, RF = render time, EV = work |
+| `com_zoneMegs` | A L | 16 | com_zoneMegs <amount> | Sets the amount of memory (in mega bytes) reserved for the game. A value of 16 is best suited for 128MB of RAM. |
+| `con_background` | T | 1 | con_background [0\|1] | Enables the animated console background. |
+| `con_height` | T | 0.5 | con_height <0.0 – 1.0> | Sets the percentile of the screen the console window takes up when on display. |
+| `con_matchlimit` |  | 16 | con_matchlimit <limit> | Sets the maximum number of entries to print to the console when using the ‘find’ command. |
+| `con_notifytime` |  | 3 | con_notifytime <time> | Sets the time (in seconds) that messages from other players are displayed on the screen. |
+| `con_opacity` | T | 0.75 | con_opacity <0.0-1.0> | Sets the opacity of the console background. |
+| `con_scale` | T | 1 | con_scale <0.5 - 1 > | Console lettertype size |
+| `con_speed` | T | 3 | con_speed <speed> | Sets the speed of the opening/closing scroll action of the console window. |
 
 ## CVARs: D
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `debug_protocol` | - | Network protocol debugging |
-| `debuggraph` [C] | 0 | Displays debugging graph |
-| `dedicated` [L] | 0 | 0=Listen server, 1=Dedicated server |
-| `developer` | 0 | Developer mode |
-| `dmflags` [S,A] | 0 | Deathmatch flags: 4=no self splash on HP, 8=no self splash on armor, 16=no fall damage |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `debug_protocol` |  | - | debug_protocol | Network protocol debugging for globalservers. |
+| `debuggraph` | C | 0 | debuggraph [0\|1] | Displays debugging graph. |
+| `dedicated` | L | 0 | dedicated [0\|1] /  / 0 = Listen server /  / 1 = Dedicated server | Specifies whether a server created will be dedicated or not, i.e: the server joins the game or not. |
+| `developer` |  | 0 | developer [0\|1] | Enables developer mode. |
+| `dmflags` | S / A | 0 | dmflags <flags> /  / Known flags: /  / 4 = no self splash-damage on health /  / 8 = no self splash-damage on armor /  / 16 = no falling damage | Deathmatch flags. |
 
 ## CVARs: F
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `fixedtime` [C] | 0 | Enables system wait on rendering |
-| `fraglimit` [S,A] | 30 | Frag limit (0=none) |
-| `fs_basegame` [I] | - | Default data directory |
-| `fs_basepath` [I] | - | Base game root path |
-| `fs_cdpath` [I] | - | Alternate hierarchy path |
-| `fs_copyfiles` [I] | - | Copies files from fs_cdpath to fs_basepath (dev tool) |
-| `fs_debug` | 0 | File system debugging |
-| `fs_game` [I] | - | Game directory path |
-| `fs_homepath` [I] | - | Write access path; location for custom mods/content |
-| `fs_restrict` [I] | - | Demo/restricted mode test tool |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `fixedtime` | C | 0 | fixedtime <wait> | Enables system wait on rendering. |
+| `fraglimit` | S / A | 30 | fraglimit [limit] /  / 0 = no fraglimit | Show or set the frag limit for deathmatch games. |
+| `fs_basegame` | I | - | fs_basegame <basegame> | Sets the directory under the paths where data comes from by default |
+| `fs_basepath` | I | - | fs_basepath <basepath> | Sets base game root path. |
+| `fs_cdpath` | I | - | fs_cdpath <cdpath> | Sets the path to an alternate hierarchy that will be searched if a file is not located in the base path. |
+| `fs_copyfiles` | I | - | fs_copyfiles | When set to 1, every time a file is sourced from fs_cdpath, it will be copied over to fs_basepath. This is a development aid to help build test releases and to copy working sets over slow network links. |
+| `fs_debug` |  | 0 | fs_debug [0\|1] | File system debugging tool. |
+| `fs_game` | I | - | fs_game <path> | Sets the game directory. |
+| `fs_homepath` | I | - | fs_homepath <path> | Sets the path used for all write access, also the location where custom mods and content can be installed to. |
+| `fs_restrict` | I | - | fs_restrict [0\|1] | File system demo/restricted mode test tool. |
 
 ## CVARs: G
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `g_gametype` [S,L] | 0 | 0=FFA, 1=Tournament (Duel), 2=Race, 3=TDM, 4=Clan Arena, 5=CTF, 6=One-Flag CTF, 7=Overload, 8=Harvester, 9=Freeze Tag |
-| `g_ca` | 0 | Non-functional CA toggle (use g_gametype 4) |
-| `g_freeze` | 0 | Non-functional Freeze Tag toggle (use g_gametype 9) |
-| `g_domination` | 0 | Domination mode (non-functional) |
-| `g_compmode` [S,I] | 0 | Competition mode |
-| `g_training` | 0 | Training mode (skill placement match) |
-| `g_quadHog` | 0 | Score only while holding Quad |
-| `g_allowVote` [A] | 1 | Enable voting |
-| `g_allowSpecVote` | 0 | Allow spectators to vote |
-| `g_allowStandardVote` | 1 | Allow standard members to vote |
-| `g_allowVoteMidGame` | 0 | Allow voting during match |
-| `g_voteFlags` [S,A] | 0 | Bitmask of disabled vote commands: &1=map, &2=map_restart, &4=nextmap, &8=gametype, &16=kick, &64=timelimit, &128=fraglimit, &256=shuffle, &512=teamsize, &1024=cointoss, &2048=ruleset |
-| `g_voteDelay` | 0 | Min time before voting allowed in warmup |
-| `g_voteLimit` | 0 | Max times same vote can be called |
-| `g_knockback` | 1000 | General knockback base |
-| `g_knockback_lg` | 1.50 | Lightning gun knockback (highest) |
-| `g_knockback_gl` | 1.10 | Grenade knockback |
-| `g_knockback_pg` | 1.10 | Plasma knockback |
-| `g_knockback_pg_self` | 1.30 | Plasma self-splash knockback |
-| `g_knockback_rl` | 0.90 | Rocket knockback |
-| `g_knockback_rg` | 0.85 | Railgun knockback (lowest) |
-| `g_knockback_z` | 24 | Vertical knockback offset (units) |
-| `g_max_knockback` | 120 | Maximum knockback cap |
-| `g_velocity_pg` | 2000 | Plasma projectile speed (units/sec) |
-| `g_velocity_rl` | 1000 | Rocket projectile speed (units/sec) |
-| `g_velocity_bfg` | 1800 | BFG projectile speed (units/sec) |
-| `g_velocity_gl` | 700 | Grenade projectile speed (units/sec) |
-| `g_startingHealth` | 100 | Spawn health |
-| `g_startingArmor` | 0 | Spawn armor |
-| `g_startingHealthBonus` | 25 | Bonus health on spawn |
-| `g_startingammo_mg` | 100 | MG ammo on spawn |
-| `g_enableMachinegun` | 1 | Spawn with MG |
-| `g_ca_startingHealth` | 200 | Clan Arena spawn health |
-| `g_timelimit` [S,A] | 0 | Time limit in minutes (0=none) |
-| `g_fraglimit` [S,A] | 30 | Frag limit (0=none) |
-| `g_friendlyFire` [S,A] | 0 | Friendly fire |
-| `g_allowKill` [A] | 1 | Allow kill command |
-| `g_inactivity` | 0 | Kick inactive players after N seconds (0=disabled) |
-| `g_warmup` | 20 | Warmup time (seconds) |
-| `g_overtime` | 0 | Enable overtime |
-| `g_doWarmup` | 0 | Enable warmup period |
-| `g_log` | - | Server log filename |
-| `g_logSync` | 0 | Synchronous game logging |
-| `g_teamForceBalance` | 0 | Force balanced teams |
-| `g_teamAutoJoin` | 0 | Auto-assign team on connect |
-| `g_redTeam` | Pagans | Red team name |
-| `g_blueTeam` | Stroggs | Blue team name |
-| `g_quadfactor` | 3 | Quad damage multiplier |
-| `g_weaponRespawn` | 5 | Weapon respawn time (seconds) |
-| `g_weaponTeamRespawn` | 30 | Team game weapon respawn |
-| `g_healthRegenTime` | 0 | Health regen time (CA) |
-| `g_armorRegenTime` | 0 | Armor regen time (CA) |
-| `g_startingWeapons` | 3 | Starting weapon bitmask: &1=Gauntlet, &2=MG, &4=SG, &8=GL, &16=RL, &32=LG, &64=Rail, &128=PG, &256=BFG, &512=Grapple, &1024=Nailgun, &2048=Prox, &4096=Chaingun, &8192=Map default |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `g_accelFactor_bfg` |  | 1 | ??? | ??? |
+| `g_accelFactor_pg` |  | 1 | ??? | ??? |
+| `g_accelFactor_rl` |  | 1 | ??? | ??? |
+| `g_accelRate_bfg` |  | 16 | ??? | ??? |
+| `g_accelRate_pg` |  | 16 | ??? | ??? |
+| `g_accelRate_rl` |  | 16 | ??? | ??? |
+| `g_advertdelay` | I | 15000 | g_advertdelay <0 - 15000> | length of the pre-game advert. It is write protected and changes to 0 with the purchase of premium or pro subscription. |
+| `g_allowCustomHeadModels` |  | 0 | g_allowCustomHeadModels [0\|1] | Allows clients to alter their player head models using headmodel and team_headmodel. |
+| `g_allowForfeit` |  | 1 | g_allowForfeit [0\|1] | Allows players to forfeit the game using the forfeit command. |
+| `g_allowKill` | A | 0 | g_allowKill [0\|1] | Allows usage of the ‘kill’ command in a server. |
+| `g_allowSpecVote` |  | 0 | g_allowSpecVote [0\|1] | Allows spectators to call or cast votes in a server. |
+| `g_allowStandardVote` |  | 1 | g_allowStandardVote [0\|1] | Allows standard members in the server to vote. |
+| `g_allowVote` | A | 1 | g_allowVote [0\|1] | Allows voting to take place in a server. |
+| `g_allowVoteMidGame` |  | 0 | g_allowVoteMidGame [0\|1] | Allows voting to take place during a match. |
+| `g_allWeapons` |  | 0 | g_allWeapons [0\|1] | Gives players weapons 3 to 8 when spawning, similar to in Clan Arena. |
+| `g_arenasFile` | R / I | - | g_arenasFile <file name> | Points to a file for a server map rotation list. |
+| `g_aspectEnable` | S | 0 | g_aspectEnable [0\|1] | ??? |
+| `g_autoAction` |  | 0 | g_autoAction [0\|1] | Allows automatic demo recording on a server. |
+| `g_banIPs` | A | - | g_banIPs <ip addresses> | Ban certain IP addresses from connecting to your server. |
+| `g_battleSuitDampen` |  | 0.25 | g_battleSuitDampen <percentile> | Sets battle suit splash damage dampening percentile. |
+| `g_botsFile` | R / I | - | g_botsFile <file name> | Points to the bot control file for bot configurations (such as scripts/bots.txt). |
+| `g_botSpawnList` |  | - | ??? | ??? |
+| `g_ca` |  | 0 | g_ca [0\|1] | Enables Clan Arena mode. (non-functional, Clan Arena is a game-type, not a game-mode. Use g_gametype 4) |
+| `g_ca_challengeMode` |  | 0 | g_ca_challengeMode [0\|1] | ??? |
+| `g_ca_startingArmor` |  | 100 | g_ca_startingArmor <value> | Sets the player starting armor amount for Clan Arena games. |
+| `g_ca_startingHealth` |  | 200 | g_startingHealth <value> | Sets the player starting health amount for Clan Arena games. |
+| `g_complaintDamageThreshold` | A | 400 | g_complaintDamageThreshold [value] | Sets the amount of team damage a player can cause to allow the targetted player to file a complaint. |
+| `g_complaintLimit` | A | 5 | g_complaintLimit [value] | Sets the number of teamkill complaints filed against an offending player before being kicked from the server. |
+| `g_compmode` | S / I | 0 | g_compmode [0\|1] | Enables competition mode. |
+| `g_cubeTimeout` |  | 30 | g_cubeTimeout <time> | Sets reset time for blue and red orbs. (not used) |
+| `g_damage_bfg` |  | 100 | g_damage_bfg <value> | Sets damage done by BFG projectile. |
+| `g_damage_cg` |  | 8 | g_damage_cg <value> | Sets damage done by chaingun bullet. |
+| `g_damage_g` |  | 50 | g_damage_g <value> | Sets damage done by gauntlet. |
+| `g_damage_gl` |  | 100 | g_damage_gl <value> | Sets damage done by direct grenade shots. |
+| `g_damage_lg` |  | 7 | g_damage_lg <value> | Sets the damage done by the lightning gun shaft. |
+| `g_damage_lg_falloff` |  | 0 | g_damage_lg_falloff <value> | Sets the damage done by lightning fall off. |
+| `g_damage_mg` |  | 5 | g_damage_mg <value> | Sets the damage done by a machinegun bullet. |
+| `g_damage_mg_tdm` |  | 4 | g_damage_mg_tdm <value> | Sets the damage done by a machinegun bullet in team deathmatch. |
+| `g_damage_ng` |  | 12 | g_damage_ng <value> | Sets the damage done per nail by the nailgun shot. |
+| `g_damage_pg` |  | 20 | g_damage_pg <value> | Sets the damage done per plasma cell. |
+| `g_damage_pl` |  | 0 | g_damage_pl <value> | Sets the damage done by direct hits by prox mines. |
+| `g_damage_rg` |  | 80 | g_damage_rg <value> | Sets the damage done by the rail gun. |
+| `g_damage_rl` |  | 100 | g_damage_rl <value> | Sets the damage done by a direct hit by a rocket. |
+| `g_damage_sg` |  | 5 | g_damage_sg <value> | Sets the damage done by the shotgun shot, per pellet. |
+| `g_damage_sg_falloff` |  | 0 | g_damage_sg_falloff <value> | Sets the damage done by shotgun falloff. |
+| `g_damage_sg_outer` |  | 5 | g_damage_sg_outer <value> | Sets the damage done by the shotgun shot in indirect shots (i.e: stray pellets) |
+| `g_damage_sg_tdm` |  | 4 | g_damage_sg_tdm <value> | Sets the damage done by the shotgun shot in team deathmatch, per pellet. |
+| `g_debugAlloc` |  | 0 | g_debugAlloc [0\|1] | Server degugging tool: memory allocation. |
+| `g_debugDamage` |  | 0 | g_debugDamage [0\|1] | Server debugging tool: details information on any player damage dealt/received, including health and armor values. Draws information to console. |
+| `g_debugFlags` |  | 0 | ??? | ??? |
+| `g_debugMove` |  | 0 | g_debugMove [0\|1] | Server debugging tool: client movement |
+| `g_debugThawTime` |  | 0 | g_debugThawTime [0\|1] | Displays thaw time information when thawing a team mate in Freeze Tag. |
+| `g_dmgThroughSurface /  / AngularThreshold` |  | 0.5f | ??? | ??? |
+| `g_dmgThroughSurface /  / Dampening` |  | 0.5f | ??? | ??? |
+| `g_dmgThroughSurfaceDistance` |  | -33.1f | g_dmgThroughSurfaceDistance <value> | ??? |
+| `g_domCapTime` | S | 3 | g_domCapTime <integer> | Sets the time duration to score points as set by g_domScoreRate. |
+| `g_domination` | S | 0 | g_domination [0\|1] | Enables Domination mode. (non-functional as of yet) |
+| `g_domScoreRate` | S | 5 | g_domScoreRate <integer> | Sets the amount of points earned per ‘capture’. |
+| `g_doWarmup` | A | 1 | g_doWarmup [0\|1] | Allows warm up rounds before matches begin. |
+| `g_dropCmds` |  | 7 | &1 = flags (dropflag) /  / &2 = power-ups (droppowerup) /  / &4 = weapons (dropweapon)" | Enables the dropping of items in team games. |
+| `g_dropDamagedHealth` |  | 0 | ??? | ??? |
+| `g_dropinactive` |  | 1 | g_dropinactive [0\|1] | Enables kicking of inactive clients from server when time set by g_inactivity 1 is reached. |
+| `g_dropPowerups` |  | 1 | g_dropPowerups [0\|1] | Enables the dropping of powerups when power-up carriers die. |
+| `g_dropRunes` |  | 0 | g_dropRunes [0\|1] | Enables the dropping of runes when rune carriers die. |
+| `g_enableBreath` | S | 0 | g_enableBreath [0\|1] | Enables the frosty breath effect on player models on maps that enable this cvar. |
+| `g_enablecasterinfo` |  | 0 | ??? | ??? |
+| `g_enableDebugTrace` |  | 0 | ??? | ??? |
+| `g_enableDust` | S | 0 | g_enableDust [0\|1] | Enables the dust affect by players running over ‘dusty’ floors. |
+| `g_enableMachinegun` |  | 1 | g_enableMachinegun [0\|1] | Enables players to spawn with a machinegun. This is not applicable when g_instagib 1 and the amount of bullets issued with the weapon is set by g_startingammo_mg. |
+| `g_enemyTeamRespawnRatio` |  | 1.5 | ??? | ??? |
+| `g_filterBan` | A | 1 | g_filterban [0\|1] /  / 0 = allows only specified IP’s to connect /  / 1 = allows anyone except specified IP’s to connect | Allows/disallows only specified IP addresses (as per listip) to connect to the server. |
+| `g_flagBounce` |  | 0.25 | g_flagBounce <value> | When a flag is dropped in CTF, this value multiplies the drop distance of the flag to give it bounces. A value of 1 will cause the flag to continue to bounce the exact height as the initial drop distance while a value higher than 1 will cause the flag to bounce higher after each iteration. A value of 0 will disable bouncing altogether. |
+| `g_flagPhysics` |  | 0 | ??? <<< | ??? <<< |
+| `g_flightRefuelRate` |  | 0 | ??? <<< | ??? <<< |
+| `g_flightThrust` |  | 1200 | g_flightThrust <amount> | Sets the amount of thrust when using the flight item. |
+| `g_floodprot_decay` |  | 1000 | ??? | ??? |
+| `g_floodprot_maxcount` |  | 10 | ??? | ??? |
+| `g_floodprot_threadshold` |  | 500 | ??? | ??? |
+| `g_forceAtmosphericEffects` |  | - | ??? | ??? |
+| `g_forceDmgThroughSurface` |  | 0 | g_forceDmgThroughSurface [0\|1] | Enables damage through surfaces. |
+| `g_forceNextMap` |  | 0 | g_forceNextMap [0\|1] | Automatically loads next map at match end. |
+| `g_forcePremium` |  | 0 | g_forcePremium [0\|1] | Allows only premium/pro clients to join the server. Standard users can only join via pro invites. |
+| `g_freeze` | S | 0 | g_freeze [0\|1] | Enables Freeze-Tag mode. (non-functional, Freeze-Tag is a game-type, not game-mode. Use g_gametype 9.) |
+| `g_freezeAutoThawTime` |  | 120000 | g_freezeAutoThawTime <time> | Freeze Tag: Sets the amount of time (in milliseconds) for frozen players to auto thaw. |
+| `g_freezeEnvironmentalRespawnDelay` |  | 0 | g_freezeEnvironmentalRespawnDelay <time> | Freeze Tag: Sets time delay (in milliseconds) before respawning after being 'frozen' by lava, slime and other environmental hazards. |
+| `g_freezeRemovePowerupsOnRound` |  | 1 | g_freezeRemovePowerupsOnRound [0\|1] | Freeze Tag: Removes power-ups at the start of a round |
+| `g_freezeResetArmorOnRound` |  | 0 | g_freezeResetArmorOnRound [0\|1] | Freeze Tag: Resets armor spawns at the start of a round |
+| `g_freezeResetHealthOnRound` |  | 0 | g_freezeResetHealthOnRound [0\|1] | Freeze Tag: Resets health spawns at the start of a round |
+| `g_freezeResetWeaponsOnRound` |  | 0 | g_freezeResetWeaponsOnRound [0\|1] | Freeze Tag: Resets weapon spawns at the start of a round |
+| `g_removePowerupsOnRound` |  | 1 | g_removePowerupsOnRound [0\|1] | Freeze Tag: Forces power-ups to be removed from carriers when rounds end. |
+| `g_freezeRoundDelay` |  | 4000 | g_freezeRoundDelay <delay> | Freeze Tag: Sets the delay (in milliseconds) between rounds. |
+| `g_freezeThawRadius` |  | 64 | g_freezeThawRadius <radius> | Freeze Tag: Sets a radius (in map units) around a frozen team member in which team mates need to camp in, for the time specified by g_freezeThawTime, in order to thaw the frozen team mate. |
+| `g_freezeThawThroughSurface` |  | 1 | g_freezeThawThroughSurface [0\|1] | Freeze Tag: Enables thawing through surfaces |
+| `g_freezeThawTick` |  | 1 | g_freezeThawTick [0\|1] | Freeze Tag: Enables thawing sound |
+| `g_freezeThawTime` |  | 3000 | g_freezeThawTime <time> | Freeze Tag: Sets time (in milliseconds) required for a team mate to camp in the g_freezeThawRadius before a frozen team mate is thawed. |
+| `g_freezeThawWinningTeam` |  | 1 | g_freezeThawWinningTeam [0\|1] | Freeze Tag: Thaws any frozen players on the round-winning team |
+| `g_friendlyfire` | A | 0 | g_friendlyFire [0\|1] | Allow damage to be inflicted between team mates. |
+| `g_friendlyFireDampen` | A | 1.00 | g_friendlyFireDampen <value> | Multiplies all team damage by value |
+| `g_gameState` | S / R / A | - | g_gamestate | Dictates which stage of play a server is in. |
+| `g_gametype` | S / L | 0 | g_gametypes [0\|1\|2\|3\|4\|5\|6\|7\|8\|9] /  / 0 = Free for All /  / 1 = Tournament /  / 2 = Race /  / 3 = Team Deathmatch /  / 4 = Clan Arena /  / 5 = Capture the Flag /  / 6 = One-Flag CTF /  / 7 = Overload /  / 8 = Harvester /  / 9 = Freeze Tag | Sets server game type to be set for next match. |
+| `g_grantItemOnSpawn` | A | - | g_grantItemOnSpawn <item> | Grants the specified item to players when spawning. |
+| `g_gravity` | A | 800 | g_gravity <factor> | Sets gravitational factor. |
+| `g_guidedRocket` |  | 0 | g_guidedRocket [0\|1] | Enables guided rockets. |
+| `g_headShotDamageScale` |  | 1.0 | g_headShotDamageScale <scale> | Scales head shot damage by this amount. |
+| `g_headShotEnable` |  | 0 | g_headShotEnable [0\|1] | Enables the use of head shots, multiplying damage inflicted to opponents’ heads by the amount specified by g_headShotDamageScale. |
+| `g_headShotEnable_Bullet` |  | 1 | g_headShotEnable_Bullet [0\|1] | Enables machinegun bullet head shots when g_headShotEnable 1. |
+| `g_headShotEnable_Rail` |  | 1 | g_headShotEnable_Rail [0\|1] | Enables railgun slug head shots when g_headShotEnable 1. |
+| `g_headShotEnable_Shotgun` |  | 1 | g_headShotEnable_Shotgun [0\|1] | Enables shotgun shell head shots when g_headShotEnable 1. |
+| `g_holiday` | S | 0 | ??? | ??? |
+| `g_inactivity` |  | 70 | g_inactivity <time> | Sets the amount of time a player can be inactive for before being kicked from the server. |
+| `g_instaGib` | S | 0 | g_instagib [0\|1] | Toggles instagib railguns-only mode. |
+| `g_ironsights_mg` |  | 1.0 | ??? | ??? |
+| `g_kamiAttenuate` |  | 2048 | ??? | ??? |
+| `g_kamiMinRatio` |  | 0.1 | ??? | ??? |
+| `g_knockback` |  | 1000 | g_knockback <factor> | Amount of knock back general projectiles exert on players. |
+| `g_knockback_bfg` |  | 1 | g_knockback_bfg <factor> | Amount of knock back BFG projectiles (and splash damage) exert on players. |
+| `g_knockback_cg` |  | 1 | g_knockback_cg <factor> | Amount of knock back chaingun projectiles exert onto players. |
+| `g_knockback_cripple` |  | 0 | ??? | ??? |
+| `g_knockback_g` |  | 1 | g_knockback_g <factor> | Amount of knock back gauntlets exert onto players. |
+| `g_knockback_gl` |  | 1.10 | g_knockback_gl <factor> | Amount of knock back grenades (and splash damage) exert onto players. |
+| `g_knockback_lg` |  | 1.50 | g_knockback_lg <factor> | Amount of knock back beams of lightning exert onto players. |
+| `g_knockback_mg` |  | 1 | g_knockback_mg <factor> | Amount of knock back machinegun projectiles exert onto players. |
+| `g_knockback_ng` |  | 1 | g_knockback_ng <factor> | Amount of knock back nailgun projectiles exert onto players. |
+| `g_knockback_pg` |  | 1.10 | g_knockback_pg <factor> | Amount of knock back plasma projectiles (and splash damage) exert on players. |
+| `g_knockback_pg_self` |  | 1.30 | g_knockback_pg_self <factor> | Amount of knock back plasma splash damage exerts onto yourself. |
+| `g_knockback_pl` |  | 1 | g_knockback_pl <factor> | Amount of knock back prox mines and their splash damage exert onto players. |
+| `g_knockback_rg` |  | 0.85 | g_knockback_rg <factor> | Amount of knock back rail projectiles exert onto players. |
+| `g_knockback_rl` |  | 0.90 | g_knockback_rl <factor> | Amount of knock back rockets (and splash damage) exert on players. |
+| `g_knockback_rl_self` |  | 01. Okt | g_knockback_rl_self <factor> | Amount of knock back rocket splash damage exert on your own player. |
+| `g_knockback_sg` |  | 1 | g_knockback_sg <self> | Amount of knock back shotgun pellets exert on players. |
+| `g_knockback_z` |  | 24 | g_knockback_z <value> | Sets player center of mass higher than the origin by the specified number of units when calculating knockback from enemy splash damage. This allows for more vertical knockback. |
+| `g_lagHaxHistory` | L | 4 | ??? | ??? |
+| `g_lagHaxMs` | L | 80 | ??? | ??? |
+| `g_lastManStandingMessage` |  | You are /  / the only  /  / one left | g_lastManStandingMessage [string] | Sets the message to display when a player is the sole survivor in clan arena and when g_lastManStandingWarning 1. |
+| `g_lastManStandingWarning` |  | 1 | g_lastManStandingWarning [0\|1] | Enables the use of the sole survivor message in clan arena in a server. |
+| `g_levelStartTime` | S / R / A | 0 | ??? | ??? |
+| `g_log` | A | 0 | g_log [0\|1] /  / 1 = Enables logging | Enables logging of game data and statistics. |
+| `g_log_shuffle` |  | 0 | g_log_shuffle [0\|1] | ??? |
+| `g_logSync` | A | 0 | g_logSync [0\|1] /  / 0 = overwrite existing files /  / 1 = write to the end of an existing file. | Enables logging to append to an existing file. |
+| `g_max_knockback` |  | 120 | g_max_knockback <factor> | Sets maximum knock-back factor. |
+| `g_maxDeferredSpawns` | S | 4 | g_maxDeferredSpawns <value> | ??? |
+| `g_maxFlightFuel` |  | 16000 | g_maxFlightFuel <amount> | Sets the amount of flight time given by the holdable flight item. |
+| `g_maxGameClients` | S / A / L | 0 | g_maxGameClients <amount> | Sets maximum amount of players that are allowed to populate a server. |
+| `g_maxSkillTier` | S | 0 | g_maxSkillTier <0 – 5> /  / 1 – 5 = max skill level set | The client skill level limit of the server. |
+| `g_maxStandardClients` | S A L | 0 | g_maxStandardClients [number] | Sets the maximum number of standard membership players that can be connected to the server at a given time. |
+| `g_mercytime` | A | 0 | g_mercytime <time> | An optional component to mercylimit, in teamgames with timelimits, you may set g_mercytime to the number of minutes of gameplay that must first pass before mercylimit is enforced. |
+| `g_minplayers_ctf` |  | 2 | g_minplayers_ctf <quantity> | Sets the minimum amount of players needed for a CTF match to be allowed to begin. |
+| `g_motd` |  | - | g_motd [string] | Sets message of the day string. Displayed using cl_motd. |
+| `g_nailbounce` |  | 1 | g_nailbounce <value> | Sets the amount of times nails bounce of walls, floors etc.; the percentage of which is controlled by g_nailbouncepercentage. |
+| `g_nailbouncepercentage` |  | 65 | g_nailbouncepercentage <value> | Sets the percentage of nails that will bounce off of surfaces. |
+| `g_nailcount` |  | 10 | g_nailcount <amount> | Sets the number of nails fired per shot by the nailgun. |
+| `g_nailspeed` |  | 1000 | g_nailspeed <value> | Sets the velocity of nails. |
+| `g_nailspread` |  | 400 | g_nailspread <spread> | Sets the spread of nail projectiles fired by the nailgun. |
+| `g_needpass` | S / R | - | g_needpass [0\|1] | Informs that clients are required to enter a password to join the server. |
+| `g_noobArmor` |  | 0 | g_noobArmor [0\|1] | ??? |
+| `g_noobArmorDmgScale` |  | 0.5 | g_noobArmorDmgScale <amount> | ??? |
+| `g_obeliskHealth` |  | 2500 | g_obeliskHealth <value> | Maximum amount of health an Obelisk can have. |
+| `g_obeliskRegenAmount` |  | 15 | g_obeliskRegenAmount <value> | Amount of health an Obelisk regenerates at a time. |
+| `g_obeliskRegenPeriod` |  | 1 | g_obeliskRegenPeriod <value> | Obelisk delays between health regeneration. |
+| `g_obeliskRespawnDelay` |  | 10 | g_obeliskRespawnDelay <value> | Delay that occurs after an Obelisk is destroyed before a new one spawns. |
+| `g_overtime` | S | 120 | g_overtime <value> | Duration of the overtime periods (in seconds) in deathmatch games. |
+| `g_password` | U | - | g_password [string] | Sets the server-side password for clients to use to join the server. |
+| `g_playerCylinders` |  | 1 | g_playercylinders [0\|1] /  / 0 = rectangular bounding boxes /  / 1 = cylindrical bounding boxes | Enables the use of cylindrical player bounding boxes. |
+| `g_playerheadmodelOverride` |  | - | g_playerheadmodelOverride [model] | Forces all player head models viewed by clients in a server to a specific head model. |
+| `g_playerheadScale` |  | 1.0 | g_playerheadScale <scale> | Scales the player head models. |
+| `g_playerheadScaleOffset` |  | 1.0 | ??? | ??? |
+| `g_playerModelScale` |  | 1.1 | g_playerModelScale <scale> | Scales the player models. |
+| `g_playermodelOverride` |  | - | g_playermodelOverride [model] | Forces all player models viewed by clients in a server to a specific model. |
+| `g_podiumDist` |  | 80 | g_podiumDist <value> | Sets the distance of the podium from the camera. (that you see at the end of Single Player matches) |
+| `g_podiumDrop` |  | 70 | g_podiumDrop <value> | Sets the height of the podium in relation to the camera view. (that you see at the end of Single Player matches) |
+| `g_proxMineTimeout` |  | 20000 | g_proxMineTimeout <time> | Time it takes for proximity mines to expire and explode. |
+| `g_quadDamageFactor` |  | 3 | g_quadDamageFactor <factor> | Sets the Quad Damage damage multiplying factor. |
+| `g_quadHog` |  | 0 | g_quadHog [0\|1] | Enables Quad Hog mode - players score frags only while holding Quad, which randomly respawns at player spawn points around the map. |
+| `g_quadHogIdle` |  | 20 | g_quadHogIdle <delay> | Enables Quad Hog mode - players score frags only while holding Quad, which randomly respawns at player spawn points around the map. |
+| `g_quadHogTime` |  | 60 | g_quadHogTime <time> | Quad Hog (g_quadHog 1): Sets the amount of time (in seconds) that a Quad Damage carrier gets of power-up time. |
+| `g_railJump` |  | 0 | g_railJump [0\|1] | Enables rail-jumping |
+| `g_range_sg_falloff` |  | 768 | g_range_sg_falloff <value> | Sets shotgun falloff distance (in units). |
+| `g_range_lg_falloff` |  | 768 | g_range_lg_falloff <value> | Sets lightning shaft falloff distance (in units). |
+| `g_reflector` |  | 0 | ??? | ??? |
+| `g_regenArmor` |  | 0 | g_regenArmor [0\|1] | Regenerates players' armor |
+| `g_regenArmorRate` |  | 100 | g_regenArmorRate <time> | Sets time delay (in milliseconds) for armor regeneration when g_regenArmor is set to 1 |
+| `g_regenHealth` |  | 0 | g_regenHealth [0\|1] | Regenerates players' health to a maximum of 100 |
+| `g_regenHealthRate` |  | 100 | g_regenHealthRate <time> | Sets time delay (in milliseconds) for health regeneration when g_regenHealth is set to 1 |
+| `g_reportcache_delay` |  | 1000 | g_reportcache_delay <value> | ??? |
+| `g_reportcache_enable` |  | 1 | g_reportcache_enable [0\|1] | ??? |
+| `g_respawn_delay_max` |  | 2400 | g_respawn_delay_max <time> | Sets maximum time (in milliseconds) for respawn delays. |
+| `g_respawn_delay_min` |  | 2100 | g_respawn_delay_min <time> | Sets minimum time (in milliseconds) for respawn delays. |
+| `g_restarted` | R | 0 | g_restarted | Toggles when a match is restarted and tells the game if a warmup round is needed (if applicable). |
+| `g_rocketsplashOffset` |  | -10.0 | g_rocketsplashOffset <value> | Sets rocket splash damage offset. |
+| `g_runespawntime` |  | 10 | g_runespawntime <time> | Time it takes for CTF powerup runes to respawn. |
+| `g_shuffle_automatic` |  | 0 | g_shuffle_automatic [0\|1] | Enables automatic team shuffling. |
+| `g_shuffle_automatic_minplayers` |  | 6 | ??? | ??? |
+| `g_shuffle_minplayers` |  | 3 | g_shuffle_minplayers <amount> | Sets the amount of players in warm up rounds in team based games required before shuffling can be called. |
+| `g_shuffle_timedelay` |  | 5000 | ??? | ??? |
+| `g_shufflePingHandicap` |  | 0.0 | ??? | ??? |
+| `g_shufflePowerRatingThreshold` |  | 4 | g_shufflePowerRatingThreshold <value> | Sets the power rating threshold applied to team shuffles. |
+| `g_skipTrainingEnable` | R | 0 | g_skipTrainingEnable | Enables skipping of training matches. |
+| `g_smoothClients` |  | 0 | g_smoothClients [0\|1] | Enables clients’ use of smooth clients on a server. |
+| `g_spAwards` | R / A | - | g_spAwards <awards> | Single Player awards variable. |
+| `g_spawnArmor` |  | 0 | g_spawnArmor [amount] | Sets the amount of armor issued to players when spawning. N/A for Clan Arena |
+| `g_spawnArmor` |  | 0 | g_spawnArmor [0\|1] | ??? |
+| `g_spawnArmorDmgScale` |  | 0.5 | g_spawnArmorDmgScale <amount> | ??? |
+| `g_spawnItemAmmo` |  | 1 | g_spawnItemAmmo [0\|1] | Enables the spawning of ammunition in a game. |
+| `g_spawnItemArmor` |  | 1 | g_spawnItemArmor [0\|1] | Enables the spawning of armor items in a game. |
+| `g_spawnItemHealth` |  | 1 | g_spawnItemHealth [0\|1] | Enables the spawning of health items in a game. |
+| `g_spawnItemHoldable` |  | 1 | g_spawnItemHoldable [0\|1] | Enables the spawning of holdable items in a game. |
+| `g_spawnItemPowerup` |  | 1 | g_spawnItemPowerup [0\|1] | Enables the spawning of power-ups in a game. |
+| `g_spawnItemRune` |  | 1 | g_spawnItemRune [0\|1] | Enables the spawning of runes in a game. |
+| `g_spawnItemWeapons` |  | 1 | g_spawnItemWeapons [0\|1] | Enables the spawning of weapons in a game. |
+| `g_spawnMinDistance` | C | 64 | g_spawnMinDistance <value> | Sets minimum respawning distance from death. |
+| `g_spawnRandomRatio` | C | 0.4 | g_spawnRandomRatio <value> | Sets random respawning ratio. |
+| `g_speed` |  | 320 | g_speed <value> | Player movement speed. |
+| `g_splashdamage_bfg` |  | 100 | g_splashdamage_bfg <value> | Sets the splash damage of the BFG cell. |
+| `g_splashdamage_gl` |  | 100 | g_splashdamage_gl <value> | Sets the splash damage of grenades. |
+| `g_splashdamage_pg` |  | 15 | g_splashdamage_pl <value> | Sets the splash damage done by plasma cells. |
+| `g_splashdamage_pl` |  | 100 | g_splashdamage_pl <value> | Sets the splash damage done by prox mines. |
+| `g_splashdamage_rl` |  | 84 | g_splashdamage_rl <value> | Sets the splash damage done by rockets. |
+| `g_splashdamageOffset` |  | 0.05 | g_splashdamageOffset <value> | ??? |
+| `g_splashradius_bfg` |  | 80 | g_splashradius_bfg <radius> | Sets the splash damage radius of every BFG cell. |
+| `g_splashradius_gl` |  | 150 | g_splashradius_gl <radius> | Sets the splash damage radius of every grenade. |
+| `g_splashradius_pg` |  | 20 | g_splashradius_pg <radius> | Sets the splash damage radius of every plasma cell. |
+| `g_splashradius_pl` |  | 150 | g_splashradius_pl <radius> | Sets the splash damage radius of every proximity mine. |
+| `g_splashradius_rl` |  | 120 | g_splashradius_rl <radius> | Sets the splash damage radius of every rocket. |
+| `g_spScores1` | R / A | - | g_spScores1 | Contains Single Player scores on skill level 1 (I Can Win). |
+| `g_spScores2` | R / A | - | g_spScores2 | Contains Single Player scores on skill level 2 (Bring it On). |
+| `g_spScores3` | R / A | - | g_spScores3 | Contains Single Player scores on skill level 3 (Hurt Me Plenty). |
+| `g_spScores4` | R / A | - | g_spScores4 | Contains Single Player scores on skill level 4 (Hardcore). |
+| `g_spScores5` | R / A | - | g_spScores5 | Contains Single Player scores on skill level 5 (Nightmare). |
+| `g_spSkill` | A | 2 | g_spSkill [1\|2\|3\|4\|5] /  / 1 = I Can Win /  / 3 = Hurt Me Plenty /  / 5 = Nightmare | Sets Single Player skill level. |
+| `g_spVideos` | R / A | - | g_spVideos | Contains the names of videos played during matches in Single Player. |
+| `g_startingAmmo` |  | 100 | g_startingAmmo <value> | Seems to be ineffectual. |
+| `g_startingammo_mg` |  | 100 | g_startingammo_mg <integer> | Sets the amount of machine gun ammo that players spawn with. |
+| `g_startingArmor` |  | 0 | g_startingArmor <value> | Sets the specified amount as armor players receive when spawning. |
+| `g_startingHealth` |  | 100 | g_startingHealth <value> | Sets the specified amount as the health players receive when spawning. |
+| `g_startingHealthBonus` |  | 25 | g_startingHealthBonus <value> | Adds the specified bonus amount of health to players' health when spawning |
+| `g_startingWeapons` |  | 3 | g_startingweapons [bitmask] / &1 = Gauntlet /  / &2 = Machinegun /  / &4 = Shotgun /  / &8 = Grenade Luncher /  / &16 = Rocket Luncher /  / &32 = Lightning Gun /  / &64 = Railgun /  / &128 = Plasmagun /  / &256 = BFG /  / &512 = Grappling Hook /  / &1024 = Nailgun /  / &2048 = Prox Launcher /  / &4096 = Chaingun /  / &8192 = Map Default Weapons | "Sets the starting weapon and you can combine it by summing it up. Examples: / Gauntlet + Machinegun (default) = 3 /  / All Weapons = 8191 /  / All Weapons minus Grapple = 7679 /  / Standard CA loadout = 255 /  / " |
+| `g_startingWeapons` |  | 3 | g_startingweapons [1\|2\|4\|8\|16\|32\| /  / 128\|256\|512\|1024\|2048\|4096\|8192] /  / 1 = Gauntlet /  / 2 = Machinegun /  / 4 = Shotgun /  / 8 = Grenade Luncher /  / 16 = Rocket Luncher /  / 32 = Lightning Gun /  / 64 = Railgun /  / 128 = Plasmagun /  / 256 = BFG /  / 512 = Grappling Hook /  / 1024 = Nailgun /  / 2048 = Prox Launcher /  / 4096 = Chaingun /  / 8192 = Map Defualt Weapons | Sets the starting weapon and you can combine it by summing it up, for example: /  / * Gauntlet and Machinegun = 3 /  / * Machinegun and Shotgun and Rocket Launcher = 22 /  / and so on |
+| `g_suddenDeathRespawn` |  | 0 | g_suddenDeathRespawn [0\|1] | Controls the player respawn delay when CTF matches enter sudden death. |
+| `g_suddenDeathRespawn /  / Increment` |  | 1 | g_suddenDeathRespawnIncrement <time> | Sets the amount of time (in seconds) added to player respawn delays in CTF sudden death rounds with every tick. |
+| `g_suddenDeathRespawnMax` |  | 10 | g_suddenDeathRespawnMax <time> | Sets the maximum amount of time (in seconds) that player respawn delays can reach in CTF sudden death rounds. |
+| `g_suddenDeathRespawnPrint` |  | 1 | g_suddenDeathRespawnPrint [0\|1] | Enables messages regarding respawn delays in CTF sudden death rounds. |
+| `g_suddenDeathRespawnStart` |  | 3 | g_suddenDeathRespawnStart <value> | Sets the initial respawn delay when CTF matches enter sudden death, when g_suddenDeathRespawn 1. |
+| `g_suddenDeathRespawnTick` |  | 60 | g_suddenDeathRespawnTick <value> | Sets the player respawn delay increment interval in CTF sudden death rounds. |
+| `g_tackleFlag` |  | 0 | g_tackleFlag [0\|1] | Forces flag carriers in CTF and One Flag CTF to drop the flag in the event of a gauntlet attack. |
+| `g_teamAutoJoin` | A | 0 | g_teamAutoJoin [0\|1] | Allows team auto-join on a server. |
+| `g_teamForceBalance` | A | 0 | g_teamForceBalance [0\|1] | Forces team balancing on a server. |
+| `g_teamLocators` |  | 0 | g_teamLocators [0\|1] | ??? <<< |
+| `g_teamSizeMin` |  | 1 | g_teamSizeMin [number] | ??? |
+| `g_teamSpecFreeCam` |  | 1 | g_teamSpecFreeCam [0\|1] | Allows free cam spectator mode for fragged players during clan arena rounds. |
+| `g_teamSpecSayEnable` |  | 1 | g_teamSpecSayEnable [0\|1] | Allows fragged players in clan arena to use team chat. |
+| `g_throwFlagForwardMult` |  | 2.5 | ??? <<< | ??? <<< |
+| `g_throwFlagVelocity` |  | 0 | ??? <<< | ??? <<< |
+| `g_timeoutCount` | S | 3 | g_timeoutCount <time> | ??? |
+| `g_timeoutLen` |  | 30 | g_timeoutLen <amount> | ??? |
+| `g_training` |  | 0 | g_training [0\|1] | Enables training mode, such as that of the skill placement match with Crash. |
+| `g_velocity_bfg` |  | 1800 | g_velocity_bfg <velocity> | Sets the projectile velocity (in units/second) for BFG cells. |
+| `g_velocity_gl` |  | 700 | g_velocity_gl <velocity> | Sets the projectile velocity (in units/second) for grenades. |
+| `g_velocity_pg` |  | 2000 | g_velocity_pg <velocity> | Sets the projectile velocity (in units/second) for plasma cells. |
+| `g_velocity_rl` |  | 1000 | g_velocity_rl <velocity> | Sets the projectile velocity (in units/second) for rockets. |
+| `g_version` | R | - | g_version | Holds game version information. |
+| `g_voteDelay` |  | 0 | g_voteDelay <delay> | Sets the minimum time at the start of warmup before any voting can occur. |
+| `g_voteFlags` | S A | 0 | g_voteFlags [bitmask] / &1 = map /  / &2 = map_restart /  / &4 = nextmap /  / &8 = g_gametype /  / &16 = clientkick/kick /  / &32 = ??? /  / &64 = timelimit /  / &128 = fraglimit /  / &256 = shuffle /  / &512 = teamsize /  / &1024 = cointoss /  / &2048 = ruleset | Sets which vote commands are disabled on the server. |
+| `g_voteLimit` |  | 0 | g_voteLimit [value] | Sets the maximum number of times the same vote can be called. |
+| `g_voteFlags` | S / A | 0 | g_voteflags <flags> | ??? |
+| `g_warmup` | A | 10 | g_warmup [time] | Sets the time (in seconds) in which it takes to progress from pre-game readyup phase to match start. |
+| `g_warmupDelay` |  | 30 | g_warmupDelay <time> | Sets the amount of time (in seconds) it takes from progressing from warm up round to match start when enough players are ready to begin. |
+| `g_weaponrespawn` |  | 5 | g_weaponrespawn <time> | Respawn rate of weapons. |
+| `g_weaponTeamRespawn` |  | 12 | g_weaponTeamRespawn <time> | Respawn rate of weapons in team deathmatch. |
+| `gamedate` | R | - | gamedate | Displays game version information. Shows the date of the last update installed. |
+| `gamename` | S / R | - | gamename | Displays game name. |
+| `graphheight` | C | 32 | graphheight <value> | Sets height in pixels for graph displays. |
+| `graphscale` | C | 1 | graphscale <value> | Sets scale multiplier of graphs. |
+| `graphshift` | C | 0 | graphshift <value> | Sets offset for graph displays. |
+| `gt_admin` | R | - | gt_admin | ??? |
+| `gt_eventid` | R / A | 0 | gt_eventid | ??? |
+| `gt_eventtype` | R / A | None | gt_eventtype | ??? |
+| `gt_master` | A | - | ??? | ??? |
+| `gt_noEidReq` |  | 0 | ??? | ??? |
+| `gt_pass` | R | - | ??? | ??? |
+| `gt_realm` | S / A | quakelive | ??? | ??? |
+| `gt_user` | U / R | - | gt_user | ??? |
 
-Weapon damage reference (from g_ cvars):
+## CVARs: H
 
-| Weapon | Direct | Splash | Radius |
-|--------|--------|--------|--------|
-| BFG | 100 | 100 | 80 |
-| Chaingun | 8/bullet | - | - |
-| Gauntlet | 50 | - | - |
-| Grenade Launcher | 100 | 100 | 150 |
-| Lightning Gun | 7/tick | - | - |
-| Machinegun | 5 (4 TDM) | - | - |
-| Nailgun | 12/nail | - | - |
-| Plasmagun | 20/cell | 15 | 20 |
-| Railgun | 80 | - | - |
-| Rocket Launcher | 100 | 84 | 120 |
-| Shotgun | 5/pellet (4 TDM) | - | - |
-| Prox Mine | 0 | 100 | 150 |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `handicap` | U / A / T | 100 | handicap [0-100] | Sets your player health handicap. |
+| `headmodel` | U / A / T | sarge | headmodel <model> | Sets player head model. Not applicable for Quake Live. |
+
+## CVARs: I
+
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `in_debugjoystick` |  | 0 | in_debugjoystick [0\|1] | Enables the joystick debugging tool. |
+| `in_debugMouse` |  | 0 | in_debugMouse [0\|1] | Enables the mouse debugging tool. |
+| `in_joyBallScale` | A | 1.0 | in_joyBallScale [value] | Sets the sensitivity of a joyball input device. |
+| `in_joyHorizMoveDeadzone` | A | 0.50 | in_joyHorizMoveDeadzone <value> | ??? |
+| `in_joyHorizViewDeadzone` | A | 0.15 | in_joyHorizViewDeadzone <value> | ??? |
+| `in_joyHorizViewSensitivity` | A | 20.0 | in_joyHorizViewSensitivity <value> | Horizontal sensitivity for joysticks. |
+| `in_joystick` | A / L | 0 | in_joystick [0\|1] | Allows the use of a joystick. |
+| `in_joystick_inverted` | A | 0 | in_joystick_inverted [0\|1] /  / 0 = normal input /  / 1 = inverted input | Inverts vertical joystick input. |
+| `in_joyVertMoveDeadzone` | A | 0.15 | in_joyVertMoveDeadzone <value> | ??? |
+| `in_joyVertViewDeadzone` | A | 0.15 | in_joyVertViewDeadzone <value> | ??? |
+| `in_joyVertViewSensitivity` | A | 15.0 | in_joyVertSensitivity <value> | Vertical sensitivity for joysticks. |
+| `in_midi` | A | 0 | in_midi [0\|1] | Allows the use of a MIDI control. |
+| `in_midichannel` | A | 1 | in_midichannel [0\|1] | Allows the use of a MIDI channel as an input device. |
+| `in_mididevice` | A | 0 | in_mididevice [0\|1] | Allows the use of a MIDI device as an input device. |
+| `in_midiport` | A | 1 | in_midiport [0\|1] | Enables the use of a MIDI port. |
+| `in_mouse` | A / L | 2 | in_mouse [-1\|0\|1\|2] /  / -1 = Windows mouse input /  / 1 = Direct input /  / 2 = Raw input | Controls the in-game mouse input. |
+| `in_mouseMode` | R / A | Undefined | in_mouseMode [driver] | Sets mouse driver source. |
+| `in_nograb` | T | 0 | in_nograb [0\|1] | Developer input device tool for in Linux – allows an application break to occur without losing the mouse pointer. |
+
+## CVARs: J
+
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `journal` | I | 0 | journal [0\|1] | Sets whether journal.dat is written in the game directory. |
+| `joy_threshold` | A | 0.15 | joy_threshold [value] | Joystick threshold setting. |
+
+## CVARs: L
+
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `logfile` |  | 0 | logfile [0\|1\|2\|3] /  / 1 = buffered /  / 2 = continuous /  / 3 = append | Console logging to qconsole.log. |
+
+## CVARs: M
+
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `m_cpi` | A T | 0 | m_cpi <value> | Sets counts per inch for mouse input. It is useful as a way of retaining the same sensitivity and acceleration when changing mice. Detailed information can be found here: www.quakelive.com/forum/showthread.php?15458-New-Mouse-Sensitivty-and-Mouse-Accel-Features |
+| `m_filter` | A | 0 | m_filter [0\|1] | Smoothes mouse movement. |
+| `m_forward` | A | 0.25 | m_forward [value] | Back and forward player movement speed in relation to mouse movement. |
+| `m_pitch` | A / T | 0.022 | m_pitch [value] | Vertical view movement sensitivity. |
+| `m_side` | A | 0.25 | m_side [value] | Strafe player movement speed in relation to mouse movement. |
+| `m_yaw` | A | 0.022 | m_yaw [value] | Horizontal view movement sensitivity |
+| `mapname` | S / R / A | - | mapname | Displays the name of the current map for server hosts and local host. |
+| `mercylimit` | S A | 0 | mercylimit [value] | In teamgames that have a timelimit set, you may set mercylimit to trigger the match to end if the team score difference (spread) ever becomes greater than or equal to the mercylimit. |
+| `model` | U / T | sarge/ /  / default | model [model] | Customises your in-game player model. |
 
 ## CVARs: N
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `net_noudp` [I] | 0 | Disable UDP networking |
-| `net_ip` [I] | - | IP address to bind server to |
-| `net_port` [I] | 27960 | Network port |
-| `net_socksEnabled` [I] | 0 | Enable SOCKS proxy |
-| `nextmap` | - | Map to load after current map ends |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `name` | U / A / T | Unnamed /  / Player | name <playername> | Your player name. In Quake Live, any changes which alter the alpha-numerical display of your name are immediately reset to your registered name. |
+| `net_ip` | L | - | net_ip <address> | Holds the name or IP address of the local machine. |
+| `net_noudp` | A / L | 0 | net_noudp [0\|1] | Enables the use of TCP/IP network protocol. |
+| `net_port` | L | - | net_port <port> | Sets servers port number when there’s multiple clients on the same machine. |
+| `net_qport` |  | - | net_qport <port> | Sets internal network port. |
+| `net_socksEnabled` | A / L | 0 | net_socksEnabled [0\|1] | Enables socks 5 network protocol. |
+| `net_socksPassword` | A / L | - | net_socksPassword <password> | Sets password for socks network/firewall access. |
+| `net_socksPort` | A / L | 1080 | net_socksPort <port> | Sets proxy and firewall port. |
+| `net_socksServer` | A / L | - | net_socksServer <address> | Sets the name or IP address of the socks server. |
+| `net_socksUsername` | A / L | - | net_socksUsername <username> | Sets the username for socks firewall supports. It does not support GSS-API authentication. |
+| `net_strict` |  | 1 | net_strict [0\|1] | Hypothesis is that when enabled, it forces localhost to use port 27960. If this port is in use Quake Live will crash when going to localhost. It is unknown if disabling it would prevent this, untested. |
+| `nextmap` | A | map_ /  / restart 0 | nextmap | Holds the name of the next map in the server map rotation. |
 
-## CVARs: P — Physics
+## CVARs: P
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `pmove_fixed` | 0 | Fixed physics timestep (1=required for consistent physics) |
-| `pmove_msec` | 8 | Physics timestep in ms (8=125Hz) |
-| `pmove_float` | 0 | Floating point movement |
-| `pm_bunnyhopping` | 1 | Enable bunny hopping |
-| `pm_airstrafejump` | 1 | Enable air-strafing during jumps |
-| `pm_maxStepSize` | 18 | Maximum step height |
-| `pm_fallheight_damage` | 74 | Fall damage threshold (units/sec) |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `password` | U | - | password <string> | Password string for connecting to password-protected servers. |
+| `plugin_version` | R | - | plugin_version | Currently-installed plug-in list. |
+| `pmove_AirAccel` |  | 1.0 | pmove_AirAccel <acceleration> | Sets the amount of acceleration available to players in mid-air. |
+| `pmove_AirSteps` |  | 1 | pmove_AirSteps [0\|1] | ??? |
+| `pmove_JumpTimeDeltaMin` |  | 100.0 | pmove_JumpTimeDeltaMin | ??? |
+| `pmove_JumpVelocity` |  | 275 | pmove_JumpVelocity <velocity> | Sets the player jump velocity. |
+| `pmove_JumpVelocityScaleAdd` |  | 0.4 | pmove_JumpVelocityScaleAdd | ??? |
+| `pmove_JumpVelocityTime /  / Threshold` |  | 500.0 | pmove_JumpVelocityTimeThreshold | ??? |
+| `pmove_RampJump` |  | 0 | pmove_RampJump [0\|1] | Enables ramp jumping. |
+| `pmove_RampJumpScale` |  | 1.0 | pmove_RampJumpScale <scale> | Sets the ramp jumping factor when pmove_RampJump 1. |
+| `pmove_StepHeight` |  | 22.0 | pmove_StepHeight <height> | Sets the set height (in map units). |
+| `pmove_StepJump` |  | 1 | pmove_StepJump [0\|1] | Enables stepping in player jumps. |
+| `pmove_WalkAccel` |  | 10.0 | pmove_WalkAccel <acceleration> | Handles user-intended walking/running acceleration. |
+| `pmove_WalkFriction` |  | 6.0 | pmove_WalkFriction <friction> | Sets the amount of surface friction applied to player movement when walking/running. |
+| `pmove_WeaponDropTime` |  | 200 | pmove_WeaponDropTime <time> | Controls the weapon drop time between weapon changes. |
+| `pmove_WeaponRaiseTime` |  | 200 | pmove_WeaponRaiseTime <time> | Controls the weapon raise time between weapon changes. |
+| `practiceflags` |  | 0 | practiceflags [flags] | Sets flags in practice match. |
+| `protocol` | S / R | 73 | protocol | Displays the network protocol number. |
 
-## CVARs: R — Rendering
+## CVARs: R
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `r_mode` | -2 | Resolution: -2=desktop, -1=custom, 0-27=presets |
-| `r_customwidth` | 1600 | Custom width (when r_mode -1) |
-| `r_customheight` | 1024 | Custom height (when r_mode -1) |
-| `r_fullscreen` | 0 | 0=Windowed, 1=Fullscreen |
-| `r_aspectRatio` | 0 | 0=4:3, 1=16:9, 2=16:10, 3=5:4 |
-| `r_displayRefresh` | 0 | Monitor refresh rate (Hz) |
-| `r_colorbits` | 32 | Color depth (16 or 32) |
-| `r_depthbits` | 0 | Z-buffer depth |
-| `r_texturebits` | 32 | Texture quality (16 or 32) |
-| `r_noFastRestart` | 0 | 0=attempt mode switch without full reload |
-| `r_picmip` | 0 | Texture detail: 0=highest, 16=near solid colors; requires vid_restart |
-| `r_textureMode` | GL_LINEAR_MIPMAP_LINEAR | Bilinear=GL_LINEAR_MIPMAP_NEAREST, Trilinear=GL_LINEAR_MIPMAP_LINEAR |
-| `r_detailtextures` | 1 | Detail texturing |
-| `r_roundImagesDown` | 1 | Round images down; boosts performance |
-| `r_simpleMipMaps` | 1 | Simple MIP mapping; boosts performance |
-| `r_intensity` | 1 | Brightness on textures and model skins |
-| `r_fullbright` | 0 | 1=all map textures at full brightness |
-| `r_ext_compressed_textures` | 0 | External texture compression |
-| `r_gamma` | 1 | Image luminance |
-| `r_contrast` | 1.0 | Contrast |
-| `r_ambientScale` | 10 | Ambient light among players |
-| `r_overBrightBits` | 1 | Ambient lighting on entities (0-4) |
-| `r_mapOverBrightBits` | 2 | Ambient lighting on map geometry (0-10) |
-| `r_dynamiclight` | 1 | Dynamic lights |
-| `r_directedScale` | 1 | Lighting intensity on world objects |
-| `r_drawSun` | 0 | Sunlight simulation (0 recommended) |
-| `r_flares` | 0 | Projectile flare effects |
-| `r_flareSize` | 40 | Size of flares |
-| `r_flareFade` | 7 | Fading scale of flares |
-| `r_vertexlight` | 0 | 0=light maps, 1=vertex lighting |
-| `r_lightmap` | 0 | Light data model |
-| `r_teleporterFlash` | 1 | 0=black frame on teleport instead of white flash |
-| `r_enablePostProcess` | 1 | Post-processing pipeline (performance hit) |
-| `r_enableBloom` | 0 | Bloom (requires r_enablePostProcess 1) |
-| `r_enableColorCorrect` | 1 | Color correction (requires r_enablePostProcess 1) |
-| `r_BloomBrightThreshold` | 0.125 | Lower=more bloom (0-1) |
-| `r_BloomIntensity` | 0.750 | Bloom intensity (0-10) |
-| `r_BloomSaturation` | 0.800 | Bloom color saturation (0-10) |
-| `r_BloomSceneIntensity` | 1.000 | Non-bloomed world brightness (0-10) |
-| `r_BloomPasses` | 1 | Rendering passes for bloom |
-| `r_floatingPointFBOs` | 0 | Experimental floating point FBOs; modern GPUs only |
-| `r_facePlaneCull` | 1 | Brush face culling; boosts performance |
-| `r_lodbias` | 0 | Geometric detail: 0=High, 1=Medium, 2=Low |
-| `r_subdivisions` | 4 | Patch subdivisions; 80=angled surfaces for performance |
-| `r_fastsky` | 0 | 1=disable sky boxes |
-| `r_fastSkyColor` | 0x000000 | Solid sky color when r_fastsky 1 (hex) |
-| `r_drawentities` | 1 | Draw world entities |
-| `r_maxpolys` | 600 | Max polygons drawn |
-| `r_maxpolyverts` | 3000 | Max polygon vertices |
-| `r_ext_compiled_vertex_array` | 1 | CVA extension; boosts performance |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `r_allowExtensions` | A / L | 1 | r_allowExtensions [0\|1] | Global enabling of all OpenGL extensions. |
+| `r_allowSoftwareGL` | L | 0 | r_allowSoftwareGL [0\|1] /  / 0 = diabled | Enables the use of the default OpenGL  /  / drivers provided by the operating system. |
+| `r_ambientScale` | A / T | 10 | r_ambientScale <value> | Controls the amount of ambient light cast among players. |
+| `r_aspectRatio` | A / L | 0 | r_aspectRatio [0\|1\|2\|3] /  / 0 = 4:3 /  / 1 = 16:9 /  / 2 = 16:10 /  / 3 = 5:4 | Controls the game’s screen aspect ratio setting. |
+| `r_bloomActive` | R | 0 | r_bloomActive | Dictates whether the bloom effect is active. |
+| `r_BloomBlurFalloff` |  | 0.75 | r_bloomBlurRadius <amount> | ??? |
+| `r_BloomBlurRadius` |  | 5 | r_bloomBlurRadius <amount> | ??? |
+| `r_BloomBlurScale` |  | 1.0 | r_bloomBlurScale <amount> | ??? |
+| `r_BloomBrightThreshold` | A / T | 0.125 | r_bloomBrightThreshold <value> | Sets the bloom threshold when r_enableBloom 1 and r_enablePostProcess 1. The lower the threshold, the  /  / more bloom drawn. <0-1> |
+| `r_BloomIntensity` | A / T | 0.750 | r_bloomintensity <value> | Sets the bloom intensity when r_enableBloom 1 and r_enablePostProcess 1. The higher the value, the  /  / more intensive and bright the  /  / bloom effect will be. <0-10> |
+| `r_BloomPasses` | A / L | 1 | r_bloomPasses <value> | Sets the number of rendering passes for bloom effect. |
+| `r_BloomSaturation` | A / T | 0.800 | r_bloomSaturation <value> | Sets the degree of color saturation applied to the bloom effect when r_enableBloom 1 and r_enablePostProcess 1. The higher the value, the more colorful the /  / bloom effect will appear to be. <0-10> |
+| `r_BloomSceneIntensity` | A / T | 1.000 | r_bloomSceneIntensity <value> | Sets the intensity of brightness applied to the non-bloomed world when r_enableBloom 1 and r_enablePostProcess 1. The higher the value, the brighter the non-bloomed world will appear to be. <0-10> |
+| `r_BloomSceneSaturation` | A / T | 1.000 | r_bloomSceneSaturation <value> | Sets the degree of color saturation applied to the non-bloomed world when r_enableBloom 1 and r_enablePostProcess 1. The higher the value, the more colorful the non-bloomed world will appear to be. <0-10> |
+| `r_clear` | C | 0 | r_clear [0\|1] | Enables the clearing of the screen between video frames. |
+| `r_colorbits` | A / L | 32 | r_colorbits [16\|32] /  / 0 = default /  / 16 = 16 bit color /  / 24 = 24 bit color /  / 32 = 32 bit color | Sets video color depth. |
+| `r_colorCorrectActive` | R | 0 | r_colorCorrectActive | Dictates whether color correction is active. |
+| `r_colorMipLevels` | L | 0 | r_colorMipLevels [0\|1] | A developer aid to see texture mip usage. |
+| `r_contrast` | A | 1.0 | r_contrast <value> | Sets the level of contrast. |
+| `r_customheight` | A / L | 1024 | r_customheight <value> | Sets the custom vertical resolution when r_mode -1. |
+| `r_customwidth` | A / L | 1600 | r_customwidth <value> | Sets the custom horizontal resolution when r_mode -1. |
+| `r_debugAds` |  | 0 | r_debugAds [0\|1] | Debugging tool for in-game advertisement entities. |
+| `r_debuglight` |  | 0 | r_debuglight [0\|1] | Debugging tool: writes ambient light data to console. |
+| `r_debugSort` | C | 0 | r_debugSort [0\|1] | A debugging tool that only renders those sort  /  / layers that are greater than the value of the variable set. |
+| `r_debugSurface` | C | 0 | r_debugSurface [0\|1\|2] | Debugging tool: shows bounding boxes of patch mesh surfaces that are targeted by the camera view. |
+| `r_debugSurfaceUpdate` |  | 1 | r_debugSurfaceUpdate [0\|1] /  / 0 = first bounding box that appears will remain and others will not appear. /  / 1 = changes the bounding box according to location. | When r_debugSurface is 1, this enables  /  / changing the patch mesh surface bounding box according to location. |
+| `r_depthbits` | A / L | 0 | r_depthbits [bits] /  / 0 = Uses the desktop depth bits. /  / 16 = 16-bit. Can result in artifacts. /  / 24 = 24-bit* /  / 32 = 32 bit* /  / *24 or 32 bit recommended | Sets Z-buffer depth. |
+| `r_detailtextures` | A / L | 1 | r_detailtextures [0\|1] | Enables the usage of detail texturing stages. |
+| `r_directedScale` | C | 1 | r_directedScale <value> | Sets the lighting intensity applied to world objects. |
+| `r_displayRefresh` | A / L | 0 | r_displayRefresh <rate> | Monitor refresh rate (in Hertz), useful for CRT monitors. |
+| `r_drawBuffer` | C | GL_BACK | r_drawbuffer [buffer] | Sets which frame buffer to draw into. Basically you draw into  /  / a "back" buffer while simultaneously showing a "front" buffer.  /  / Next frame you "swap" these. The benefit is that you  /  / won't "see" the actual painting of the image take place.  /  / However, in Quake Live, probably only gl_back  /  / will actually render. |
+| `r_drawentities` | C | 1 | r_drawentities [0\|1] | Enables the drawing of world entities (weapons, items, player models etc.). |
+| `r_drawskyfloor` |  | 1 | r_drawskyfloor [0\|1] | Enables a visual fix of the glitchy scrolling sky floors, /  / removing the hall-of-mirrors effect. |
+| `r_drawSun` | A | 0 | r_drawsun [0\|1] /  / 0 = disabled* /  / * suggested setting | Controls the way in which lighting of models and  /  / objects is handled by simulating effects of sunlight. |
+| `r_drawworld` | C | 1 | r_drawworld [0\|1] | Enables rendering of the map. |
+| `r_dynamiclight` | A | 1 | r_dynamiclight [0\|1] | Dynamic Lights. (eg: rockets emitting light onto nearby scenery) |
+| `r_enableBloom` | A / L | 0 | r_enableBloom [0\|1] | Enables light bloom effects  /  / when r_enablePostProcess 1. |
+| `r_enableColorCorrect` | A / L | 1 | r_enableColorCorrect [0\|1] | Enables color correction when r_enablePostProcess 1. |
+| `r_enablePostProcess` | A / L | 1 | r_enablePostProcess [0\|1] | Enables post processing, which offers extra graphical  /  / features and quality (such as light bloom effects and color correction), but inflicts a performance hit. Recommended only /  / for powerful computers. |
+| `r_ext_compiled_vertex_array` | A / L | 1 | r_ext_compiled_vertex_array [0\|1] | Enables hardware compiled vertex array rendering. |
+| `r_ext_compressed_textures` | A / L | 0 | r_ext_compressed_textures [0\|1] | Enables external texture compression. |
+| `r_ext_gamma_control` | A / L | 1 | r_ext_gamma_control [0\|1] | Enables the use of external gamma controls. |
+| `r_ext_multitexture` | A / L | 1 | r_ext_multitexture [0\|1] | Enables external hardware multi-texturing. |
+| `r_ext_texture_env_add` | A / L | 1 | r_ext_texture_env_add [0\|1] | Enables additive blending when using multi-texturing. |
+| `r_facePlaneCull` | A | 1 | r_facePlaneCull [0\|1] | Enables brush face culling, providing a performance boost. |
+| `r_fastsky` | A T | 0 | r_fastsky [0\|1] /  / 1 = Sky boxes disabled | Disable sky boxes (and portal camera views). |
+| `r_fastSkyColor` | T | 0x000000 | r_fastSkyColor <hex> | Sets the sky color (in hex color code) when r_fastsky 1. |
+| `r_finish` | A | 0 | r_finish [0\|1] | Enables synchronization of rendered frames. |
+| `r_flareFade` | C | 7 | r_flareFade <amount> | Sets fading scale of flares in relation to distance. |
+| `r_flares` | A | 0 | r_flares [0\|1] | Enables projectile flare and lighting effects. |
+| `r_flareSize` | C | 40 | r_flareSize <size> | Sets size of flares. |
+| `r_floatingPointFBOs` | A / L | 0 | r_floatingPointsFBOs [0\|1] | Enables the use of floating point framebuffer objects –  /  / an OpenGL extension for doing off-screen rendering, including rendering to a texture. By capturing images that would normally  /  / be drawn to the screen, it can be used to implement a large  /  / variety of image filters and post-processing effects. It is /  / currently an experimental CVAR that will only work on modern graphics cards. |
+| `r_fullbright` | A / L / T | 0 | r_fullbright [0\|1] /  / 0 = Normal Rendering /  / 1 = Full Brightness | Renders all textures on the map at full brightness. |
+| `r_fullscreen` | A / L | 0 | r_fullscreen [0\|1] /  / 0 = Windowed /  / 1 = Fullscreen | Enables full-screen view. |
+| `r_gamma` | A | 1 | r_gamma <value> | Amount of image luminance applied to the in-game display.  /  / The higher the number, the stronger luminance present. |
+| `r_gl_renderer` | R / A / T | none | r_gl_renderer | Displays your graphics renderer. |
+| `r_gl_reserved` | R / A / T | 0 | ??? | ??? |
+| `r_gl_vendor` | R / A / T | none | r_gl_vendor | Displays your graphics chip manufacturer. |
+| `r_glDriver` | A / L | opengl32 | r_glDriver <driver> | Sets the OpenGL driver in use. |
+| `r_ignore` | C | 1 | r_ignore [0\|1] | A rendering debugging tool. |
+| `r_ignoreFastPath` | A / L | 1 | r_ignoreFastPath [0\|1] | Enables ignoring of Tess fast paths. |
+| `r_ignoreGLErrors` | A | 1 | r_ignoreGLErrors [0\|1] | Enables ignoring of OpenGL errors and to attempt to continue rendering. |
+| `r_ignorehwgamma` | A / L | 0 | r_ignorehwgamma [0\|1] | Enables ignoring of hardware gamma settings. |
+| `r_inBrowserMode` | A / L / T | 9 | r_inBrowserMode <mode> | Sets resolution when in browser mode. |
+| `r_inGameVideo` | A | 1 | r_inGameVideo [0\|1] | Enables in-game videos. |
+| `r_intensity` | A / L | 1 | r_intensity <amount> | Intensifies the level of brightness added to textures and model skins. |
+| `r_lastValidRenderer` | A | - | r_lastValidRenderer | Last recorded video driver in use. |
+| `r_lightmap` | A | 0 | r_lightmap [0\|1] | Enables the light data lighting model. |
+| `r_lockpvs` | C | 0 | r_lockpvs [0\|1] | Locks the Potentially Visible Set table, resulting in area  /  / visibilities not being rendered. |
+| `r_lodbias` | A | 0 | r_lodbias <-2 – 2> /  / 0 = High /  / 1 = Medium /  / 2 = Low | Sets level of geometric detail. |
+| `r_lodCurveError` | C | 250 | r_lodCurveError <value> | Level of detail curve error setting. |
+| `r_lodscale` |  | 10 | r_lodscale <value> | Level of detail scale adjustment. |
+| `r_logFile` | C | 0 | r_logFile <value> | Sets the number of frames to emit GL logs. |
+| `r_mapOverBrightBits` | A / L | 2 | r_mapOverBrightBits <0 – 10> | Ambient lighting and radiance of the map. |
+| `r_mapOverBrightCap` | A / L | 255 | r_mapOverBrightCap <0 – 255> | ??? |
+| `r_maskMinidriver` | L | 0 | r_maskMinidriver [mask] | Treats the current OpenGL32 driver as an ICD, even  /  / if it is in fact a MCD. In other words, allow a different /  / dll name to be treated as if it were opengl32.dll. |
+| `r_maxpolys` |  | 600 | r_maxpolys <value> | Sets the maximum number of polygons drawn to the screen. Values lower than default appear to have no effect,  /  / even negative values. Unknown if higher values have an effect. |
+| `r_maxpolyverts` |  | 3000 | r_maxpolyverts <value> | Maximum number of vertices from polygons drawn to screen. Values lower than default appear to have no effect, /  / even negative values. Unknown if higher values have |
+| `r_measureOverdraw` | C | 0 | r_measureOverdraw [0\|1] | Reports overdraw (if the harware supports a stencil buffer). |
+| `r_mode` | A / L | -2 | r_mode <-2 – 27> | Screen resolution setting. Use Modelist for a list of resolution options, also included in appendix. |
+| `r_nobind` | C | 0 | r_nobind [0\|1] /  / 0 = binding enabled /  / 1 = no binding | Disables binding of textures to triangles. |
+| `r_nocull` | C | 0 | r_nocull [0\|1] /  / 0 = culling enabled /  / 1 = no culling | Disables the culling of textures. Has an adverse affect on performance. |
+| `r_nocurves` | C | 0 | r_nocurves [0\|1] /  / 0 = curves surfaces enabled /  / 1 = no curved surfaces | Disables curved surfaces. |
+| `r_noFastRestart` | A | 0 | r_noFastRestart [0\|1] | When set to 0 QL will attempt to change from fullscreen to windowed mode without re-loading all game data. |
+| `r_noportals` | C | 0 | r_noportal [0\|1] /  / 0 = portal cameras enabled /  / 1 = no portal cameras | Disables portal cameras. |
+| `r_norefresh` | C | 0 | r_norefresh [0\|1] /  / 0 = rendering refreshes allowed /  / 1 = no rendering refreshes | Disables rendering refreshes. |
+| `r_novis` | C | 0 | r_novis [0\|1] /  / 0 = VIS enabled /  / 1 = no VIS | Disables PVS/VIS tables. |
+| `r_offsetfactor` | C | -1 | r_offsetfactor <factor> | Sets the polygon offset factor for shader stages that have  /  / polygon offset set. Testing resulted in no change after /  / vid_restart at multiple values. May be ineffectual. |
+| `r_offsetunits` | C | -2 | r_offsetunits <units> | Sets the polygon offset units for shader stages that /  / have polygon offset set. Testing resulted in no change /  / after vid_restart at multiple values. May be ineffectual. |
+| `r_overBrightBits` | A / L | 1 | r_overBrightBits <0 – 4> | Ambient lighting applied to in-game entities or objects. |
+| `r_picmip` | A / L / T | 0 | r_picmip <0 – 16> /  / Example:  / 0 / \|5 / \|10 | Texture color average/level of detail. /  / Lower values will manipulate and blend the colors of the /  / map textures. Textures at the highest value, ‘16’ appear nearly  /  / as solid colors. A vid_restart or map load is required before changes will come into affect. |
+| `r_portalOnly` | C | 0 | r_portalOnly [0\|1] | A debug option to see exactly what is being mirrored when /  / drawing portal surfaces – this includes mirrors and portal  /  / cameras. |
+| `r_postProcessActive` | R / A | 0 | r_postProcessActive | Dictates whether post processing is active. |
+| `r_primitives` | A | 0 | r_primitives [-1\|0\|1\|2] /  / -1 = skips drawing /  / 0 = uses glDrawelements if compiled vertex arrays are present, or strips of glArrayElement if not. /  / 1 = force strips /  / 2 = force drawElements | Sets rendering method. |
+| `r_printShaders` |  | 0 | r_printShaders [0\|1] | A debugging tool that prints out all the shaders that are /  / utilised by a level. It is referred to when generating a pak /  / file for a map. |
+| `r_railCoreWidth` | A | 6 | r_railCoreWidth <width> | Rail trail core effect diameter (in pixels) |
+| `r_railSegmentLength` | A | 32 | r_railSegmentLength <length> | Rail trail section length (in pixels) |
+| `r_railWidth` | A | 16 | r_railWidth <width> | Diameter of rail beam and impact effects in pixels. |
+| `r_roundImagesDown` | A / L | 1 | r_roundImagesDown <amount> | Sets amount to round images down by. Increases performance, lowers image quality. |
+| `r_saveFontData` |  | 0 | r_saveFontData [0\|1] | ??? |
+| `r_showcluster` | C | 0 | r_showcluster [0\|1] | Displays clusters loaded by number. |
+| `r_showImages` |  | 0 | r_showImages [0\|1] | Texture debugging tool: Displays loaded textures on screen. |
+| `r_shownormals` | C | 0 | r_shownormals [0\|1] | Shows wireframe normals on model polygons and brush faces. Useful when debugging model lighting. |
+| `r_showsky` | C | 0 | r_showsky [0\|1] | Forces sky in front of all surfaces. |
+| `r_showSmp` | C | 0 | r_showSmp [0\|1] | Shows symmetric multiprocessing information on the HUD. |
+| `r_showtris` | C | 0 | r_showtris [0\|1] | Enables wireframe rendering of the world. |
+| `r_simpleMipMaps` | A / L | 1 | r_simpleMipMaps [0\|1] | Enables simple MIP mapping, boosts performance. |
+| `r_singleShader` | L C | 0 | r_singleShader [0\|1] | Forces single shadering to textures with multiple shaders. |
+| `r_skipBackEnd` | C | 0 | r_skipBackEnd [0\|1] | A debugging tool that skips the rendering of the back end. |
+| `r_smp` | R | 0 | r_smp [0\|1] | Enables symmetric multiprocessing acceleration. |
+| `r_speeds` | C | 0 | r_speeds [0\|1] | Shows rendering information display, providing useful /  / information to developers (especially map designers)  /  / on rendering speeds. |
+| `r_stencilbits` | A / L | 0 | r_stencilbits [0\|16\|32] /  / 16 = 16-bit /  / 32 = 32-bit | Sets stencil buffer size. |
+| `r_stereo` | A / L | 0 | r_stereo [0\|1] | Enables stereo separation. |
+| `r_subdivisions` | L | 4 | r_subdivisions [4\|80] /  / 4 = curved surfaces /  / 80 = angles surfaces | Patch mesh/curve sub divisions. A value of 80 will replace curved surfaces with angled surfaces to give a performance boost. |
+| `r_swapInterval` | A | 0 | r_swapInterval [0\|1] | Forces vertical synchronization, used in combination with r_displayrefresh. (Only useful with CRT monitors) |
+| `r_teleporterFlash` | A | 1 | r_teleporterFlash [0\|1] | Added the option of a simpler black frame fill rather than the white flash that occurs when teleporting |
+| `r_texturebits` | A / L | 32 | r_texturebits [16\|32] /  / 16 = 16 bit /  / 32 = 32 bit | Sets texture quality level. |
+| `r_textureMode` | A | GL_LINEAR_ /  / MIPMAP_ /  / LINEAR | r_texturemode <filter> /  / GL_LINEAR_MIPMAP_NEAREST = Bilinear /  / GL_LINEAR_MIPMAP_LINEAR = Trilinear | Sets texture filter. |
+| `r_uiFullScreen` | A | 1 | r_uiFullScreen [0\|1] | Sets the UI running fullscreen. |
+| `r_verbose` | C | 0 | r_verbose [0\|1] | Lists occurring rendering commands in the console. |
+| `r_vertexlight` | A / L / T | 0 | r_vertexlight [0\|1] /  / 0 = Light Map /  / 1 = Vertex | Enables vertex lighting. |
+| `r_znear` | C | 4 | r_znear <distance> | Sets distance from player in which objects are clipped out of the scene. |
+| `rate` | U / A / T | 16000 | rate <8000-25000> | Controls packets so that your downstream connection bandwidth does not get saturated. (Max bytes per second) |
+| `rcon` |  | - | rcon [command] | Send remote console commands. |
+| `rconAddress` |  | - | rconAddress [string] | Remote console address. |
+| `rconPassword` |  | - | rconPassword [string] | Password required for remote console commands. |
+| `roundlimit` | S / A | 5 | roundlimit <limit> | Round limit in Clan Arena. |
+| `ruleset` | S | 1 | ruleset [1\|2] /  / 1 = QL Rules /  / 2 = PQL Rules | Applies various prefab settings concerning player physics, item pick-up rules and more. It is usually votable on premium or pro servers via 'callvote ruleset ql/pql'. |
+| `roundtimelimit` | S / A | 180 | roundtimelimit <limit> | Time limit for rounds in Clan Arena. |
 
-## CVARs: S — Sound
+## CVARs: S
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `s_volume` [A] | 0.8 | Master volume (0.0-1.0) |
-| `s_musicvolume` [A] | 0.25 | Music volume (0=mute) |
-| `s_doppler` | 1 | Doppler effect (0=off) |
-| `s_khz` [I] | 22 | Sampling rate (11, 22, or 44 kHz) |
-| `s_mixahead` | 0.2 | Sound mixing ahead time |
-| `s_mixPreStep` | 0.05 | Sound pre-step time |
-| `s_show` | 0 | Sound debug info |
-| `s_testsound` | 0 | Play test sound |
-| `s_separation` | 0.5 | Stereo separation |
-| `s_ambient` | 1 | Ambient sounds |
-
-## CVARs: SV — Server
-
-| CVar | Default | Description |
-|------|---------|-------------|
-| `sv_maxclients` [I] | 8 | Maximum clients |
-| `sv_hostname` [S,A] | noname | Server name |
-| `sv_fps` | 20 | Server frame rate |
-| `sv_timeout` | 200 | Client timeout (seconds) |
-| `sv_zombietime` | 2 | Time (minutes) to keep zombie client slots |
-| `sv_pure` | 1 | Pure server (clients must match server pk3s) |
-| `sv_cheats` [S,I] | 0 | Enable cheat cvars |
-| `sv_maxRate` | 0 | Maximum client data rate cap |
-| `sv_minPing` [S] | 0 | Minimum client ping filter |
-| `sv_maxPing` [S] | 0 | Maximum client ping filter |
-| `sv_allowDownload` | 0 | Allow clients to download missing files |
-| `sv_floodprotect` | 1 | Flood protection |
-| `sv_password` | - | Server password |
-| `sv_rconPassword` | - | RCON password |
-| `sv_privateClients` | 0 | Reserved player slots |
-| `sv_privatePassword` | - | Password for reserved slots |
-| `sv_keywords` [S] | - | Keywords for server browser filtering |
-| `sv_paknames` [R] | - | List of pk3 files server is running |
-| `sv_master1` through `sv_master5` | - | Master server addresses |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `s_ambient` | A / L / T | 1 | s_ambient [0\|1] /  / 0 = no ambient sounds /  / 1 = ambient sounds enabled | Ambient sound effects. (s_restart or a map load required for change to take effect) |
+| `s_doppler` | A | 0 | s_doppler [0\|1] | Controls doppler sound effects. (bypassing sounds) |
+| `s_initsound` |  | 1 | s_initsound [0\|1] | Enables the sound system. |
+| `s_mixahead` | A | 0.140 | s_mixahead <delay> | Sets the time delay before mixing sound samples. /  / This is for fine-tuning the mixer and will mix ahead the number of seconds specified. |
+| `s_mixPreStep` | A | 0.05 | s_mixPreStep <value> | This is for fine-tuning the mixer. /  / It will mix this number of seconds every mixing step. /  / The more you increase the better the sound but it will increase drastically the amount of processing power needed. /  / Don't expect any improvements in sound past the default. /  / Setting it to 0 results in hilarious sounding plasma and machine gun fire, although that's not to be recommended for anything more than a laugh. |
+| `s_musicvolume` | A | 0.25 | s_musicvolume <0.0 – 1.0> | Sets volume of the background music. |
+| `s_show` | C | 0 | s_show [0\|1] | Displays sounds that are currently playing to console. |
+| `s_testsound` | C | 0 | s_testsound [0\|1] | Enables looping testing sound for sound tests. |
+| `s_volume` | A | 0.8 | s_volume <0.0 – 1.0> | Sets sound effects volume. |
+| `scr_conspeed` |  | - | - | Obsolete. Use con_speed instead. |
+| `sensitivity` | A | 4 | sensitivity <factor> | Sets mouse sensitivity. |
+| `server1` | A | - | server1 [address] | Server IP Address slot for favourite servers list. |
+| `server10` | A | - | server10 [address] | Server IP Address slot for favourite servers list. |
+| `server11` | A | - | server11 [address] | Server IP Address slot for favourite servers list. |
+| `server12` | A | - | server12 [address] | Server IP Address slot for favourite servers list. |
+| `server13` | A | - | server13 [address] | Server IP Address slot for favourite servers list. |
+| `server14` | A | - | server14 [address] | Server IP Address slot for favourite servers list. |
+| `server15` | A | - | server15 [address] | Server IP Address slot for favourite servers list. |
+| `server16` | A | - | server16 [address] | Server IP Address slot for favourite servers list. |
+| `server2` | A | - | server2 [address] | Server IP Address slot for favourite servers list. |
+| `server3` | A | - | server3 [address] | Server IP Address slot for favourite servers list. |
+| `server4` | A | - | server4 [address] | Server IP Address slot for favourite servers list. |
+| `server5` | A | - | server5 [address] | Server IP Address slot for favourite servers list. |
+| `server6` | A | - | server6 [address] | Server IP Address slot for favourite servers list. |
+| `server7` | A | - | server7 [address] | Server IP Address slot for favourite servers list. |
+| `server8` | A | - | server8 [address] | Server IP Address slot for favourite servers list. |
+| `server9` | A | - | server9 [address] | Server IP Address slot for favourite servers list. |
+| `session$` |  | - | session$ [1, 2, 3, 4, 5, 6, 7] /  /  /  / $: 0 to 8 /  /  /  / 1 – team data (bk010221 format) /  / 2 – spectator time /  / 3 – spectator states (bk010221 format) /  / 4 – number of spectators as clients /  / 5 – client wins /  / 6 – client losses /  / 7 – team leader data (bk010221 format) | Numerous variables created during matches with game session data. /  /  /  / Session data is the only data to be carried on between matches and is gametype specific, meaning that if the gametype is changed after a match, new game session data will be created. |
+| `sex` | U / A / T | male | sex <M\|F\|N> | Player gender. |
+| `showdrop` |  | - | showdrop [0\|1] | Shows dropped packets display. |
+| `showpackets` |  | - | showpackets [0\|1] | Display of packets sent and received. |
+| `sv_adminGroups` |  | - | sv_admingroups [group] | ??? |
+| `sv_advertising` | S / I | 1 | sv_advertising [0\|1] | Enables in-game advertising. |
+| `sv_adXmitDelay` | S | 300000 | sv_adXmitDelay <integer> | ??? |
+| `sv_allowDownload` | S | 0 | sv_allowDownload [0\|1] /  / 0 = Downloads disallowed /  / 1 = Downloads allowed | Allows ability of clients to download maps and map content from the server. |
+| `sv_allowGetInfo` |  | 0 | sv_allowGetInfo [0\|1] | ??? |
+| `sv_altEntDir` |  | - | ??? | ??? |
+| `sv_cheats` | R / A | 1 | sv_cheats | Allows the use of cheat-protected cvars/commands on a server. |
+| `sv_cylinderScale` |  | 1.1 | sv_cylinderScale <scale> | Scale of the hit cylinder. 1,0 = minimum size of Q3 hitbox. 1,41 = maximum size of Q3 hitbox viewed at 45 degrees angle. |
+| `sv_errorExit` |  | 1 | ??? | ??? |
+| `sv_floodProtect` | A | 1 | sv_floodprotect [0\|1] | Allows server flood protection. |
+| `sv_fps` |  | 40 | sv_fps <10 – 125> | Sets the maximum frames per second a server sends to clients. <10-125> |
+| `sv_gtid` | S / R | - | ??? | ??? |
+| `sv_hostname` | S / A | noname | sv_hostname [string] | Sets the server name. |
+| `sv_idleExit` |  | 120 | ??? | ??? |
+| `sv_keywords` | S | - | sv_keywords [string] | Search string entered in the internet connection window. |
+| `sv_killserver` |  | 0 | sv_killserver [0\|1] | Kills the server when set to 1. |
+| `sv_lanForceRate` | A | 1 | sv_lanForceRate [0\|1] | Forces client rate limit on LAN. |
+| `sv_location` | S | - | sv_location [string] | Defines the local country, mostly for use for displaying country flags on premium scoreboards. |
+| `sv_logantic` |  | 0 | sv_logantic [0\|1] | ??? |
+| `sv_mapChecksum` | R / A | - | sv_mapChecksum [0\|1] | Allows check for client server map to match. |
+| `sv_mapname` | S / R | - | sv_mapname | Display the name of the map active on the current server. |
+| `sv_maxclients` | S / A / L | 8 | sv_maxclients | Sets the maximum number of client slots on server. |
+| `sv_maxPing` | S / A | 0 | sv_maxPing | Sets the maximum allowed ping for clients. |
+| `sv_maxRate` | A | 0 | sv_maxRate | Forces a maximum rate on clients. Keeps low-ping clients /  / from over-utilising server bandwidth and in the process  /  / can help prevent high-ping clients from being affected by this. |
+| `sv_minPing` | S / A | 0 | sv_minPing | Sets the minimum allowed ping for clients. |
+| `sv_monkeysOnly` | S / I | 0 | sv_monkeysOnly | Id Software refuse to comment on this J |
+| `sv_owner` |  | - | ??? | Server owner - name of player who has spawned the server. |
+| `sv_padPackets` |  | 0 | sv_padPackets [value] /  / Minimum: 0 /  / Maximum: 0 | Add NOP bytes to messages. |
+| `sv_pakNames` | R / A | - | sv_pakNames | Pure server control: /  / Holds pk3 file names that the server is using, and sends  /  / the info to clients in order for the clients to /  / load the identical files. (Only when sv_pure 1) |
+| `sv_paks` | R / A | - | sv_paks | Pure server control: /  / Holds checksums of pk3 files the server is using, and /  / sends the info to clients in order for the clients to /  / load the identical files. (Only when sv_pure 1) |
+| `sv_paused` | R / A | 0 | sv_paused [0\|1] | Allows pausing of server. |
+| `sv_premium` | I | 0 | sv_premium [0\|1] | Classifies a server as a premium server. |
+| `sv_privateClients` | S | 0 | sv_privateClients <amount> | Amount of slots reserved for private players. |
+| `sv_privatePassword` |  | - | sv_privatePassword [string] | Password that allows you to take up a private slot on a server. |
+| `sv_punkbuster` |  | - | - | Obsolete. |
+| `sv_pure` | R | 1 | sv_pure [0\|1] | Enables pure server (disallows native DLL loading etc.). |
+| `sv_qlservername` | I | qlsnone | sv_qlservername [string] | ??? |
+| `sv_quitOnEmpty` |  | 0 | sv_quitOnEmpty [0\|1] | Ends the server when there are no clients connected. |
+| `sv_quitOnExitLevel` |  | 0 | sv_quitOnExitLevel [0\|1] | Ends the server when the current level/map is ended. |
+| `sv_ranked` | S / A / L | 0 | sv_ranked [0\|1] /  / 0 = Unranked server /  / 1 = Ranked server | Enables the creation of a ranked server. |
+| `sv_reconnectlimit` |  | 3 | sv_reconnectlimit <limit> | Sets the number of times a disconnected client can reconnect to the server. |
+| `sv_referencedPakNames` | R / A | - | sv_referencedPakNames | Pure server control: /  / Holds referenced pk3 file names that the server is using, /  / and sends the info to clients in order for the clients to  /  / load the identical files. (Only when sv_pure 1) |
+| `sv_referencedPaks` | R / A | - | sv_referencedPaks | Pure server control: /  / Holds checksums of all referenced pk3 files the server is using, and sends the info to clients in order for the clients to load the identical files. (Only when sv_pure 1) |
+| `sv_running` | R / A | 0 | sv_running | Tells the game whether a local server is currently running. |
+| `sv_serverid` | R / A | 0 | sv_serverid | Sets server ID. |
+| `sv_showloss` |  | 0 | sv_showloss [0\|1] | Displays server packet loss. |
+| `sv_skillRating` | S / R | 0 | sv_skillRating | The ELO skill rating (from 0-100) of the server,  /  / changes as players enter/leave. |
+| `sv_timeout` |  | 40 | sv_timeout <time> | Amount of time (in seconds) required to consider an /  / inactive client as disconnected. |
+| `sv_warmupReadyPercentage` | A / L | 0.51 | sv_warmupReadyPercentage <percentile> | Sets the minimum percentile of players of ready status /  / required in a warm up match before the match starts. |
+| `sv_wwwBaseURL` | A | - | ??? | ??? |
+| `sv_wwwDlDisconnected` | A | 0 | ??? | ??? |
+| `sv_wwwDownload` | A | 0 | ??? | ??? |
+| `sv_wwwFallbackURL` | A | - | ??? | ??? |
+| `sv_zombietime` |  | 2 | sv_zombietime <time> | The time in which a player can be frozen before getting kicked. |
+| `sys_cpuid` |  | 35 | sys_cpuid | Returns a two digit number that is quake's /  / identification code for your CPU. CPU IDs are  /  / nothing new and are well documented. How quake /  / arrives at a two digit number for them is another story. |
+| `sys_cpustring` |  | detect | sys_cpustring | CPU identification. |
 
 ## CVARs: T
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `timelimit` [S,A] | 0 | Match time limit in minutes |
-| `timescale` [C] | 1 | Game speed multiplier (cheat) |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `teamsize` | S | 0 | teamsize <size> /  / 0 = no restriction | Maximum team size restriction for servers. Votable through callvote teamsize. |
+| `teamtask` | U / T | 0 | teamtask [0-7] /  / 0 = default (offense) /  / 1 = offense /  / 2 = defense /  / 3 = patrol /  / 4 = following /  / 5 = retrieving /  / 6 = escorting /  / 7 = camping | Displays the current task you have been assigned. (Team Arena) |
+| `team_headmodel` | T | sarge/default | team_headmodel [model] | Sets player head model for use in team games (ineffectual). |
+| `team_model` | T | sarge/default | team_model [model] | Sets player model for use in team games (ineffectual). |
+| `timedemo` | C | 0 | timedemo [0\|1] | Runs a demo as fast as it can and report  /  / performance information in frames per second. |
+| `timegraph` | C | 0 | timegraph [0\|1] | Displays the time graph. |
+| `timelimit` | S / A | 0 | timelimit [limit] | Sets the time limit on your server. |
+| `timescale` | C | 1 | timescale [0-] | Higher values set while playing back demo files will result in the demo fast forwarding at a rate times the timescale value. Values under 1 but greaer than 0 will slow down playback. |
 
-## CVARs: U — UI
+## CVARs: U
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `ui_bigFont` | 0.4 | Large font size in UI |
-| `ui_smallFont` | 0.25 | Small font size in UI |
-| `ui_debug` | 0 | UI debugging mode |
-| `ui_menuFiles` | ui/menus.txt | Menu control/content files |
-| `ui_serverStatusTimeOut` | 7000 | Server status timeout (ms) |
-| `username` | - | Network login ID |
-| `ui_gametype` | 3 | Gametype in start server menu |
-| `ui_netGametype` | 3 | Network gametype in Create Server menu |
-| `ui_dedicated` | 0 | 0=listen server, 1=dedicated server |
-| `ui_fragLimit` | 10 | Frag limit for start server menu |
-| `ui_captureLimit` | 5 | Capture limit for start server menu |
-| `ui_mapIndex` | 0 | Map selection in Create Server menu |
-| `ui_redteam` | Pagans | Red team name |
-| `ui_blueteam` | Stroggs | Blue team name |
-| `ui_enemyColor` | 0 | Enemy model colorization |
-| `ui_enemyHeadColor` | 27 | Enemy head color |
-| `ui_enemyUpperColor` | 27 | Enemy upper body color |
-| `ui_enemyLowerColor` | 27 | Enemy lower body color |
-| `ui_forceEnemyModel` | - | Force enemy model |
-| `ui_teamHeadColor` | 96 | Teammate head color |
-| `ui_teamUpperColor` | 96 | Teammate upper body color |
-| `ui_teamLowerColor` | 96 | Teammate lower body color |
-| `ui_forceTeamModel` | - | Force team model |
-| `ui_ffa_fraglimit` | 20 | FFA frag limit |
-| `ui_ffa_timelimit` | 0 | FFA time limit |
-| `ui_ctf_capturelimit` | 8 | CTF capture limit |
-| `ui_ctf_timelimit` | 30 | CTF time limit |
-| `ui_team_fraglimit` | 0 | TDM frag limit |
-| `ui_team_timelimit` | 20 | TDM time limit |
-| `ui_tourney_fraglimit` | 0 | Tournament frag limit |
-| `ui_tourney_timelimit` | 15 | Tournament time limit |
-| `ui_bloomPreset` | Default | Bloom preset |
-| `ui_screenDamage` | 0 | Screen damage indicator |
-| `ui_screenDamage_Team` | 0 | Team screen damage indicator |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `ui_actualNetGametype` | A | 3 | ui_actualNetGametype <value> | Create Server game type menu element. |
+| `ui_bigFont` | A | 0.4 | ui_bigFont <size> | Controls the size of the large font in the user interface. |
+| `ui_bloomPreset` | A | Default | ui_bloompreset <preset> | Sets the light bloom predefined settings option for use in the settings menu. |
+| `ui_blueteam` | A | Stroggs | ui_blueteam <team name> | Sets the name of the blue team. |
+| `ui_blueteam1` | A | 0 | ui_blueteam1 <player> | Blue team player slot for use in the start server menu. |
+| `ui_blueteam2` | A | 0 | ui_blueteam2 <player> | Blue team player slot for use in the start server menu. |
+| `ui_blueteam3` | A | 0 | ui_blueteam3 <player> | Blue team player slot for use in the start server menu. |
+| `ui_blueteam4` | A | 0 | ui_blueteam4 <player> | Blue team player slot for use in the start server menu. |
+| `ui_blueteam5` | A | 0 | ui_blueteam5 <player> | Blue team player slot for use in the start server menu. |
+| `ui_browserGameType` | A | 0 | ui_browserGameType [gametype] | Set server search by g_gametype in server list. N/A for QL |
+| `ui_browserMaster` | A | 0 | ui_browserMaster [0\|1\|2\|3] /  / 0 = LAN /  / 1 = Mplayer /  / 2 = Internet /  / 3 = Favorites | Set server search by network. N/A for QL |
+| `ui_browserShowEmpty` | A | 1 | ui_browserShowEmpty [0\|1] /  / 0 = hide empty servers /  / 1 = show empty servers | Display empty servers in browser server list. N/A for QL |
+| `ui_browserShowFull` | A | 1 | ui_browserShowFull [0\|1] /  / 0 = hide full servers /  / 1 = show full servers | Display full servers in browser server list. N/A for QL |
+| `ui_browserSortKey` | A | 4 | ui_browserSortKey [0\|1\|2\|3\|4] /  / 0 = server name /  / 1 = map name /  / 2 = open player slots /  / 3 = game type /  / 4 = ping time | Sorts the browser server list. N/A for QL |
+| `ui_captureLimit` |  | 5 | ui_captureLimit <limit> | The capture limit variable for use in the start server menu. |
+| `ui_cdkeychecked` | R | 0 | ui_cdkeychecked [0\|1] /  / 0 = CD-Key has not been checked /  / 1 = CD-Key has been checked | Check for CD-Key, changes to 1 when checked. N/A for QL |
+| `ui_ctf_capturelimit` | A | 8 | ui_ctf_capturelimit <limit> | Start server menu capture limit variable. |
+| `ui_ctf_friendly` | A | 0 | ui_ctf_friendly [0\|1] /  / 0 = no friendly fire /  / 1 = friendly fire enabled | Start server menu friendly fire variable. |
+| `ui_ctf_timelimit` | A | 30 | ui_ctf_timelimit <limit> | Single-player menu capture the flag time limit variable. |
+| `ui_currentMap` | A | 0 | ui_currentMap <map number> | Map list map selection in voting menu. |
+| `ui_currentNetMap` | A | 0 | ui_currentNetMap <map number> | Map list map selection. |
+| `ui_currentOpponent` | A | 0 | ui_currentOpponent <value> | ??? |
+| `ui_currentTier` | A | 0 | ui_currentTier <value> | Current single-player tier menu element. |
+| `ui_debug` |  | 0 | ui_debug [0\|1] | User interface debugging mode. |
+| `ui_dedicated` | A | 0 | ui_dedicated [0\|1] /  / 0 = listen server setting /  / 1 = dedicated server setting | Dedicated server variable in the start server menu. |
+| `ui_enemyColor` | A | 0 | ui_enemyColor <value> | Menu element for enemy model colorization. |
+| `ui_enemyHeadColor` | A | 27 | ui_enemyHeadColor <value> | Menu element for enemy model head colorization. |
+| `ui_enemyLowerColor` | A | 27 | ui_enemyLowerColor <value> | Menu element for enemy model lower body colorization. |
+| `ui_enemyUpperColor` | A | 27 | ui_enemyUpperColor <value> | Menu element for enemy model upper body colorization. |
+| `ui_ffa_fraglimit` | A | 20 | ui_ffa_fraglimit <limit> | Single-player menu free for all frag limit variable. |
+| `ui_ffa_timelimit` | A | 0 | ui_ffa_timelimit <limit> | Single-player menu free for all time limit variable. |
+| `ui_findPlayer` | A | Sarge | ui_findPlayer <player name> | Finds player with specified name in currently loaded server list. |
+| `ui_forceEnemyModel` | A | - | ui_forceEnemyModel <value> | Menu element for forcing enemy model. |
+| `ui_forceEnemyModelBright` | A | 0 | ui_forceEnemyModelBright [0\|1] /  / 1 = on | Menu element for forcing bright enemy models. |
+| `ui_forceEnemySkin` |  | - | ??? | ??? |
+| `ui_forceTeamModel` | A | - | ui_forceTeamModel <value> | Menu element for forcing team models. |
+| `ui_forceTeamModelBright` | R | 0 | ui_ForceTeamModelBright [0\|1] | Menu element for forcing bright team models. |
+| `ui_forceTeamSkin` |  | - | ??? | ??? |
+| `ui_fragLimit` |  | 10 | ui_fragLimit <limit> | The frag limit variable for use in the start server menu. |
+| `ui_gametype` | A | 3 | ui_gametype [gametype] | Sets the gametype in the start server menu. |
+| `ui_globalpreset` | A | - | ui_globalpreset <preset> | Menu element for config preset. |
+| `ui_impactSparks` | A | - | ui_impactSparks <preset> | Impact sparks predefined settings menu element. |
+| `ui_initialized` |  | 0 | - | Not used. |
+| `ui_joinGametype` | A | 0 | ui_joinGametype <gametype> | Game type filter menu element for Join Server menu. |
+| `ui_lastServerRefresh_0` | A | - | ui_lastServerRefresh_0 | Dictates at what time the last LAN server list refresh took place. |
+| `ui_lastServerRefresh_1` | A | - | ui_lastServerRefresh_1 | Dictates at what time the last MPlayer server list refresh took place. |
+| `ui_lastServerRefresh_2` | A | - | ui_lastServerRefresh_2 | Dictates at what time the last internet server list refresh took place. |
+| `ui_lastServerRefresh_3` | A | - | ui_lastServerRefresh_3 | Dictates at what time the last favourites server list refresh took place. |
+| `ui_lightingModelPreset` | A | - | ui_lightingModelPreset <preset> | Sets the lighting model predefined settings option for use in the settings menu. |
+| `ui_lowAmmoPreset` | A | - | ui_lowAmmoPreset <preset> | Sets the predefined settings for low ammo notification options in the settings menu. |
+| `ui_mapIndex` | A | 0 | ui_mapIndex <map number> | Map list map selection Create Server menu element. |
+| `ui_marksPreset` | A | - | ui_marksPreset <preset> | Sets the marks predefined settings option for use in the settings menu. |
+| `ui_menuFiles` | A | ui/menus.txt | ui_menuFiles <file> | Directs the game to the menu control files (the file that loads the menu content). |
+| `ui_mousePitch` |  | 0 | ui_mousePitch <amount> | Mouse pitch menu element for use in Controls Menu. |
+| `ui_netGametype` | A | 3 | ui_netGametype <gametype> | Network game type menu element in Create Server menu. |
+| `ui_netSource` | A | 0 | ui_netSource <source> | Game type field menu element in Join Server menu. |
+| `ui_new` |  | 0 | - | Not used. |
+| `ui_opponentName` | A | Stroggs | ui_opponentName <team name> | Sets the name of your opponents’ team in single player. |
+| `ui_powerupKillCounters` | A | "" | ??? | ??? |
+| `ui_q3model` |  | 0 | ui_q3model [0\|1] /  / 0 = Team Arena player model list /  / 1 = Arena player model list | The Team Arena setting for switching between Quake III: Team Arena player models and Quake III: Arena player models in the player settings menu. |
+| `ui_recordSPDemo` | A | 0 | ui_recordSPDemo [0\|1] | Enables ‘Record Demo’ in the single player menu. |
+| `ui_recordSPDemoName` | A | - | ui_recordSPDemoName [name] | Configures single player demo recording naming. |
+| `ui_redteam` | A | Pagans | ui_redteam <team name> | Sets the name of the red team. |
+| `ui_redteam1` | A | 0 | ui_redteam1 <player> | Red team player slot for use in the start server menu. |
+| `ui_redteam2` | A | 0 | ui_redteam2 <player> | Red team player slot for use in the start server menu. |
+| `ui_redteam3` | A | 0 | ui_redteam3 <player> | Red team player slot for use in the start server menu. |
+| `ui_redteam4` | A | 0 | ui_redteam4 <player> | Red team player slot for use in the start server menu. |
+| `ui_redteam5` | A | 0 | ui_redteam5 <player> | Red team player slot for use in the start server menu. |
+| `ui_scoreAccuracy` | A | 0 | ui_scoreAccuracy <amount> | Single player menu element: player aim accuracy. |
+| `ui_scoreAssists` | A | 0 | ui_scoreAssists <amount> | Single player menu element: number of carrier assists. |
+| `ui_scoreBase` | A | 0 | ui_scoreBase <amount> | Single player menu element: base score. |
+| `ui_scoreCaptures` | A | 0 | ui_scoreCaptures <amount> | Single player menu element: number of flag/skull captures. |
+| `ui_scoreDefends` | A | 0 | ui_scoreDefends <amount> | Single player menu element: number of ‘defence’ awards. |
+| `ui_scoreExcellents` | A | 0 | ui_scoreExcellents <amount> | Single player menu element: number of ‘excellent’ awards. |
+| `ui_scoreGauntlets` | A | 0 | ui_scoreGauntlets <amount> | Single player menu element: number of ‘gauntlet humiliation’ awards. |
+| `ui_scoreImpressives` | A | 0 | ui_scoreImpressives <amount> | Single player menu element: number of ‘impressive’ awards. |
+| `ui_scorePerfect` | A | 0 | ui_scorePerfect <amount> | Single player menu element: number of ‘perfect’ awards. |
+| `ui_scoreScore` | A | 0 | ui_scoreScore <score> | Single player menu element: player score in a match. |
+| `ui_scoreShutoutBonus` | A | 0 | ui_scoreShutoutBonus <amount> | Single player menu element: shut-out bonus in a match. |
+| `ui_scoreSkillBonus` | A | 0 | ui_scoreSkillBonus <amount> | Single player menu element: skill bonus in a match. |
+| `ui_scoreTeam` | A | 0 to 0 | ui_scoreTeam <score> | Single player menu element: team score in a match. |
+| `ui_scoreTime` | A | 00:00 | ui_scoreTime <time> | Single player menu element: match time. |
+| `ui_scoreTimeBonus` | A | 0 | ui_scoreTimeBonus <amount> | Single player menu element: match time bonus. |
+| `ui_screenDamage` | A | 0 | ui_screenDamage <value> | Screen damage indicator toggle element for menu element. |
+| `ui_screenDamage_preset` | A | - | ui_screenDamage_preset <value> | Screen damage indicator predefined settings menu element. |
+| `ui_screenDamage_Team` | A | 0 | ui_screenDamage_Team <value> | Screen damage indicator by team toggle element for menu element. |
+| `ui_screenDamage_Team_preset` | A | - | ui_screenDamage_Team_preset <value> | Screen damage indicator by team predefined settings menu element. |
+| `ui_serverStatusTimeOut` | A | 7000 | ui_serverStatusTimeOut <time> | Sets the server status time-out amount. |
+| `ui_singlePlayerActive` | U / A | 0 | ui_singlePlayerActive | Dictates whether a single play game is currently active. |
+| `ui_smallFont` | A | 0.25 | ui_smallFont <size> | Controls the size of the small font in the user interface. |
+| `ui_spSelection` | R | - | ui_spSelection <map number> | Single player menu map selection menu element. |
+| `ui_team_fraglimit` | A | 0 | ui_team_fraglimit <limit> | Single-player menu team deathmatch frag limit variable. |
+| `ui_team_friendly` | A | 1 | ui_team_friendly [0\|1] /  / 1 = friendly fire | Single-player menu team deathmatch friendly fire variable. |
+| `ui_team_timelimit` | A | 20 | ui_team_timelimit <limit> | Single-player menu team deathmatch time limit variable. |
+| `ui_teamColor` | A | 0 | ui_teamColor <value> | Menu element for team mate bright model colorization. |
+| `ui_teamHeadColor` | A | 96 | ui_teamHeadColor <value> | Menu element for team mate bright model head colorization. |
+| `ui_teamLowerColor` | A | 96 | ui_teamLowerColor <value> | Menu element for team mate bright model lower body colorization. |
+| `ui_teamName` | A | Pagans | ui_teamName <team name> | Sets your team’s name in the single player menu. |
+| `ui_teamUpperColor` | A | 96 | ui_teamUpperColor <value> | Menu element for team mate bright model upper body colorization. |
+| `ui_tourney_fraglimit` | A | 0 | ui_tourney_fraglimit <limit> | Single-player menu tournament frag limit variable. |
+| `ui_tourney_timelimit` | A | 15 | ui_tourney_timelimit <limit> | Single-player menu tournament time limit variable. |
+| `ui_version` | R | - | ui_version | Displays user interface version. |
+| `ui_voteactive` | R / A | - | ui_voteactive | Dictates whether a voting session is currently active in order to suitably alter the user interface for voting. |
+| `ui_votestring` | C | - | ui_votestring [string] | Dictates what the current vote calling is for. |
+| `username` |  | - | username | Your network login ID obtained from the %username% env variable. |
 
-## CVARs: V–W
+## CVARs: V
 
-| CVar | Default | Description |
-|------|---------|-------------|
-| `vid_xpos` | 3 | Window x position on desktop |
-| `vid_ypos` | 22 | Window y position on desktop |
-| `win_wndproc` [R] | - | Window procedure debug address |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `version` | S / R | - | version | Displays current version of the binary code. |
+| `vid_xpos` | A | 0 | vid_xpos <position> | X position in windowed mode. N/A for QL |
+| `vid_ypos` | A | 0 | vid_ypos <position> | Y position in windowed mode. N/A for QL |
+| `viewlog` | C | 0 | viewlog [0\|1] | Displays the start-up console over the game screen. |
 
-## Color System
+## CVARs: W
 
-Three separate color systems in QL:
-
-| Palette | Use |
-|---------|-----|
-| 8-color | Text: clan tags and player names (Black unavailable for names) |
-| 26-color | Weapons: railgun trail, grenade color |
-| Hex | Skins, grenade color, fast sky color |
-
-| 8# | 26# | Name | Hex | R | G | B |
-|----|-----|------|-----|---|---|---|
-| 1 | 1 | Red | FF0000 | 255 | 0 | 0 |
-| | 2 | Orange-Red | FF4000 | 255 | 64 | 0 |
-| | 3 | Dark Orange | FF8000 | 255 | 128 | 0 |
-| | 4 | Orange | FFC000 | 255 | 192 | 0 |
-| 3 | 5 | Yellow | FFFF00 | 255 | 255 | 0 |
-| | 6 | Green-Yellow | C0FF00 | 192 | 255 | 0 |
-| | 7 | Chartreuse | 80FF00 | 128 | 255 | 0 |
-| | 8 | Green 1 | 40FF00 | 64 | 255 | 0 |
-| 2 | 9 | Green 2 | 00FF00 | 0 | 255 | 0 |
-| | 10 | Spring Green 1 | 00FF40 | 0 | 255 | 64 |
-| | 11 | Spring Green 2 | 00FF80 | 0 | 255 | 128 |
-| | 12 | Green-Cyan | 00FFC0 | 0 | 255 | 192 |
-| 5 | 13 | Cyan | 00FFFF | 0 | 255 | 255 |
-| | 14 | Deep Sky Blue | 00C0FF | 0 | 192 | 255 |
-| | 15 | Azure | 0080FF | 0 | 128 | 255 |
-| | 16 | Cobalt | 0040FF | 0 | 64 | 255 |
-| 4 | 17 | Blue | 0000FF | 0 | 0 | 255 |
-| | 18 | Electric Ultramarine | 4000FF | 64 | 0 | 255 |
-| | 19 | Electric Purple | 8000FF | 128 | 0 | 255 |
-| | 20 | Lilac | C000FF | 192 | 0 | 255 |
-| 6 | 21 | Magenta 1 | FF00FF | 255 | 0 | 255 |
-| | 22 | Magenta 2 | FF00C0 | 255 | 0 | 192 |
-| | 23 | Bright Pink | FF0080 | 255 | 0 | 128 |
-| | 24 | Folly | FF0040 | 255 | 0 | 64 |
-| 7 | 25 | White | FFFFFF | 255 | 255 | 255 |
-| | 26 | Medium Grey | 808080 | 128 | 128 | 128 |
-| 8/0 | - | Black | 000000 | 0 | 0 | 0 |
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `weapon_gravity_bfg` |  | 0 | ??? | ??? |
+| `weapon_gravity_ng` |  | 0 | ??? | ??? |
+| `weapon_gravity_pg` |  | 0 | ??? | ??? |
+| `weapon_gravity_rl` |  | 0 | ??? | ??? |
+| `weapon_reload_bfg` |  | 300 | weapon_reload_bfg <reload time> | Controls the weapon reload time (in milliseconds) for the BFG. |
+| `weapon_reload_cg` |  | 50 | weapon_reload_cg <reload time> | Controls the weapon reload time (in milliseconds) for the chaingun. |
+| `weapon_reload_gauntlet` |  | 400 | weapon_reload_gauntlet <reload time> | Controls the weapon reload time (in milliseconds) for the gauntlet. |
+| `weapon_reload_gl` |  | 800 | weapon_reload_gl <reload time> | Controls the weapon reload time (in milliseconds) for the grenade launcher. |
+| `weapon_reload_hook` |  | 400 | weapon_reload_hook <reload time> | Controls the weapon reload time (in milliseconds) for the grappling hook. |
+| `weapon_reload_lg` |  | 50 | weapon_reload_lg <reload time> | Controls the weapon reload time (in milliseconds) for the lightning gun. |
+| `weapon_reload_mg` |  | 100 | weapon_reload_mg <reload time> | Controls the weapon reload time (in milliseconds) for the machine gun. |
+| `weapon_reload_ng` |  | 1000 | weapon_reload_ng <reload time> | Controls the weapon reload time (in milliseconds) for the nailgun. |
+| `weapon_reload_pg` |  | 100 | weapon_reload_pg <reload time> | Controls the weapon reload time (in milliseconds) for the plasmagun. |
+| `weapon_reload_prox` |  | 800 | weapon_reload_prox <reload time> | Controls the weapon reload time (in milliseconds) for the proximity mine launcher. |
+| `weapon_reload_rg` |  | 1500 | weapon_reload_rg <reload time> | Controls the weapon reload time (in milliseconds) for the railgun. |
+| `weapon_reload_rl` |  | 800 | weapon_reload_rl <reload time> | Controls the weapon reload time (in milliseconds) for the rocket launcher. |
+| `weapon_reload_sg` |  | 1000 | weapon_reload_sg <reload time> | Controls the weapon reload time (in milliseconds) for the shotgun. |
+| `web_advancedBrowser` | A T | "" | ??? | ??? |
+| `web_botskill` |  | - | web_botskill <skill> | Sets bot skill for practice matches on website. |
+| `web_chattimestamps` | A / T | 0 | web_chattimestamps [0\|1] | Enables chat time stamps in buddy chat window on website. |
+| `web_configVersion` | T | 8 | web_configVersion | Configuration file version setting for website. |
+| `web_home` | T | - | web_home <page> | Sets a certain page of the website as your web home. |
+| `web_practice_gametype` | T | - | web_practice_gametype <gametype> | Practice match game type setting for website. |
+| `web_practice_settings_0` | T | {} | web_practice_settings_0 <value> | Website practice match settings. |
+| `web_practice_settings_1` | T | {} | web_practice_settings_1 <value> | Website practice match settings. |
+| `web_practice_settings_2` | T | {} | web_practice_settings_2 <value> | Website practice match settings. |
+| `web_practice_settings_3` | T | {} | web_practice_settings_3 <value> | Website practice match settings. |
+| `web_practice_settings_4` | T | {} | web_practice_settings_4 <value> | Website practice match settings. |
+| `web_practice_settings_5` | T | {} | web_practice_settings_5 <value> | Website practice match settings. |
+| `web_skipLauncher` |  | 0 | web_skipLauncher <value> | ??? |
+| `web_start_gametype` | A / T | - | web_start_gametype <value> | Practice match game-type selection for website. |
+| `web_start_settings_0` |  | - | web_start_settings_0 <value> | Start game settings for website. |
+| `web_start_settings_1` |  | - | web_start_settings_1 <value> | Start game settings for website. |
+| `web_start_settings_3` |  | - | web_start_settings_3 <value> | Start game settings for website. |
+| `web_start_settings_4` | A / T | - | web_start_settings_4 <value> | Start game settings for website. |
+| `web_start_settings_5` | A / T | - | web_start_settings_5 <value> | Start game settings for website. |
+| `web_start_settings_9` | A / T | - | web_start_settings_9 <value> | Start game settings for website. |
+| `win_hinstance` | R | - | win_hinstance | Game handle instance address in Windows. |
+| `win_wndproc` | R | - | win_wndproc | Outputs a number that is presumably a code that corresponds to quake live's process in windows. |
+| `winkey_disable` |  | 0 | winkey_disable [0\|1] /  / 0 = Use of windows key allowed /  / 1 = Use of windows key disabled | Disable the windows key in-game. |
 
 ## Commands
 
-| Command | Usage | Description |
-|---------|-------|-------------|
-| `addbot` | `addbot <name> [skill 1-5] [team] [delay]` | Add a bot |
-| `alias` | `alias <name> [command]` | Set a command alias |
-| `arena` | `arena <file>.sp_arena` | Load arena from scripts file |
-| `bind` | `bind <key> [command]` | Assign action to key |
-| `bindlist` | `bindlist` | Show current binds |
-| `block` | `block [playername]` | Block player chat |
-| `blocklist` | `blocklist` | List blocked players |
-| `callvote` | (see below) | Call a vote |
-| `centerview` | `centerview` | Snap view to horizontal |
-| `clear` | `clear` | Clear console output |
-| `clearcvar` | `clearcvar` | Clear a cvar or all cvars |
-| `clientkick` | `clientkick <slot>` | Kick client by slot |
-| `cmdlist` | `cmdlist <query>` | List commands |
-| `condump` | `condump <file>.txt` | Dump console to file |
-| `connect` | `connect <ip:port>` | Connect to server |
-| `cvar_restart` | `cvar_restart` | Restart CVAR system |
-| `cvarlist` | `cvarlist <query>` | List CVARs |
-| `demo` | `demo <demoname>` | Play a demo |
-| `devmap` [C] | `devmap <mapname>` | Open map with cheats |
-| `dir` | `dir [dir]/[ext]` | Show files in directory |
-| `disconnect` | `disconnect` | Leave server |
-| `dropflag` | `dropflag` | Drop flag (CTF) |
-| `droppowerup` | `droppowerup` | Drop powerup |
-| `dropweapon` | `dropweapon` | Drop current weapon |
-| `dumpuser` | `dumpuser <userid>` | Info about a client |
-| `echo` | `echo <string>` | Print to console |
-| `exec` | `exec <filename>` | Execute .cfg file |
-| `fdir` | `fdir <filter>` | Search game directory |
-| `find` | `find <substring>` | Search console entries |
-| `follow` | `follow <pos/name>` | Follow player in spectator (1=leader, 2=2nd, or name) |
-| `forfeit` | `forfeit` | Forfeit the game |
-| `gfxinfo` | `gfxinfo` | Graphics settings info |
-| `give` [C] | `give [item]` | Give item to player |
-| `god` [C] | `god` | Toggle invincibility |
-| `imagelist` | `imagelist` | List textures for current map |
-| `in_restart` | `in_restart` | Restart input drivers |
-| `kick` | `kick <playername>` | Kick a client |
-| `kill` | `kill` | Kill yourself (requires g_allowKill 1) |
-| `map` | `map <mapname>` | Load map (server) |
-| `map_restart` | `map_restart` | Restart current map |
-| `messagemode` | `messagemode` | Open all-chat |
-| `messagemode2` | `messagemode2` | Open team chat |
-| `music` | `music <filename>` | Play music |
-| `nextmap` | `nextmap` | Load next map |
-| `noclip` [C] | `noclip` | Toggle noclip |
-| `notarget` [C] | `notarget` | Bots ignore you |
-| `players` | `players` | List players and IDs |
-| `quit` | `quit` | Quit game |
-| `rcon` | `rcon <command>` | Send RCON command |
-| `record` | `record <demoname>` | Start recording demo |
-| `reconnect` | `reconnect` | Reconnect to last server |
-| `say` | `say <message>` | Chat to all |
-| `say_team` | `say_team <message>` | Chat to team |
-| `set` | `set <cvar> <value>` | Set cvar |
-| `seta` | `seta <cvar> <value>` | Set and archive cvar |
-| `sets` | `sets <cvar> <value>` | Set server info cvar |
-| `setu` | `setu <cvar> <value>` | Set userinfo cvar |
-| `serverinfo` | `serverinfo` | Server info |
-| `status` | `status` | Server status and players |
-| `stopdemo` | `stopdemo` | Stop playing demo |
-| `stoprecord` | `stoprecord` | Stop recording demo |
-| `tell` | `tell <clientnum> <msg>` | Private message |
-| `toggle` | `toggle <cvar>` | Toggle boolean cvar |
-| `toggleconsole` | `toggleconsole` | Toggle console |
-| `unbind` | `unbind <key>` | Remove key binding |
-| `unbindall` | `unbindall` | Remove all bindings |
-| `unban` | `unban <name>` | Remove from ban list |
-| `userinfo` | `userinfo` | Display your userinfo |
-| `vid_restart` | `vid_restart` | Restart video system |
-| `vstr` | `vstr <variable>` | Execute string variable |
-| `vote` | `vote yes/no` | Cast vote |
-| `weapon` | `weapon <number>` | Switch to weapon slot |
-| `weapnext` | `weapnext` | Next weapon |
-| `weapprev` | `weapprev` | Previous weapon |
-| `writeconfig` | `writeconfig <file>` | Write settings to file |
-
-callvote options:
-```
-callvote map_restart
-callvote nextmap
-callvote map <mapname>
-callvote g_gametype <n>
-callvote kick <player>
-callvote clientkick <clientnum>
-callvote timelimit <time>
-callvote fraglimit <frags>
-callvote shuffle
-callvote teamsize <number>
-callvote cointoss <heads/tails>
-```
+| Entry | Flags | Default | Usage | Description |
+|-------|-------|---------|-------|-------------|
+| `addbot` |  | - | addbot <botname> [skill 1-5] [team] [msec delay] [altname] | Adds a computer opponent. |
+| `advert_done` |  | - | advert_done | Exucutes after the standard pre-game advertisement has been shown. |
+| `alias` |  | - | alias <aliasname> [command] | Sets an alias function for a given command. |
+| `arena` |  | - | arena <file>.sp_arena /  / Example: /arena nightmare | Load arena and bots from scripts/<file>.sp_arena. |
+| `bind` |  | - | bind <key> [command] | Assign an action to a key. |
+| `bindlist` |  | - | bindlist | Displays a list of the current binds as per repconfig.cfg. |
+| `block` |  | - | block [playername] | Blocks the specified player’s in-game and website chat. |
+| `blocklist` |  | - | blocklist | Lists currently blocked players. |
+| `callvote` |  | - | Restart map: /  / callvote map_restart /  /  /  / Next Map: /  / callvote nextmap /  /  /  / Map Change: /  / callvote map <mapname> /  /  /  / Gametype Change: /  / callvote g_gametype <n> /  /  /  / Kick a Player: /  / callvote kick <player> /  /  /  / Kick Client: /  / callvote clientkick <clientnum> /  /  /  / Timelimit Change: /  / callvote timelimit <time> /  /  /  / Fraglimit Change: /  / callvote fraglimit <frags> /  /  /  / Shuffle Teams: /  / callvote shuffle /  /  /  / Team Size: /  / callvote teamsize <number> /  /  /  / Cointoss: /  / callvote cointoss <heads/tails/(blank)> | Call a vote. |
+| `centerview` |  | - | centerview | Snaps your view to the horizontal plane. |
+| `changeVectors` |  | - | changeVectors | Supposedly "change to vector defined by FIND_NEW_CHANGE_VECTORS as in vector graphics." Either used internally by the rendering system, or is just legacy and no longer effectual. Either way it produces absolutely no effect. |
+| `cinematic` |  | - | cinematic <file name> | Plays the specified ROQ cinematic file. Cinematics are currently disabled in Quake Live. |
+| `clear` |  | - | clear | Clears all entries in the console. |
+| `clearcvar` |  | - | clearcvar | Clears specified CVAR, if none set, then clears all. |
+| `clientinfo` |  | - | clientinfo | Displays information about clients. |
+| `clientkick` |  | - | clientkick <slot number> | Kicks a client by slot number. |
+| `cmd` |  | - | cmd <command> | Executes a given command. |
+| `cmdlist` |  | - | cmdlist <query> | Displays queried commands, if none specified, lists all available commands. |
+| `condump` |  | - | condump <filename>.txt | Write the contents of the console to a file. |
+| `configstrings` |  | - | configstrings | Lists the current config strings in effect. |
+| `confirmOrder` |  | - | confirmOrder | Team Arena legacy – confirm team order received. |
+| `connect` |  | - | connect <serveraddress> | Connects to a server by server IP address. |
+| `cvar_restart` |  | - | cvar_restart | Restarts CVAR system. |
+| `cvarlist` |  | - | cvarlist <query> | Shows a list of current CVARs starting with specified query string. If none set, displays all CVARs. |
+| `demo` |  | - | demo <demoname> | Plays a demo file. |
+| `denyOrder` |  | - | denyOrder | Denies orders given to you by the team leader in team-based game types. (Team Arena) |
+| `devmap` |  | - | devmap <mapname> /  / Example: /devmap campgrounds | Opens a map in developer mode (all cheat CVARs enabled) |
+| `dir` |  | - | dir [directory]/[extension] /  / Example: /  / /dir “maps/*.bsp” /  / …to show all listed maps | Shows the files contained in a specific directory. |
+| `disconnect` |  | - | disconnect | Leave/disconnect from the current server. |
+| `dropflag` |  | - | dropflag | Allows the flag carrier to drop the flag in CTF. |
+| `droppowerup` |  | - | droppowerup | Drops a power-up item. |
+| `dropweapon` |  | - | dropweapon | Drops current weapon |
+| `dumpuser` |  | - | dumpuser <userid> | Displays information about a specific client. |
+| `echo` |  | - | echo <string> | Prints a client-side message. |
+| `exec` |  | - | exec <filename> | Executes a specific file or command. |
+| `fdir` |  | - | fdir <filter> /  / Usable meta characters: /  / ? = any single character /  / * = any group of characters | Search game directory for certain file types. |
+| `find` |  | - | find <substring> | A case-sensitive search of the console entry database. Maximum number of entries set by con_matchlimit. |
+| `follow` |  | - | follow <variable> /  /  /  / <position> = follow player by place on scoreboard (eg: ‘follow 1’ to follow leader, ‘follow 2’ to follow the player in 2nd place, etc) /  /  /  / <name> = follow player with the specific name. | Switch to follow mode when in spectator mode. |
+| `fs_openedList` |  | - | fs_openedList | List of opened PK3 files. |
+| `fs_referencedList` |  | - | fs_referencedList | List of referenced PK3 files, from sv_referencedPakNames. |
+| `gfxinfo` |  | - | gfxinfo | Lists extensive information about your graphics settings. |
+| `give` | C | - | give [item] /  / Example: /give all /  / …gives all weapons. | Gives a specific item/weapon to the player |
+| `globalservers` |  | - | globalservers <master #1 0-1> <protocol> [keywords] | ??? |
+| `god` | C | - | god | Toggles player invincibility. |
+| `imagelist` |  | - | Imagelist | Lists textures used by current map and memory used up by these textures. |
+| `in_restart` |  | - | in_restart | Restarts all input device drivers. |
+| `kick` |  | - | kick <playername> | Server command to kick a client. |
+| `kill` |  | - | kill | Kills your player (only if g_allowKill is set to 1 on the specific server). |
+| `killserver` |  | - | killserver | Ends your current server. |
+| `levelshot` |  | - | levelshot | Shows the level intermission camera view and writes a 128x128 tga levelshot to levelshots/<mapname>.tga. |
+| `listcmds` |  | - | listcmds | Lists current commands. |
+| `listcvars` |  | - | listcvars | Lists current console variables. |
+| `ListInputDevices` |  | - | ListInputDevices | Lists input devices. |
+| `loaddeferred` |  | - | loaddeferred | Loads deferred player models manually. This is done automatically by using cg_deferplayers 1. For example you are in pre-game on a clan arena server, and someone enters and joins your team. You have forceteammodel set to bitterman, but for some reason their model is showing up as the one they have set for themselves, say klesk. Issuing a 'loaddeferred' in the console will reset their model as you see it back to bitterman. |
+| `loadhud` |  | - | loadhud | Refreshes HUD file source as per cg_hudFiles. Useful when wanting to load a different HUD. |
+| `localservers` |  | - | localservers | Searches for local servers. |
+| `map` | S / R / A | - | map <mapname> /  / Example: /map campgrounds | Loads the specified map. |
+| `map_restart` |  | - | map_restart | Resets the game on the current map in localhost. |
+| `meminfo` |  | - | meminfo | Displays some registers, how many bits high/low, the total bits and memory statistics of the Z-buffer in the game. |
+| `messagemode` |  | - | messagemode | Public chat. |
+| `messagemode2` |  | - | messagemode2 | Team chat. |
+| `messagemode3` |  | - | messagemode3 | Send a message to your target. |
+| `messagemode4` |  | - | messagemode4 | Send a message to your attacker. |
+| `messagemode5` |  | - | messagemode5 | Send a reply to an online buddy (Quake Live’s buddy chat system). |
+| `midiinfo` |  | - | midiinfo | Displays MIDI system information. |
+| `model` | U / A / T | sarge | model <model> /  / Example: /model “keel/bright” | Sets your player model. |
+| `Modelist` |  | - | Modelist | Displays a list of available screen resolution modes, options listed in appendix. |
+| `modellist` |  | - | modellist | Displays a list of models currently loaded by the game. |
+| `music` |  | - | music <soundfile> /  / Example: /music “music/sonic1.ogg” | Loops a specified sound file as background music. |
+| `net_restart` |  | - | net_restart | Restarts the networking subsystem. |
+| `nextOrder` |  | - | nextOrder | Team Arena legacy for issuing the ‘next team order’. Ineffectual in Quake Live |
+| `nextTeamMember` |  | - | nextTeamMember | Used in Team Arena to view information on HUD about next team mate in player cycle. |
+| `noclip` | C | - | noclip | Enables no clip mode. |
+| `notarget` | C | - | notarget | Forces artificial intelligence to ignore you. |
+| `path` |  | - | path | Lists current search paths. |
+| `ping` |  | - | ping [server] | Pings a specific server. |
+| `play` |  | - | play <soundfile> | Plays a specific sound file. |
+| `players` |  | - | players | Lists current players in server. |
+| `postprocess_restart` |  | - | postprocess_restart | Restarts the post process subsystem. |
+| `prevTeamMember` |  | - | prevTeamMember | Used in Team Arena to view information on HUD about previous team mate in player cycle. |
+| `print` |  | - | print [message] | Displays a local message in the console and on the heads-up display. |
+| `quit` |  | - | quit | Exit the game. |
+| `ragequit` |  | - | ragequit | Quit the game and display ‘<yourname> ragequits’. |
+| `readyup` |  | - | readyup | Toggles your ready-up status in warm up rounds. Once the amount of ‘ready’ players meets or exceeds the server’s sv_warmupReadyPercentage, the game will begin. |
+| `reconnect` |  | - | reconnect | Reconnects to the last server you connected to. |
+| `record` |  | - | record <demoname> | Start recording a demo. |
+| `reply` |  | - | reply <message> | Reply to chat messages you received from an online buddy. |
+| `reset` |  | - | reset [cvar] | Resets a CVAR. |
+| `s_info` |  | - | s_info | Displays sound information. |
+| `s_list` |  | - | s_list | Lists all currently loaded sound files. |
+| `s_stop` | C | - | s_stop | Stops currents sounds from being played. |
+| `say` |  | - | say <message> | Ordinary in-game message command. |
+| `say_team` |  | - | say_team <message> /  / Available chat tokens: /  / #h - Current health value /  / #a - Current armor value /  / #w - Current weapon & ammo count /  / ## - To print the character '#' | In-game team message command. |
+| `screenshot` |  | - | screenshot <file name> | Takes a screenshot in TGA file format. If no file name is set, screenshots will be named automatically. |
+| `screenshotSocial` |  | - | screenshotSocial | Takes a screenshot and uploads it to your social media pages. |
+| `screenshotJPEG` |  | - | screenshotJPEG <filename> | Takes a screenshot in JPG file format. If no file name is set, screenshots will be named automatically. |
+| `sectorlist` |  | - | sectorlist | Displays a list of the number of entities in the different sectors of the map with regards to the current position. |
+| `serverinfo` |  | - | serverinfo | Prints out server information list to the console. |
+| `set` |  | - | set <variable> <value> | Set Variable: /  / Assigns a value to an existing CVAR or assigns or creates a new VSTR for your current session. |
+| `seta` |  | - | seta <variable> <value> | Set Variable to Archive: /  / Assigns a value to an existing CVAR or assigns or creates a new VSTR for your current session. Also writes the setting to your configuration so that it is applied every time you run the game. |
+| `setenemycolor` |  | - | ??? | ??? |
+| `setenv` |  | - | ??? | ??? |
+| `setteamcolor` |  | - | ??? | ??? |
+| `setviewpos` |  | - | setviewpos <x> <y> <z> <yaw> | Sets view at specified point, in relation to map coordinates. |
+| `shaderlist` |  | - | shaderlist | Displays a list of currently loaded shaders. |
+| `showip` |  | - | showip [0\|1] /  / 0 = Hide /  / 1 = Show | Shows your IP address. This will be the same as what appears in your network settings. If you are connecting through a router it will show the IP your router has assigned to you. |
+| `sizedown` |  | - | sizedown | Decreases the size of the in-game display area. |
+| `sizeup` |  | - | sizeup | Increases the size of the in-game display area. |
+| `skinlist` |  | - | skinlist | Displays a list of skin files that are currently loaded with the corresponding model surfaces. |
+| `snd_restart` |  | - | snd_restart | Restarts the sound system. |
+| `spdevmap` |  | - | spdevmap <mapname> | Selects a map to open in single player developer mode (cheats enabled). |
+| `spec` |  | - | spec [element] /  / FC = follow a flag carrier /  / RED = follow a red team player /  / BLUE = follow a blue team player /  / PU = follow a player who has a power-up | Cycle through players in spectator mode. |
+| `spmap` |  | - | spmap <mapname> /  / Example: /spmap campgrounds | Runs a specific map along with the applicable arena file settings, i.e: single-player match with bots, if included in an arena file. |
+| `startOrbit` |  | - | startOrbit | A 3rd person orbital view of your player. |
+| `status` |  | - | status | Status of currently connected server. |
+| `stoprecord` |  | - | stoprecord | Stops the current demo recording. |
+| `systeminfo` |  | - | systeminfo | Lists the server configuration. |
+| `taskCamp` |  | - | taskCamp | Voice message your target team mate that you are camping. (Team Arena) |
+| `taskDefense` |  | - | taskDefense | Voice message your target team mate that you are defending. (Team Arena) |
+| `taskEscort` |  | - | tastEscort | Voice message your target team mate that you are escorting the flag carrier. (Team Arena) |
+| `taskFollow` |  | - | taskFollow | Voice message your target team mate that you are following. (Team Arena) |
+| `taskOffense` |  | - | taskOffense | Voice message your target team mate that you are attacking. (Team Arena) |
+| `taskOwnFlag` |  | - | taskOwnFlag | Voice message your target team mate that you have the flag. (Team Arena) |
+| `taskPatrol` |  | - | taskPatrol | Voice message your target team mate that you are patrolling. (Team Arena) |
+| `taskRetrieve` |  | - | taskRetrieve | Voice message your target team mate that you are retrieving the flag. (Team Arena) |
+| `taskSuicide` |  | - | taskSuicide | Voice message your target (bot) team mate to commit suicide. (Team Arena) |
+| `tauntDeathInsult` |  | - | tauntDeathInsult | Random voice insult when you die. (Team Arena) |
+| `tauntGauntlet` |  | - | tauntGauntlet | Random voice insult when you die by gauntlet. (Team Arena) |
+| `tauntKillInsult` |  | - | tauntKillInsult | Random voice insult when you frag your opponent. (Team Arena) |
+| `tauntPraise` |  | - | tauntPraise | Random voice praise to your opponent. (Team Arena) |
+| `tauntTaunt` |  | - | tauntTaunt | Voice taunt. (Team Arena) |
+| `tcmd` |  | - | tcmd | Displays the current target commands or code address. |
+| `team` |  | - | team <team> /  / A = random team /  / B = blue team /  / F = free  /  / R = red team /  / S = spectate | Join a team (team change limited to a 5 second delay between changes) |
+| `teamtask` | U / T | 0 | teamtask [0-7] /  / 0 = default (offense) /  / 1 = offense /  / 2 = defense /  / 3 = patrol /  / 4 = following /  / 5 = retrieving /  / 6 = escorting /  / 7 = camping | Displays the current task you have been assigned. (Team Arena) |
+| `tell_attacker` |  | - | tell_attacker <message> | Sends a message to your attacker. |
+| `tell_buddy` |  | - | tell_buddy <playername> <message> | Sends a message to a specific online buddy. |
+| `tell_target` |  | - | tell_target <message> | Sends a message to a targeted player. |
+| `toggle` |  | - | toggle <cvar> | Toggles a variable (if applicable). May be able to toggle certain write protected CVARs, too. |
+| `togglechathistory` |  | - | togglechathistory | Toggles displaying of chat history screen. |
+| `toggleconsole` |  | - | toggleconsole | Toggles displaying of console. |
+| `touchFile` |  | - | touchFile <file> | Makes a file a zero-byte file. |
+| `unalias` |  | - | unalias <alias> | Clears a specific alias. |
+| `unaliasall` |  | - | unaliasall | Clears all aliases. |
+| `unbind` |  | - | unbind <key> | Unbind a binded key. |
+| `unbindall` |  | - | unbindall | Unbinds all key binds. |
+| `unblock` |  | - | unblock [playername] | Unblocks a blocked player. |
+| `userinfo` |  | - | userinfo | Lists user information. |
+| `vid_restart` |  | - | vid_restart | Restarts video system. |
+| `viewpos` |  | - | viewpos | Displays player coordinates in map, in the form of: (X Y Z) : XY-Angle |
+| `vosay` |  | - | vosay <voice script> | General voice communication. |
+| `vosay_team` |  | - | vosay_team <voice script> | Team voice communication. |
+| `vote` |  | - | vote <y/n> /  / yes = yes vote /  / no = no vote | Sets your vote for the current vote calling. |
+| `votell` |  | - | votell [message] | Voice chat to a player. |
+| `vsay` |  | - | vosay [message] | Voice chat to all players. |
+| `vsay_team` |  | - | vsay_team [message] | Voice chat to team. |
+| `vstr` |  | - | vstr [name] | Execute a specific VSTR. |
+| `vtaunt` |  | - | vtaunt [message] | Voice taunt to all players. |
+| `vtell` |  | - | vtell [message] | Voice chat to a specific player. |
+| `vtell_attacker` |  | - | vtell_attacker [message] | Voice chat to attacker. |
+| `vtell_target` |  | - | vtell_target [message] | Voice chat to target player. |
+| `wait` |  | - | wait <delay> /  / (if none set, delay = 1) | Frame delay for remaining buffered commands. |
+| `weapnext` |  | - | weapnext | Selects next weapon in weapon cycle (by default, no weapons without ammo are selected, including gauntlet). |
+| `weapon` |  | - | weapon [1-13] /  / 1 = gauntlet /  / 2 = machine gun /  / 3 = shotgun /  / 4 = grenade launcher /  / 5 = rocket launcher /  / 6 = lightning gun /  / 7 = railgun /  / 8 = plasmagun /  / 9 = BFG10K /  / 10 = grappling hook /  / 11 = nailgun /  / 12 = proximity mine launcher /  / 13 = chaingun | Selects a specific weapon. |
+| `weapprev` |  | - | weapprev | Selects previous weapon in weapon cycle (by default, no weapons without ammo are selected, including gauntlet). |
+| `writeconfig` |  | - | writeconfig [<configname>.cfg] | Writes settings to a configuration file. |
 
 ## Button Commands
 
 Used with `bind <key> <command>`:
 
-| Command | Description |
-|---------|-------------|
-| `+attack` | Fire weapon |
-| `+button0` | Fire weapon (alternate) |
-| `+button2` | Use holdable item |
-| `+button3` | Gesture |
-| `+chat` | Chat window |
-| `+forward` | Move forward |
-| `+back` | Move backward |
-| `+moveleft` | Strafe left |
-| `+moveright` | Strafe right |
-| `+moveup` | Jump / swim up |
-| `+movedown` | Crouch / swim down |
-| `+left` | Turn left |
-| `+right` | Turn right |
-| `+lookup` | Look up |
-| `+lookdown` | Look down |
-| `+mlook` | Mouse look |
-| `+speed` | Walk toggle |
-| `+strafe` | Strafe mode toggle |
-| `+zoom` | Zoom |
-| `+scores` | Scoreboard |
-| `+acc` | Accuracy panel |
-
-## Premium Server Commands
-
-Available on paid/rented servers. Access levels: none = all players, admin = admins, owner = owner only.
-
-| Command | Level | Description |
-|---------|-------|-------------|
-| `players` | none | List players with IDs and status |
-| `timeout` | none | Pause game for 30 seconds |
-| `timein` | none | Resume after timeout |
-| `abort` | admin | End game, return to warmup |
-| `allready` | admin | Force all players ready |
-| `kickban` | admin | Remove and ban player (takes ID) |
-| `lock` | admin | Stop players joining a team |
-| `unlock` | admin | Allow players to join teams |
-| `mute` | admin | Block player chat (takes ID) |
-| `unmute` | admin | Remove mute (takes ID) |
-| `pause` | admin | Pause match indefinitely |
-| `unpause` | admin | Resume match |
-| `put` | admin | Move player to team: r/b/s (takes ID) |
-| `opsay` | admin | Broadcast message to all |
-| `op` | owner | Grant admin privileges (takes ID) |
-| `deop` | owner | Remove admin privileges (takes ID) |
-| `stopserver` | owner | Shut down server immediately |
+| Entry | Description |
+|-------|-------------|
+| `+acc` | Displays in-game weapon accuracy panel. |
+| `+attack` | Fires weapon. |
+| `+back` | Move backwards. |
+| `+button0` | Fires weapon. |
+| `+button1` | Display chat bubble. |
+| `+button2` | Use holdable item. |
+| `+button3` | Gesture. |
+| `+button4` | Not used. |
+| `+button5` | Animation signal – ‘Yes/I vote yes/Confirm order’ (TA models only) |
+| `+button6` | Animation signal – ‘No/I vote no/Deny Order’ (TA models only) |
+| `+button7` | Team order hand signal – ‘Attack/I am on offense’ (TA models only) |
+| `+button8` | Team order hand signal – ‘Defend/I am defending’ (TA models only) |
+| `+button9` | Team order hand signal – ‘Patrol/I am patrolling’ (TA models only) |
+| `+button10` | Team order hand signal – ‘Follow me/I am following’ (TA models only) |
+| `+button11` | Not used. |
+| `+button12` | Not used. |
+| `+button13` | Not used. |
+| `+button14` | Not used. |
+| `+chat` | Display the chat window. |
+| `+forward` | Move forwards. |
+| `+left` | Turn left. |
+| `+lookdown` | Look down. |
+| `+lookup` | Look up. |
+| `+mlook` | Mouse look. |
+| `+movedown` | Move downwards – crouch/swim down. |
+| `+moveleft` | Strafe left. |
+| `+moveright` | Strafe right. |
+| `+moveup` | Move upwards – jump/swim up. |
+| `+right` | Turn right. |
+| `+scores` | Display scoreboard. |
+| `+speed` | Run/Walk toggle. |
+| `+strafe` | Strafe toggle. |
+| `+zoom` | Zoom toggle. |
 
 ## Related
 
-- [[games/quake-live/controls|Controls]]
-- [[games/quake-live/modding/server-hosting|Server Hosting]]
+- [[games/quake-live/controls\|Controls]]
+- [[games/quake-live/modding/server-hosting\|Server Hosting]]
