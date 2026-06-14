@@ -26,6 +26,6 @@ Each game has its own subdirectory under `content/games/`. Deployment syncs cano
 
 ## Contributing
 
-Report errors or missing content in the [TARP Discord](https://discord.gg/myRt8kVfdR).
+Report errors or missing content in the [TARP Discord](https://discord.gg/DTWhqy6a).
 
 See [ACKNOWLEDGEMENTS.md](./ACKNOWLEDGEMENTS.md) for third-party credits.
